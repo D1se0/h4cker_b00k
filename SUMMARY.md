@@ -71,3 +71,12 @@
 * [Write Up unknowndevice64 VulnHub](group-1/write-up-unknowndevice64-vulnhub.md)
 * [Write Up Usage HackTheBox](group-1/write-up-usage-hackthebox.md)
 * [Write Up Vikings VulnHub](group-1/write-up-vikings-vulnhub.md)
+
+***
+
+* [PortSwigger Apuntes](portswigger-apuntes.md)
+
+## Group 2
+
+* [SQL Injection](group-2/sql-injection.md)
+* [XSS (Cross Site Scripting)](group-2/xss-cross-site-scripting.md)
