@@ -71,6 +71,7 @@
 * [Write Up unknowndevice64 VulnHub](write-ups-ctfs/write-up-unknowndevice64-vulnhub.md)
 * [Write Up Usage HackTheBox](write-ups-ctfs/write-up-usage-hackthebox.md)
 * [Write Up Vikings VulnHub](write-ups-ctfs/write-up-vikings-vulnhub.md)
+* [Write Up ColddBoxEasy\_EN VulnHub](write-ups-ctfs/write-up-colddboxeasy\_en-vulnhub.md)
 
 ***
 
