@@ -7,7 +7,6 @@
 
 * [SQL Injection](portswigger-notes/sql-injection.md)
 * [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
-* [The hacker's book](portswigger-notes/the-hackers-book.md)
 
 ## The hacker's bible
 
@@ -40,6 +39,7 @@
 
 ***
 
+* [The hacker's book](the-hackers-book.md)
 * [Write Up's](write-ups.md)
 
 ## Write Up's (CTF's)
