@@ -1,6 +1,36 @@
 # Table of contents
 
 * [README](README.md)
+* [PortSwigger Apuntes](portswigger-apuntes.md)
+
+## PortSwigger Notes
+
+* [SQL Injection](portswigger-notes/sql-injection.md)
+* [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
+* [The hacker's book](portswigger-notes/the-hackers-book.md)
+
+## The hacker's bible
+
+* [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
+
+## File2ban (root)
+
+* [File2ban Privilege Escalation](file2ban-root/file2ban-privilege-escalation.md)
+
+## openssl tool
+
+* [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
+
+## Reverse Shell's, Payload's, etc...
+
+* [Payloads, Reverse Shell's...](reverse-shells-payloads-etc.../payloads-reverse-shells....md)
+
+## SQL Injection Script's
+
+* [SQL Injection Script](sql-injection-scripts/sql-injection-script.md)
+
+***
+
 * [Write Up's](write-ups.md)
 
 ## Write Up's (CTF's)
@@ -72,36 +102,3 @@
 * [Write Up Usage HackTheBox](write-ups-ctfs/write-up-usage-hackthebox.md)
 * [Write Up Vikings VulnHub](write-ups-ctfs/write-up-vikings-vulnhub.md)
 * [Write Up ColddBoxEasy\_EN VulnHub](write-ups-ctfs/write-up-colddboxeasy\_en-vulnhub.md)
-
-***
-
-* [PortSwigger Apuntes](portswigger-apuntes.md)
-
-## PortSwigger Notes
-
-* [SQL Injection](portswigger-notes/sql-injection.md)
-* [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
-
-***
-
-* [The hacker's book](the-hackers-book.md)
-
-## The hacker's bible
-
-* [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## File2ban (root)
-
-* [File2ban Privilege Escalation](file2ban-root/file2ban-privilege-escalation.md)
-
-## openssl tool
-
-* [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
-
-## Reverse Shell's, Payload's, etc...
-
-* [Payloads, Reverse Shell's...](reverse-shells-payloads-etc.../payloads-reverse-shells....md)
-
-## SQL Injection Script's
-
-* [SQL Injection Script](sql-injection-scripts/sql-injection-script.md)
