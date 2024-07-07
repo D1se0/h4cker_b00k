@@ -115,7 +115,7 @@ Equipo de Atenci&oacute;n al Cliente Amazon.</p>
 
 Perspectiva:
 
-!\[\[Pasted image 20240707161106.png]]
+<figure><img src="../.gitbook/assets/email1.png" alt=""><figcaption></figcaption></figure>
 
 Donde pone en el codigo `{{.URL}}` es donde sustituiremos eso por el link que nos proporcionara la herramienta `ngrok` pero eso mas adelante...
 
@@ -171,7 +171,7 @@ Donde pone `Name:` pondremos el nombre con el que lo queramos identificar en mi 
 
 > Como deberia de verse:
 
-!\[\[Pasted image 20240707164741.png]]
+<figure><img src="../.gitbook/assets/campaign1.png" alt=""><figcaption></figcaption></figure>
 
 Una vez puesto todo lo anterior no guardaremos nada, le daremos en la opcion llamada `Send Test Email` y dentro de la misma se configurara de la siguiente forma...
 
@@ -250,7 +250,7 @@ o
 rm /var/www/html/*
 ```
 
-#### MySQL \[Configuracion de captacion de credenciales]
+### MySQL \[Configuracion de captacion de credenciales]
 
 Instalaremos y configuraremos una base de datos en `mysql` para que cuando inserte las credenciales en la pagina de `phishing` del login se envien automaticamente a la base de datos que crearemos en `mysql`...
 
@@ -713,7 +713,7 @@ Lo llamaremos `index.php` para que sea lo primero que se vea cuando le redirija 
 
 Perspectiva:
 
-!\[\[Pasted image 20240707171928.png]]
+<figure><img src="../.gitbook/assets/login1.png" alt=""><figcaption></figcaption></figure>
 
 Una vez tengamos creado el login y el formulario con el `action="process.php"` que le programamos para que cuando inicies sesion redirija a ese `process.php` que ahora crearemos, crearemos el `process.php` el cual sera el que capte las credenciales y las escriba en `mysql` a parte de que te redirija a la vez a una pagina de error de la siguiente forma...
 
@@ -5396,7 +5396,7 @@ Aqui configuramos ya el archivo con la base de datos en `mysql` para que se escr
 
 Perspectiva:
 
-!\[\[Pasted image 20240707172614.png]]
+<figure><img src="../.gitbook/assets/error1.png" alt=""><figcaption></figcaption></figure>
 
 Una vez estemos aqui ya se habrian escrito las credenciales en la base de datos, pero cuando le den a `Iniciar sesión` les llevara al verdadero login de la pagina oficial...
 
@@ -5432,7 +5432,7 @@ Esto iniciara la tunelizacion del `localhost` proporcionando asi la `URL` a la q
 
 Perspectiva:
 
-!\[\[Pasted image 20240707174032.png]]
+<figure><img src="../.gitbook/assets/ngrok1.png" alt=""><figcaption></figcaption></figure>
 
 En mi caso me proporciono `https://9b19-90-169-44-222.ngrok-free.app` pero por seguridad y que no les aparezca al usuario la interfaz de `ngrok` detallaremos dode quieres que se redirija al usuario de que archivo de la pagina, quedando de la siguiente forma...
 
