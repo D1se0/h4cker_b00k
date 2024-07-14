@@ -118,9 +118,9 @@ Una vez comprobado que nos detecta la red, pondremos la dirección que nos dio P
 
 \> Credenciales (Default):
 
-User: \`\`admin\`\`
+User: `admin`
 
-Password: \`\`pfsense\`\`
+Password: `pfsense`
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXezXcqvihGQj2lwEn3YdyY1ruRAsp5I2K36RUTQw-f55cCFCxmb2p3K5miusw6zBAVUhx-Z1zl6-v2cRNbQgJ09SGPSsAtNTscIl5apbNmXTYnVFe5uDYW7_r91BnI2N-Okkrgctq8pwFYGhrqsAlYVmOA?key=BIdnsx2kvhiLCGz7N7uenw" alt=""><figcaption></figcaption></figure>
 
