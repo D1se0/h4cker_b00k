@@ -41,10 +41,13 @@
 
 * [Pfsense Firewall Configuración](pfsense-firewall-configuracion-guia/pfsense-firewall-configuracion.md)
 
+## Configuración y Explotación de Windows (EternalBlue y BlueKeep)
+
+* [Config W7 x86 y x64 Vuln EternalBlue](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
+* [Conf W7 Professional 64 bits Vuln BlueKeep](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/conf-w7-professional-64-bits-vuln-bluekeep.md)
+
 ***
 
-* [Config W7 x86 y x64 Vuln EternalBlue](config-w7-x86-y-x64-vuln-eternalblue.md)
-* [Conf W7 Professional 64 bits Vuln BlueKeep](conf-w7-professional-64-bits-vuln-bluekeep.md)
 * [The hacker's book](the-hackers-book.md)
 * [Write Up's](write-ups.md)
 
@@ -120,7 +123,3 @@
 * [KB-VULN3 VulnHub](write-ups-ctfs/kb-vuln3-vulnhub.md)
 * [Funbox\_CTF\_4 VulnHub](write-ups-ctfs/funbox\_ctf\_4-vulnhub.md)
 * [NASEF\_1 LOCATING TARGET](write-ups-ctfs/nasef\_1-locating-target.md)
-
-## Configuración y Explotación de Windows (EternalBlue y BlueKeep)
-
-* [Page 1](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/page-1.md)
