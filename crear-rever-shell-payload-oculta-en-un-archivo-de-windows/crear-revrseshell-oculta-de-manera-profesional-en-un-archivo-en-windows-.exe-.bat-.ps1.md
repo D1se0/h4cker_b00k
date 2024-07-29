@@ -1,5 +1,7 @@
 # Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)
 
+## Forma manual para entender como funciona por dentro
+
 Vamos a crear el archivo malicioso oculto dentro de uno legitimo, escogeremos cualquier aplicacion que queramos ocultar el codigo malicioso, una vez teniendo la aplicacion haremos lo siguiente.
 
 Antes de crearlo en nuestra maquina atacante creamos el archivo con `msfvenom`.
