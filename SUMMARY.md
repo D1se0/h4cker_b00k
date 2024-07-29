@@ -46,6 +46,10 @@
 * [Config W7 x86 y x64 Vuln EternalBlue](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
 * [Conf W7 Professional 64 bits Vuln BlueKeep](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/conf-w7-professional-64-bits-vuln-bluekeep.md)
 
+## Crear Rever Shell (payload) oculta en un archivo de windows
+
+* [Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)](crear-rever-shell-payload-oculta-en-un-archivo-de-windows/crear-revrseshell-oculta-de-manera-profesional-en-un-archivo-en-windows-.exe-.bat-.ps1.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
