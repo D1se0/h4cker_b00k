@@ -50,6 +50,10 @@
 
 * [Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)](crear-rever-shell-payload-oculta-en-un-archivo-de-windows/crear-revrseshell-oculta-de-manera-profesional-en-un-archivo-en-windows-.exe-.bat-.ps1.md)
 
+## Conectarse con SMB mediante el dumpeo de hashes (Pass-The-Hash)
+
+* [Conectarse con SMB mediante el dumpeo de hashes (Pass-The-Hash)](conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash/conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
