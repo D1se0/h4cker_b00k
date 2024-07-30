@@ -111,6 +111,20 @@ Y en la maquina atacante se podra entrar mediante.
 URL = http://<IP>:80/
 ```
 
+## Habilitar usuario Administrador en Windows 7
+
+Primero cambiaremos la contraseña al administrador en el cmd como administrador.
+
+```shell
+net user Administrador <NEW_PASSWORD>
+```
+
+Despues activaremos la cuenta administrador.
+
+```shell
+net user Administrador /active:yes
+```
+
 ## Explotar maquina windows, para dumpear los hashes y contectarnos mediante SMB con los hashes
 
 ```shell
