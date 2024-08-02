@@ -54,6 +54,14 @@
 
 * [Conectarse con SMB mediante el dumpeo de hashes (Pass-The-Hash)](conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash/conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash.md)
 
+## Conf Ubuntu 12.04 server (exploit kernel)
+
+* [Conf Ubuntu 12.04 server (exploit kernel)](conf-ubuntu-12.04-server-exploit-kernel/conf-ubuntu-12.04-server-exploit-kernel.md)
+
+## Visualizar Webcam por metasploit en windows (Vulnerabilidad)
+
+* [Visualizar Webcam por metasploit en windows (Vulnerabilidad)](visualizar-webcam-por-metasploit-en-windows-vulnerabilidad/visualizar-webcam-por-metasploit-en-windows-vulnerabilidad.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
