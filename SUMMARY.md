@@ -144,9 +144,10 @@
 ## 🐳 DockerLabs (Writeup's)
 
 * [DockerLabs](dockerlabs-writeups/dockerlabs/README.md)
-  * [AaguaDeMayo DockerLabs](dockerlabs-writeups/dockerlabs/aaguademayo-dockerlabs.md)
-  * [Asucar DockerLabs](dockerlabs-writeups/dockerlabs/asucar-dockerlabs.md)
-  * [Bashpariencias DockerLabs](dockerlabs-writeups/dockerlabs/bashpariencias-dockerlabs.md)
+  * [AaguaDeMayo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/aaguademayo-dockerlabs-easy.md)
+  * [Asucar DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/asucar-dockerlabs-intermediate.md)
+  * [Bashpariencias DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/bashpariencias-dockerlabs-intermediate.md)
+  * [Chocolatefire DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chocolatefire-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
