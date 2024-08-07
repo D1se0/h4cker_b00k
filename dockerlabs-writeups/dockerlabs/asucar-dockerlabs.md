@@ -444,6 +444,8 @@ ssh curiosito@<IP>
 
 Metemos la contarseña y ya estariamos dentro de la maquina.
 
+### Privilege Escalation
+
 Si hacemos `sudo -l` podemos ver lo siguiente.
 
 ```
