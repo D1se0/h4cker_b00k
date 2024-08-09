@@ -148,6 +148,7 @@
   * [Asucar DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/asucar-dockerlabs-intermediate.md)
   * [Bashpariencias DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/bashpariencias-dockerlabs-intermediate.md)
   * [Chocolatefire DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chocolatefire-dockerlabs-intermediate.md)
+  * [Collections DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/collections-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
