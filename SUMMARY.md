@@ -62,6 +62,10 @@
 
 * [Visualizar Webcam por metasploit en windows (Vulnerabilidad)](hackear-webcam-en-windows-vulnerabilidad/visualizar-webcam-por-metasploit-en-windows-vulnerabilidad.md)
 
+## ⌨️Técnica Keylogger Automatizada
+
+* [Keylogger Script Automatizado (Linux y Windows)](tecnica-keylogger-automatizada/keylogger-script-automatizado-linux-y-windows.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
