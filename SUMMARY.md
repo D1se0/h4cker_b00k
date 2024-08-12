@@ -149,6 +149,7 @@
   * [Bashpariencias DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/bashpariencias-dockerlabs-intermediate.md)
   * [Chocolatefire DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chocolatefire-dockerlabs-intermediate.md)
   * [Collections DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/collections-dockerlabs-intermediate.md)
+  * [Skullnet Dockerlabs (Difícil)](dockerlabs-writeups/dockerlabs/skullnet-dockerlabs-dificil.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
