@@ -154,6 +154,7 @@
   * [Chocolatefire DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chocolatefire-dockerlabs-intermediate.md)
   * [Collections DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/collections-dockerlabs-intermediate.md)
   * [Skullnet Dockerlabs (Difícil)](dockerlabs-writeups/dockerlabs/skullnet-dockerlabs-dificil.md)
+  * [Mirame DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/mirame-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
