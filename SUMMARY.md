@@ -173,3 +173,4 @@
 * [CTF Cyb3rSh1€ld Intermediate](my-ctfs/ctf-cyb3rsh1eurld-intermediate.md)
 * [CTF HackMeDaddy Hard](my-ctfs/ctf-hackmedaddy-hard.md)
 * [CTF inj3ct0rs Intermediate](my-ctfs/ctf-inj3ct0rs-intermediate.md)
+* [CTF LFI.elf Easy](my-ctfs/ctf-lfi.elf-easy.md)
