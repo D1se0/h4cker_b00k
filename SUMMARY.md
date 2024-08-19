@@ -175,3 +175,4 @@
 * [CTF HackMeDaddy Hard](my-ctfs/ctf-hackmedaddy-hard.md)
 * [CTF inj3ct0rs Intermediate](my-ctfs/ctf-inj3ct0rs-intermediate.md)
 * [CTF LFI.elf Easy](my-ctfs/ctf-lfi.elf-easy.md)
+* [CTF 404-not-found Easy](my-ctfs/ctf-404-not-found-easy.md)
