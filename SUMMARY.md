@@ -165,6 +165,7 @@
   * [Mirame DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/mirame-dockerlabs-easy.md)
   * [Buscalove DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/buscalove-dockerlabs-easy.md)
   * [Hidden DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hidden-dockerlabs-intermediate.md)
+  * [Hackpenguin DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hackpenguin-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
