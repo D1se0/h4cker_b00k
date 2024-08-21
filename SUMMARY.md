@@ -187,3 +187,4 @@
 * [CTF 404-not-found Easy](my-ctfs/ctf-404-not-found-easy.md)
 * [CTF dance-samba Intermediate](my-ctfs/ctf-dance-samba-intermediate.md)
 * [CTF VulnVault Intermediate](my-ctfs/ctf-vulnvault-intermediate.md)
+* [CTF CrackOff Hard](my-ctfs/ctf-crackoff-hard.md)
