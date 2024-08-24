@@ -166,6 +166,7 @@
   * [Buscalove DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/buscalove-dockerlabs-easy.md)
   * [Hidden DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hidden-dockerlabs-intermediate.md)
   * [Hackpenguin DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hackpenguin-dockerlabs-intermediate.md)
+  * [Fileception DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/fileception-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
