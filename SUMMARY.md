@@ -192,3 +192,4 @@
 * [CTF PressEnter Easy](my-ctfs/ctf-pressenter-easy.md)
 * [CTF Mapache2 Intermediate](my-ctfs/ctf-mapache2-intermediate.md)
 * [CTF Ctrl-X Easy](my-ctfs/ctf-ctrl-x-easy.md)
+* [CTF r00tless Hard](my-ctfs/ctf-r00tless-hard.md)
