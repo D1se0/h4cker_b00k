@@ -13,7 +13,7 @@ unzip ctrl-x.zip
 Nos lo descomprimira y despues montamos la maquina de la siguiente forma.
 
 ```shell
-bash auto_deploy.sh ctrl-x.tar
+bash auto_mount.sh ctrl-x.tar
 ```
 
 Info:

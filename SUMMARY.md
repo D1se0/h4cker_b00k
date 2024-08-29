@@ -193,3 +193,4 @@
 * [CTF Mapache2 Intermediate](my-ctfs/ctf-mapache2-intermediate.md)
 * [CTF Ctrl-X Easy](my-ctfs/ctf-ctrl-x-easy.md)
 * [CTF r00tless Hard](my-ctfs/ctf-r00tless-hard.md)
+* [CTF 0xc0ffee Intermediate](my-ctfs/ctf-0xc0ffee-intermediate.md)
