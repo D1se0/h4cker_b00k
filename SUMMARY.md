@@ -196,3 +196,4 @@
 * [CTF 0xc0ffee Intermediate](my-ctfs/ctf-0xc0ffee-intermediate.md)
 * [CTF Memesploit Intermediate](my-ctfs/ctf-memesploit-intermediate.md)
 * [CTF Jenkhack Easy](my-ctfs/ctf-jenkhack-easy.md)
+* [CTF chmod-4755 Intermediate](my-ctfs/ctf-chmod-4755-intermediate.md)
