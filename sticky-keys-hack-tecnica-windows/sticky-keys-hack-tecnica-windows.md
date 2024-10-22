@@ -53,3 +53,23 @@ net user <USER> <PASSWORD>
 ```
 
 Y con esto ya se habria cambiado correctamente el password del usuario elegido, solo tendremos que ingresar el nuevo password y listo, estariamos dentro ya.
+
+## Restaurar el archivo
+
+Para dejar todo como estaba antes, abriremos el `PowerShell` como `Administrador` y escribiremos lo siguiente:
+
+```powershell
+copy C:\Windows\System32\sethc.exe.bak C:\Windows\System32\sethc.exe
+```
+
+Y con esto ya estaria todo como antes.
+
+### Segunda opción de restaurar el archivo
+
+Antes de hacer todo lo anterior y de copiar el `cmd.exe` al archivo de la tecla especial, podremos copiarlo a nuestro pendrive o en algun lugar como copia de seguridad de la siguiente manera:
+
+```powershell
+copy D:\Windows\System32\sethc.exe C:\Windows\System32\sethc.exe
+```
+
+Cambiaremos la letra del pendrive que corresponda a vuestro pendrive.
