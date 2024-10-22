@@ -74,6 +74,14 @@
 
 * [Crear dominio y subdominio en apache2 pata CTF's](crear-dominio-y-subdominio-en-apache2/crear-dominio-y-subdominio-en-apache2-pata-ctfs.md)
 
+## ✅Activación Office Gratis
+
+* [Activación de Office Permanente gratis](activacion-office-gratis/activacion-de-office-permanente-gratis.md)
+
+## 💡Sticky Keys Hack (Técnica Windows)
+
+* [Sticky Keys Hack (Técnica Windows)](sticky-keys-hack-tecnica-windows/sticky-keys-hack-tecnica-windows.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
