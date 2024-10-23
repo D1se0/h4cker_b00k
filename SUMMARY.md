@@ -82,6 +82,13 @@
 
 * [Sticky Keys Hack (Técnica Windows)](sticky-keys-hack-tecnica-windows/sticky-keys-hack-tecnica-windows.md)
 
+## 🧰Hack5 Tools Info
+
+* [Hack5 Tools](hack5-tools-info/hack5-tools/README.md)
+  * [Bash Bunny (Hack5) Función](hack5-tools-info/hack5-tools/bash-bunny-hack5-funcion.md)
+  * [ScreenCrab (Hack5) Función](hack5-tools-info/hack5-tools/screencrab-hack5-funcion.md)
+  * [KeyCroc (Hack5) Función](hack5-tools-info/hack5-tools/keycroc-hack5-funcion.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
