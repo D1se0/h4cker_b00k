@@ -82,12 +82,21 @@
 
 * [Sticky Keys Hack (Técnica Windows)](sticky-keys-hack-tecnica-windows/sticky-keys-hack-tecnica-windows.md)
 
+## 🔌Configuración de WOL (Wake On Lan)
+
+* [Configuración de WOL (Wake On Lan)](configuracion-de-wol-wake-on-lan/configuracion-de-wol-wake-on-lan.md)
+
+## ⚡DigiSpark y USB Ninja (Función)
+
+* [DigiSpark y USB Ninja (Función)](digispark-y-usb-ninja-funcion/digispark-y-usb-ninja-funcion.md)
+
 ## 🧰Hack5 Tools Info
 
 * [Hack5 Tools](hack5-tools-info/hack5-tools/README.md)
   * [Bash Bunny (Hack5) Función](hack5-tools-info/hack5-tools/bash-bunny-hack5-funcion.md)
   * [ScreenCrab (Hack5) Función](hack5-tools-info/hack5-tools/screencrab-hack5-funcion.md)
   * [KeyCroc (Hack5) Función](hack5-tools-info/hack5-tools/keycroc-hack5-funcion.md)
+  * [USB Rubber Ducky (Hack5) Función](hack5-tools-info/hack5-tools/usb-rubber-ducky-hack5-funcion.md)
 
 ***
 
