@@ -99,6 +99,12 @@
   * [KeyCroc (Hack5) Función](hack5-tools-info/hack5-tools/keycroc-hack5-funcion.md)
   * [USB Rubber Ducky (Hack5) Función](hack5-tools-info/hack5-tools/usb-rubber-ducky-hack5-funcion.md)
 
+## 🪟 Active Directoy (Hacking)
+
+* [Active Directory Hacking (Auditorias para entorno real)](active-directoy-hacking/active-directory-hacking-auditorias-para-entorno-real.md)
+* [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-hacking-practicas-teoria.md)
+* [KERBEROASTING en Active Directory](active-directoy-hacking/kerberoasting-en-active-directory.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
