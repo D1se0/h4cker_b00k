@@ -198,6 +198,8 @@
   * [Hidden DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hidden-dockerlabs-intermediate.md)
   * [Hackpenguin DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/hackpenguin-dockerlabs-intermediate.md)
   * [Fileception DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/fileception-dockerlabs-intermediate.md)
+  * [Domain DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/domain-dockerlabs-intermediate.md)
+  * [ChatMe DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chatme-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
