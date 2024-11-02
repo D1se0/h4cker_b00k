@@ -90,6 +90,7 @@
 
 * [DigiSpark y USB Ninja (Función)](digispark-y-usb-ninja-funcion/digispark-y-usb-ninja-funcion.md)
 * [Digispark Tutorial (Programandolo)](digispark-y-usb-ninja-funcion/digispark-tutorial-programandolo.md)
+* [Lista de signos Digispark (Caracteres, simbolos, etc...)](digispark-y-usb-ninja-funcion/lista-de-signos-digispark-caracteres-simbolos-etc....md)
 
 ## 🧰Hack5 Tools Info
 
