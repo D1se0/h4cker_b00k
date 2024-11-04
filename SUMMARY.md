@@ -106,7 +106,7 @@
 * [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-hacking-practicas-teoria.md)
 * [KERBEROASTING en Active Directory](active-directoy-hacking/kerberoasting-en-active-directory.md)
 
-## Herramientas de DOXEO (OSINT)
+## 🌐Herramientas de DOXEO (OSINT)
 
 * [Herramientas/Paginas de DOXEO para cualquier usuario de internet](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/README.md)
   * [BoxPiper Pagina Doxeo](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/boxpiper-pagina-doxeo.md)
