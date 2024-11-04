@@ -119,6 +119,10 @@
   * [Phomber GitHub (Doxeo Numero de Teléfono)](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/phomber-github-doxeo-numero-de-telefono.md)
   * [Temp Mail Pagina Correos Temporales](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/temp-mail-pagina-correos-temporales.md)
 
+## 📡Shell Persistente en PowerShell (Windows)
+
+* [Shell Persistente mediante PowerShell Windows](shell-persistente-en-powershell-windows/shell-persistente-mediante-powershell-windows.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
