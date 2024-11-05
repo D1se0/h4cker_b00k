@@ -4,6 +4,8 @@ Este es un programa para controlar de forma remota cualquier equipo mediante un 
 
 URL = [Download Remcos](https://breakingsecurity.net/remcos/free/)
 
+Password ZIP = `BreakingSecurity.net`
+
 Para poder utilizar esta herramienta, nos la descargaremos en ese link, seguidamente tendremos que desactivar el `Windows Defender` ya que nos lo pondra como un `malware` pero es una aplicacion legitima, ejecutaremos el `.exe` de `remcos` y se nos abrira una ventana donde podremos crear un ejecutable, elegiremos la extension, el nombre, que tipo de archivo queremos que sea, el empaquetado, etc... Una vez echo todo esto, nos iremos a `Build` donde contruiremos el ejecutable.
 
 Una vez creado, se lo tendremos que pasar dicho ejecutable a la maquina victima, este lo tendra que ejecutar.
