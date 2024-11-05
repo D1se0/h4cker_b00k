@@ -123,6 +123,10 @@
 
 * [Shell Persistente mediante PowerShell Windows](shell-persistente-en-powershell-windows/shell-persistente-mediante-powershell-windows.md)
 
+## 💀Software Remcos (RAT)
+
+* [Programa Remcos (Técnica RAT)](software-remcos-rat/programa-remcos-tecnica-rat.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
