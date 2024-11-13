@@ -102,9 +102,10 @@
 
 ## 🪟 Active Directoy (Hacking)
 
-* [Active Directory Hacking (Auditorias para entorno real)](active-directoy-hacking/active-directory-hacking-auditorias-para-entorno-real.md)
-* [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-hacking-practicas-teoria.md)
-* [KERBEROASTING en Active Directory](active-directoy-hacking/kerberoasting-en-active-directory.md)
+* [Active Directory dedicado al hacking](active-directoy-hacking/active-directory-dedicado-al-hacking/README.md)
+  * [KERBEROASTING en Active Directory](active-directoy-hacking/active-directory-dedicado-al-hacking/kerberoasting-en-active-directory.md)
+  * [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-practicas-teoria.md)
+  * [Active Directory Hacking (Auditorias para entorno real)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-auditorias-para-entorno-real.md)
 
 ## 🌐Herramientas de DOXEO (OSINT)
 
