@@ -1,5 +1,7 @@
 # CTF Hackzones Intermediate
 
+URL Download CTF = [https://drive.google.com/file/d/1v4vbcRabLahhepUYP2mM-WONLskKPjQr/view?usp=sharing](https://drive.google.com/file/d/1v4vbcRabLahhepUYP2mM-WONLskKPjQr/view?usp=sharing)
+
 ### Instalación
 
 Cuando obtenemos el `.zip` nos lo pasamos al entorno en el que vamos a empezar a hackear la maquina y haremos lo siguiente.
