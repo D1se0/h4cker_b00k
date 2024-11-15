@@ -254,3 +254,4 @@
   * [CTF CrackOff Hard](my-ctfs/ctfs/ctf-crackoff-hard.md)
   * [CTF PressEnter Easy](my-ctfs/ctfs/ctf-pressenter-easy.md)
   * [CTF Mapache2 Intermediate](my-ctfs/ctfs/ctf-mapache2-intermediate.md)
+  * [CTF Hackzones Intermediate](my-ctfs/ctfs/ctf-hackzones-intermediate.md)
