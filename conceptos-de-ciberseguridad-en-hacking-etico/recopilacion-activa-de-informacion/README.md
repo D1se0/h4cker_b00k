@@ -1,0 +1,2 @@
+# Recopilación Activa de información
+
