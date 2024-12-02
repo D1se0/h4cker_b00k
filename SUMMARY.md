@@ -262,6 +262,10 @@
   * [Pesidious (Mutaciones con Deep Learning)](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/pesidious-mutaciones-con-deep-learning.md)
   * [Ingeniería Social - Deep fake](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/ingenieria-social-deep-fake.md)
 
+## 🔐CVE-2024-10924 (Bypass-MFA-Wordpress)
+
+* [Instalación laboratorio vulnerable CVE-2024-10924 (Bypass-MFA-Wordpress)](cve-2024-10924-bypass-mfa-wordpress/instalacion-laboratorio-vulnerable-cve-2024-10924-bypass-mfa-wordpress.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
