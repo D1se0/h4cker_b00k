@@ -266,6 +266,10 @@
 
 * [Instalación laboratorio vulnerable CVE-2024-10924 (Bypass-MFA-Wordpress)](cve-2024-10924-bypass-mfa-wordpress/instalacion-laboratorio-vulnerable-cve-2024-10924-bypass-mfa-wordpress.md)
 
+## CVE-2024-21413 (Instalación laboratorio vulnerable)
+
+* [Instalación laboratorio vulnerable CVE-2024-21413 (Ejecución remota de comandos Outlook)](cve-2024-21413-instalacion-laboratorio-vulnerable/instalacion-laboratorio-vulnerable-cve-2024-21413-ejecucion-remota-de-comandos-outlook.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
