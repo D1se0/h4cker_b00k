@@ -82,6 +82,10 @@
 
 * [Sticky Keys Hack (Técnica Windows)](sticky-keys-hack-tecnica-windows/sticky-keys-hack-tecnica-windows.md)
 
+## 🔧Bypass Login Linux (GRUP)
+
+* [Bypass Login Linux (GRUB)](bypass-login-linux-grup/bypass-login-linux-grub.md)
+
 ## 🔌Configuración de WOL (Wake On Lan)
 
 * [Configuración de WOL (Wake On Lan)](configuracion-de-wol-wake-on-lan/configuracion-de-wol-wake-on-lan.md)
