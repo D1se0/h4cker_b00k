@@ -272,7 +272,11 @@
 
 ## 🧪CVE-2024-21413 (Instalación laboratorio vulnerable)
 
-* [Instalación laboratorio vulnerable CVE-2024-21413 (Ejecución remota de comandos Outlook)](cve-2024-21413-instalacion-laboratorio-vulnerable/instalacion-laboratorio-vulnerable-cve-2024-21413-ejecucion-remota-de-comandos-outlook.md)
+* [📧Instalación laboratorio vulnerable CVE-2024-21413 (Ejecución remota de comandos Outlook)](cve-2024-21413-instalacion-laboratorio-vulnerable/instalacion-laboratorio-vulnerable-cve-2024-21413-ejecucion-remota-de-comandos-outlook.md)
+
+## 🔑Técnica Vulnerabilidad CVE-2023-32784
+
+* [Técnica CVE-2023-32784 (Keepass-password-dump)](tecnica-vulnerabilidad-cve-2023-32784/tecnica-cve-2023-32784-keepass-password-dump.md)
 
 ***
 
