@@ -278,6 +278,10 @@
 
 * [Técnica CVE-2023-32784 (Keepass-password-dump)](tecnica-vulnerabilidad-cve-2023-32784/tecnica-cve-2023-32784-keepass-password-dump.md)
 
+## 🔧Instalar SPSS full gratis (crack)
+
+* [Instalar SPSS full gratis (crack)](instalar-spss-full-gratis-crack/instalar-spss-full-gratis-crack.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
