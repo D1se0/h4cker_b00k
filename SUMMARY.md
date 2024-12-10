@@ -377,6 +377,8 @@
   * [Fileception DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/fileception-dockerlabs-intermediate.md)
   * [Domain DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/domain-dockerlabs-intermediate.md)
   * [ChatMe DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chatme-dockerlabs-intermediate.md)
+  * [Devil DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/devil-dockerlabs-intermediate.md)
+  * [Usersearch DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/usersearch-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
