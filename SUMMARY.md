@@ -282,6 +282,10 @@
 
 * [Instalar SPSS full gratis (crack)](instalar-spss-full-gratis-crack/instalar-spss-full-gratis-crack.md)
 
+## 🔋Crear USB AutoRun
+
+* [Crear USB AutoRun (Emular Rubber Ducky)](crear-usb-autorun/crear-usb-autorun-emular-rubber-ducky.md)
+
 ***
 
 * [The hacker's book](the-hackers-book.md)
