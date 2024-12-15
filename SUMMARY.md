@@ -360,6 +360,7 @@
   * [Write Up Builder HackTheBox](hackthebox-writeups/hackthebox/write-up-builder-hackthebox.md)
   * [Write Up BoardLight HackTheBox](hackthebox-writeups/hackthebox/write-up-boardlight-hackthebox.md)
   * [Write Up Bizness HackTheBox](hackthebox-writeups/hackthebox/write-up-bizness-hackthebox.md)
+  * [Write Up Chemistry HackTheBox](hackthebox-writeups/hackthebox/write-up-chemistry-hackthebox.md)
 
 ## 🐳 DockerLabs (Writeup's)
 
