@@ -95,13 +95,8 @@ PORT    STATE SERVICE     VERSION
 | ssh-hostkey: 
 |   256 aa:df:30:8b:17:c5:3c:80:1c:88:f1:f8:c0:ac:cc:fa (ECDSA)
 |_  256 aa:6a:33:65:fc:54:b7:8f:98:ff:1f:3d:79:a3:05:3c (ED25519)
-80/tcp  open  http        Apache httpd
-|_http-title: 403 Forbidden
-|_http-server-header: Apache
 139/tcp open  netbios-ssn Samba smbd 4.6.2
 445/tcp open  netbios-ssn Samba smbd 4.6.2
-MAC Address: 02:42:AC:15:00:02 (Unknown)
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Host script results:
 | smb2-security-mode: 
