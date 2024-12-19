@@ -384,6 +384,7 @@
   * [ChatMe DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/chatme-dockerlabs-intermediate.md)
   * [Devil DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/devil-dockerlabs-intermediate.md)
   * [Usersearch DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/usersearch-dockerlabs-intermediate.md)
+  * [Insecure DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/insecure-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
