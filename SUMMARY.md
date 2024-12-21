@@ -387,6 +387,7 @@
   * [Insecure DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/insecure-dockerlabs-hard.md)
   * [Debugme DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/debugme-dockerlabs-hard.md)
   * [Forgotten\_portal DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/forgotten_portal-dockerlabs-intermediate.md)
+  * [Elevator DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/elevator-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
