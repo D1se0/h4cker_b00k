@@ -389,6 +389,7 @@
   * [Forgotten\_portal DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/forgotten_portal-dockerlabs-intermediate.md)
   * [Elevator DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/elevator-dockerlabs-easy.md)
   * [Stack DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/stack-dockerlabs-intermediate.md)
+  * [Hedgehog DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/hedgehog-dockerlabs-very-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
