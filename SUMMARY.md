@@ -390,6 +390,7 @@
   * [Elevator DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/elevator-dockerlabs-easy.md)
   * [Stack DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/stack-dockerlabs-intermediate.md)
   * [Hedgehog DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/hedgehog-dockerlabs-very-easy.md)
+  * [Report DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/report-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
