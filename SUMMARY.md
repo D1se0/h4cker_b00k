@@ -392,6 +392,7 @@
   * [Hedgehog DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/hedgehog-dockerlabs-very-easy.md)
   * [Report DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/report-dockerlabs-intermediate.md)
   * [Reverse DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/reverse-dockerlabs-intermediate.md)
+  * [Reflection DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/reflection-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 

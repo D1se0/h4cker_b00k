@@ -457,7 +457,7 @@ URL = http://localhost:8080
 
 Podremos ver la pagina que estabamos haciendo con un `curl` viendose algo tal que asi:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Si vemos las versiones de la pagina web con el siguiente comando:
 
