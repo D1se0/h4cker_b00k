@@ -428,3 +428,4 @@
   * [CTF Darkweb Hard](my-ctfs/ctfs/ctf-darkweb-hard.md)
   * [CTF Flow Hard](my-ctfs/ctfs/ctf-flow-hard.md)
   * [CTF Sender Intermediate](my-ctfs/ctfs/ctf-sender-intermediate.md)
+  * [CTF Cracker Intermediate](my-ctfs/ctfs/ctf-cracker-intermediate.md)

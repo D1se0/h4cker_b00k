@@ -4,7 +4,7 @@ Por ejemplo si hemos identificado una direccion IP de dicha empresa o usuario, p
 
 Podremos añadirle una relacion a `persona` con el nombre de `mantiene el host` y dandole click en la entidad de `IPv4 Address`, podremos ver que en la lista de transformadores nos aparece el transformador llamado `shodan`.
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 Por lo que abriremos la interfaz y para ver si tiene vulnerabilidades esa IP, podremos irnos a la seccion de `Vulnerabilities Details` y seleccionamos la unica opcion que hay, esto lo que hara sera reportarnos si hay vulnerabilidades asociadas a dicha IP.
 
