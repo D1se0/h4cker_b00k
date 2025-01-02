@@ -393,6 +393,7 @@
   * [Report DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/report-dockerlabs-intermediate.md)
   * [Reverse DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/reverse-dockerlabs-intermediate.md)
   * [Reflection DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/reflection-dockerlabs-easy.md)
+  * [Spain DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/spain-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
