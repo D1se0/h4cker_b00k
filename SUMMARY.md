@@ -402,6 +402,7 @@
   * [SecretJenkins DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/secretjenkins-dockerlabs-easy.md)
   * [Backend DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/backend-dockerlabs-easy.md)
   * [Eclipse DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/eclipse-dockerlabs-intermediate.md)
+  * [Cachopo DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/cachopo-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
