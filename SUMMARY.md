@@ -401,6 +401,7 @@
   * [PyRed DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/pyred-dockerlabs-intermediate.md)
   * [SecretJenkins DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/secretjenkins-dockerlabs-easy.md)
   * [Backend DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/backend-dockerlabs-easy.md)
+  * [Eclipse DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/eclipse-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
@@ -437,3 +438,4 @@
   * [CTF Flow Hard](my-ctfs/ctfs/ctf-flow-hard.md)
   * [CTF Sender Intermediate](my-ctfs/ctfs/ctf-sender-intermediate.md)
   * [CTF Cracker Intermediate](my-ctfs/ctfs/ctf-cracker-intermediate.md)
+  * [CTF Express Intermediate](my-ctfs/ctfs/ctf-express-intermediate.md)
