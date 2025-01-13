@@ -407,6 +407,7 @@
   * [Extraviado DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/extraviado-dockerlabs-easy.md)
   * [DockHackLab DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/dockhacklab-dockerlabs-intermediate.md)
   * [SummerVibes DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/summervibes-dockerlabs-hard.md)
+  * [WalkingCMS DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/walkingcms-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
