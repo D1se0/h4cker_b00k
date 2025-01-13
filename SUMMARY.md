@@ -404,6 +404,7 @@
   * [Eclipse DockerLabs (intermediate)](dockerlabs-writeups/dockerlabs/eclipse-dockerlabs-intermediate.md)
   * [Cachopo DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/cachopo-dockerlabs-intermediate.md)
   * [Fooding DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/fooding-dockerlabs-intermediate.md)
+  * [Extraviado DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/extraviado-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
