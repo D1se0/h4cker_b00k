@@ -406,6 +406,7 @@
   * [Fooding DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/fooding-dockerlabs-intermediate.md)
   * [Extraviado DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/extraviado-dockerlabs-easy.md)
   * [DockHackLab DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/dockhacklab-dockerlabs-intermediate.md)
+  * [SummerVibes DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/summervibes-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
