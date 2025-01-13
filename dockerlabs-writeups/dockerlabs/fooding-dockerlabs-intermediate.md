@@ -176,7 +176,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 33.53 seconds
 ```
 
-Si nos vamos a los demas puertos no habra nada interesante, pero si ingresamos en el siguiente puerto:
+Si nos vamos a los demas puertos no habra nada interesante, pero si ingresamos en el siguiente puerto.
 
 ```
 URL = http://172.17.0.2:8161/
