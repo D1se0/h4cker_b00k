@@ -410,6 +410,7 @@
   * [WalkingCMS DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/walkingcms-dockerlabs-easy.md)
   * [Patriaquerida DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/patriaquerida-dockerlabs-easy.md)
   * [Psycho DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/psycho-dockerlabs-easy.md)
+  * [Picadilly DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/picadilly-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
