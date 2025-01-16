@@ -413,6 +413,7 @@
   * [Picadilly DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/picadilly-dockerlabs-easy.md)
   * [Anonymouspingu DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/anonymouspingu-dockerlabs-easy.md)
   * [Veneno DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/veneno-dockerlabs-intermediate.md)
+  * [DoubleTrouble DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/doubletrouble-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
