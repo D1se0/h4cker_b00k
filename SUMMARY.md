@@ -450,3 +450,4 @@
   * [CTF Sender Intermediate](my-ctfs/ctfs/ctf-sender-intermediate.md)
   * [CTF Cracker Intermediate](my-ctfs/ctfs/ctf-cracker-intermediate.md)
   * [CTF Express Intermediate](my-ctfs/ctfs/ctf-express-intermediate.md)
+  * [CTF CineHack Intermediate](my-ctfs/ctfs/ctf-cinehack-intermediate.md)
