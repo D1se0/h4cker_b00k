@@ -6,7 +6,7 @@ URL = [Pagina GitHub](https://github.com)
 
 Si nos vamos algun perfil de algun usuario al que queremos investigar (Doxear) y nos vamos en la parte de `Repositorios` para ver sus repositorios, nos iremos a los mas antiguos para asegurarnos que no estan muy bien protegidos, por lo que entrariamos a dicho `repositorio`, dentro de el veremos una opcion llamada `<NUMBER> Commits` que sera el numero de actualizaciones que le habra echo al repositorio:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esto dependera del `repositorio`, si le pinchamos y vamos dentro, veremos algunos que estan verificados y otros que no, los `verificados` suelen tener mas proteccion, pero igualmente podremos ver informacion, por lo que probaremos a entrar en algun verificado de la siguiente forma.
 

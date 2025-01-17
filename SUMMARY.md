@@ -414,6 +414,10 @@
   * [Anonymouspingu DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/anonymouspingu-dockerlabs-easy.md)
   * [Veneno DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/veneno-dockerlabs-intermediate.md)
   * [DoubleTrouble DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/doubletrouble-dockerlabs-hard.md)
+  * [FindYouStyle DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/findyoustyle-dockerlabs-easy.md)
+  * [Move DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/move-dockerlabs-easy.md)
+  * [Los 40 Ladrones DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/los-40-ladrones-dockerlabs-easy.md)
+  * [Library DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/library-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 

@@ -191,7 +191,7 @@ Password: admin
 
 Y veremos que estaremos dentro de forma autenticada:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es un tipo de software, por lo que veremos que version es y si tuviera algun exploit.
 
