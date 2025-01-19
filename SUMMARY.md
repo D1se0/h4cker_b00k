@@ -419,6 +419,7 @@
   * [Los 40 Ladrones DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/los-40-ladrones-dockerlabs-easy.md)
   * [Library DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/library-dockerlabs-easy.md)
   * [NorC DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/norc-dockerlabs-hard.md)
+  * [Predictable DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/predictable-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
