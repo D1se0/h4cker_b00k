@@ -421,6 +421,8 @@
   * [NorC DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/norc-dockerlabs-hard.md)
   * [Predictable DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/predictable-dockerlabs-hard.md)
   * [Winterfell DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/winterfell-dockerlabs-easy.md)
+  * [Pntopntobarra DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pntopntobarra-dockerlabs-easy.md)
+  * [ConsoleLog DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/consolelog-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
