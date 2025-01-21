@@ -459,3 +459,4 @@
   * [CTF Cracker Intermediate](my-ctfs/ctfs/ctf-cracker-intermediate.md)
   * [CTF Express Intermediate](my-ctfs/ctfs/ctf-express-intermediate.md)
   * [CTF CineHack Intermediate](my-ctfs/ctfs/ctf-cinehack-intermediate.md)
+  * [CTF LifeOrDead Hard](my-ctfs/ctfs/ctf-lifeordead-hard.md)
