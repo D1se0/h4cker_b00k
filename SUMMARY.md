@@ -423,6 +423,7 @@
   * [Winterfell DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/winterfell-dockerlabs-easy.md)
   * [Pntopntobarra DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pntopntobarra-dockerlabs-easy.md)
   * [ConsoleLog DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/consolelog-dockerlabs-easy.md)
+  * [Queuemedic DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
