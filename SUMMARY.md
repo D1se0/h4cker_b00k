@@ -424,6 +424,7 @@
   * [Pntopntobarra DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pntopntobarra-dockerlabs-easy.md)
   * [ConsoleLog DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/consolelog-dockerlabs-easy.md)
   * [Queuemedic DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard.md)
+  * [Stranger DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/stranger-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
