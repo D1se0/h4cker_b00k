@@ -426,6 +426,7 @@
   * [Queuemedic DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/queuemedic-dockerlabs-hard.md)
   * [Stranger DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/stranger-dockerlabs-intermediate.md)
   * [WhereIsMyWebShell DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/whereismywebshell-dockerlabs-easy.md)
+  * [Insanity DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
