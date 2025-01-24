@@ -425,6 +425,8 @@ Info:
 
 Veremos que es de `136`.
 
+> Ahora de aqui para abajo sera todo dentro de la maquina victima, lo de antes solamente era en la maquina `host` para sacar el `offset`.
+
 ### Buscar la dirección de memoria `/bin/sh`
 
 ```shell
