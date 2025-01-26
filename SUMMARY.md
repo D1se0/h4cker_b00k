@@ -428,6 +428,7 @@
   * [WhereIsMyWebShell DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/whereismywebshell-dockerlabs-easy.md)
   * [Insanity DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/insanity-dockerlabs-hard.md)
   * [NodeClimb DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/nodeclimb-dockerlabs-easy.md)
+  * [MyBB DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/mybb-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
