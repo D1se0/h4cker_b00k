@@ -431,6 +431,9 @@
   * [MyBB DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/mybb-dockerlabs-intermediate.md)
   * [Seeker DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/seeker-dockerlabs-intermediate.md)
   * [sjd DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/sjd-dockerlabs-very-easy.md)
+  * [Hiddencat DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/hiddencat-dockerlabs-easy.md)
+  * [Verdejo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/verdejo-dockerlabs-easy.md)
+  * [ChocolateLovers DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/chocolatelovers-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
