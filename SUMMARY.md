@@ -430,6 +430,7 @@
   * [NodeClimb DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/nodeclimb-dockerlabs-easy.md)
   * [MyBB DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/mybb-dockerlabs-intermediate.md)
   * [Seeker DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/seeker-dockerlabs-intermediate.md)
+  * [sjd DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/sjd-dockerlabs-very-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
