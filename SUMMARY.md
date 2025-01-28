@@ -434,6 +434,7 @@
   * [Hiddencat DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/hiddencat-dockerlabs-easy.md)
   * [Verdejo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/verdejo-dockerlabs-easy.md)
   * [ChocolateLovers DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/chocolatelovers-dockerlabs-easy.md)
+  * [Pinguinazo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pinguinazo-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
