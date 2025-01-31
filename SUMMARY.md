@@ -437,6 +437,8 @@
   * [Pinguinazo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pinguinazo-dockerlabs-easy.md)
   * [Vendetta DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/vendetta-dockerlabs-easy.md)
   * [Pequenas-mentirosas DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pequenas-mentirosas-dockerlabs-easy.md)
+  * [Balulero DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/balulero-dockerlabs-easy.md)
+  * [Whoiam DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/whoiam-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
