@@ -439,6 +439,7 @@
   * [Pequenas-mentirosas DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/pequenas-mentirosas-dockerlabs-easy.md)
   * [Balulero DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/balulero-dockerlabs-easy.md)
   * [Whoiam DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/whoiam-dockerlabs-easy.md)
+  * [Apolos DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/apolos-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
