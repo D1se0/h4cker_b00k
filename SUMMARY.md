@@ -481,3 +481,4 @@
   * [CTF Express Intermediate](my-ctfs/ctfs/ctf-express-intermediate.md)
   * [CTF CineHack Intermediate](my-ctfs/ctfs/ctf-cinehack-intermediate.md)
   * [CTF LifeOrDead Hard](my-ctfs/ctfs/ctf-lifeordead-hard.md)
+  * [CTF TpRoot Very Easy](my-ctfs/ctfs/ctf-tproot-very-easy.md)
