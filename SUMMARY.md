@@ -449,6 +449,9 @@
   * [Trust DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/trust-dockerlabs-very-easy.md)
   * [Firsthacking DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/firsthacking-dockerlabs-very-easy.md)
   * [BreakMySSH DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/breakmyssh-dockerlabs-very-easy.md)
+  * [Borazuwarahctf DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/borazuwarahctf-dockerlabs-very-easy.md)
+  * [Vacaciones DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/vacaciones-dockerlabs-very-easy.md)
+  * [Obsession DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/obsession-dockerlabs-very-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
