@@ -452,6 +452,7 @@
   * [Borazuwarahctf DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/borazuwarahctf-dockerlabs-very-easy.md)
   * [Vacaciones DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/vacaciones-dockerlabs-very-easy.md)
   * [Obsession DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/obsession-dockerlabs-very-easy.md)
+  * [Swiss DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/swiss-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
