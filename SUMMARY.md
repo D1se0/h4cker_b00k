@@ -453,6 +453,7 @@
   * [Vacaciones DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/vacaciones-dockerlabs-very-easy.md)
   * [Obsession DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/obsession-dockerlabs-very-easy.md)
   * [Swiss DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/swiss-dockerlabs-intermediate.md)
+  * [Internship DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/internship-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
