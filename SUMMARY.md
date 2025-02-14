@@ -454,6 +454,7 @@
   * [Obsession DockerLabs (Very Easy)](dockerlabs-writeups/dockerlabs/obsession-dockerlabs-very-easy.md)
   * [Swiss DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/swiss-dockerlabs-intermediate.md)
   * [Internship DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/internship-dockerlabs-easy.md)
+  * [Canario DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/canario-dockerlabs-hard.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
