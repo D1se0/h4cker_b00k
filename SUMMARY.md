@@ -455,6 +455,7 @@
   * [Swiss DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/swiss-dockerlabs-intermediate.md)
   * [Internship DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/internship-dockerlabs-easy.md)
   * [Canario DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/canario-dockerlabs-hard.md)
+  * [ApiRoot DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/apiroot-dockerlabs-intermediate.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
