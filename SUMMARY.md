@@ -456,6 +456,7 @@
   * [Internship DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/internship-dockerlabs-easy.md)
   * [Canario DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/canario-dockerlabs-hard.md)
   * [ApiRoot DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/apiroot-dockerlabs-intermediate.md)
+  * [Amor DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/amor-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
