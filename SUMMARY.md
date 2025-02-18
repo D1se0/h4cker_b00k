@@ -457,6 +457,7 @@
   * [Canario DockerLabs (Hard)](dockerlabs-writeups/dockerlabs/canario-dockerlabs-hard.md)
   * [ApiRoot DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/apiroot-dockerlabs-intermediate.md)
   * [Amor DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/amor-dockerlabs-easy.md)
+  * [Walking Dead DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/walking-dead-dockerlabs-easy.md)
 
 ## 🕵️‍♂️TryHackMe (Writeup's)
 
