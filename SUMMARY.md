@@ -1,6 +1,13 @@
 # Table of contents
 
 * [Whoami](README.md)
+
+## ARTIUCLO
+
+* [Tratamiento para la TTY](artiuclo/tratamiento-para-la-tty.md)
+
+***
+
 * [PortSwigger Apuntes](portswigger-apuntes.md)
 
 ## 📝PortSwigger Notes
