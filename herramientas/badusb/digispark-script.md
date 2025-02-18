@@ -1,4 +1,19 @@
-# Digispark Tutorial (Programandolo)
+---
+icon: gear-complex-code
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Digispark (Script)
 
 Lo que primero tendremos que hacer es conectarlo a nuestro equipo, utiliza un tipo A normal, por lo que nos servira con algun puerto de tipo A del equipo, una vez conectado, tendremos que desacragarnos el software de `Arduino IDE`.
 

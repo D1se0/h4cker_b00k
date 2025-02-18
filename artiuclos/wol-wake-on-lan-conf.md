@@ -1,4 +1,19 @@
-# Configuración de WOL (Wake On Lan)
+---
+icon: power-off
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# WOL (Wake On Lan) Conf
 
 Si por ejemplo queremos encender nuestro PC desde un movil o desde un microcontrolador, podremos hacerlo mediante un llamado `Paquete Magico` que se le envia al `Router` y mediante la identificacion de la MAC del PC viaja por el cable `Ethernet` hasta el PC activando el mismo.
 
@@ -6,13 +21,13 @@ Si por ejemplo queremos encender nuestro PC desde un movil o desde un microcontr
 
 Tenemos que estar en la misma red con el PC y el movil, el PC tiene que estar por cable al mismo `Router` desde donde esta conectado el movil con el `Wifi` del mismo `Router`.
 
-## Activar opcion WOL en la BIOS
+## <mark style="color:purple;">Activar opcion WOL en la BIOS</mark>
 
 Nos meteremos a nuestra BIOS con la tecla correspondiente al equipo (`F2, F11, Supr, etc...`) mientras se esta iniciando el sistema, una vez estando dentro de la BIOS tendremos que irnos a opciones avanzadas u opciones de alimentacion dependiendo de la BIOS que tengamos y en esas opciones deberemos de ver una opcion llamada algo parecido como `Wake On Lan`, `Power Management`, `Network Boot`, etc... Opciones parecidas a las mencionadas y si aparece como `Disable` tendremos que ponerlo en `Enable`.
 
 Una vez echo eso, guardaremos la configuracion y saldremos de la BIOS entrando al S.O.
 
-## Configuracion en Windows
+## <mark style="color:purple;">Configuracion en Windows</mark>
 
 Abrir `Administrador de dispositivos`, nos dirigimos a la seccion llamada `Adaptadores de red` y seleccionamos nuestro adaptador de red (Que me refiero a nuestro cable `Ethernet`), entramos a las propiedades del mismo con click derecho, nos vamos a la pestaña `Administracion de energia` y marcamos las siguientes casillas:
 
@@ -29,7 +44,7 @@ ipconfig /all
 
 En esta informacion buscaremos nuestro adaptador de red y apuntaremos la direccion MAC (Ej. `A8-CC-L1-F6-55-C1`) del equipo, tambien nos vendra bien saber la direccion IP con la que esta asociada para posteriormente sacar la direccion del `Broadcast` (Ej. `192.168.1.255`)
 
-## Script para el movil
+## <mark style="color:purple;">Script para el movil</mark>
 
 Ahora crearemos un script en `python3` para el movil, para que desde el script de forma automatizada envie el `paquete magico` al `router` y con la direccion `MAC` vaya directo por el cable `Ethernet` hasta que llegue a encender el equipo.
 

@@ -1,10 +1,25 @@
-# Sticky Keys Hack (Técnica Windows)
+---
+icon: shield-slash
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Explicación de la técnica
+# Sticky Keys Hack
+
+## <mark style="color:purple;">Explicación de la técnica</mark>
 
 Esta tecnica se utiliza para que cuando estas en un login de windows y no sabes la contraseña de dicho usuario o quieres de alguna forma bypassear el password del usuario, intercambias el ejecutable de la tecla especial (Esta se activa dando 5 veces al `Shift` de seguido) y que en vez de aparezca el recuadro de la tecla especial, aparezca un `cmd` autenticada como `administrador`, con lo cual desde ahi cambiar la contraseña al usuario y entrarias.
 
-## Pendrive Boot Windows 10
+## <mark style="color:purple;">Pendrive Boot Windows 10</mark>
 
 Primero haremos un `Pendrive Boot` con Windows 10 con la propia herramienta de `Windows Tool` para generar un `Pendrive Boot` con el `Windows 10`.
 
@@ -20,7 +35,7 @@ Ese pendrive se borrara entero (Formateara) y se instalara la herramienta minimo
 
 Le daremos a `Siguiente` hasta llegar a la opcion de `Actualizar en este equipo` y `Exportarlo en una ISO, Pendrive, etc...` seleccionaremos la segunda opcion (ISO, Pendrive, etc...), deberia de detectar automaticamente el pendrive, pero seleccionaremos el pendrive que queremos formatear para transformarlo en un `Pendrive Boot` con windows 10, seguiremos la propia guia que ya da windows con todo por defecto.
 
-## Configuracion de Sticky Key
+## <mark style="color:purple;">Configuracion de Sticky Key</mark>
 
 Una vez finalizado lo anterior, insertaremos el `Pendrive Boot` en el PC donde queremos hacer dicha tecnica, entraremos a la BIOS con la tecla `F11, Supr, F10, etc...` dependiendo de que PC sea, una vez dentro cambiaremos las opciones de arranque para que se inicie con el `Pendrive Boot`, una vez echo eso reiniciaremos el PC.
 
@@ -44,7 +59,7 @@ exit
 
 Reiniciaremos el equipo, pero antes sacar el `Pendrive Boot` del slot USB y nos metera de normal al windows.
 
-## Efectuar tecnica Sticky Key
+## <mark style="color:purple;">Efectuar tecnica Sticky Key</mark>
 
 Estando en el login de windows y habiendo echo todo lo anterior pulsaremos 5 veces de seguido la tecla `Shift`, esto nos abrira el `cmd` autenticado como `administrador` y podremos cambiar el password al usuario con el que queramos entrar de la siguiente forma:
 
@@ -54,7 +69,7 @@ net user <USER> <PASSWORD>
 
 Y con esto ya se habria cambiado correctamente el password del usuario elegido, solo tendremos que ingresar el nuevo password y listo, estariamos dentro ya.
 
-## Restaurar el archivo
+## <mark style="color:purple;">Restaurar el archivo</mark>
 
 Para dejar todo como estaba antes, abriremos el `PowerShell` como `Administrador` y escribiremos lo siguiente:
 

@@ -1,3 +1,18 @@
+---
+icon: linux
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Bypass Login Linux (GRUB)
 
 Para `bypassear` un login de practicamente cualquier `linux` tendra que ser mediante el `GRUP` que es el metodo de arranque que utilizan generalmente los sistemas `linux` en formato de un menu, por lo que para que aparezca este menu en muchas ocasiones aparece de forma automatica y en otras como por ejemplo en `hipervisores` donde tenemos maquinas virtuales `linux` tendremos que pulsar `F2` y hacer `click iquierdo` a la vez nada mas se esta arrancando, en otros casos se nos abrira la `BIOS` y le tendremos que dar al `F10` para cerrarlo, seguidamente cuando se cierre darle `click iquierdo` con esto aparecera el `GRUB` de `linux`, tendremos que ver algo tal que esto:
@@ -41,7 +56,7 @@ passwd: password updated successfully
 
 Veremos que con esto ya habremos modificado la contraseña con exito, por lo que si ahora reiniciamos la maquina y probamos las credenciales que hemos modificado como `root` veremos que nos podremos logear y habremos `bypasseado` de alguna manera este login sin sabernos la contraseña anterior.
 
-## Mitigación de esta técnica
+## <mark style="color:purple;">Mitigación de esta técnica</mark>
 
 Para mitigar y evitar esto, tendremos que establecer un bloqueo en el `GRUB` para que solo la persona con permisos y que este autenticada pueda editarlo.
 

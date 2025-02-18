@@ -16,6 +16,10 @@
 * [Kernel Conf Exploit](artiuclos/kernel-conf-exploit.md)
 * [RevrseShell Oculta en windows](artiuclos/revrseshell-oculta-en-windows.md)
 * [Crear CTF en Docker](artiuclos/crear-ctf-en-docker.md)
+* [Crear Dominio y Subdominio en apache2](crear-dominio-y-subdominio-en-apache2/crear-dominio-y-subdominio-en-apache2-pata-ctfs.md)
+* [Sticky Keys Hack](artiuclos/sticky-keys-hack.md)
+* [Bypass Login Linux (GRUB)](artiuclos/bypass-login-linux-grub.md)
+* [WOL (Wake On Lan) Conf](artiuclos/wol-wake-on-lan-conf.md)
 
 ## HERRAMIENTAS
 
@@ -27,45 +31,23 @@
 * [Phishing](herramientas/phishing/README.md)
   * [Phishing - Tools](herramientas/phishing/phishing-tools.md)
   * [Phishing Técnicas y Resultados](herramientas/phishing/phishing_techniques-and-results.md)
+* [BadUSB](herramientas/badusb/README.md)
+  * [Digispark/USB Ninja (Función)](herramientas/badusb/digispark-usb-ninja-funcion.md)
+  * [Digispark (Script)](herramientas/badusb/digispark-script.md)
+  * [Lista de signos Digispark](herramientas/badusb/lista-de-signos-digispark.md)
+  * [Bash Bunny](herramientas/badusb/bash-bunny.md)
+  * [ScreenCrab](herramientas/badusb/screencrab.md)
+  * [KeyCroc](herramientas/badusb/keycroc.md)
+  * [Rubber Ducky](herramientas/badusb/rubber-ducky.md)
 * [Hacking ActiveDirectory](herramientas/hacking-activedirectory.md)
 
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
 
-## 🌍Crear dominio y subdominio en apache2
-
-* [Crear dominio y subdominio en apache2 pata CTF's](crear-dominio-y-subdominio-en-apache2/crear-dominio-y-subdominio-en-apache2-pata-ctfs.md)
-
 ## ✅Activación Office Gratis
 
 * [Activación de Office Permanente gratis](activacion-office-gratis/activacion-de-office-permanente-gratis.md)
-
-## 💡Sticky Keys Hack (Técnica Windows)
-
-* [Sticky Keys Hack (Técnica Windows)](sticky-keys-hack-tecnica-windows/sticky-keys-hack-tecnica-windows.md)
-
-## 🔧Bypass Login Linux (GRUP)
-
-* [Bypass Login Linux (GRUB)](bypass-login-linux-grup/bypass-login-linux-grub.md)
-
-## 🔌Configuración de WOL (Wake On Lan)
-
-* [Configuración de WOL (Wake On Lan)](configuracion-de-wol-wake-on-lan/configuracion-de-wol-wake-on-lan.md)
-
-## ⚡DigiSpark y USB Ninja (Función)
-
-* [DigiSpark y USB Ninja (Función)](digispark-y-usb-ninja-funcion/digispark-y-usb-ninja-funcion.md)
-* [Digispark Tutorial (Programandolo)](digispark-y-usb-ninja-funcion/digispark-tutorial-programandolo.md)
-* [Lista de signos Digispark (Caracteres, simbolos, etc...)](digispark-y-usb-ninja-funcion/lista-de-signos-digispark-caracteres-simbolos-etc....md)
-
-## 🧰Hack5 Tools Info
-
-* [Hack5 Tools](hack5-tools-info/hack5-tools/README.md)
-  * [Bash Bunny (Hack5) Función](hack5-tools-info/hack5-tools/bash-bunny-hack5-funcion.md)
-  * [ScreenCrab (Hack5) Función](hack5-tools-info/hack5-tools/screencrab-hack5-funcion.md)
-  * [KeyCroc (Hack5) Función](hack5-tools-info/hack5-tools/keycroc-hack5-funcion.md)
-  * [USB Rubber Ducky (Hack5) Función](hack5-tools-info/hack5-tools/usb-rubber-ducky-hack5-funcion.md)
 
 ## 🪟 Active Directoy (Hacking)
 

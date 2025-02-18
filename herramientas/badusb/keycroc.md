@@ -1,8 +1,23 @@
-# KeyCroc (Hack5) Función
+---
+icon: signature-lock
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# KeyCroc
 
 Este dispositivo basicamente lo que hace es registrar las pulsaciones de un teclado en el que conectaremos el teclado al puerto USB del dispositivo y con el otro puerto USB al equipo para que haga de intermediario, a parte de tener herramientas de pentesting, etc... Pero para ponerlo en `Modo armamento` y poder convertirlo en una `Unidad Flash` de forma temporal con la que podamos trabajar para programarle cualquier cosa tendremos con un alfiler o un pin introducirlo en un mini agujerito del dispositivo y con esto ya estaria de forma temporal en `Modo armamento`.
 
-## Función del KeyCroc
+## <mark style="color:purple;">Función del KeyCroc</mark>
 
 Su funcion basica que viene por defecto sin programar nada, es la de un `KeyLogger`, por lo que si lo conectamos como dije anteriormente y el usuario teclea lo que sea, esto se quedara almacenado en el dispositivo y despues poniendolo en `Modo armamento` podremos extraer dicha informacion de el.
 
@@ -30,7 +45,7 @@ Esto lo que hace es que cuando detecte el dispositivo que hemos escrito la palab
 
 Por lo que en vez de escribir palabras se podria utilizar para que cuando detecte cierta palabra se cargue alguna carga util o algun comando en especifico. (Esto se repite las veces en la que el usuario ponga la palabra)
 
-## Control remoto de teclado con KeyCroc
+## <mark style="color:purple;">Control remoto de teclado con KeyCroc</mark>
 
 Lo que se podria hacer es que cuando se conecte el dispositivo hacer que este mismo se conecte a la vez a un `punto de acceso` (Red Wifi) la cual se podria estar gestionando con otro dispositivo externo como un movil (Parte del atacante) para esto se le tiene que indicar cual es el nombre de la `Wifi` y la contraseña de la misma, todo esto en los archivos de configuracion para que funcione.
 
@@ -38,7 +53,7 @@ La idea es que por `DHCP` se le va asignar una IP al `KeyCroc`, pero no podremos
 
 Una vez que ya sepamos cual es la IP habiendo echo todo lo anterior, nos conectaremos desde el movil al `KeyCroc` para especificar cuales son las teclas que queremos que se presionen de forma remota.
 
-### Configuración de KeyCroc (Teclado remoto)
+### <mark style="color:purple;">Configuración de KeyCroc (Teclado remoto)</mark>
 
 Estando el dispositivo en `Modo armamento` nos iremos a la carpeta llamada `library`, dentro de ella nos iremos a `examples` y de ahi nos copiaremos el archivo llamado `example_crocctl-ipinfo.txt`, una vez copiado, lo pegaremos en la carpeta de `payloads` y borraremos el anterior `payload.txt` que creamos.
 

@@ -1,4 +1,19 @@
-# ScreenCrab (Hack5) Función
+---
+icon: screencast
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# ScreenCrab
 
 Es un dispositivo que se utiliza pata capturar la pantalla de un equipo Victima, ya sea mediante capturas o video, pudiendo elegir la calidad de cada una de ellas, se hace la captura de una forma interna sin utilizar herramentas del sistema, por lo que es super sigiloso y nos afecta al sistema en tema de lentitud ni nada parecido.
 
@@ -6,7 +21,7 @@ Es un dispositivo que se utiliza pata capturar la pantalla de un equipo Victima,
 
 Para que funcione y este alimentado el dispositivo, tendremos que tenerlo conectado en la ranura del `USB tipo C` a una toma de corriente.
 
-## Conexión/Configuración para que funcione
+## <mark style="color:purple;">Conexión/Configuración para que funcione</mark>
 
 Lo que necesitaremos sera un cable `HDMI` extra del que ya venga en el monitor de la maquina victima, una `Micro SD` que conectaremos al dispositivo para que se guarde las capturas y los videos.
 

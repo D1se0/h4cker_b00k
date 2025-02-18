@@ -1,8 +1,23 @@
-# USB Rubber Ducky (Hack5) Función
+---
+icon: duck
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Rubber Ducky
 
 Es un USB aparentemente normal, pero en su interior tiene un hardware que simula ser un teclado, por lo que cuando se conecta a un dispositivo, este lo reconoce como un teclado y permite ejecutar scripts escribiendolo todo de forma automatica como un teclado programable a tu manera.
 
-## Explicación practica
+## <mark style="color:purple;">Explicación practica</mark>
 
 Podremos programar el USB con su propio lenguaje de script que esta establecido en la siguiente pagina:
 

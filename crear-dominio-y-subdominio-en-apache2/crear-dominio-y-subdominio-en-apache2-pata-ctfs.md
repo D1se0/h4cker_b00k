@@ -1,6 +1,21 @@
-# Crear dominio y subdominio en apache2 pata CTF's
+---
+icon: network-wired
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Dominio con apache2
+# Crear Dominio y Subdominio en apache2
+
+## <mark style="color:purple;">Dominio con apache2</mark>
 
 Primero vamos a crear los archivos correspondientes paso a paso para que esto funcione.
 
@@ -90,7 +105,7 @@ nano /etc/hosts
 
 Lo guardamos y ahora si deberiamos de ver su contenido.
 
-## Subdominio con apache2
+## <mark style="color:purple;">Subdominio con apache2</mark>
 
 El proceso sera similar al anterior, crearemos el archivo de configuracion que tendra el subdominio.
 

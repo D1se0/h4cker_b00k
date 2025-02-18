@@ -1,8 +1,23 @@
-# DigiSpark y USB Ninja (Función)
+---
+icon: newspaper
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Digispark/USB Ninja (Función)
 
 En esta prueba veremos a como desbloquear el patron de un movil (Patron de numeros) pero ya programado sabiendo el patron y las funcionalidades del mismo una vez estando dentro del movil y las diferencias de los 2.
 
-## DigiSpark General
+## <mark style="color:purple;">DigiSpark General</mark>
 
 ### DigiSpark desbloqueo de patron y escribir una frase de prueba en un bloq de notas (movil)
 
@@ -92,7 +107,7 @@ Podremos ganar acceso al sistema del movil mediante una terminal en nuestro host
 
 O se podria hacer un `KeyLogger` para capturar los pulsos de teclas del patron o de informacion debil.
 
-## USB Ninja + Cable Bluetooth General
+## <mark style="color:purple;">USB Ninja + Cable Bluetooth General</mark>
 
 ### USB Ninja desbloqueo de patron y escribir una frase de prueba en un bloq de notas todo mediante un cable Bluetooth (movil)
 
@@ -172,8 +187,8 @@ Esto lo que hace es desbloquear el movil con el `Boton A` y cuando se presione e
 
 A parte de el texto de prueba, se puede hacer mucho mas como por ejemplo `Reverse Shell` o `KeyLoggers`, tambien la tecnica de las `Stiky Keys`, etc...
 
-URL = [Pagina USB Ninja](https://lab401.com/es-es/products/usbninja?srsltid=AfmBOoq-v9GiW8FI27gS4XAFEIymS1ttCIRpMyqGIhuVpUA9u\_KYtbAK)
+URL = [Pagina USB Ninja](https://lab401.com/es-es/products/usbninja?srsltid=AfmBOoq-v9GiW8FI27gS4XAFEIymS1ttCIRpMyqGIhuVpUA9u_KYtbAK)
 
-## Conclusión final
+## <mark style="color:purple;">Conclusión final</mark>
 
 El USB Ninja + el cable bluetooth es la mejor eleccion ya que a la hora de hacer pentesting en red team es muy eficaz y muchisimo mas discreto, sin embargo el DigiSpark es menos sigiloso y menos variedad de programación ya que es muy limitada.

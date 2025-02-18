@@ -1,4 +1,19 @@
-# Lista de signos Digispark (Caracteres, simbolos, etc...)
+---
+icon: clipboard-list
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Lista de signos Digispark
 
 En el dispositivo `Digispark` hay muchas veces que los simbolos del teclado no los pilla como realmente son, ya que utiliza otro tipo de teclado a diferencia del `QWERTY`, por lo que he creado una lista de simbolos, caracteres, signos, etc... Para que se corresponda con lo que quereis programar en vuestro `Digispark`:
 
