@@ -2,13 +2,9 @@
 
 * [Whoami](README.md)
 
-## ARTIUCLO
+## ARTIUCLOS
 
-* [Tratamiento para la TTY](artiuclo/tratamiento-para-la-tty.md)
-
-***
-
-* [PortSwigger Apuntes](portswigger-apuntes.md)
+* [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
 
 ## 📝PortSwigger Notes
 
@@ -379,7 +375,7 @@
 
 ## 🐳 DockerLabs (Writeup's)
 
-* [DockerLabs](dockerlabs-writeups/dockerlabs/README.md)
+* [Dockerlabs](dockerlabs-writeups/dockerlabs/README.md)
   * [AaguaDeMayo DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/aaguademayo-dockerlabs-easy.md)
   * [Asucar DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/asucar-dockerlabs-intermediate.md)
   * [Bashpariencias DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/bashpariencias-dockerlabs-intermediate.md)

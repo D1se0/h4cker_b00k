@@ -1,4 +1,8 @@
-# DockerLabs
+---
+icon: docker
+---
+
+# Dockerlabs
 
 In this directory I will upload the WriteUps of the DockerLabs platform machines. At DockerLabs, you can download controlled environments in Docker that are automatically deployed with a bash script. These environments are ideal for practicing ethical hacking and pentesting.
 

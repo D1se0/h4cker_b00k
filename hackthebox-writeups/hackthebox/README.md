@@ -1,3 +1,7 @@
+---
+icon: cube
+---
+
 # HackTheBox
 
 In this directory, I will upload detailed write-ups for machines and challenges from **Hack The Box**. Hack The Box provides a range of virtual machines and scenarios focused on penetration testing and cybersecurity skills. Users can engage with these environments to enhance their hacking abilities in realistic settings.

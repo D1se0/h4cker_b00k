@@ -1,2 +1,6 @@
+---
+icon: excavator
+---
+
 # CTF's
 

@@ -1,3 +1,7 @@
+---
+icon: fire
+---
+
 # VulnHub
 
 In this directory, I will upload detailed write-ups for machines from **VulnHub**. VulnHub provides vulnerable virtual machines specifically designed for learning and practicing cybersecurity. Each machine is pre-configured with known vulnerabilities, allowing users to safely experiment and improve their ethical hacking skills.
