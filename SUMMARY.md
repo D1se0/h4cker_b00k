@@ -10,6 +10,7 @@
 * [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
 * [EternalBlue Conf y Explotación](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
 * [BlueKeep Conf y Explotación](artiuclos/bluekeep-conf-y-explotacion.md)
+* [Pass-The-Hash en Metasploit](tecnica-pass-the-hash-en-metasploit/conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash.md)
 
 ## HERRAMIENTAS
 
@@ -29,10 +30,6 @@
 ## 🖥️Rever Shell (payload) oculto en windows
 
 * [Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)](rever-shell-payload-oculto-en-windows/crear-revrseshell-oculta-de-manera-profesional-en-un-archivo-en-windows-.exe-.bat-.ps1.md)
-
-## 🔑Técnica Pass-The-Hash en metasploit
-
-* [Conectarse con SMB mediante el dumpeo de hashes (Pass-The-Hash)](tecnica-pass-the-hash-en-metasploit/conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash.md)
 
 ## 🐧Exploit kernel en Ubuntu
 
