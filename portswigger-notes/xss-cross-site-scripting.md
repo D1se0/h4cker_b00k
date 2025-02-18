@@ -1,3 +1,18 @@
+---
+icon: code
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # XSS (Cross Site Scripting)
 
 ### Lab: Reflected XSS into HTML context with nothing encoded

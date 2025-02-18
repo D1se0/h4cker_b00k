@@ -1,6 +1,21 @@
+---
+icon: syringe
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # SQL Injection
 
-## SQL Injection
+## <mark style="color:purple;">SQL Injection</mark>
 
 URL = https://portswigger.net/web-security/all-labs
 

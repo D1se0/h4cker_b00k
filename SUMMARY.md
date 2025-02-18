@@ -6,10 +6,11 @@
 
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
 
-## 📝PortSwigger Notes
+## HERRAMIENTAS
 
-* [SQL Injection](portswigger-notes/sql-injection.md)
-* [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
+* [HackingWeb](herramientas/hackingweb/README.md)
+  * [SQL Injection](portswigger-notes/sql-injection.md)
+  * [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
 
 ## 📖The hacker's bible
 
