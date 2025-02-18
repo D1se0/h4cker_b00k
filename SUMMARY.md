@@ -6,6 +6,7 @@
 
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
 * [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
+* [File2ban Privilege Escalation](artiuclos/file2ban-privilege-escalation.md)
 
 ## HERRAMIENTAS
 
@@ -16,10 +17,6 @@
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## 🚫File2ban (root)
-
-* [File2ban Privilege Escalation](file2ban-root/file2ban-privilege-escalation.md)
 
 ## 🛠️openssl tool
 
