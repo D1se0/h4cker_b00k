@@ -1,4 +1,5 @@
 ---
+icon: shish-kebab
 layout:
   title:
     visible: true

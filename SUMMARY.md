@@ -18,7 +18,7 @@
   * [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
 * [Phishing](herramientas/phishing/README.md)
   * [Phishing - Tools](herramientas/phishing/phishing-tools.md)
-  * [Phishing\_techniques and results](herramientas/phishing/phishing_techniques-and-results.md)
+  * [Phishing Técnicas y Resultados](herramientas/phishing/phishing_techniques-and-results.md)
 
 ## 📖The hacker's bible
 

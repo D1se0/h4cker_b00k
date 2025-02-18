@@ -1,5 +1,5 @@
 ---
-icon: shish-kebab
+icon: fishing-rod
 layout:
   title:
     visible: true

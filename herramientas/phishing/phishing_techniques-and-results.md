@@ -1,6 +1,20 @@
-# Phishing\_techniques and results
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-### Gophish \[Configuracion]
+# Phishing Técnicas y Resultados
+
+### <mark style="color:purple;">Gophish \[Configuracion]</mark>
 
 Lo primero de todo tendremos que descargar la herramienta de `Gophish` y que cree el servidor donde se aloja la pagina web para poder empezar a configurarla...
 
@@ -252,7 +266,7 @@ o
 rm /var/www/html/*
 ```
 
-### MySQL \[Configuracion de captacion de credenciales]
+### <mark style="color:purple;">MySQL \[Configuracion de captacion de credenciales]</mark>
 
 Instalaremos y configuraremos una base de datos en `mysql` para que cuando inserte las credenciales en la pagina de `phishing` del login se envien automaticamente a la base de datos que crearemos en `mysql`...
 
@@ -5404,7 +5418,7 @@ Una vez estemos aqui ya se habrian escrito las credenciales en la base de datos,
 
 Pero esto estara en local por lo que solo nosotros podremos verlo, para ponerlo de forma publica tunelizando nuestro servidor local de `apache2` a un dominio publico por asi decirlo lo haremos con la herramienta `ngrok`...
 
-### ngrok \[Configuracion]
+### <mark style="color:purple;">ngrok \[Configuracion]</mark>
 
 URL = https://ngrok.com/download
 
