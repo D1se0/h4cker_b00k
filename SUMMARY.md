@@ -11,6 +11,11 @@
 * [EternalBlue Conf y Explotación](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
 * [BlueKeep Conf y Explotación](artiuclos/bluekeep-conf-y-explotacion.md)
 * [Pass-The-Hash en Metasploit](tecnica-pass-the-hash-en-metasploit/conectarse-con-smb-mediante-el-dumpeo-de-hashes-pass-the-hash.md)
+* [Keylogger Automatizado](tecnica-keylogger-automatizada/keylogger-script-automatizado-linux-y-windows.md)
+* [Visualizar Webcam en Windows](artiuclos/visualizar-webcam-en-windows.md)
+* [Kernel Conf Exploit](artiuclos/kernel-conf-exploit.md)
+* [RevrseShell Oculta en windows](artiuclos/revrseshell-oculta-en-windows.md)
+* [Crear CTF en Docker](artiuclos/crear-ctf-en-docker.md)
 
 ## HERRAMIENTAS
 
@@ -22,30 +27,11 @@
 * [Phishing](herramientas/phishing/README.md)
   * [Phishing - Tools](herramientas/phishing/phishing-tools.md)
   * [Phishing Técnicas y Resultados](herramientas/phishing/phishing_techniques-and-results.md)
+* [Hacking ActiveDirectory](herramientas/hacking-activedirectory.md)
 
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## 🖥️Rever Shell (payload) oculto en windows
-
-* [Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)](rever-shell-payload-oculto-en-windows/crear-revrseshell-oculta-de-manera-profesional-en-un-archivo-en-windows-.exe-.bat-.ps1.md)
-
-## 🐧Exploit kernel en Ubuntu
-
-* [Conf Ubuntu 12.04 server (exploit kernel)](exploit-kernel-en-ubuntu/conf-ubuntu-12.04-server-exploit-kernel.md)
-
-## 📹Hackear Webcam en windows (Vulnerabilidad)
-
-* [Visualizar Webcam por metasploit en windows (Vulnerabilidad)](hackear-webcam-en-windows-vulnerabilidad/visualizar-webcam-por-metasploit-en-windows-vulnerabilidad.md)
-
-## ⌨️Técnica Keylogger Automatizada
-
-* [Keylogger Script Automatizado (Linux y Windows)](tecnica-keylogger-automatizada/keylogger-script-automatizado-linux-y-windows.md)
-
-## 📦CTF en docker, importar y automontarla
-
-* [Crear maquina vulnerable docker, importar la misma y automontarla](ctf-en-docker-importar-y-automontarla/crear-maquina-vulnerable-docker-importar-la-misma-y-automontarla.md)
 
 ## 🌍Crear dominio y subdominio en apache2
 

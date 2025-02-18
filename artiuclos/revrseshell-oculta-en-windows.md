@@ -1,6 +1,21 @@
-# Crear RevrseShell oculta de manera profesional en un archivo en windows (.exe .bat .ps1)
+---
+icon: laptop-file
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Forma manual para entender como funciona por dentro
+# RevrseShell Oculta en windows
+
+## <mark style="color:purple;">Forma manual para entender como funciona por dentro</mark>
 
 Vamos a crear el archivo malicioso oculto dentro de uno legitimo, escogeremos cualquier aplicacion que queramos ocultar el codigo malicioso, una vez teniendo la aplicacion haremos lo siguiente.
 
@@ -119,7 +134,7 @@ Server username: vuln-smb\diseo
 
 Por lo que ya tendriamos acceso al sistema de windows mediante una terminal ocultandolo en una aplicacion legitima.
 
-## 2ª Forma mas profesional de hacer lo anterior
+## <mark style="color:purple;">2ª Forma mas profesional de hacer lo anterior</mark>
 
 Vamos a crear el archivo malicioso oculto dentro de uno legitimo, escogeremos cualquier aplicacion que queramos ocultar el codigo malicioso, una vez teniendo la aplicacion haremos lo siguiente.
 
@@ -311,7 +326,7 @@ Server username: NT AUTHORITY\SYSTEM
 
 Veremos que somos el usuario administrador.
 
-## Pasarlo de .bat a .exe
+## <mark style="color:purple;">Pasarlo de .bat a .exe</mark>
 
 Primero nos descargaremos la siguiente herramienta.
 
@@ -327,7 +342,7 @@ En la pestaña `Versioninformations` cragaremos un`.ico` en tal caso de que teng
 
 Una vez hecho todo eso le daremos a `Compilar` y ya estaria listo nuestro `.exe`.
 
-## Implementar ejecuccion en modo administrador
+## <mark style="color:purple;">Implementar ejecuccion en modo administrador</mark>
 
 Si queremos que nuestro `.exe` se ejecute con el modo administrador (Que nos lo pida) haremos lo siguiente.
 
@@ -388,7 +403,7 @@ Microsoft (R) Manifest Tool                                                     
 
 Hecho esto, ya tendriamos nuestro archivo para que solicite ejecutarlo como administrador.
 
-## Compatibilidad con Windows 10 y 11
+## <mark style="color:purple;">Compatibilidad con Windows 10 y 1</mark>1
 
 Para los pasos mencionados anteriores el codigo que esta en `.bat` habra que pasarlo a `.ps1` (PowerShell) ya que a veces no funciona con el cmd solo.
 

@@ -1,6 +1,21 @@
-# Keylogger Script Automatizado (Linux y Windows)
+---
+icon: keyboard
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Contenido del script
+# Keylogger Automatizado
+
+## <mark style="color:purple;">Contenido del script</mark>
 
 Tendremos 2 scripts, uno que sera el que tendremos en nuestro host como modo servidor estando a la escucha de todas las teclas que se presionan visualizandolo a tiempo real y despues otro que sera el que tenga que ejecutar el ususario victima mediante ingenieria social, a parte el script de la victima genera automaticamente un `Reverse Shell` por lo que si queremos generar una shell a esa maquina tendremos que estar a la escucha con metasploit con el modulo `multi/handler`.
 
@@ -196,7 +211,7 @@ if __name__ == "__main__":
 
 En este script para la victima hay que modificar la IP en la seccion `SERVER_IP =` poner tu IP en la que quieres que se vea lo que teclea el usuario victima, despues la primera seccion de puerto llamada `PORT =` sera al puerto en el que se va a conectar para enviarte toda la informacion que debera de coincidir con el script `server_host.py` y despues en la seccion de `REVERSE_PORT =` debera de ir el puerto en el que hayamos configurado nuestra escucha en metasploit.
 
-### Preparar la escucha en metasploit
+### <mark style="color:purple;">Preparar la escucha en metasploit</mark>
 
 Ahora tendremos que habrir metasploit para prepararnos la escucha en otra pestaña de la terminal a parte.
 
@@ -258,7 +273,7 @@ Y esto automaticamente hara que nos pongamos a la escucha.
 
 Por lo que ya estaremos a la espera de que el usuario victima ejecute el script `capture_victim.py` lo que nos haria una visualizacion de lo que teclea a la vez de que obtendremos una shell con metasploit para poder hacer lo que queramos.
 
-## Requisitos para el script
+## <mark style="color:purple;">Requisitos para el script</mark>
 
 Lo primero que tendremos que instalar en nuestra maquina host sera lo siguiente.
 
@@ -268,7 +283,7 @@ pip install colorama pynput keyboard
 
 Y con esto deberia de funcionar el script.
 
-## Pasarlo a .elf
+## <mark style="color:purple;">Pasarlo a .elf</mark>
 
 Primero tendremos que instalarnos una herramienta llamada `Nuitka` de la siguiente forma.
 
@@ -348,7 +363,7 @@ rm -rf capture_victim.onefile-build
 
 Y ya estaria listo nuesto ejecutable.
 
-## Pasarlo a .exe
+## <mark style="color:purple;">Pasarlo a .exe</mark>
 
 Primero tendremos que instalarnos una herramienta llamada `Nuitka` de la siguiente forma.
 

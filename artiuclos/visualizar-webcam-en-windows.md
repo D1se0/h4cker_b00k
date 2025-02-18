@@ -1,6 +1,21 @@
-# Visualizar Webcam por metasploit en windows (Vulnerabilidad)
+---
+icon: camera-web
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Vulnerar windows
+# Visualizar Webcam en Windows
+
+## <mark style="color:purple;">Vulnerar windows</mark>
 
 Crearemos un archivo malicioso que la persona se descargara en internet, pero nosotros simularemos eso para tener una shell en metasploit de la maquina victima de windows.
 
@@ -60,7 +75,7 @@ Info:
 meterpreter >
 ```
 
-## Vulnerar webcam
+## <mark style="color:purple;">Vulnerar webcam</mark>
 
 Vemos la lista de camaras que tiene activas.
 

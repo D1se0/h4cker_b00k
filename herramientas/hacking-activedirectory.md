@@ -1,5 +1,5 @@
 ---
-icon: binary-lock
+icon: windows
 layout:
   title:
     visible: true
@@ -13,6 +13,6 @@ layout:
     visible: true
 ---
 
-# Criptología
+# Hacking ActiveDirectory
 
-Herramientas sobre el tema de `criptología` enfocados en el entorno de `Hacking Ético`.
+Técnicas y herramientas de `hacking ético` sobre entornos de `Active Directory`.

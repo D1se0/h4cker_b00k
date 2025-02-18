@@ -1,6 +1,21 @@
-# Crear maquina vulnerable docker, importar la misma y automontarla
+---
+icon: box-taped
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Crear maquina vulnerable en un docker
+# Crear CTF en Docker
+
+## <mark style="color:purple;">Crear maquina vulnerable en un docke</mark>r
 
 ### Instalar docker
 
@@ -141,7 +156,7 @@ Seleccionamos la imagen `docker` que vamos a pasar al archivo `.tar` en mi caso 
 
 Y con esto ya estaria hecho, ahora vamos a utilizar un script en `.sh` que te automatiza todo este proceso de montar la imagen `docker` `.tar` a nuestro `docker`.
 
-### auto\_mount.sh para montar el docker.tar
+## <mark style="color:purple;">auto\_mount.sh para montar el docker.tar</mark>
 
 > auto\_mount.sh
 
