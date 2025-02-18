@@ -29,3 +29,9 @@ Currently focused on exploring and solving diverse CTF challenges, I aim to shar
 🔍 Whether you're a beginner or a seasoned hacker, find detailed solutions and strategies to enhance your skills and contribute to the cybersecurity community.
 
 \--> [Link to h4cker\_b00k](https://dise0.gitbook.io/h4cker_b00k/) <--
+
+## <mark style="color:purple;">¿Por dónde empezar?</mark> 🚀
+
+
+
+<table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>GERENIC  TOOLS</td><td></td><td><a href=".gitbook/assets/imagen_2025-02-18_131752436.png">imagen_2025-02-18_131752436.png</a></td></tr><tr><td>INITIATION HACKING</td><td><a href="broken-reference">Broken link</a></td><td><a href=".gitbook/assets/imagen_2025-02-18_131851193.png">imagen_2025-02-18_131851193.png</a></td></tr><tr><td>ADVANCED HACKING</td><td></td><td><a href=".gitbook/assets/imagen_2025-02-18_131948570.png">imagen_2025-02-18_131948570.png</a></td></tr></tbody></table>
