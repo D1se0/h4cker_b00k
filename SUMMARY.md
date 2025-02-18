@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋Whoami](README.md)
+* [Whoami](README.md)
 * [PortSwigger Apuntes](portswigger-apuntes.md)
 
 ## 📝PortSwigger Notes

@@ -1,4 +1,24 @@
-# 👋Whoami
+---
+icon: hand-wave
+cover: .gitbook/assets/banner-1.png
+coverY: -17
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Whoami
 
 👋 Welcome to h4cker\_b00k | A Resource for CTF Write-Ups and Ethical Hacking Insights 💻
 
@@ -8,4 +28,4 @@ Currently focused on exploring and solving diverse CTF challenges, I aim to shar
 
 🔍 Whether you're a beginner or a seasoned hacker, find detailed solutions and strategies to enhance your skills and contribute to the cybersecurity community.
 
-\--> [Link to h4cker\_b00k](https://dise0.gitbook.io/h4cker\_b00k/) <--
+\--> [Link to h4cker\_b00k](https://dise0.gitbook.io/h4cker_b00k/) <--
