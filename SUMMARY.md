@@ -5,9 +5,11 @@
 ## ARTIUCLOS
 
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
-* [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
 * [File2ban Privilege Escalation](artiuclos/file2ban-privilege-escalation.md)
 * [Reversing Shell's (Creación)](artiuclos/reversing-shells-creacion.md)
+* [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
+* [EternalBlue Conf y Explotación](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
+* [BlueKeep Conf y Explotación](artiuclos/bluekeep-conf-y-explotacion.md)
 
 ## HERRAMIENTAS
 
@@ -23,11 +25,6 @@
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## 🔵Configuración y Explotación de Windows (EternalBlue y BlueKeep)
-
-* [Config W7 x86 y x64 Vuln EternalBlue](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/config-w7-x86-y-x64-vuln-eternalblue.md)
-* [Conf W7 Professional 64 bits Vuln BlueKeep](configuracion-y-explotacion-de-windows-eternalblue-y-bluekeep/conf-w7-professional-64-bits-vuln-bluekeep.md)
 
 ## 🖥️Rever Shell (payload) oculto en windows
 

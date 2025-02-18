@@ -1,4 +1,19 @@
-# Conf W7 Professional 64 bits Vuln BlueKeep
+---
+icon: bacterium
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# BlueKeep Conf y Explotación
 
 Primero obtendremos la OVA de un windows 7.
 
@@ -70,7 +85,7 @@ Nmap done: 1 IP address (1 host up) scanned in 31.91 seconds
 
 Vemos que si esta activo, por lo que ahora pasaremos a la explotacion del exploit `BlueKeep`.
 
-## Explotacion con exploit BlueKeep
+## <mark style="color:purple;">Explotacion con exploit BlueKeep</mark>
 
 Primero haremos un scanner para ver si es vulnerable al BlueKeep.
 

@@ -1,6 +1,21 @@
-# Config W7 x86 y x64 Vuln EternalBlue
+---
+icon: infinity
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Arquitectura 32 (x86) bits
+# EternalBlue Conf y Explotación
+
+## <mark style="color:purple;">Arquitectura 32 (x86) bits</mark>
 
 Primero obtendremos la OVA de un windows 7.
 
@@ -154,7 +169,7 @@ sc config wscsvc start= disabled
 
 Con esto todas las medidas de seguridad ya estarian desactivadas.
 
-## Arquitectura x64 bits
+## <mark style="color:purple;">Arquitectura x64 bits</mark>
 
 URL (OVA Windows 7 64 bits) = https://drive.google.com/file/d/1YPFRlCmJdtO08CDZLDZf0HyHAPElzNDj/view?usp=sharing
 

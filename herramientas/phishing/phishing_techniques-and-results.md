@@ -1,4 +1,5 @@
 ---
+icon: file-lines
 layout:
   title:
     visible: true
