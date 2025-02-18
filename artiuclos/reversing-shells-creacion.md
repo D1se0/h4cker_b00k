@@ -1,4 +1,19 @@
-# Payloads, Reverse Shell's...
+---
+icon: arrows-rotate-reverse
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Reversing Shell's (Creación)
 
 ### Crear parametro cmd para ejecutar codigo en URL (PHP)
 

@@ -7,33 +7,22 @@
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
 * [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
 * [File2ban Privilege Escalation](artiuclos/file2ban-privilege-escalation.md)
+* [Reversing Shell's (Creación)](artiuclos/reversing-shells-creacion.md)
 
 ## HERRAMIENTAS
 
 * [HackingWeb](herramientas/hackingweb/README.md)
   * [SQL Injection](portswigger-notes/sql-injection.md)
   * [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
+* [Criptología](herramientas/criptologia/README.md)
+  * [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
+* [Phishing](herramientas/phishing/README.md)
+  * [Phishing - Tools](herramientas/phishing/phishing-tools.md)
+  * [Phishing\_techniques and results](herramientas/phishing/phishing_techniques-and-results.md)
 
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## 🛠️openssl tool
-
-* [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
-
-## 🔄Reverse Shell's, Payload's, etc...
-
-* [Payloads, Reverse Shell's...](reverse-shells-payloads-etc.../payloads-reverse-shells....md)
-
-***
-
-* [🔍PHISHING (Apuntes)](phishing-apuntes.md)
-
-## 🎣phishing\_generic
-
-* [Phishing\_tools](phishing_generic/phishing_tools.md)
-* [Phishing\_techniques and results](phishing_generic/phishing_techniques-and-results.md)
 
 ## 🔵Configuración y Explotación de Windows (EternalBlue y BlueKeep)
 

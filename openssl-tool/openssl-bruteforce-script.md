@@ -1,3 +1,7 @@
+---
+icon: expeditedssl
+---
+
 # Openssl bruteforce script
 
 Si alguna vez se necesita sacar alguna contraseña a fuerza bruta con algun archivo que esta encriptado por `openssl` que eso se mira haciendo el comando `file` a un archivo y para desencriptarlo se necesita una contraseña que no sabemos, con este script se automatiza todo...

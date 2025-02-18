@@ -1,4 +1,18 @@
-# Phishing\_tools
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Phishing - Tools
 
 Primero descargaremos la herramienta de auditoria para `Phishing` llamada `Gophish` para poder crear la estructura basica del `phishing`....
 
@@ -38,7 +52,7 @@ O en vez de utilizar `SMTP` podremos crear un correo de `hotmail` y utilizar el 
 
 > Configuracion `SMTP` de `Microsoft`
 
-<figure><img src="../.gitbook/assets/img_phishing1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/img_phishing1.png" alt=""><figcaption></figcaption></figure>
 
 El servidor `SMTP` es el siguiente...
 
