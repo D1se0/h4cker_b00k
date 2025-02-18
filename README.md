@@ -20,6 +20,8 @@ layout:
 
 # Whoami
 
+## <mark style="color:green;">Welcome to my GitBook</mark>&#x20;
+
 👋 Welcome to h4cker\_b00k | A Resource for CTF Write-Ups and Ethical Hacking Insights 💻
 
 Passionate about leveraging technology for a positive impact! This sheet is dedicated to write-ups of various Capture The Flag (CTF) challenges, providing valuable insights into ethical hacking and cybersecurity. 🛡️

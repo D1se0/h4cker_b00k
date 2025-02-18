@@ -1,14 +1,29 @@
-# Pfsense Firewall Configuración
+---
+icon: block-brick-fire
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## # Config VirtualBox Pfsense
+# Pfsense Firewall Configuración GUIA
 
-### # Links requisitos
+## <mark style="color:green;"># Config VirtualBox Pfsense</mark>
+
+### <mark style="color:purple;"># Links requisitos</mark>
 
 LINK (Pfsense) = [https://archive.org/details/pfSense-CE-2.6.0-RELEASE-amd64](https://archive.org/details/pfSense-CE-2.6.0-RELEASE-amd64)
 
 LINK (VirtualBox) = [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-### # Inicio Config
+### <mark style="color:purple;"># Inicio Config</mark>
 
 Lo primero que tendremos que hacer será instalar la ISO (IMAGE ISO) de Pfsense de la siguiente forma:
 
@@ -26,7 +41,7 @@ En la siguiente sección, selecciona el tamaño del disco virtual. Yo opté por 
 
 Una vez configurado todo lo anterior, finalizamos la instalación de la máquina Pfsense y procederemos a la configuración de red para asegurar su correcto funcionamiento.
 
-### # Configuración Red:
+### <mark style="color:purple;"># Configuración Red:</mark>
 
 En el menú “Herramientas”, haz clic en las tres barras para desplegar una serie de opciones. Selecciona la opción llamada “Red”.
 
@@ -58,7 +73,7 @@ En el “Adaptador 2”, selecciona “Adaptador solo anfitrión” y elige el �
 
 Hecho esto abriremos Pfsense.
 
-### # Configuración Pfsense:
+### <mark style="color:purple;"># Configuración Pfsense:</mark>
 
 Una vez que se inicie la máquina, nos aparecerá el aceptar el Copyright, lo aceptamos.
 
@@ -112,7 +127,7 @@ Para verificar que tenemos la IP correcta, abrimos el “cmd” y ejecutamos el 
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe7PEKwiT5anZD4aUiNGvawYj2FjECG5HcTjXySHXxYzqsEVgahdC7HoyGLChuBQeTVxVz11HgZKb-Rs29r8357V8G5LUFmZXNXkx1cy9YBVsXyVfoOgaLsCLTt2lFBENYGlb86q5qrTJ9RDwddvUHrQs8g?key=BIdnsx2kvhiLCGz7N7uenw" alt=""><figcaption></figcaption></figure>
 
-### # Pagina Web Pfsense:
+### <mark style="color:purple;"># Pagina Web Pfsense:</mark>
 
 Una vez comprobado que nos detecta la red, pondremos la dirección que nos dio Pfsense para poder entrar al login del mismo. ([https://192.168.56.2/](https://192.168.56.2/))&#x20;
 

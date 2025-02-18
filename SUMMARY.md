@@ -5,6 +5,7 @@
 ## ARTIUCLOS
 
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
+* [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
 
 ## HERRAMIENTAS
 
@@ -28,10 +29,6 @@
 
 * [Payloads, Reverse Shell's...](reverse-shells-payloads-etc.../payloads-reverse-shells....md)
 
-## 💉SQL Injection Script's
-
-* [SQL Injection Script](sql-injection-scripts/sql-injection-script.md)
-
 ***
 
 * [🔍PHISHING (Apuntes)](phishing-apuntes.md)
@@ -40,10 +37,6 @@
 
 * [Phishing\_tools](phishing_generic/phishing_tools.md)
 * [Phishing\_techniques and results](phishing_generic/phishing_techniques-and-results.md)
-
-## 🔐Pfsense Firewall Configuración GUIA
-
-* [Pfsense Firewall Configuración](pfsense-firewall-configuracion-guia/pfsense-firewall-configuracion.md)
 
 ## 🔵Configuración y Explotación de Windows (EternalBlue y BlueKeep)
 
