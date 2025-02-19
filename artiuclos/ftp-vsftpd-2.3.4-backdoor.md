@@ -1,4 +1,19 @@
-# Conf FTP vsftpd-2.3.4 vulnerable backdoor exploit
+---
+icon: door-open
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# FTP vsftpd-2.3.4 backdoor
 
 Primero tendremos que descargarnos el repositorio donde se encuentra este `FTP` vulnerable:
 

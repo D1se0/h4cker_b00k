@@ -1,3 +1,18 @@
+---
+icon: envelope
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Temp Mail Pagina Correos Temporales
 
 Es una pagina para generar correos electronicos de forma aleatoria, teniendo mas privacidad y teniendo tambien una bandeja de entrada donde llegaran las solicitudes de dicho correo.

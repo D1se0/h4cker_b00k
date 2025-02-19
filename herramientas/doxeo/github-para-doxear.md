@@ -1,3 +1,18 @@
+---
+icon: github
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # GitHub Para Doxear
 
 En `GitHub` tambien se puede utilizar para doxear a alguien, como veremos despues, es una pagina en la que se pueden hacer bastante cosas, desde subir repositorios, crear ayudas en diversidad de modalidades de trabajo, etc... Hasta poder doxear a alguien mediante su perfil de `GitHub`.

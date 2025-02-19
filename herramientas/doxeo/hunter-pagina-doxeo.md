@@ -1,3 +1,18 @@
+---
+icon: shutters
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Hunter Pagina Doxeo
 
 Esta pagina es mas dedicado al doxeo de empresas, llegando a saber correos, empresas, etc...

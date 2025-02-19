@@ -1,3 +1,18 @@
+---
+icon: spider-web
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # BoxPiper Pagina Doxeo
 
 Esta pagina se centra en la comunidad de lo que va pasando actualmente y en la parte de `Google Dorks List` podremos encontrar comandos que se puede utilizar el `google` para filtrar mucho mejor la informacion a la hora de buscar a alguien.

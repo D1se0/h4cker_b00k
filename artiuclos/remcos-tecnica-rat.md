@@ -1,4 +1,19 @@
-# Programa Remcos (Técnica RAT)
+---
+icon: binoculars
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Remcos (Técnica RAT)
 
 Este es un programa para controlar de forma remota cualquier equipo mediante un `.exe`, `.dll`, etc... Tiene varias extensiones, de por si la version gratuita ya tiene muchas opciones, pero la de pago, te permite un `keylogger` y demas cosas, con esto tiene el acceso total del sistema de la victima pudiendo hablar por un chat generado con la victima en el sistema, bloquearle el teclado y cualquier periferico, pudiendo activar la camara, microfono, etc... Es una herramienta muy util para auditorias de seguridad.
 

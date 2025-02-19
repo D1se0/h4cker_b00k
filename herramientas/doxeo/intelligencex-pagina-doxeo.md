@@ -1,3 +1,18 @@
+---
+icon: brain
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # IntelligenceX Pagina Doxeo
 
 Es una pagina donde se puede obtener informacion de correos, numeros, etc... De forma detallada.

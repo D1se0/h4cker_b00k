@@ -1,3 +1,18 @@
+---
+icon: map-location-dot
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # OSINT Industries Pagina Doxeo (Correo, numero, etc...)
 
 Es como la pagina de `Epieos` pero con mas funcionalidades, esta mejor echa, te lo da en un formato mas limpio y como dije en la otra pagina es para obtener informacion sobe correos electronicos y numeros de telefonos.

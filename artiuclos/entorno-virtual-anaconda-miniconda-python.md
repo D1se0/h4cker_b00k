@@ -1,4 +1,19 @@
-# Entorno virtual de Anaconda/Miniconda Python
+---
+icon: python
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Entorno virtual Anaconda/Miniconda Python
 
 En algunos casos algunas herramientas de `github` o de cualquier otra plataforma, que esten echas con `python` en este caso pueden dar error dependiendo de la version de `python` que soporte dicha herramienta, por lo que esta herramienta llamada `Conda` crea un entorno virtual en el que nosotros podremos especificar que tipo de version de `python` queremos que tenga dicho entorno para asi poder ejecutar la herramienta dentro de ese entorno virtual, es muy util para herramientas de `python` las cuales estan desactualizadas o que queramos utilizar alguna version anterior que ya no tenga soporte con el `python3`, para realizar todo esto haremos lo siguiente:
 

@@ -1,3 +1,18 @@
+---
+icon: mobile-notch
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Phomber GitHub (Doxeo Numero de Teléfono)
 
 Es una herramienta de doxeo sobre numeros de telefono y mas opciones, pero esta especializado en numeros de telefono, de primeras hay que instalar los requerimientos y ya despues iniciarla, esta herramienta te proporciona informacion sobre dicho numero, diciendo la compañia, el pais, proporcionando links sobre que paginas esta registrado dicho numero y 2 paginas donde se puede ver mas informacion detallada sobre el numero, es una herramientas bastante buena para doxear un numero de telefono.

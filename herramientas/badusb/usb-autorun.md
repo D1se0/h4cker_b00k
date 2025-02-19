@@ -1,4 +1,19 @@
-# Crear USB AutoRun (Emular Rubber Ducky)
+---
+icon: scroll-old
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# USB AutoRun
 
 Si queremos emular el comportamiento de un USB `Rubber Ducky`, que basicamente cuando insertemos el USB en algun PC se ejecute el script que nosotros hayamos programado de forma automatica, esto se consigue haciendo creer al sistema operativo que se esta conectando un teclado y con el script enviar tecla por tecla lo que se quiere escribir o hacer en el S.O. como si fuera un teclado.
 
@@ -14,7 +29,7 @@ USB AutoRun Creator - Editor
 
 Ejecutamos esa aplicacion para que se nos habra el programa para crear el USB `AutoRun`, pero antes de seleccionar las opciones, crearemos un script basico para dumpear la informacion de la `red wifi` seleccionada + la contraseña en texto plano de forma automatica:
 
-## Crear Script VBS
+## <mark style="color:purple;">Crear Script VBS</mark>
 
 > wifiHack.vbs
 
@@ -86,21 +101,21 @@ Lo unico que tendremos que cambiar sera la parte de `<WIFI_NAME>` donde tendremo
 
 Una vez echo esto lo guardaremos en el USB y por si acaso crearemos el archivo `dead.txt` en el USB tambien.
 
-## Crear USB AutoRun
+## <mark style="color:purple;">Crear USB AutoRun</mark>
 
 Llendo donde estabamos en la interfaz del `USB AutoRun Creator` de la aplicacion, tendremos que darle a `Select` en la primera opcion:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y en este seleccionaremos el archivo `wifiHack.vbs` que esta en el USB.
 
 Despues en la segunda opcion seleccionaremos `Browser`:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y seleccionaremos la letra de la unidad del USB, seguidamente le daremos a la opcion `USB Drive`:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y le daremos a `OK`.
 

@@ -1,3 +1,18 @@
+---
+icon: magnifying-glass-waveform
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Epieos Pagina Doxeo
 
 Esta pagina se centra en recopilar toda la informacion posible sobre correos electronicos y numeros de telefono.

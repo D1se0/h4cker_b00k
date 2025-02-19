@@ -1,3 +1,18 @@
+---
+icon: aperture
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Exposed Pagina Doxeo (Correo, numero, etc...)
 
 Es una pagina en la cual sirve para que si el correo introducido esta registrado en alguna aplicacion, proporcionarnos las contraseñas en texto plano.

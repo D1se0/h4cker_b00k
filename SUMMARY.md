@@ -20,6 +20,13 @@
 * [Sticky Keys Hack](artiuclos/sticky-keys-hack.md)
 * [Bypass Login Linux (GRUB)](artiuclos/bypass-login-linux-grub.md)
 * [WOL (Wake On Lan) Conf](artiuclos/wol-wake-on-lan-conf.md)
+* [Shell Persistente PowerShell](artiuclos/shell-persistente-powershell.md)
+* [Remcos (Técnica RAT)](artiuclos/remcos-tecnica-rat.md)
+* [Entorno virtual Anaconda/Miniconda Python](artiuclos/entorno-virtual-anaconda-miniconda-python.md)
+* [CVE-2024-10924 (Bypass-MFA-Wordpress)](artiuclos/cve-2024-10924-bypass-mfa-wordpress.md)
+* [CVE-2024-21413 (Outlook)](artiuclos/cve-2024-21413-outlook.md)
+* [CVE-2023-32784 (Keepass-password-dump)](artiuclos/cve-2023-32784-keepass-password-dump.md)
+* [FTP vsftpd-2.3.4 backdoor](artiuclos/ftp-vsftpd-2.3.4-backdoor.md)
 
 ## HERRAMIENTAS
 
@@ -39,10 +46,21 @@
   * [ScreenCrab](herramientas/badusb/screencrab.md)
   * [KeyCroc](herramientas/badusb/keycroc.md)
   * [Rubber Ducky](herramientas/badusb/rubber-ducky.md)
+  * [USB AutoRun](herramientas/badusb/usb-autorun.md)
 * [Hacking ActiveDirectory](herramientas/hacking-activedirectory.md)
   * [KERBEROASTING Active Directory](herramientas/hacking-activedirectory/kerberoasting-active-directory.md)
   * [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-practicas-teoria.md)
   * [Active Directory Hacking (Auditorias entorno real)](herramientas/hacking-activedirectory/active-directory-hacking-auditorias-entorno-real.md)
+* [DOXEO](herramientas/doxeo/README.md)
+  * [BoxPiper Pagina Doxeo](herramientas/doxeo/boxpiper-pagina-doxeo.md)
+  * [Epieos Pagina Doxeo](herramientas/doxeo/epieos-pagina-doxeo.md)
+  * [Exposed Pagina Doxeo (Correo, numero, etc...)](herramientas/doxeo/exposed-pagina-doxeo-correo-numero-etc....md)
+  * [GitHub Para Doxear](herramientas/doxeo/github-para-doxear.md)
+  * [Hunter Pagina Doxeo](herramientas/doxeo/hunter-pagina-doxeo.md)
+  * [IntelligenceX Pagina Doxeo](herramientas/doxeo/intelligencex-pagina-doxeo.md)
+  * [OSINT Industries Pagina Doxeo (Correo, numero, etc...)](herramientas/doxeo/osint-industries-pagina-doxeo-correo-numero-etc....md)
+  * [Phomber GitHub (Doxeo Numero de Teléfono)](herramientas/doxeo/phomber-github-doxeo-numero-de-telefono.md)
+  * [Temp Mail Pagina Correos Temporales](herramientas/doxeo/temp-mail-pagina-correos-temporales.md)
 
 ## 📖The hacker's bible
 
@@ -51,31 +69,6 @@
 ## ✅Activación Office Gratis
 
 * [Activación de Office Permanente gratis](activacion-office-gratis/activacion-de-office-permanente-gratis.md)
-
-## 🌐Herramientas de DOXEO (OSINT)
-
-* [Herramientas/Paginas de DOXEO para cualquier usuario de internet](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/README.md)
-  * [BoxPiper Pagina Doxeo](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/boxpiper-pagina-doxeo.md)
-  * [Epieos Pagina Doxeo](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/epieos-pagina-doxeo.md)
-  * [Exposed Pagina Doxeo (Correo, numero, etc...)](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/exposed-pagina-doxeo-correo-numero-etc....md)
-  * [GitHub Para Doxear](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/github-para-doxear.md)
-  * [Hunter Pagina Doxeo](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/hunter-pagina-doxeo.md)
-  * [IntelligenceX Pagina Doxeo](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/intelligencex-pagina-doxeo.md)
-  * [OSINT Industries Pagina Doxeo (Correo, numero, etc...)](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/osint-industries-pagina-doxeo-correo-numero-etc....md)
-  * [Phomber GitHub (Doxeo Numero de Teléfono)](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/phomber-github-doxeo-numero-de-telefono.md)
-  * [Temp Mail Pagina Correos Temporales](herramientas-de-doxeo-osint/herramientas-paginas-de-doxeo-para-cualquier-usuario-de-internet/temp-mail-pagina-correos-temporales.md)
-
-## 📡Shell Persistente en PowerShell (Windows)
-
-* [Shell Persistente mediante PowerShell Windows](shell-persistente-en-powershell-windows/shell-persistente-mediante-powershell-windows.md)
-
-## 💀Software Remcos (RAT)
-
-* [Programa Remcos (Técnica RAT)](software-remcos-rat/programa-remcos-tecnica-rat.md)
-
-## 🐍Entorno de Anaconda/Miniconda con Python
-
-* [Entorno virtual de Anaconda/Miniconda Python](entorno-de-anaconda-miniconda-con-python/entorno-virtual-de-anaconda-miniconda-python.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
@@ -207,29 +200,9 @@
   * [Pesidious (Mutaciones con Deep Learning)](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/pesidious-mutaciones-con-deep-learning.md)
   * [Ingeniería Social - Deep fake](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/ingenieria-social-deep-fake.md)
 
-## 🔐CVE-2024-10924 (Bypass-MFA-Wordpress)
-
-* [Instalación laboratorio vulnerable CVE-2024-10924 (Bypass-MFA-Wordpress)](cve-2024-10924-bypass-mfa-wordpress/instalacion-laboratorio-vulnerable-cve-2024-10924-bypass-mfa-wordpress.md)
-
-## 🧪CVE-2024-21413 (Instalación laboratorio vulnerable)
-
-* [📧Instalación laboratorio vulnerable CVE-2024-21413 (Ejecución remota de comandos Outlook)](cve-2024-21413-instalacion-laboratorio-vulnerable/instalacion-laboratorio-vulnerable-cve-2024-21413-ejecucion-remota-de-comandos-outlook.md)
-
-## 🔑Técnica Vulnerabilidad CVE-2023-32784
-
-* [Técnica CVE-2023-32784 (Keepass-password-dump)](tecnica-vulnerabilidad-cve-2023-32784/tecnica-cve-2023-32784-keepass-password-dump.md)
-
 ## 🔧Instalar SPSS full gratis (crack)
 
 * [Instalar SPSS full gratis (crack)](instalar-spss-full-gratis-crack/instalar-spss-full-gratis-crack.md)
-
-## 🔋Crear USB AutoRun
-
-* [Crear USB AutoRun (Emular Rubber Ducky)](crear-usb-autorun/crear-usb-autorun-emular-rubber-ducky.md)
-
-## 💥Configuración vsftpd-2.3.4 Vulnerable
-
-* [Conf FTP vsftpd-2.3.4 vulnerable backdoor exploit](configuracion-vsftpd-2.3.4-vulnerable/conf-ftp-vsftpd-2.3.4-vulnerable-backdoor-exploit.md)
 
 ***
 
