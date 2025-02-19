@@ -1,8 +1,23 @@
+---
+icon: file-lines
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Active Directory Hacking (Practicas-Teoria)
 
 En esta practica habra 3 maquinas explicativas para entrar un poco en el entorno de `Active Directory` y las diferentes herramientas y formas de las cuales se puede aprovechar paar vulnerar una maquina.
 
-## Ejemplo 1 (Practica Maquina)
+## <mark style="color:purple;">Ejemplo 1 (Practica Maquina)</mark>
 
 Haciendo un `nmap` imaginemos que nos encontramos los siguientes puertos.
 
@@ -247,7 +262,7 @@ Y veremos que funciona, nos da la informacion de los recursos compartidos.
 
 Por lo que ya seria entrar mediante `evil-winrm` y escalar, etc...
 
-## Ejemplo 2 (Practica Maquina)
+## <mark style="color:purple;">Ejemplo 2 (Practica Maquina)</mark>
 
 Si por ejemplo le tiramos un `nmap` y vemos que tiene puertos tipicos de `Active Directory` podremos hacer tecnicas similares a la anterior, pero imaginemos que no nos deja entrar por `SMB` con una `NullSesion` podremos enumerar el `SMB` desde esta herramienta:
 
@@ -332,7 +347,7 @@ Y vemos que si podremos entrar en este caso, ya que este usuario tiene activado 
 
 Y ya seria escalar privilegios....
 
-## Ejemplo 3 (Practica Maquina)
+## <mark style="color:purple;">Ejemplo 3 (Practica Maquina)</mark>
 
 Tirando un `nmap` nos descubrira varios puertos, veremos que estan relacionados con el `Active Directory` y tambien nos descubrira el dominio bajo el que esta sujeto llamado `active.htb`.
 

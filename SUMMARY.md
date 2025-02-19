@@ -40,6 +40,9 @@
   * [KeyCroc](herramientas/badusb/keycroc.md)
   * [Rubber Ducky](herramientas/badusb/rubber-ducky.md)
 * [Hacking ActiveDirectory](herramientas/hacking-activedirectory.md)
+  * [KERBEROASTING Active Directory](herramientas/hacking-activedirectory/kerberoasting-active-directory.md)
+  * [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-practicas-teoria.md)
+  * [Active Directory Hacking (Auditorias entorno real)](herramientas/hacking-activedirectory/active-directory-hacking-auditorias-entorno-real.md)
 
 ## 📖The hacker's bible
 
@@ -48,13 +51,6 @@
 ## ✅Activación Office Gratis
 
 * [Activación de Office Permanente gratis](activacion-office-gratis/activacion-de-office-permanente-gratis.md)
-
-## 🪟 Active Directoy (Hacking)
-
-* [Active Directory dedicado al hacking](active-directoy-hacking/active-directory-dedicado-al-hacking/README.md)
-  * [KERBEROASTING en Active Directory](active-directoy-hacking/active-directory-dedicado-al-hacking/kerberoasting-en-active-directory.md)
-  * [Active Directory Hacking (Practicas-Teoria)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-practicas-teoria.md)
-  * [Active Directory Hacking (Auditorias para entorno real)](active-directoy-hacking/active-directory-dedicado-al-hacking/active-directory-hacking-auditorias-para-entorno-real.md)
 
 ## 🌐Herramientas de DOXEO (OSINT)
 

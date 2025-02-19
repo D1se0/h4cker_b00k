@@ -1,8 +1,23 @@
-# Active Directory Hacking (Auditorias para entorno real)
+---
+icon: building-memo
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Active Directory Hacking (Auditorias entorno real)
 
 Se van a tocar muchas tecnicas de hacking etico relacionadas con `Windows` para un entorno real de auditoria en una empresa, ya que los CTF's son tecnicas preparadas y tienen similitud a esto siguiente, pero en este caso, esto es mas realista a la hora de ir a un entorno mas real, tocaremos diversas tecnicas y utilizaremos herramientas, a parte de que trabajaremos con un entorno controlado mediante una serie de maquinas virtuales creando un `lab`.
 
-## Buenas configuraciones en los equipos/servidores
+## <mark style="color:purple;">Buenas configuraciones en los equipos/servidore</mark>s
 
 Supongamos que tenemos un `Windows Server 2016`, un `PC-Marcelo` y un `PC-Ramlux` con los cuales vamos hacer una auditoria, lo primero es ver el nombre del sistema que este correctamente editado y no por defecto, para no dar pistas a los `Ciberdelincuentes` que intenten hackear nuestro sistema, para ello en `Windows Server 2016` daremos click derecho en `Windows` -> `Sistema` -> `Cambiar configuracion` -> `Cambiar` y aqui pondremos un nombre como `DC-Company`, ahora nos pedira reiniciarlo para que se apliquen los cambios, pero para cambiar los nombres en los equipos normales de `Windows` es algo parecido y diferente, para ello le daremos click derecho a `Windows` -> `Sistema` -> `Cambiar el nombre de este equipo` y le pondremos algo como `PC-Marcelo` y no pedira reiniciarlo para que se apliquen los cambios, de la misma forma con el otro equipo o en un caso real con los equipos que vengan con el nombre por defecto.
 
@@ -93,7 +108,7 @@ Despues nos iremos a otro apartado llamado `Seguridad de Windows` -> `Proteccion
 
 Y con esto ya estaria listo para los ataques, haremos lo mismo con el otro usuario.
 
-## SMB Relay IPv4 (Practica)
+## <mark style="color:purple;">SMB Relay IPv4 (Practic</mark>a)
 
 > NOTA
 
@@ -494,7 +509,7 @@ impacket-ntlmrelayx -tf targets.txt -smb2support -c "powershell IEX(New-Object N
 
 Este ultimo comando lo que haya es que con el parametro `-c` estamos indicando que ejecute un coamando en el equipo, ya que el usuario con el que se esta haciendo tiene privilegios de administrador en el equipo `ramlux` y estamos diciendo que se descargue el archivo que preparamos llamado `PS.ps1` desde nuestro servidor de `python3` y estando a la escucha por dicho puerto cuando se ejecute ese `PS.ps1` nos creara una shell interactiva sobre el equipo de `marcelo` con privilegios de administrador sobre el equipo de `ramlux`.
 
-## SMB Relay IPv6 (Practica)
+## <mark style="color:purple;">SMB Relay IPv6 (Practica)</mark>
 
 Aunque parchen la entrada por IPv4, tambien esta la opcion por IPv6 que es un poco mas diferente, pero se puede hacer si no esta mitigado de la siguiente forma, conociendo el dominio de la empresa, haremos lo siguiente:
 
@@ -1198,7 +1213,7 @@ Session completed.
 
 Por lo que vemos nos la ha crackeado.
 
-## Ataque ASReproast (Practica)
+## <mark style="color:purple;">Ataque ASReproast (Practica)</mark>
 
 Ahora si queremos hacernos una lista de usuarios del dominio para extraer su hash, podremos hacerlo de la siguiente forma:
 
@@ -1768,7 +1783,7 @@ Info:
 
 Aqui veriamos el hash del usuario que ha sido vulnerable por la `ASReproast` e intentar crackearlo.
 
-## Archivos SCF (Practica)
+## <mark style="color:purple;">Archivos SCF (Practica)</mark>
 
 Para hacerlo mas realista, pueden existir los archivos llamados `SCF`.
 
