@@ -1,10 +1,25 @@
-# Activación de Office Permanente gratis
+---
+icon: file-word
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Activación de Office Permanente
 
 > NOTA:
 
 Antes de empezar con el tutorial, debemos de tener el office instalado para que funcione (Sin activar).
 
-## PowerShell como Admin
+## <mark style="color:purple;">PowerShell como Admin</mark>
 
 Primero abrimos el `PowerShell` como administrador dandole click izquierdo en el mismo y `Ejecutar como administrador`, esto se nos abrira con los privilegios maximos para realizar lo siguiente.
 

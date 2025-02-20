@@ -1,4 +1,19 @@
-# Instalar SPSS full gratis (crack)
+---
+icon: table-cells-row-unlock
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Instalar SPSS (crack)
 
 Lo que primero tendremos que hacer sera descargarnos el siguiente comprimido el cual contendra todas las herramientas necesarias para realizar la instalación y crackeo del mismo.
 

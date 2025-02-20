@@ -1,8 +1,17 @@
 ---
-description: >-
-  Welcome to h4cker_b00k, a sheet where the write up's of different CTF's are to
-  learn ethical hacking...
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Write Up's
+# CTF
 
+`Writeups` de diferentes CTF's para aprender `Hacking Ético`.

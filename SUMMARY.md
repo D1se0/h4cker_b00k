@@ -27,6 +27,8 @@
 * [CVE-2024-21413 (Outlook)](artiuclos/cve-2024-21413-outlook.md)
 * [CVE-2023-32784 (Keepass-password-dump)](artiuclos/cve-2023-32784-keepass-password-dump.md)
 * [FTP vsftpd-2.3.4 backdoor](artiuclos/ftp-vsftpd-2.3.4-backdoor.md)
+* [Activación de Office Permanente](artiuclos/activacion-de-office-permanente.md)
+* [Instalar SPSS (crack)](artiuclos/instalar-spss-crack.md)
 
 ## HERRAMIENTAS
 
@@ -65,10 +67,6 @@
 ## 📖The hacker's bible
 
 * [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
-
-## ✅Activación Office Gratis
-
-* [Activación de Office Permanente gratis](activacion-office-gratis/activacion-de-office-permanente-gratis.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
@@ -200,14 +198,9 @@
   * [Pesidious (Mutaciones con Deep Learning)](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/pesidious-mutaciones-con-deep-learning.md)
   * [Ingeniería Social - Deep fake](conceptos-de-ciberseguridad-en-hacking-etico/machine-learning-aplicado-a-hacking/ingenieria-social-deep-fake.md)
 
-## 🔧Instalar SPSS full gratis (crack)
-
-* [Instalar SPSS full gratis (crack)](instalar-spss-full-gratis-crack/instalar-spss-full-gratis-crack.md)
-
 ***
 
-* [The hacker's book](the-hackers-book.md)
-* [Write Up's](write-ups.md)
+* [CTF](write-ups.md)
 
 ## 🔥VulnHub (Writeup's)
 
