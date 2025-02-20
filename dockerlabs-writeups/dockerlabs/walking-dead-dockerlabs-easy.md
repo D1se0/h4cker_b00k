@@ -1,3 +1,18 @@
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Walking Dead DockerLabs (Easy)
 
 ### Instalación
