@@ -1,4 +1,19 @@
-# Write Up doubletrouble VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# doubletrouble VulnHub
 
 ### Escaneo de puertos
 

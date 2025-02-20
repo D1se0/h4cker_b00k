@@ -1,4 +1,19 @@
-# Write Up driftingblues\_7 VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# driftingblues\_7 VulnHub
 
 ### Escaneo de puertos
 

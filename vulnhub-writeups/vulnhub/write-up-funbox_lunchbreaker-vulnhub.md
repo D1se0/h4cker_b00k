@@ -1,4 +1,19 @@
-# Write Up Funbox\_Lunchbreaker VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Funbox\_Lunchbreaker VulnHub
 
 ### Escaneo de puertos
 

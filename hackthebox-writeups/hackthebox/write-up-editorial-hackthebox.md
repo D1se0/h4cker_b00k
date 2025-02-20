@@ -1,4 +1,19 @@
-# Write Up Editorial HackTheBox
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Editorial HackTheBox
 
 ### Escaneo de puertos
 

@@ -1,4 +1,19 @@
-# Write Up Perfection HackTheBox
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Perfection HackTheBox
 
 ### Escaneo de puertos
 

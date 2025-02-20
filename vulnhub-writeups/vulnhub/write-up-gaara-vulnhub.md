@@ -1,4 +1,19 @@
-# Write Up Gaara VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Gaara VulnHub
 
 ### Escaneo de puertos
 

@@ -1,4 +1,19 @@
-# Write Up Connect-The-Dots VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Connect-The-Dots VulnHub
 
 ### Escaneo de puertos
 

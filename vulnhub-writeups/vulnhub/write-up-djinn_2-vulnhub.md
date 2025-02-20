@@ -1,4 +1,19 @@
-# Write Up djinn\_2 VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# djinn\_2 VulnHub
 
 ### Escaneo de puertos
 

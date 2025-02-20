@@ -1,4 +1,19 @@
-# Write Up Vikings VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Vikings VulnHub
 
 ### Escaneo de puertos
 

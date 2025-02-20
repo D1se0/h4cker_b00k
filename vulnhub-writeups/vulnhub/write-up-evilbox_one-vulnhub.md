@@ -1,4 +1,19 @@
-# Write Up EVILBOX\_ONE VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# EVILBOX\_ONE VulnHub
 
 ### Escaneo de puertos
 

@@ -1,12 +1,23 @@
 ---
 icon: cube
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # HackTheBox
 
 In this directory, I will upload detailed write-ups for machines and challenges from **Hack The Box**. Hack The Box provides a range of virtual machines and scenarios focused on penetration testing and cybersecurity skills. Users can engage with these environments to enhance their hacking abilities in realistic settings.
 
-## **What is Hack The Box?**&#x20;
+## <mark style="color:purple;">**What is Hack The Box?**</mark>&#x20;
 
 Hack The Box is a platform offering various virtual machines and challenges aimed at improving penetration testing and security skills. It provides realistic environments for practicing and mastering ethical hacking techniques.
 

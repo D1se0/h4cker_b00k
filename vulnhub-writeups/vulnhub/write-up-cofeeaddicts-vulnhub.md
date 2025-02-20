@@ -1,4 +1,19 @@
-# Write Up Cofeeaddicts VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Cofeeaddicts VulnHub
 
 ### Escaneo de puertos
 

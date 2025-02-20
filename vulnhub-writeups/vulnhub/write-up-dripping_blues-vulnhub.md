@@ -1,4 +1,19 @@
-# Write Up Dripping\_blues VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Dripping\_blues VulnHub
 
 ### Escaneo de puertos
 

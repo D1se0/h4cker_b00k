@@ -1,4 +1,19 @@
-# Write Up Durian VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Durian VulnHub
 
 ### Escaneo de puertos
 

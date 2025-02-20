@@ -1,4 +1,19 @@
-# Write Up THOTH\_TECH\_1 VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# THOTH\_TECH\_1 VulnHub
 
 ### Escaneo de puertos
 

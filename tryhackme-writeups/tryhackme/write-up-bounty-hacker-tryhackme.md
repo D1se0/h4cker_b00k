@@ -1,4 +1,19 @@
-# Write Up Bounty Hacker TryHackMe
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Bounty Hacker TryHackMe
 
 ### Escaneo de puertos
 

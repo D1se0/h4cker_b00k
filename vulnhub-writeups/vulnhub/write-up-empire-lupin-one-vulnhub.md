@@ -1,4 +1,19 @@
-# Write Up Empire Lupin One VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Empire Lupin One VulnHub
 
 ### Escaneo de puertos
 

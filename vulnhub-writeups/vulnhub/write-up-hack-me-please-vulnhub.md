@@ -1,4 +1,19 @@
-# Write Up HACK ME PLEASE VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# HACK ME PLEASE VulnHub
 
 ### Escaneo de puertos
 

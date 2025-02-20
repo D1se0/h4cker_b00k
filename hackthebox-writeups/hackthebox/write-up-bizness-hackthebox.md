@@ -1,4 +1,19 @@
-# Write Up Bizness HackTheBox
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Bizness HackTheBox
 
 ### Escaneo de puertos
 

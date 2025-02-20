@@ -1,12 +1,23 @@
 ---
 icon: fire
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # VulnHub
 
 In this directory, I will upload detailed write-ups for machines from **VulnHub**. VulnHub provides vulnerable virtual machines specifically designed for learning and practicing cybersecurity. Each machine is pre-configured with known vulnerabilities, allowing users to safely experiment and improve their ethical hacking skills.
 
-## **What is VulnHub?**&#x20;
+## <mark style="color:purple;">**What is VulnHub?**</mark>&#x20;
 
 VulnHub is a platform that offers a collection of vulnerable virtual machines for practicing penetration testing and security skills. These environments are designed to simulate real-world scenarios, helping users to develop and refine their hacking techniques.
 

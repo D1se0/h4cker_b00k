@@ -1,4 +1,19 @@
-# Write Up System\_failure VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# System\_failure VulnHub
 
 ### Escaneo de puertos
 

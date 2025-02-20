@@ -1,4 +1,19 @@
-# Write Up Monitoring VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Monitoring VulnHub
 
 ### Escaneo de puertos
 

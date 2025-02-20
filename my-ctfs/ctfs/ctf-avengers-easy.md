@@ -1,7 +1,0 @@
-# CTF Avengers Easy
-
-URL Download CTF = [https://drive.google.com/file/d/1ALrKezZIwTLRH3c\_jnCPNVf\_sp9VQ-1n/view](https://drive.google.com/file/d/1ALrKezZIwTLRH3c\_jnCPNVf\_sp9VQ-1n/view)
-
-
-
-URL CTF Avengers = [https://d1se0.github.io/hacklab.github.io/pagina\_de\_ctfs/ctf\_avengers\_easy.html](https://d1se0.github.io/hacklab.github.io/pagina\_de\_ctfs/ctf\_avengers\_easy.html)

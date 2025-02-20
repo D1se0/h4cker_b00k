@@ -1,4 +1,19 @@
-# Write Up CK-00 VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# CK-00 VulnHub
 
 ### Escaneo de puertos
 

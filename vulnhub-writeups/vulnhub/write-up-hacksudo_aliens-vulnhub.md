@@ -1,4 +1,19 @@
-# Write Up Hacksudo\_Aliens VulnHub
+---
+icon: flag
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Hacksudo\_Aliens VulnHub
 
 Escaneo de puertos
 
