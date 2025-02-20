@@ -362,6 +362,7 @@
   * [ApiRoot DockerLabs (Intermediate)](dockerlabs-writeups/dockerlabs/apiroot-dockerlabs-intermediate.md)
   * [Amor DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/amor-dockerlabs-easy.md)
   * [Walking Dead DockerLabs (Easy)](dockerlabs-writeups/dockerlabs/walking-dead-dockerlabs-easy.md)
+  * [Master DockerLabs (Intermediate)](ctf/dockerlabs/master-dockerlabs-intermediate.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
