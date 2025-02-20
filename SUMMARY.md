@@ -35,6 +35,8 @@
 * [HackingWeb](herramientas/hackingweb/README.md)
   * [SQL Injection](portswigger-notes/sql-injection.md)
   * [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
+* [Explotación](herramientas/explotacion.md)
+* [Reconocimiento](herramientas/reconocimiento.md)
 * [Criptología](herramientas/criptologia/README.md)
   * [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
 * [Phishing](herramientas/phishing/README.md)
