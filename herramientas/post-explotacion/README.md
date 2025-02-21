@@ -1,5 +1,5 @@
 ---
-icon: explosion
+icon: bomb
 layout:
   title:
     visible: true
@@ -13,6 +13,7 @@ layout:
     visible: true
 ---
 
-# Explotación
+# Post-Explotación
 
-En esta sección veremos tecnicas y herramientas para realizar una `explotación` en `Hacking Ético`.
+En esta sección veremos las tecnicas y herramientas para una fase de `post-explotación`.
+
