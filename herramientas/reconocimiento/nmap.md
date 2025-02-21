@@ -1,4 +1,5 @@
 ---
+icon: map
 layout:
   title:
     visible: true
@@ -96,5 +97,27 @@ Si queremos utilizar un script con `nmap` de fuerza bruta para que vaya probando
 
 ```shell
 nmap --script http-enum -p<PORT> <TARGET> -oN <FILE_NAME>
+```
+
+### Busqueda de vulnerabilidades en el reconocimiento
+
+Cuando el `nmap` te reporta los detalles de algunas versiones como el `ssh`, `ftp`, etc... Se pueden buscar de forma rapida si tienen alguna vulnerabilidad en la siguiente `URL`...
+
+URL = https://launchpad.net/
+
+Y tendrias que poner algo parecido a lo siguiente, de ver esto...
+
+```
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 6a:d8:44:60:80:39:7e:f0:2d:08:2f:e5:83:63:f0:70 (RSA)
+|   256 f2:a6:62:d7:e7:6a:94:be:7b:6b:a5:12:69:2e:fe:d7 (ECDSA)
+|_  256 28:e1:0d:04:80:19:be:44:a6:48:73:aa:e8:6a:65:44 (ED25519)
+```
+
+A poner esto...
+
+```
+OpenSSH 8.2p1 Ubuntu 4ubuntu0.3
 ```
 
