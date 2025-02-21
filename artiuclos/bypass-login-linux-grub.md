@@ -23,7 +23,7 @@ Estando en este punto le tendremos que dar a la tecla `E` para entrar a la edici
 
 Llendonos abajo del todo y viendo algo similar a esto:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tendremos que eliminar desde la linea `$vt_handoff` hasta la linea `find_preseed` con esta incluida, quedando algo asi:
 

@@ -22,7 +22,7 @@ A esta persona la podemos ligar alguna organizacion, buscando `Company` y arrast
 
 Si la damos al siguiente icono:
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Podremos ligarlo a la compañia poniendo el nombre de `Trabaja en` y dandole aceptar se creara una flecha.
 
