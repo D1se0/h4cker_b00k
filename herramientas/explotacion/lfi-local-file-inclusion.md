@@ -130,7 +130,7 @@ Aqui lo que estamos haciendo es que nos muestre de forma codificada en `Base64` 
 
 Para automatizar todo lo anterior podemos utilizar un script que te genera lo que tienes que indtroducir en la `URL` en el apartado despues del `=`...
 
-URL = [Script Wrapper LFI](https://github.com/synacktiv/php_filter_chains_oracle_exploit/blob/main/filters_chain_oracle_exploit.py)
+URL = [Script Wrapper LFI](https://github.com/synacktiv/php_filter_chain_generator/blob/main/php_filter_chain_generator.py)
 
 Si queremos por ejemplo crear un parametro llamado `cmd` que ejecute cualquier comando que le pongamos, seria de la siguiente forma...
 
