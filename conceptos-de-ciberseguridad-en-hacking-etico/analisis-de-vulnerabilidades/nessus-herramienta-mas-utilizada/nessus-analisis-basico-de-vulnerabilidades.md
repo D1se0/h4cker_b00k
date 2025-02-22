@@ -11,7 +11,7 @@ Folder: My Scans
 Targets: 192.168.16.0/24
 ```
 
-<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34) (1).png" alt=""><figcaption></figcaption></figure>
 
 En la seccion de `Schedule` se puede configurar para que haga un escaneo a una determinada hora, en un determinado horario, etc...
 
@@ -29,11 +29,11 @@ Le daremos a guardar con el boton `Save` y ya tendriamos el escaneo configurado.
 
 Ahora para ejecutar el escaneo, tendremos que darle a boton de `Play` en la parte del escaneo que se representa como con una flecha (`>`).
 
-<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si pulsamos en el escaneo podremos ver que esta en ejeccion, por lo que tendremos que esperar, pero igualmente a tiempo real nos ira poniendo lo que va encontrando:
 
-<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (36) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y mientras esto va terminando, podremos probar hacer otro escaneo ya preconfigurados sobre vulnerabilidades famosas como por ejemplo la de el grupo de `hackers` llamados `Shadow Brockers`, si pinchamos en ese tipo de escaneo, configuraremos de forma normal el escaneo, por ejemplo poniendole en este caso a 2 maquinas objetivos:
 
@@ -49,7 +49,7 @@ Pero si nos vamos a la parte de `Plugins` en nuestro escaneo de `Host Discovery`
 
 Solo le tendriamos que dar a `Save` y ejecutarlo, llendonos al otro escaneo que realizamos principalmente de `hosts`, veremos que ha terminado y si pinchamos en el, veremos algo tal que asi:
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ha descubierto 5 `hosts` pero los que nos interesan son los que terminan en `129` y `132`.
 

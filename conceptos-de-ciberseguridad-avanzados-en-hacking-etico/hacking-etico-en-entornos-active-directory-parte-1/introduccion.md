@@ -70,11 +70,11 @@ Una `unidad organizativa (OU)` es un objeto contenedor que permite organizar otr
 
 > ESQUEMA DE UN BOSQUE:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
 
 > Active Directory Schema
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
 
 Todo lo que se almacena en `Active Directory` se almacena en forma de `objeto`. El esquema define los atributo para cada tipo de objeto.
 

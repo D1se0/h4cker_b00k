@@ -183,6 +183,6 @@ Nmap done: 11 IP addresses (3 hosts up) scanned in 151.28 seconds
 
 Y con esto nos dara toda la informacion que obtuvimos anteriormente con dicho comando, pero esta vez con las versiones y servicios que hay corriendo en los diferentes `hosts` y con un fichero `XML`.
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esta tecnica si es verdad que es muchisimo mas intrusiva que las demas.

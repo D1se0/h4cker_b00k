@@ -177,7 +177,7 @@ sudo nmap -v -sS -oX vulnerabilidades.xml --stylesheet="https://svn.nmap.org/nma
 
 Y esto lo que hara sera que toda esta informacion la exportara a un fichero `.xml` en el que se pueda visualizar mucho mejor, escaneando 2 `hosts` a la vez con el uso de una `,`(coma); viendose de tal forma:
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que de esta forma se pueden ver las vulnerabilidades de mucha mejor forma, pero igualmente este tipo de scripts no son 100% fiables, ya que habra algunas vulnerabilidades que no las sacara muy bien, pero para ello utilizaremos otro tipo de herramientas mas fiables.
 

@@ -42,13 +42,13 @@ nano shell.php
 
 Por ejemplo esa, la misma que utilizamos para el caso anterior.
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80) (1).png" alt=""><figcaption></figcaption></figure>
 
 Subimos el archivo de nuestra `WebShell`.
 
 Y nos dice donde se ha depositado:
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora haciendo `Path Traversal` podremos acceder al archivo que acabamos de subir:
 

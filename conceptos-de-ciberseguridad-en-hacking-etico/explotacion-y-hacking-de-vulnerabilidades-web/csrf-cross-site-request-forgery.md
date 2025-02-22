@@ -47,21 +47,21 @@ Lo que vamos hacer con esto es que cada vez que un usuario entre en esta entrada
 
 Ponemos a `Burp Suite` a la escucha, para capturar una peticion que nosotros hagamos, una vez que hayamos capturado la peticion poniendo por ejemplo `canario`, nos vamos al `Decoder` y lo codificamos en `URL`, despues esta codificacion la pegamos sustituyendo la palabra `canario`, quedando algo asi:
 
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Forward` y veremos esto:
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos que ha funcionado, claramente este popup en una explotacion real, no habria que ponerlo.
 
 Y vemos que algo se ha injectado en el blog:
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que cada vez que un usuario acceda a esta pagina se va a estar ejecutando este scrip:
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (101) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y se va a estar añadiendo una entrada en el blog como el usuario que entre.
 
@@ -71,11 +71,11 @@ Si por ejemplo nosotros nos logeamos con otro usuario, como si fuera otro el usu
 
 Seleccionamos el ver todas las entradas `Show all` y le damos a `View Blog Entries`, veremos esto:
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (102) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que se nos ha ejecutado por detras el script, como este usuario, por lo que si nosotros ahora nos dirigimos a escribir una entrada en el blog:
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (103) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que ya hay una entrada con este usuario logeado, por lo que ha funcionado correctamente.
 
@@ -129,11 +129,11 @@ Lo bueno de esto es que si nosotros no podemos crearnos una cuenta ya sea por qu
 
 Por lo que abriremos `Burp Suite` capturaremos la peticion de `canario` y codificaremos el anterior script en `URL` y lo reemplazaremos por la palabra `canario` quedando algo asi:
 
-<figure><img src="../../.gitbook/assets/image (104).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (104) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Forward` y nos saldra esto:
 
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (105) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nos loguearemos con otra cuenta para hacerlo desde un usuario externo.
 
@@ -141,7 +141,7 @@ Nos iremos a `OWASP 2017` -> `Cross-Site-Scripting (XSS)` -> `Persistent (Second
 
 Seleccionamos el ver todas las entradas `Show all` y le damos a `View Blog Entries`, veremos esto:
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (106) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que el usuario con los parametros que especificamos ya se habria creado correctamente bajo este usuario, solo tendremos que probar a introducir las credenciales y veremos lo siguiente:
 
@@ -150,4 +150,4 @@ User: csrf_test
 Pass: csrf_password
 ```
 
-<figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (107) (1).png" alt=""><figcaption></figcaption></figure>

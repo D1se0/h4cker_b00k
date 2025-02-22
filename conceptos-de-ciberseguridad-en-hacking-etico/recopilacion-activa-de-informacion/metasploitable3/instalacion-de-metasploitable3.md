@@ -26,7 +26,7 @@ Abriremos la carpeta descomprimida y encontraremos otro archivo de la misma form
 
 Una vez echo eso, eliminaremos el archivo `.zip` y como resultado veremos archivos que ahora si nos sirven para importarlos a nuestro `VMWare`, si nos lo mete en carpetas, sacaremos todos esos archivos de las carpetas poniendolas en una carpeta unicamente paar que funcione.
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption></figcaption></figure>
 
 Cambiaremos el nombre de la carpeta que contiene estos archivos por el que se identifique por la `ISO`, por ejemplo el de `windows` sera `metasploitable3-Win2008`, una vez echo todo esto, abriremos `VMWare`.
 

@@ -52,7 +52,7 @@ Retype new password: <REPIT_PASSWORD>
 passwd: password updated successfully
 ```
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que con esto ya habremos modificado la contraseña con exito, por lo que si ahora reiniciamos la maquina y probamos las credenciales que hemos modificado como `root` veremos que nos podremos logear y habremos `bypasseado` de alguna manera este login sin sabernos la contraseña anterior.
 
@@ -103,14 +103,14 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 Ahora si reiniciamos la maquina nos pedira en el `GRUB` unas credenciales las cuales establecimos cuando pulsamos la tecla `E`, de esta manera:
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y si metemos la contraseña correcta nos metera directamente al usuario.
 
 Pero si fallamos la contarseña nos aparecera esto y nos llevara al `GRUB`:
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y si intentamos darle a la `E` nos aparecera la autenticacion para poder entrar, y si no la tenemos podremos iniciar de forma normal el `linux`.

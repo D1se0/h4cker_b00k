@@ -14,7 +14,7 @@ service postgresql start
 
 Ahora para iniciar el software, pondremos simplemente `aemitage` y nos aparecera una ventana donde dejaremos por defecto las opciones ya que nos dice que donde esta la instancia de `metasploit` corriendo, le daremos simeplemnete a `Connect`.
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nos aparecera otro popup, en el que tendremos que dar a `Si`.
 

@@ -4,7 +4,7 @@ En primer lugar `sqlmap` tiene que recibir una URL donde haya una serie de campo
 
 Por ejemplo, abriendo `Burp Suite`, llendonod en la pagina de `Mutillidae` en la seccion de `SQL Injection - Bypass Login` vamos a poner un usuario y contraseña, pero antes de darle a enviar ponemos a `Burp Suite` a la escucha, por lo que una vez que este a la escucha le damos a enviar para que nos capture la peticion:
 
-<figure><img src="../../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (76) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y una vez que tengamos esta peticion la vamos a guardar en un fichero de la siguinte forma, seleccionaremos todo -> le daremos click derecho -> `Copy to File` -> seleccionamos donde queremos guardar el archivo -> ponemos como nombre algo como `request.burp.txt` -> `Save`
 

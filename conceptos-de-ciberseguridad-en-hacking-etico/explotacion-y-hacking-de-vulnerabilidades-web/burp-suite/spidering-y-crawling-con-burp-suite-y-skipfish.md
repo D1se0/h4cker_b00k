@@ -2,9 +2,9 @@
 
 Si nos vamos en la pestaña de `targets` -> `Site map` -> Aqui podremos ver nuestra IP y si desplegamos veremos una carpeta de la pagina `mutillidae` y si volvemos a desplegar, veremos varios archivos los cuales conforman la pagina web, entre ellos un `index.php` pero si desplegamos ese podremos ver todas las paginas que nos ha descubierto `Burp Suite` y las que estan en gris claro significa que no las hemos visitado y las que estan en negrita significa que si las hemos visitado:
 
-<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (56) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (57) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esta herramienta consigue descubrir todo esto mediante el analisis del codigo fuente que recive del servidor, cuando recive esa peticion desde el servidor con la pagina web parsea la peticion coge todos los enlaces que puedan hacer referencia a otros apartados dentro de esa aplicacion web y te los muestra ahi.
 
@@ -74,6 +74,6 @@ Lo que mola de esta herramienta es que la visualizacion de los resultados es bas
 open index.html
 ```
 
-<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (58) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos una interfaz bastante bonita y visual a la hora de poder analizar los datos.

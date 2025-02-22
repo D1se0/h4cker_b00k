@@ -14,6 +14,6 @@ Hostname/IP: www.google.com; cat /etc/passwd
 
 Y podremos ver algo asi:
 
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (108) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos funciona correctamente.

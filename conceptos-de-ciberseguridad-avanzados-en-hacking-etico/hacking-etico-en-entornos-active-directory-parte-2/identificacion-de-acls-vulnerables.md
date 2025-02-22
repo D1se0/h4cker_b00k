@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Page
+# Identificación de ACLs vulnerables
 
 Primero para poder explotar las `ACLs` tendremos que identificar cuales pueden ser vulnerables para poder ser explotadas:
 

@@ -27,8 +27,8 @@ URL = https://localhost:8834/
 
 Aceptamos el riesgo y le daremos a continuar, por lo que nos llevara a la pagina de `Nessus`.
 
-<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez que se instales todos los `plugins` nos aparecera la interfaz de `Nessus` nos pedira que introduzcamos una IP para empezar el primer escaneo, pero le daremos a `Close` y si nos vamos a `New Scan` veremos todos los `plugins` que hay para realizar escaneos.
 
-<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33) (1).png" alt=""><figcaption></figcaption></figure>

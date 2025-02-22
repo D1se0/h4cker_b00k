@@ -31,6 +31,6 @@ Y con la de `Windows` haremos lo mismo, la pondremos en `Host-only`, en mi caso 
 
 En la maquina `windows` le daremos click derecho al adaptador de red -> `Open Network and Sharing center` -> `Changue advanced sharing settings` y ponemos todo a `On` lo que este en `off`.
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con esto lo que estamos haciendo es que esta maquina se pueda comunicar con otros `nodos` (Maquinas) para posteriormente poder ser explotadas.

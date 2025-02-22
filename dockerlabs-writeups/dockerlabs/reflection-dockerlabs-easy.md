@@ -100,7 +100,7 @@ Si en el cuadro de texto ponemos lo siguiente:
 
 Y le damos a enviar, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que podemos injectar codigo `HTML` y se refleja el resultado en el cuadro de texto, por lo que estaria completado el primer reto.
 
@@ -166,7 +166,7 @@ Por lo que habremos terminado los retos, ahora si le damos al siguiente boton ll
 
 ## SSH
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que nos conectaremos por `ssh` con dichas credenciales.
 

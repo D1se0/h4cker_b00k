@@ -22,7 +22,7 @@ setoolkit
 
 Y nos aparecera como un `disclaimer` para aceptar que vamos a utilizar la herramienta con buenas acciones y no con malas, por lo que le daremos a la `y`, y esto nos metera en la herramienta:
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (127) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esto lo que hace automaticamente es replicar una pagina web que elijamos y capturar las credenciales que se introduzcan por parte del usuario para que nos llegue a nosotros.
 
@@ -73,7 +73,7 @@ window.onload = function () {
 
 Guardamos esto y volvemos a ejecutar la herramienta, con esto deberia de funcionar ya.
 
-<figure><img src="../../.gitbook/assets/image (128).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (128) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez que tengamos corriendo esta pagina y estando en mitad de la comunicacion con el `ARP Spoofing` y el `DNS Spoofing` que le redirija a esta pagina cuando meta `facebook.es`, ya podremos probar a como si fueramos el usuario desde la maquina `windows` a meter `facebook.es` en el navegador y metes unas credenciales, por lo que si visitamos dicho dominio, veremos que funciona ya que nos aparece nuestra pagina falsa.
 

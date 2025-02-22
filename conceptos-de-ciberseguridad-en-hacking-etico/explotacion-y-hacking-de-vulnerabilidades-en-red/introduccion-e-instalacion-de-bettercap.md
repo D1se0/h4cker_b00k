@@ -12,11 +12,11 @@ sudo apt-get install bettercap
 
 Si ahora nosotros pusieramos `bettercap` entraremos dentro del entorno de linea de comandos de la propia herramienta:
 
-<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (119) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si ponemos `help` nos sacara la info de los modulos que hay:
 
-<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (120) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si por ejemplo queremos ver informacion de un modulo, podremos hacerlo poniendo:
 

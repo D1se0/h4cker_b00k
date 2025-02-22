@@ -13,7 +13,7 @@ Pass: null
 
 Y veriamos algo tal que asi:
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos nos esta devolviendo un error, en el que encima nos especifica donde esta dando el error y el tipo de consulta que se esta haciendo, por lo que podremos aprovechar esto para realizar un `SQL Injecction` de forma mas avanzada.
 
@@ -41,11 +41,11 @@ Pass: null
 
 Lo que vamos hacer aqui es que va a funcionar y nos va a logear con el primero usuario que este en la base de datos, por lo que pasaremos de esto:
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
 
 A esto:
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y con esto vemos que somo el usuario `admin` por lo que funciono.
 
@@ -60,7 +60,7 @@ Aqui lo que estamos haciendo es con el operador `UNION` unir lo que venga de det
 
 Y con esto nos va a dar un error, pero diferente, ya que nos esta diciendo que no coincide el numero de columnas de la primera consulta con la consulta que nosotros le estamos indicando, por lo que como no sabemos cuantas columnas hay, podremos mediante injeccion de comandos de `sql` descubrir, la columna exacta en la que poder injectar esta consulta que nosotros estamos haciendo.
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y para ir descubriendo esto, se tiene que ir haciendo poco a poco lo siguiente.
 
@@ -80,7 +80,7 @@ Pass: null
 
 Y con esto te devuelve el nombre de la base de datos que en este caso seria `mutillidae`.
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para descubrir la version de esta base de datos, podremos hacerlo con otro comando cogiendo la misma consulta ahora que sabemos que tiene 7 columnas.
 
@@ -89,7 +89,7 @@ User: ' UNION select null,version(),null,null,null,null,null-- -
 Pass: null
 ```
 
-<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si queremos sacar la informacion de todas las tablas, podremos hacerlo de la siguiente forma:
 
@@ -98,7 +98,7 @@ User: ' UNION select null,table_name,null,null,null,null,null FROM information_s
 Pass: null
 ```
 
-<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lo interesante de esto es que nosotros podremos leer algunos archivos del sistema ya que la propia base de datos suele poder leer este tipo de ficheros, y nosotros podremos aprovechar eso de la siguiente forma:
 
@@ -107,7 +107,7 @@ User: ' UNION select null,@@secure_file_priv,null,null,null,null,null-- -
 Pass: null
 ```
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esto nos mostrara la ruta de donde estan esos ficheros y sabiendo esto, nosotros mediante consultas de `mysql` podremos aprovechar esto para leerlos.
 

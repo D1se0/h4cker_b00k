@@ -12,7 +12,7 @@ Si nosotros miramos que tabla `ARP` tenemos en `Windows` veremos lo siguiente:
 arp -a
 ```
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esta es nuestra tabla actual de `ARP`.
 
@@ -37,7 +37,7 @@ Por ejemplo, si hacemos un ping a la maquina atacante desde la maquina victima, 
 ping 192.168.5.178
 ```
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (122) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora como podremos ver esta añadida nuestra maquina atacante en la `cache ARP` de la maquina victima, a parte de que podremos ver la direccion fisica de la maquina.
 
@@ -67,7 +67,7 @@ Con esto empezara el ataque, espameando paquetes `ARP` para que parezca que somo
 
 Si ahora en la maquina `windows` ponemos el `arp -a` podremos ver que el `Router` tiene la misma direccion fisica que nuestra maquina `kali`:
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (123) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que ya habriamos envenenado la tabla `ARP` y todas las peticiones pasan por nosotros.
 

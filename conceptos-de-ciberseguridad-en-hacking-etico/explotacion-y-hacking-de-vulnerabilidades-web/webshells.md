@@ -65,12 +65,12 @@ Y ahora utilizando la tecnica de `Path Traversal` haremos lo siguiente para mete
 URL = http://<IP>/mutillidae/src/index.php?page=backdoor.php
 ```
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nos aparecera como un recuadro en el que podremos insertar un comando que se ejecutara en el sistema.
 
 Si por ejemplo queremos ver el archivo de `passwd` pondremos `cat /etc/passwd`:
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y podremos verlo en la propia pagina.

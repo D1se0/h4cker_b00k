@@ -4,11 +4,11 @@ Lo que vamos hacer aqui es explotar vulnerabilidades de forma manual, sin utiliz
 
 Vamos a empezar mirando el reporte que obtuvimos de `nmap` anteriormente y en concreto vamos a intentar explotar la vulnerabilidad que nos marca del puerto `6667` que se utiliza para comunicarse con otras personas como si fuera un `chat` pero en este caso esta `troyanizada` y para obtener mas informacion nos muestra el link.
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (46) (1).png" alt=""><figcaption></figcaption></figure>
 
 URL = [Pagina de referencia](http://seclists.org/fulldisclosure/2010/Jun/277)
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos nos explica que esa version de aplicacion, contiene una `backdoor` (Puerta trasera) por lo que podemos aprovechar eso para obtener acceso a la maquina.
 
@@ -41,7 +41,7 @@ El `payload` es concretamente lo que se va a ejecutar el codigo que nosotros vam
 
 Antes de ejecutarlo tendremos que poner nuestra IP y el puerto que queramos dentro del exploit:
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (48) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez echo esto lo guardamos y ahora si lo iriamos a ejecutar.
 

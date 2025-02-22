@@ -25,7 +25,7 @@ URL = http://localhost/
 
 Podremos ver que esta todo correctamente.
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (124) (1).png" alt=""><figcaption></figcaption></figure>
 
 Primero lo que tendremos es que situarnos en medio de la comunicacion de la maquina `windows` que lo haremos mediante la tecnica del `ARP Spoofing`, cuando la maquina victima intente resolver el dominio de por ejemplo `facebook.com` nos llegara a nosotros y le responderemos con una direccion IP falsa que le lleve a la pagina que nosotros hemos creado de forma automatica.
 
@@ -69,10 +69,10 @@ Y con el tercer comando iniciamos este proceso, nos aparecera esto:
 
 Si nosotros nos vamos a la maquina `windows` y buscamos en el navegador `facebook.es` nos va a redirgir a nuestra pagina web:
 
-<figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (125) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y en la maquina del atacante aparecera lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (126) (1).png" alt=""><figcaption></figcaption></figure>
 
 Como vemos ha funcionado correctamente.

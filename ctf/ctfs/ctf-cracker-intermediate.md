@@ -228,7 +228,7 @@ Si ponemos dicho `SERIAL` veremos que es el correcto, por lo que entraremos al p
 
 Hay una opcion interesante llamada `Mostrar Contraseña Secreta` que si le damos veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos, estamos viendo una contraseña que puede ser la de un usuario del sistema, no sabemos el usuario, pero vamos a probar si el usuario es `cracker` ya que la pagina se llama asi y esta dedicado al `cracking`, por lo que haremos lo siguiente.
 

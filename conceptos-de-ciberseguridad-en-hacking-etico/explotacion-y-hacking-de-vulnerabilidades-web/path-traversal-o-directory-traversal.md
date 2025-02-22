@@ -24,7 +24,7 @@ URL = http://<IP>/mutillidae/src/index.php?page=../../../../../etc/passwd
 
 Con la segunda opcion lo que hago es que se vaya todos los directorios para atras hasta llegar al raiz `/` y de ahi le indico la ruta absoluta al fichero, por si acaso hubiera algun problema con el primero.
 
-<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (77) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que esto nos va a mostrar el `passwd`.
 

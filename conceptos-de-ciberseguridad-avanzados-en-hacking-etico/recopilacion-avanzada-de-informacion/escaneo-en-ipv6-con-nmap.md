@@ -20,7 +20,7 @@ Pero antes tendremos que identificar esa `IPv6` de ese `host` en concreto, para 
 
 > Lo que vamos hacer es hacer `direcciones Multicast`.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
 
 En nuestro caso elegiremos la primera `ff02::1` ya que es para escanear todos los `nodos` de nuestra red local y el segundo seria para todos los `routers` y asi sucesivamente dependiendo de que objetivo de escaneo queramos realizar.
 

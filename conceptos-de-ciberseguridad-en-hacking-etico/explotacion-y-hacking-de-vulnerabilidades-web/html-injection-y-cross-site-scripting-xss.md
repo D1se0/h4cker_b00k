@@ -6,11 +6,11 @@ Por lo que para efectuar este tipo de vulnerabilidad vamos a irnos al apartado d
 
 Y veremos algo tal que esto:
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82) (1).png" alt=""><figcaption></figcaption></figure>
 
 La funcionalidad legal de este apartado es que cuando nosotros metamos un dominio o IP nos haga una resolucion a dicho dominio o IP dandonos informacion sobre ello, por ejemplo si metemos `www.google.com` tendremos que ver algo asi:
 
-<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (83) (1).png" alt=""><figcaption></figcaption></figure>
 
 Esta vulnerabilidad sucede cuando los programadores de alguna manera cuando crearon dicha pagina web, este apartado en concreto, cuando nosotros incluimos texto y este texto se refleja en la pagina web como podemos observar con `www.google.com` no llega a realizar una sanitizacion adecuada sobre ciertos caracteres que nosotros podremos meter y que son caracteres reservados para el lenguaje de `HTML`, con lo cual nosotros podremos incluir caracteres especiales como por ejemplo ``<>"'`, etc...`` las cuales estan incluidos en `HTML` y este mismo lo interpretara como un fragmento de codigo `HTML` por lo que lo representara como tal.
 
@@ -24,7 +24,7 @@ Hostname/IP = <h1>canario</h1>
 
 Veremos que el nombre `canario` se ve mucho mas grande, por lo que esta funcionando la injeccion de codigo (`XSS`):
 
-<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84) (1).png" alt=""><figcaption></figcaption></figure>
 
 De esta forma parece inofensivo, pero tambien se puede injectar codigo `javascript` por lo que esto ya va siendo mas ofensivo dependiendo de lo que hagamos:
 
@@ -36,7 +36,7 @@ Hostname/IP = <script>alert('Vulnerabilidad XSS')</script>
 
 Y si todo sale bien, deberemos de ver una alerta cuando lo enviemos, sabiendo que ya 100% es vulnerable este tipo de codigos `XSS`.
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora lo que vamos hacer es un `HTML Injection` siendo de forma ofensiva, con un `paylaod` que nos proporciona la pagina de `Mutillidae` pero cambiando algunas cosas:
 
@@ -99,7 +99,7 @@ La funcionalidad basica de lo que hace este `payload` es que al usuario le salta
 
 La propia pagina de `Mutillidae` tiene por asi decirlo un apartado que actua como nuestro servidor del atacante para que lo que ponga el usuario llegue a ese apartado que nosotros hemos configurado, por lo que nos tendremos que ir a `Data Capture Page` -> `View Captured Data`:
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86) (1).png" alt=""><figcaption></figcaption></figure>
 
 Eso actua como nuestro servidor y donde podremos ver las credenciales capturadas, por lo que los cambios que realizaremos al `payload` serian los siguientes.
 
@@ -162,7 +162,7 @@ Primero quitar el `localhost` y poner la IP de la maquina donde esta corriendo `
 
 Ahora nos volvemos a nuestro `DNS Lookup`, ponemos la palabra por ejemplo `canario` y con `Burp Suite` a la escucha enciamos la peticion para que la capture `Burp Suite`:
 
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87) (1).png" alt=""><figcaption></figcaption></figure>
 
 Teniendo la peticion capturada lo que tendremos que hacer sera codificar todo esto ya que hay saltos de linea, muchos caracteres, espacios, etc... Por lo que nos iremos al `Decoder` de `Burp Suite`, en el pegaremos el codigo y le daremos a la opcion de `Encode as ...` en tipo de `URL` viendose algo asi:
 
@@ -172,23 +172,23 @@ Teniendo la peticion capturada lo que tendremos que hacer sera codificar todo es
 
 Pues todo esto lo tendremos que pegar sustituyendo la palabra `canario` por todo este tocho, quedando algo asi:
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y si ahora le damos a `Forward` veremos en la pagina lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89) (1).png" alt=""><figcaption></figcaption></figure>
 
 El panel que comente donde pondra que la sesion a expirado y habra que volver a poner las credenciales, por lo que el usuario lo hara y esto llegara a nuestro servidor del atacante en la parte esa de la pagina de `Mutillidae` que mencione.
 
 Metiendo las credenciales pondra esto otro:
 
-<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y aqui nos pondra `Gracias ya puedes continuar`, por lo que las credenciales ya las habriamos capturado, ahora solo tendremos que irnos al siguiente apartado para verlas:
 
 Iremos a `Data Capture Page` -> `View Captured Data` -> y veremos las credenciales:
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con este tipo de tecnicas tambien se podria hacer un `phishing` en el que cuando piche en un link que le enviemos aparezca este popup y cuando meta las credenciales lleguen al servidor de atacante.
 
@@ -198,7 +198,7 @@ Para probar esto nos iremos al siguiente apartado de la pagina web:
 
 `OWASP 2017` -> `Cross-Site-Scripting (XSS)` -> `Persistent (Second Order)` -> `Add to your blog`.
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92) (1).png" alt=""><figcaption></figcaption></figure>
 
 En este apartado el funcionamiento legal es que nosotros podemos escribir un blog o un comentario el cual se va a quedar reflejado en la pagina web.
 
@@ -212,13 +212,13 @@ Si nosotros por ejemplo ponemos:
 
 Podremos ver que el texto se escribe mas grande por lo que funciona, pero no solo funciona eso, si no que se queda reflejado en la pagina web y cada vez que entre un usuario se le va a ejecutar eso por lo que los demas podrian ver eso mismo:
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vamos hacer lo mismo de antes, para que cada vez que un usuario ingrese en este apartado le aparezca el popup de meter las credenciales por que su cuenta a expirado.
 
 Pondremos el `Burp Suite` a escuchar y una vez enviada la peticion, pondremos el codigo codificado reemplazando la palabra `canario` o lo que hayamos metido del popup, quedando algo asi:
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (94) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pero en el codigo tendremos que reemplazar todas las comillas simples (`'`) por comillas dobles (`"`) por que si no dara error.
 
@@ -287,14 +287,14 @@ Por lo que esto reemplazandolo por la palabra `canario`, le dariamos a `Forward`
 
 En el comentario publico se nos quedaria vacio:
 
-<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (95) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pero si volvemos a cargar la pagina volvera aparecer el popup:
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (96) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al codigo fuente, podremos ver que nuestro codigo se injecto corerctamente:
 
-<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y esto esta de forma publica, creando asi una persistencia `XSS`.
