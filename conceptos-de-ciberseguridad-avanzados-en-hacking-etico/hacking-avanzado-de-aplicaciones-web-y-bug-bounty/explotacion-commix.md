@@ -37,7 +37,7 @@ Pass: password
 
 Nos vamos al apartado de `Command Injection` y dentro del mismo tendremos un campo el cual es vulnerable a `Command Injection`, por lo que podremos probar la herramienta en esta zona.
 
-<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (264).png" alt=""><figcaption></figcaption></figure>
 
 Pillamos la `URL` de la pagina en el apartado en el que estamos, que en mi caso es este:
 

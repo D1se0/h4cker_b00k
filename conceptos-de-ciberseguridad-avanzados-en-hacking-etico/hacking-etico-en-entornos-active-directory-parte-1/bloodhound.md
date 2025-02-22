@@ -96,7 +96,7 @@ bloodhound
 
 Nos aparecera esta ventana:
 
-<figure><img src="../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption></figcaption></figure>
 
 Metemos el usuario que es `neo4j` y la contraseña que pusimos anteriormente en `neo4j`.
 
@@ -157,7 +157,7 @@ Closing writers
 
 Esto lo que va hacer es volcarnos 2 ficheros en el escritorio los cuales nos tendremos que pasar al `kali` que seran los que tengamos que cargar en el `BloodHound` para que nos haga el grafo, etc...
 
-<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption></figcaption></figure>
 
 El archivo que nos interesa pasar al `kali` es el `ZIP` por lo que nos lo pasaremos.
 
@@ -167,69 +167,69 @@ Le daremos a `Clear Finish` y cuando no veamos nada significa que ya habra carga
 
 Y en la parte de la izquierda ya veremos informacion de primeras:
 
-<figure><img src="../../.gitbook/assets/image (212).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
 
 Nosotros podremos buscar por un `nodo` en la parte de `Search for a node` pondremos por ejemplo `empleado1` y lo seleccionamos, ya que nos esta detectando que en la informacion que recopilo encontro eso mismo.
 
-<figure><img src="../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
 
 Si nosotros le damos doble click a `empleado1` nos aparece toda la informacion de dicho empleado:
 
-<figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
 
 Si nosotros queremos ver la informacion del grupo de los usuarios del dominio, buscaremos `usuarios` y seleccionamos el que nos encuentra llamado `usuarios del grupo de dominio`.
 
-<figure><img src="../../.gitbook/assets/image (215).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
 
 Si le damos doble click:
 
-<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
 
 Vemos cuantos usuarios hay en el, etc...
 
 Ahora si pulsamos en los `Miembros directos` (`Members Direct`) nos sacara todos esos usuarios de forma directa en un grafo:
 
-<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
 
 Pero lo mas potente que tiene `BloodHound` es que tiene diversas tecnicas, diversas `querys` las cuales podemos ver en la seccion de `Analisys`:
 
-<figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption></figcaption></figure>
 
 Lo que hace esto es sacar `qerys` complejas y sacarlas en forma de grafico representandolas graficamente.
 
 Por ejemplo si yo quiero saber de golpe cuales son los `Domains Admins.` podemos pulsar en esta de aqui:
 
-<figure><img src="../../.gitbook/assets/image (219).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
 
 Y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (243).png" alt=""><figcaption></figcaption></figure>
 
 Por ejemplo habremos descubierto que `empleado4` pertenece al grupo administradores gracias al grupo `Executives`, por lo que podemos marcarle como usuario de alto valor dandole click derecho al `empleado4`:
 
-<figure><img src="../../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (244).png" alt=""><figcaption></figcaption></figure>
 
 Y pinchamos en la opcion llamada `Mark User as High Value` y ahora lo veremos asi:
 
-<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
 
 Con el diamante, esto lo hacemos para marcar un usuario importante donde si lo comprometo podremos obtener privilegios de administrador directamente.
 
 Tmbien podremo ver `rutas` mas cortas para llegar a ser `administrador de dominio`.
 
-<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (246).png" alt=""><figcaption></figcaption></figure>
 
 Y veremos esto en el grafo:
 
-<figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (247).png" alt=""><figcaption></figcaption></figure>
 
 Si nosotros por ejemplo no sabemos una de las ruta que nos pone en algun grafico o cualquier cosa, solo le tendremos que dar click derecho y veremos esto:
 
-<figure><img src="../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (248).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Help`:
 
-<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (249).png" alt=""><figcaption></figcaption></figure>
 
 Y podremos ver la informacion de lo que es este `GenericAll`, tambien nos proporciona varios tipos de abuso en los cuales podremos escalar privilegios, a parte de que tambien nos da referencias a paginas y videos en los cuales explica todo esto, etc... Asi en cada uno de ellos.
 
@@ -259,12 +259,12 @@ MATCH p=(m:User)-[r:AdminTo]->(n:Computer) RETURN p
 
 Y lo pegaremos en la siguiente seccion de `BlodHound`:
 
-<figure><img src="../../.gitbook/assets/image (227).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (250).png" alt=""><figcaption></figcaption></figure>
 
 Abajo donde pone `Raw Query` lo abrimo y lo pegamos en esa barra de busqueda.
 
 En mi caso me aparecera esto:
 
-<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
 
 Y tambien podremos importar el `JSON` del GitHub el cual te lo explica todo en los repositorios, etc...

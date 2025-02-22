@@ -23,6 +23,6 @@ Lo que esta haciendo es que esta creando un nuevo proceso oculto, en este caso l
 
 Este sera el proceso donde esta la shell:
 
-<figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (138) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que si se cierra ese, se nos va la conexion.

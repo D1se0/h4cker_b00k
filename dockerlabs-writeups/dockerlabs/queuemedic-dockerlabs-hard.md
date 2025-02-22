@@ -257,7 +257,7 @@ Pass: j.castro
 
 Y vemos que estaremos dentro logeados con dicho usuario:
 
-<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que si le damos alguna de las opciones que esta en el `header` en la `URL` lleva un parametro llamado `?page=` vamos a ver si se puede utilizar algun `Wrapper` de `LFI` para poder hacer un parametro `cmd=` y asi poder ejecutar comandos del sistema.
 

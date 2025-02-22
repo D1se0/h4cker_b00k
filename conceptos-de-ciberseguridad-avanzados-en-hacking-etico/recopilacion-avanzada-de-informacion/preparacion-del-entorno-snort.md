@@ -60,7 +60,7 @@ URL = [Download Snort](https://www.snort.org/downloads)
 
 Una vez que se nos haya instalado, cuando le demos a `close` nos pondra el siguiente mensaje:
 
-<figure><img src="../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
 
 El cual nos dice que se instalo todo correctamente, pero que para poder interceptar los datos de una maquina a otra necesitara una libreria llamada `Npcap` que pertenece a `nmap`, por lo que nos iremos a la siguiente pagina:
 

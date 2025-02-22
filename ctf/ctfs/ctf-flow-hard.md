@@ -159,19 +159,19 @@ Vamos abrir `BurpSuite` configurarlo para que escuche en el mismo puerto donde e
 
 Si cambiamos algunas cosas del `Head` veremos que hay una seccion de la misma en concreto en la que se puede injectar comandos, que es en el `User-Agent`.
 
-<figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (145) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aqui vemos que si ponemos el comando `id` para que nos muestre que usuario somos, veremos que funciona y que encima nos lo muestra en la pagina, por lo que veremos el `passwd` para ver que usuarios hay.
 
-<figure><img src="../../.gitbook/assets/image (146).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (146) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos funciona y vemos que hay un usuario llamado `flow`, por lo que vamos a ver que archivos a creado dicho usuario por si hubiera algun archivo interesante.
 
-<figure><img src="../../.gitbook/assets/image (147).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (147) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos descubrio un archivo bastante interesante llamado `secret` en el `/usr/bin`, por lo que vamos a intentar leerlo por dentro a ver que hace.
 
-<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (148) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay una cadena codificada, vamos a ver en que esta codificado con la siguiente pagina:
 

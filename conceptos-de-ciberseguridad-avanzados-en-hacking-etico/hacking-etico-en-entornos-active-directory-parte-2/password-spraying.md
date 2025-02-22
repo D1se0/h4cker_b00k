@@ -169,7 +169,7 @@ Get-NetUser | Select-Object -ExpandProperty name | Out-File C:\Users\empleado1\D
 
 Esto nos habara generado un archivo en el escritorio algo asi:
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 Y ahora vamos a probar como vimos anteriormente si alguno mas de esos 2 usuarios tiene la contraseña por defecto llamada `password`:
 

@@ -87,7 +87,7 @@ Vemos que nos muestra mucha informacion aqui, pero si ahora abrimos el archivo q
 sudo open report.html
 ```
 
-<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que que nos muestra mucha mas informacion de forma que es mas visual que en la terminal, por lo que ya seria investigar.
 
@@ -145,6 +145,6 @@ sudo open report/index.html
 
 Info:
 
-<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (263).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos lo muestra muchisimo mejor que `nikto` por lo que son dos herramientas muy buenas para encontrar vulenrabilidades web.

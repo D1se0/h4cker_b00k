@@ -20,31 +20,31 @@ Lo que vamos hacer primeramente es abrir `Wireshark` para ver todas las peticion
 
 Pondremos las siguientes credenciales:
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a iniciar sesion con el `Administrador` mientras estamos capturando con `Wireshark`, una vez que estemos en el escritorio, pararemos de capturar con `Wireshark` y veremos todo esto:
 
-<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos capturo bastante informacion sobre `kerberos` y la autenticacion.
 
 Si nos vamos a un `AS-REQ` el primero en concreto:
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
 
 Y vemos sus datos a nivel de red en la parte de abajo, desplegamos un poco la informacion de `kerberos` en concreto el `cname` que es el que nos interesa para saber sobre que usuario es y vemos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es sobre el usuario `Administrador`, si seguimos bajando en los paquetes de datos, vemos que `AS` necesita una `Preautenticacion` como mencione anteriormente y el siguiente paquete es el paquete cifrado con la `clave privada` del usuario en este caso `Administrador`:
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (146).png" alt=""><figcaption></figcaption></figure>
 
 Si le damos a ese segundo `AS-REQ` sera el paquete con el `timestamp` cifrada con la `clave privada` del `Administrador` el cual nos va a interesar obtener.
 
 Nos vamos a ir a la parte de la informacion del paquete donde pone `padata-type: ... TIMESTAMP...` y cogeremos el valor donde pone `cipher: ...`:
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (147).png" alt=""><figcaption></figcaption></figure>
 
 Que esa sera la clave que nos interesa, en mi caso seria esta:
 
@@ -56,11 +56,11 @@ Para copiarla, le daremos click derecho -> `Copy` -> `Value`.
 
 Vemos que esta cifrado en `AES256`, por lo que necesitaremos otra cosa a parte de ese `hash` que hemos obtenido, que seria el `salt`, esto lo podremos obtener en la siguiente respuesta que le hacer el `AS-REP`.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 
 Y si nos vamos a la informacion, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (149).png" alt=""><figcaption></figcaption></figure>
 
 Ahi estamos viendo el `salt` con el que esta cifrado, por lo que copiaremos de la misma forma los valores como hicimos antes y obtendremos algo asi:
 
@@ -74,7 +74,7 @@ URL = [Hashcat Wiki](https://hashcat.net/wiki/doku.php?id=example_hashes)
 
 Si nos metemos en la pagina nos interesara el siguiente formato:
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
 
 Que el ejemplo seria algo asi:
 

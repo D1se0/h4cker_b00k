@@ -168,7 +168,7 @@ URL = http://crosswords.5eek3r.dl/
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (173).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (173) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si inspeccionamos la pagina y bajamos abajo del todo veremos lo siguiente:
 
@@ -194,7 +194,7 @@ Vemos que se esta codificando por lo que vamos activar una opcion en `BurpSuite`
 
 Modificaremos en `BurpSuite` esto:
 
-<figure><img src="../../.gitbook/assets/image (174).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (174) (1).png" alt=""><figcaption></figcaption></figure>
 
 Marcaremos esa `casilla`.
 
@@ -206,17 +206,17 @@ Ahora volveremos a capturar la respuesta con la misma frase:
 
 Una vez capturado le daremos una vez al boton llamado `Forward` y nos llegara la respuesta del servidor, en la parte de `Response` identificaremos la fraccion del codigo que ya esta codificada:
 
-<figure><img src="../../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (175) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (176) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es esa de ahi, por lo que la dejaremos de la siguiente forma:
 
-<figure><img src="../../.gitbook/assets/image (177).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (177) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora lo enviaremos y veremos lo siguiente en la pagina:
 
-<figure><img src="../../.gitbook/assets/image (178).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (178) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos ha funcionado, por lo que ya sabremos como realizar un `XSS` en la pagina, pero si seguimos investigando sera inutil la busqueda, vamos a probar ha realizar `fuzzing`:
 
@@ -320,7 +320,7 @@ URL = http://admin.crosswords.5eek3r.dl/
 
 Vemos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (179).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (179) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Escalate user www-data
 

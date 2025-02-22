@@ -114,7 +114,7 @@ URL = http://<IP>/
 
 Veremos un apartado en el que podremos subir una imagen con un tamaño personalizado, por lo que descargaremos una imagen y la subiremos, viendo algo asi:
 
-<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (144) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aparentemente no vemos nada, por lo que intentaremos `fuzzear` un poco por la web.
 
@@ -162,7 +162,7 @@ Finished
 
 Por lo que vemos, podremos ver el `info.php`, si nos metemos dentro podremos ver varias extensiones instaladas, entre ellas una que llama mucho la atencion llamada `imagick`:
 
-<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (143) (1).png" alt=""><figcaption></figcaption></figure>
 
 Buscamos si hubiera alguna vulnerabilidad respecto a esta herramienta, ya que esta herramienta es la que gestiona el tema de las imagenes en la pagina web.
 
@@ -203,7 +203,7 @@ Info:
 
 Ahora lo que haremos con esta imagen generada como `passwd.png` sera subirlo a la pagina, una vez subido veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (142) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nos descargaremos la imagen de la pagina y veremos el contenido de la imagen con la siguiente herramienta:
 

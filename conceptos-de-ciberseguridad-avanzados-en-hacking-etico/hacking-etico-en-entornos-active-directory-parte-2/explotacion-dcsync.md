@@ -22,15 +22,15 @@ Este tipo de informacion no se podra obtener con las tecnicas de recopilacion de
 
 Por lo que en `BloodHound` vamos a buscar por la siguiente `Query`:
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
 Y veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
 
 Si seleccionamos por ejemplo el usuario `Angelika` vemos que tiene una linea llamada `DCSync` la cual si le damos a su `help` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
 
 Tenemos los privilegios del permiso `GetChargues` que es el necesario para poder realizar un ataque de `DCSync` y en la parte de `Windows Abuse` te pone que comandos a seguir para realizar este ataque.
 
@@ -90,7 +90,7 @@ Vamos a cerrar sesion en el equipo y nos vamos a logear directamente con `Angeli
 
 Por lo que cerraremos sesion -> abajo a la izquierda le daremos a `Otro usuario` -> pondremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (104).png" alt=""><figcaption></figcaption></figure>
 
 Le damos a `ENTER` y nos habra iniciado sesion en el dominio del `DC01` con dicho usuario que esta creado ya en el dominio.
 
@@ -126,11 +126,11 @@ Mas adelante veremos a como evadir todas estas medidas de seguridad para que no 
 
 Una vez que hayamos desactivado el `Tiempo real` del `Windows Defender`:
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
 
 Podremos volver a ejecutar el comando sin problemas y esto nos lo descargara.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
 ### Dumpeo de hashes NTLM mediante el permiso `DCSync` con `Mimikatz`
 

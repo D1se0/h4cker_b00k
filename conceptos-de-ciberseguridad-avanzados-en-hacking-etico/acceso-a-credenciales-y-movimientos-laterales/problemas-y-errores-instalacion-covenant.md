@@ -16,7 +16,7 @@ layout:
 
 En algunas ocasiones es posible que al seguir el procedimiento de instalación de `Covenant` que se muestra en el siguiente vídeo os aparezca un error similar al siguiente:
 
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (179).png" alt=""><figcaption></figcaption></figure>
 
 El problema que aparece es debido a la versión de `.NET` que tienes instalada en tu máquina `Kali Linux`. Tienes que instalar la versión `3.1` que es la compatible con `Covenant`. Para ello, ejecuta los siguientes comandos en la terminal:
 

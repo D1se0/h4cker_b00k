@@ -79,4 +79,4 @@ Una vez que tengamos corriendo esta pagina y estando en mitad de la comunicacion
 
 Cuando metemos nuestras credenciales como usuario normal, podremos ver que en la maquina atacante las recivimos:
 
-<figure><img src="../../.gitbook/assets/image (129).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (129) (1).png" alt=""><figcaption></figcaption></figure>

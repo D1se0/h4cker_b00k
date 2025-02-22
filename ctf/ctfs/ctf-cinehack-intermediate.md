@@ -126,7 +126,7 @@ URL = http://cinema.dl/
 
 Vemos que nos carga una pagina como si fuera una cartelera de cine y la unica pelicula a la que podemos entrar es a la llamada `El tiempo que tenemos`, dentro del mismo podremos ver que podemos como reservar entradas, las cuales si le damos a reservar nos lleva a un `reservation.php`, vamos a ver que hace de forma intenta con la peticion de reserva capturandolo con `BurpSuite`.
 
-<figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (164) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay un parametro oculto llamado `problem_url=` el cual indica como una `URL` por defecto como si pudieramos hacer algo desde un servidor externo, por lo que vamos a probar a abrir un servidor de `python3` con una `shell.php` que vamos a crear y añadirlo en ese parametro a ver que pasa.
 
@@ -215,7 +215,7 @@ Vemos que nos encuentra uno llamado `/andrewgarfield` y si entramos en el:
 URL = http://cinema.dl/andrewgarfield/
 ```
 
-<figure><img src="../../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (163) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que es donde esta subido el archivo que se descargo el `problem_url=` por lo que nos pondremos a la escucha:
 

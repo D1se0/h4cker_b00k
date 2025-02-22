@@ -192,7 +192,7 @@ Por lo que vemos parece ser que la pagina tiene que tener instalado el siguiente
 
 En `Plugins` vemos la siguiente seccion:
 
-<figure><img src="../../.gitbook/assets/image (181).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (181) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que le daremos a instalar y le daremos a `Guardar Cambios` una vez echo esto ejecutaremos el exploit de `GitHub` de la siguiente forma:
 

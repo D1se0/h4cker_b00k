@@ -182,27 +182,27 @@ Nmap done: 1 IP address (1 host up) scanned in 87.79 seconds
 
 Si entramos en el puerto `80` veremos una pagina normal por fuera, si probamos a interceptar la peticion con `BurpSuite` enviando esto de la pagina:
 
-<figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (153) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y en `BurpSuite` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (154) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vamos a probar si el `userInput` es vulnerable por alguna injeccion de comandos.
 
 Pero antes lo mandaremos al `Repeater` y ahi lo testearemos.
 
-<figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (155) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que con un `ls` nos da un error bastante interesante el cual parece ser que no admite ese comando asi a pelo, pero tampoco nos da otro error de peticion en el sentido de que no signifique nada para el servidor, por lo que probaremos a codificarlo en `Base64` para ver si se lo traga.
 
-<figure><img src="../../.gitbook/assets/image (156).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (156) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que si nos esta haciendo un `ls` pero codificado en `Base64` por lo que haremos lo siguiente:
 
 Primero vemos que usuarios somos:
 
-<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (157) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que somos el usuario `cachopin`.
 
@@ -212,7 +212,7 @@ Si listamos los archivos que ha creado dicho usuario, veremos que en la `home` d
 find / -type f -user cachopin 2>/dev/null
 ```
 
-<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (158) (1).png" alt=""><figcaption></figcaption></figure>
 
 Los 2 archivos interesantes son:
 
@@ -225,7 +225,7 @@ Vamos a leer estos dos archivos:
 
 > hash.lst
 
-<figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (159) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 $SHA1$d$GkLrWsB7LfJz1tqHBiPzuvM5yFb=
@@ -239,7 +239,7 @@ $SHA1$d$LxVnWkB8JdGq2rH0UjPzKvT5wM1=
 
 Parece que es una lista de usuarios del sistema.
 
-<figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (160) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 dreamer

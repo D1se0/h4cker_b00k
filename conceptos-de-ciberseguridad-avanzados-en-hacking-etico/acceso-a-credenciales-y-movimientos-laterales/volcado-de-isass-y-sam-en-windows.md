@@ -20,7 +20,7 @@ Pongamos que tenemos comprometido el equipo `WS01` con el usuario de dominio `em
 
 Ejecutamos como `Administrador` el `PowerShell` y metemos lo siguiente para que se nos habra como `administrador` local:
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
 
 ```powershell
 cd C:\Users\empleado1\Desktop\logonSessions
@@ -29,7 +29,7 @@ cd C:\Users\empleado1\Desktop\logonSessions
 
 Pero antes de ejecutarlo abriremos otro `PowerShell` como `Administrador` del dominio esta vez simulando que el `administrador` esta actualmente en el equipo haciendo cualquier cosa.
 
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (168).png" alt=""><figcaption></figcaption></figure>
 
 Una vez abierto ese `PowerShell` lo dejaremos en segundo plano y ejecutaremos el `PowerShell` del `administrador` local del ejecutable `logonsessions.exe`:
 
@@ -173,7 +173,7 @@ Esto lo que hace sera añadir al grupo de `Administradores` el usuario `empleado
 
 Ahora si ejecutamos un `PowerShell` como `administrador` local, nos aparecera esto:
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
 
 Si volvemos a enumerar las `logon sessions` con este shell de `administrador` local podremos ver lo mismo de antes.
 

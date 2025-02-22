@@ -34,7 +34,7 @@ URL = [Download Rubeus Code GitHub ZIP](https://github.com/GhostPack/Rubeus/arch
 
 Y ahora habiendo descargador todo esto instalaremos el `Visual Studio`, claramente tendremos que meter las credenciales del `Administrador`, las metemos y cuando se haya medio instalado nos dara a elegir unos componentes, nosotros tendremos que instalar unicamente el siguiente componente:
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
 
 Y le daremos a `Instalar`, una vez que se haya instalado aparecera una ventana para iniciar sesion, le daremos en la parte de abajo a `Omitir esto por el momento` -> `Iniciar Visual Studio`.
 
@@ -42,21 +42,21 @@ Mientras se abre `Visual Studio` descomprimiremos la carpeta de `Rubeus` y nos d
 
 Dentro de la ventana de `Visual Studio`:
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos `Abrir un proyecto o una solucion` -> seleccionaremos dentro del `rubeus-master` el archivo llamado `Rubeus`:
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
 
 Y cuando le demos `Abrir` nos abrira todo el proyecto a nivel de codigo en el `Visual Studio` de forma automatica.
 
 Pero nos aparecera que tendremos que instalar un `destino` para que sea compatible, que sera esta ventana de aqui:
 
-<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Continuar`, si nos vamos a la parte de la derecha, veremos el proyecto ya cargado:
 
-<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>
 
 Lo unico que tendremos que hacer para compilarlo sera lo siguiente:
 
@@ -64,7 +64,7 @@ Pincharemos con un click en el fichero raiz `Rubeus` -> nos vamos en la parte su
 
 Cuando veamos esto:
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (156).png" alt=""><figcaption></figcaption></figure>
 
 Siginifica que se compilo de forma correcta.
 

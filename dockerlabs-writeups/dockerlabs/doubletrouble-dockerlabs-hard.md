@@ -89,7 +89,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.26 seconds
 
 Si entramos en la pagina vemos un panel de login, en el que si intentamos un `SQL Injection` se lo tragara y nos mostrara la opcion de cuando nos hemos logeado:
 
-<figure><img src="../../.gitbook/assets/image (166).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (166) (1).png" alt=""><figcaption></figcaption></figure>
 
 En esta veremos lo que parece ser un `2FA` por lo que vamos a realizar fuerza bruta con un script que nos montaremos en `python3` (hay que tener en cuenta que cuando se alcanza 3 intentos te lleva al login, por lo que tambien hay que controlar eso en el script):
 
@@ -260,7 +260,7 @@ Info:
 
 Vemos que el numero es el `0150` por lo que si lo ingresamos, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (165) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Escalate user www-data
 
@@ -276,7 +276,7 @@ subprocess.run(comando, shell=True)
 
 Si subimos este archivo veremos lo siguiente en la pagina:
 
-<figure><img src="../../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (167) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vamos a ofuscarlo un poco mas con la siguiente pagina:
 

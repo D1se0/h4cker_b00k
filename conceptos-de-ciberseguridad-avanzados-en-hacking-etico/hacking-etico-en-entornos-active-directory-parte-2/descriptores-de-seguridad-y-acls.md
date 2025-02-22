@@ -43,7 +43,7 @@ Si nosotros por ejemplo nos vamos a un script que tengamos en la maquina del `DC
 
 Vamos a ver lo mismo que vemos en el panel del `administrador` con el usuario `empleado1` ya que tambien se maneja por `ACLs` todo esto y veremos el `propietario` del archivo por lo que veremos que permisos tiene, etc...
 
-<figure><img src="../../.gitbook/assets/image (229).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que todos los objetos en `Windows` van a tener un `Security Descriptor` y con esto podremos manejar los permisos de cada objeto, por lo que si hay alguna mala configuracion en estas dos cosas tan importantes podriamos como atacantes escalar privilegios enseguida.
 
@@ -51,6 +51,6 @@ Por que por ejemplo si nosotros llegaramos a poder modifcar las `ACLs` podremos 
 
 Esto seria un ejemplo del proceso de `DACLs` y `ACEs`:
 
-<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (253).png" alt=""><figcaption></figcaption></figure>
 
 Aqui vemos que el intento del usuario `Andrew` es invalido ya que cuando intenta conectar con el `Object` este mismo revisa en el listado de `DACL` y ve que tiene el permiso denegado, pero cuando lo intenta `Jane` pertenece al `Group A` y este en el listado del `DACL` tiene el acceso permitido, por lo que la deja.

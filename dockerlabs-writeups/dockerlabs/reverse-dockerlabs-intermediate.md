@@ -91,7 +91,7 @@ let clickCount=0;const particleContainer=document.getElementById("particles");fu
 
 Basicamente cuando nosotros hacemos click muchas veces exactamente `20` nos aparece una alerta con el mensaje `secret_dir`:
 
-<figure><img src="../../.gitbook/assets/image (149).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (149) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nosotros metemos en la `URL` lo siguiente:
 
@@ -200,7 +200,7 @@ Aqui vemos una `funcion` interesante llamada `containsRequiredChars` que es la q
 
 Por lo que vamos a buscar el codigo de la `funcion` en el buscador donde pone `filter` de la parte izquierda del programa:
 
-<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (150) (1).png" alt=""><figcaption></figcaption></figure>
 
 Seleccionando la `funcion` podremos ver en `C` en la parte de la izquierda el programa de esta `funcion` que seria el siguiente:
 
@@ -308,7 +308,7 @@ URL = http://g00dj0b.reverse.dl/
 
 Veremos algo tal que esto:
 
-<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (151) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Local File Inclusion (LFI)
 

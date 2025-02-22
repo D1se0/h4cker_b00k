@@ -1051,36 +1051,36 @@ Y arrastramos el archivo al `bloodhound`, esto cargara los nuevos archivos de lo
 
 Ahora vamos a darle a la siguiente opcion en la seccion de `Analysis`:
 
-<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
 Para buscar las rutas mas rapidas para poder ser de dicho grupo y asi poder ser `admins`.
 
-<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>
 
 Vemos algo asi parecido, vemos varias vias por las que tirar para poder ser dicho grupo y ser `admins`.
 
 Si nosotros pulsamos sobre el objeto de `DOMAIN ADMINS` y nos vamos abajo del todo, podremos ver estos 2 apartados:
 
-<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (257).png" alt=""><figcaption></figcaption></figure>
 
 El primero es que privilegios tiene este objeto sobre otros objetos de forma muy resumida, que este apartado no viene en el propio `Windows`.
 
 El segundo (`DACL`) es sobre los objetos que tienen control explicito sobre el objeto `DOMAIN ADMINS` y si le damos a `Explicit Object Controllers` de forma grafica nos mostrara cuales son esos objetos.
 
-<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (258).png" alt=""><figcaption></figcaption></figure>
 
 Ya con esto podemos ver de todas esas lineas que estamos viendo la informacion de como pueden ser explotadas, por lo que nos facilita mucho mas el trabajo de explotacion, el cual veremos un poco mas adelante.
 
 Si le damos al objeto llamado `ADMINISTRATORS` y le damos a la siguiente opcion.
 
-<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (259).png" alt=""><figcaption></figcaption></figure>
 
 Para ver que usuarios tiene dentro de dicho grupo, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (260).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos aparece el `IT Admins` el cual metimos anteriormente al grupo de `Administradores`, si vemos que usuarios tiene de forma directa:
 
-<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (261).png" alt=""><figcaption></figcaption></figure>
 
 Vemos los siguientes, por lo que estos podrian delegar los privilegios de administrador, los cuales nos interesa.

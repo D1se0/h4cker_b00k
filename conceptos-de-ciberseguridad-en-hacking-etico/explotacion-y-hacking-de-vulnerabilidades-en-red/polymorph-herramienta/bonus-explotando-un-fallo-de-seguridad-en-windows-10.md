@@ -30,11 +30,11 @@ Por lo que vamos a modificar de forma remota los registros de la maquina `Window
 
 Desde el propio `regedit` de `Windows 10` podemos darle a `File` -> `Connect Network Registry...` y nos aparecera esto:
 
-<figure><img src="../../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (132) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y en la parte de `Escriba el nombre de objeto paar seleccionar` pondremos la IP de la maquina `Windows Server 2008`:
 
-<figure><img src="../../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (133) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le damos `Aceptar` y al cavo de unos segundos nos aparecera un recuadro para meter las credenciales de la maquina `Windows Server` que seria:
 
@@ -45,17 +45,17 @@ Pass: vagrant
 
 Una vez que nos hayamos conectado, veremos esto:
 
-<figure><img src="../../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (134) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que si nosotros por ejemplo entramos en `HKEY_USERS` -> `S-1-5-18` -> pulsamos `Control Panel` (Por ejemplo) -> hacemos doble click en el registro `(Default) REG_SZ` y lo establecemos su `data` en `testvalue` viendose algo asi:
 
-<figure><img src="../../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (135) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos ahora a la maquina `Windows Server` y en el `regedit` nos vamos a la misma ubicacion donde hemos cambiado ese registro.
 
 `HKEY_USERS` -> `S-1-5-18` -> `Control Panel` -> `(Default) REG_SZ` este registro lo veremos con la `data` como `testvalue` por lo que funciono correctamente y se cambia desde una maquina a otra.
 
-<figure><img src="../../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (136) (1).png" alt=""><figcaption></figcaption></figure>
 
 Todos estos paquetes se mandan mediante el protocolo `WINREG`, por lo que se capturamos con `wireshark` el trafico de red y lo filtramos por dicho protocolo, podremos ver todos los paquetes que se han intercambiado.
 

@@ -245,7 +245,7 @@ get backup.pdf
 
 Una vez en nuestro `host` si abrimos el `PDF` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (183) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que la contraseña esta censurada pero si intentamos leerla se puede leer algo ya que es medio legible y parece que pone `passwordpepinaca`, para el usuario `root`.
 

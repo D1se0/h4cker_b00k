@@ -60,7 +60,7 @@ Imaginemos que nos propocionan la maquina `WS01` para realizar nuestras pruebas 
 
 Antes tendremos que realizar una pequeña configuracion ya que al reiniciar o apagar el equipo se desactiva, tendremos que darle click derecho en el `adaptador de red` -> `Ethernet` -> `Configuracion de uso compartido avanzado` -> y activar las 2 opciones `Activar la deteccion de redes` y `Activar el uso compartido de archivos e impresoras` -> `Guardar cambios` pedira credenciales de administrador, las metemos y listo.
 
-<figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
 
 Con esto ya nos podremos pasar el archivo `.ps1` a la maquina `Windows` todo esto lo podremos hacer ya que tenemos acceso a dicha maquina.
 

@@ -26,19 +26,19 @@ Lo que esta sucediendo aqui es una autenticacion mediante `NTLM` por lo que si n
 
 Si nosotros nos ponemos a la escucha con `Wireshark` y capturamos dicha peticion, veremos lo siguiente.
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (174).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
 
 A nosotros nos interesa donde pone `NTLM Server Challenge` ese numerito es el que nos va a interesar, por lo que lo copiamos, despues tendremos que irnos al siguiente paquete que sera donde le responde y lo que tendremos que copiar sera el `challenge` cifrado.
 
-<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
 
 Donde pone `NTLMv2 Response [...]` es lo que nos interesa copiar tambien.
 
 Tambien otra de las cosas que tendremos que copiar sera el nombre de usuario del cual se esta conectando, para que esto funcione.
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (177).png" alt=""><figcaption></figcaption></figure>
 
 Y vemos que es el `Administrator`, por lo que nos lo copiaremos tambien, toda la informacion copiada se veria tal que asi:
 
@@ -62,7 +62,7 @@ Administrator::CORP:e1cabebb6c67ef43:4c690787731aa6bae58eff34da1448ef:0101000000
 
 El `NTProofStr` se consigue en esta seccion de aqui del paquete capturado.
 
-<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (178).png" alt=""><figcaption></figcaption></figure>
 
 Ahora teniendo ese `hash` de esa forma estructurada, si notros nos lo pasamos al `kali` y lo intentamos `crackear` de la siguiente forma:
 

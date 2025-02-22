@@ -221,7 +221,7 @@ Info:
 
 Vemos que no esta diciendo la contraseña de `mateo`, pero esta cifrada...
 
-<figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (162) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta cifrado en `Cesar`, y nos da esas opciones de contraseña, por lo que vamos hacer un diccionario de todos esos resultado para ver cual de todas puede ser, utilizando una herramienta llamado `suBrutefoce.sh`.
 

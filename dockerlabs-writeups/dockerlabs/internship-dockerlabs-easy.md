@@ -123,7 +123,7 @@ Pass: ' OR 1=1-- -
 
 Y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (184).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (184) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vamos a probar a ver si podemos sacar info de la base de datos con el `SQL Injection`, pero no podremos realizar mucho, si hacemos un poco de `fuzzing` ahora con el dominio.
 

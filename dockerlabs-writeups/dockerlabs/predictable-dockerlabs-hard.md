@@ -280,7 +280,7 @@ python3 calculatorSeed.py -s99 <NUMBRE_99>
 python3 calculatorSeed.py -s99 83111388279105088
 ```
 
-<figure><img src="../../.gitbook/assets/image (168).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (168) (1).png" alt=""><figcaption></figcaption></figure>
 
 Info:
 
@@ -290,7 +290,7 @@ Valor 100: 9212959101862389250
 
 Y esto lo metemos en la barra esa de busqueda:
 
-<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (169) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y veremos que nos muestra unas credenciales, las cuales nos conectaremos por `ssh`.
 

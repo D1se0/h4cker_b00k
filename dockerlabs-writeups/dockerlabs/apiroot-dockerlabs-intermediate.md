@@ -203,7 +203,7 @@ Finished
 
 Vemos que hay un directorio llamado `/api/users` por lo que vamos a ver que contiene:
 
-<figure><img src="../../.gitbook/assets/image (185).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (185) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta utilizando una `API` como ya nos temiamos al principio de la pagina, por lo que vamos a intentar encontrar alguna vulnerabilidad respecto a las `API's`.
 

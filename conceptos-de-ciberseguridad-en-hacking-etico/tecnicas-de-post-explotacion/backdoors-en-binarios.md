@@ -50,7 +50,7 @@ exploit
 
 Una vez que estemos a la escucha, nos iremos al `windows` nos pasaremos el archivo al mismo y lo ejecutaremos, si lo ejecutamos vemos que se nos inicia la aplicacion normal sin ningun tipo de sospecha:
 
-<figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (137) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pero si nos vamos al `kali` donde tenemos la escucha, veremos lo siguiente:
 

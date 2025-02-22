@@ -16,7 +16,7 @@ layout:
 
 > Autenticacion y credenciales en Windows
 
-<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
 
 Cuando nosotros vamos a iniciar sesion en `Windows` por detras ocurre esto, en este caso una autenticacion de forma local, lo que hace es que las credenciales que enviamos, junto con el paquete de autenticacion (`Kerberos`) lo recibe el `Servidro LSA` (`Local Security Authority`) y este las valida mediante el protocolo `NTLM` que estara en la base de datos dentro de este `LSA`.
 
@@ -24,7 +24,7 @@ Basicamente si nosotros nos logeamos mediante un usuario de dominio, nosotros es
 
 Para nosotros logearnos con un usuario `local` lo que tendremos que poner en el nombre de usuario para que no nos invoque el `CORP` sera `.\username` (Donde `username` es el usuario local) y asi automaticamente veremos abajo que estara pillando el nombre del equipo local.
 
-<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption></figcaption></figure>
 
 > LSA Logon Sessions
 
@@ -71,7 +71,7 @@ cd C:\Users\santiago2\Desktop\logonSessions
 .\logonsessions.exe
 ```
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (166).png" alt=""><figcaption></figcaption></figure>
 
 Nos abrira esto de aqui, le daremos `Agree` y en la terminal veremos todas las `logon sessions`:
 

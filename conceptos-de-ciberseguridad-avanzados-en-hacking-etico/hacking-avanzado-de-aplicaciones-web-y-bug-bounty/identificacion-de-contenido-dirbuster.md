@@ -28,11 +28,11 @@ dirbuster -u http://<IP>:8899/
 
 Lo que esta realizando aqui es una serie de `fuerza bruta` con el diccionario que le pasemos probando cada una de las palabras por si alguna de ellas existiera con su codigo de pagina (`200, 403, 500, etc...`) pero es una tecnica muy intrusiva, por lo que no es muy recomendable paar entornos reales.
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
 
 Si le damos a `Start` empezara el proceso, cuando termina podremos generar un reporte de lo que ha encontrado pudiendo investigarlo por nuestra cuenta en la propia `URL`.
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (184).png" alt=""><figcaption></figcaption></figure>
 
 El propio `kali` ya te viene implementado los diccionarios de palabras que puedes probar a utilizar con la herramienta en la siguiente ruta.
 

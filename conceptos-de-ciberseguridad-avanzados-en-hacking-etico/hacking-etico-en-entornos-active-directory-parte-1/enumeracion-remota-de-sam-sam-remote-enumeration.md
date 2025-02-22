@@ -156,7 +156,7 @@ Nos iremos a nuestro `DC` -> abriremos una carpeta normal y en la barra de busqu
 
 El `C$` es el recurso compartido de un equipo tipico en el que se encuentra todo el sistema operativo entero.
 
-<figure><img src="../../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption></figcaption></figure>
 
 Ahora si nos vamos al equipo `WS01` y ejecutamos el mismo comando de antes:
 

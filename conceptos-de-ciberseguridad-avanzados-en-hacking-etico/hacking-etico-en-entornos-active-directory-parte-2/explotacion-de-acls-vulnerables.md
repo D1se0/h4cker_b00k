@@ -20,19 +20,19 @@ Esto lo hacemos por que en un caso real puede ser asi perfectamente ya que mucho
 
 Nos pasamos el `ZIP` al `kali` y antes de cargarlo borramos la base de datos:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 Una vez borrada, cargamos el `ZIP` y buscamos lo siguiente.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
 
 Pongamos que en el grupo que estamos viendo de `Accounting` nos esta desglosando los 7 usuarios que estan dentro de dicho grupo, pero pongamos que tenemos comprometida la maquina del usuario `Annice` que esta dentro del grupo `Accounting`, podremos hacer lo siguiente para escalar privilegios.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
 
 Pero si por ejemplo queremos utilizar otro grupo por que este script te genera todo de forma aleatoria, podremos hacerlo con otro, como por ejemplo con el grupo `SALES`, imaginemos que de ese grupo tenemos comprometida la maquina del usuario `Kettie` podremos hacer diversas cosas, pero vamos a volver a donde estabamos con el de `Accounting` pongamos que tenemos esta estructura de permisos:
 
@@ -42,7 +42,7 @@ Usuario -> Grupo Accounting -> GenericWrite al grupo Proyect Management -> Gener
 
 Si vemos que permisos tienen los grupos sobre el grupo de `Project Management`, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 Entre ellos esta `Accounting` que puede hacer un `GenericWrite` a dicho grupo.
 
@@ -148,7 +148,7 @@ Vemos efectivamente que tiene el `GenericWrite` y el `WriteOwner`.
 
 Por lo que si importamos de nuevo la base de datos al `BloodHound` veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
 Ahora veremos 2 lineas apuntando al `Project Managment` una siendo `GenericWrite` y la otra `OwnerWrite`.
 
@@ -160,17 +160,17 @@ Lo que vamos hacer primeramente es saber como acceder a la cuenta de otro usuari
 
 Lo que vamos hacer es buscar `C:\Windows\System32\WindowsPowerShell\v1.0` en la carpeta y en el ejecutable de `PowerShell.exe` le daremos a `Shift` + Click derecho y nos aparecera esto:
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Ejecutar como otro usuario`.
 
 Metemos como usuario `annice.mable` y la contraseña que era `Passw0rd5`.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
 
 Y vemos que estamos con dicho usuario:
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
 Si por ejemplo no tubieramos acceso a la interfaz grafica y solo por terminal, podremos hacer lo mismo pero de la siguiente forma:
 
@@ -178,7 +178,7 @@ Si por ejemplo no tubieramos acceso a la interfaz grafica y solo por terminal, p
 runas /user:corp\annice.mable powershell
 ```
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 Y se nos abrira un `powershell` como el usuario que especificamos como podremos ver.
 
@@ -221,7 +221,7 @@ Lo que vamos hacer es que mediante una vulnerabilidad con el `WriteOwner` hagamo
 
 Si nosotros nos vamos a la informacion de lo que puede hacer este permiso:
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 Y si nos vamos a la pestaña `Windows Abuse` podremos ver como abusar de estos permisos para poder conseguir nuestro objetivo dandonos varias opciones de comandos.
 
@@ -312,7 +312,7 @@ Y cuando lo ejecutemos no nos mostrara nada de informacion, ningun error ni nada
 
 Ahora para comprobarlo si nos vamos a nuestro `DC` y nos vamos a donde estan las `ACLs` y los grupos en el grupo de `Project management`, vamos a `seguridad` y en las opciones `avanzadas` donde estan todos estos permisos, si antes era el `Owner` `Admins. del dominio` ahora tendremos que ver que es `Annice`:
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 Vemos como se cambio correctamente, siendo un usuario sin ningun privilegio.
 
@@ -324,7 +324,7 @@ Add-DomainObjectAcl -TargetIdentity "Project management" -Rights WriteMembers -P
 
 Esto igual no deberia de dar ningun error y ningun resultadom, pero si ahora nos volvemos a ir a nuestro `DC` tendremos que ver la nueva `ACL` en el grupo de `Project management`.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se ha creado correctamente, por lo que ahora si ponemos el siguiente comando para añadir un miembro a dicho grupo que sera el de `annice` nuestro usuario ya que añadimos una `ACL` que nos permite hacer eso, veremos que podremos añadirlo de forma correcta.
 
@@ -336,11 +336,11 @@ Antes de darle a ejecutar, vemos que si en nuestro `DC` nos vamos a ver el usuar
 
 > Antes de ejecutar el comando:
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
 > Despues de ejecutar el comando:
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que ha funcionado correctamente.
 
@@ -393,7 +393,7 @@ PropagationFlags      : None
 
 Vemos que se configuro todo de forma correcta y si volvemos a cargar nuestra base de datos en `BloodHound` veremos esto asi:
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que se podra explotar ese `GenericWrite` de la siguiente forma.
 
@@ -415,7 +415,7 @@ Add-DomainGroupMember -Identity "Office Admin" -Members annice.mable
 
 Y si no nos salio ningun error y ningun resultado significa que fue todo bien, por lo que si vamos al `DC` y vemos si se configuro de forma correcta...
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta añadida correctamente, por lo que ya pertenecemos al grupo `Office Admin`.
 
@@ -467,7 +467,7 @@ PropagationFlags      : None
 
 Y en el `BloodHound` se tendra que ver algo asi:
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
 Lo que nos permite hacer este `WriteDacl` es añadir una `DACL` directamente al grupo `DOMAIN ADMINS` por lo que haremos lo siguiente.
 
@@ -487,7 +487,7 @@ Add-DomainObjectAcl -TargetIdentity "Domain Admins" -Rights WriteMembers -Princi
 
 Y si no nos salio ningun error y ningun resultado significa que fue todo bien, ahora si lo comprobamos en nuestro `DC` tendremos que ver lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que se añadio correctamente, por lo que podremos hacer lo siguiente.
 
@@ -499,6 +499,6 @@ Add-DomainGroupMember -Identity "Domain Admins" -Members annice.mable
 
 Y si no nos salio ningun error y ningun resultado significa que fue todo bien, si vamos a comprobarlo en nuestro `DC` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que funciono correctamente y ahora este usuario es `Admin del dominio` por lo que tendremos el control total del dominio.

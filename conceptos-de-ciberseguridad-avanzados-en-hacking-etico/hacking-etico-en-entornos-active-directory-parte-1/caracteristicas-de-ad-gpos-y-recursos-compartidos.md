@@ -46,7 +46,7 @@ Esto lo que hara sera abrir una calculadora de `Windows` simplemente eso para ve
 
 Una vez creado, seleccionaremos en el panel donde estabamos a `Mostrar archivos` -> se nos abrira en la siguiente ruta `\\corp.local\SysVol\corp.local\Policies\{1825ED2B-B7CE-4DC1-A903-A50B21A0004C}\User\Scripts\Logon` y tendremos que arrastrar el script a la carpeta que se abre teniendo algo asi:
 
-<figure><img src="../../.gitbook/assets/image (197).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
 Echo esto cerraremos la ventana -> `Agregar` -> `Examinar` -> seleccionamos el `script.bat` -> `Abrir` -> `Aceptar` -> `Aplicar` -> `Aceptar`
 
@@ -62,15 +62,15 @@ Ahora si nos vamos al `Servidor del administrador` -> en la seccion de la izquie
 
 Ahora veremos que se nos creo correctamente:
 
-<figure><img src="../../.gitbook/assets/image (198).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
 
 Ahora para acceder a el abriremos en nuestro `DC` una carpeta normal y en la barra de busqueda pondremos lo siguiente `\\DC01\departamental`:
 
-<figure><img src="../../.gitbook/assets/image (199).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
 Y con esto estaremos dentro de dicha carpeta:
 
-<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
 
 Se podra acceder a ella los usuarios que esten dentro de este dominio, por lo que podremos hacerlo de la misma forma para los otros 3 usuarios de `Windows 10`.
 
@@ -86,7 +86,7 @@ net use t: \\192.168.5.5\departamental
 
 Cargamos el script como hicimos anteriormente y si iniciamos sesion por ejemplo en el usuario `empleado1` y nos vamos a la carpeta veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se ha creado correctamente.
 

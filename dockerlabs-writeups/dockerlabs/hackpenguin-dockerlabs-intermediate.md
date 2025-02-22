@@ -245,7 +245,7 @@ Session completed.
 
 Por lo que vemso obtenemos la contarseña, asi que ahora la meteremos en el `keepassxc` y lo haremos desbloqueado, veremos las credenciales:
 
-<figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (139) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pero el usuario sera `penguin`, por lo que nos conectaremos por ssh.
 

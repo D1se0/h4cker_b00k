@@ -25,7 +25,7 @@ traceroute 192.168.5.183
 
 Info:
 
-<figure><img src="../../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (130) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos no pasa por ningun `Router` su conexion es directa, por lo que vamos a envenenar la red con un `ARP Spoofing` que la propia herramienta de `Polymiorph` ya nos trae.
 
@@ -59,7 +59,7 @@ traceroute 192.168.5.183
 
 Info:
 
-<figure><img src="../../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (131) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora pega un salto mas pasando por nuestra IP de la maquina atacante.
 

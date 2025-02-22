@@ -312,7 +312,7 @@ Ahora para comprobar todo esto, nos iremos al `Administrador del servidor` -> `H
 
 Dentro de aqui tendremos que ver que todos los usuarios se han creado correctamente:
 
-<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
 Vamos hacer un cambio en el grupo llamado `IT Admins` -> click derecho -> `Propiedades` -> `Miembro de` -> y le vamos a poner en el grupo `Administradores`.
 

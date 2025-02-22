@@ -221,7 +221,7 @@ chmod +x start-tor-browser
 
 Una vez que ya tengamos el navegador de `TOR` abierto le tendremos que dar al siguiente boton:
 
-<figure><img src="../../.gitbook/assets/image (140).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (140) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos al boton de `Connect` y echo esto pegaremos en la `URL` el siguiente link que decodificamos:
 

@@ -124,7 +124,7 @@ Esto nos va a mostrara los usuarios que no tienen esta medida de seguridad, en c
 
 Para ver esta flag dentro del `DC` si nos vamos donde los usuarios y seleccionamos uno cualquiera, veremos esta seccion de aqui:
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
 
 Donde pone `Do not require Kerberos preauthentication` significa que si eso esta marcado no va a pedir la autenticacion previa que vemos que hace el `AS`.
 
@@ -197,7 +197,7 @@ C:\Users\empleado1\Desktop\Rubeus-master\Rubeus\bin\Debug\hash.john
 
 Si abrimos el archivo con un bloc de notas, veremos los 3 `hashes`:
 
-<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (158).png" alt=""><figcaption></figcaption></figure>
 
 En formato de `john`.
 
@@ -290,7 +290,7 @@ DETALLADO: [Set-DomainObject] XORing 'useraccountcontrol' with '4194304' for obj
 
 Si nos vamos a nuestro `DC` veremos que el usuario ahora lo tiene marcado:
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption></figcaption></figure>
 
 Y si lanzamos el script de `Rubeus` veremos que ahora nos saca ese usuario tambien:
 
@@ -389,21 +389,21 @@ Version: dev (n/a) - 01/15/25 - Ronnie Flathers @ropnop
 
 Si nos vamos a `Wireshark` vamos a ver lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (160).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hemos interceptado todos los paquetes de las solicitudes que ha echo `kerbrute` las cuales tendremos que ver cuales no piden la `Preautenticacion` de `kerberos` sobre que usuario y esto lo veremos siguiendo las trazas de paquetes de datos:
 
 Si nos vamos a esta parte de aqui:
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (161).png" alt=""><figcaption></figcaption></figure>
 
 Estamos viendo que la traza lleva directamente a un `AS-REP` por lo que no esta pidiendo una `Preautenticacion` de `kerberos` por lo que vamos a ver los datos de ese paquete, para saber el nombre de usuario.
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se llama `audre.maible` por lo que vamos a irnos al `AS-REP` y copiamos el valor de `cipher`.
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
 
 Una vez copiado dicho valor, veremos algo asi:
 

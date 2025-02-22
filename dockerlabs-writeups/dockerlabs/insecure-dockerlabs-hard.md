@@ -959,7 +959,7 @@ Se nos abrira una aplicacion, en la cual tendremos que cargar el archivo que nos
 
 Le daremos al siguiente boton:
 
-<figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (141) (1).png" alt=""><figcaption></figcaption></figure>
 
 Se nos abrira otra ventana mas grande en la cual tendremos que cargar el archivo `show_files`, le daremos a `File` -> `Import File...` -> seleccionamos el archivo a decompilar y nos mostrara la informacion en texto plano de basicamente la funciona de la aplicacion en la parte derecha del programa, viendo lo siguiente:
 

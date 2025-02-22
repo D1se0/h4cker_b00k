@@ -90,7 +90,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.18 seconds
 
 Si entramos en la pagina veremos el siguiente nombre en este apartado:
 
-<figure><img src="../../.gitbook/assets/image (186).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (186) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos tendremos un nombre de usuario, vamos a probar a realizar fuerza bruta con `hydra`.
 

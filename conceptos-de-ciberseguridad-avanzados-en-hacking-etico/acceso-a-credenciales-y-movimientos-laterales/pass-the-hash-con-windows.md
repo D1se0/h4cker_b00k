@@ -91,6 +91,6 @@ NTLM    : a87f3a337d73085c45f9416be5787d86
 
 Y veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (173).png" alt=""><figcaption></figcaption></figure>
 
 Y con esto ya tendremos un `cmd` como el usuario `Administrador` del dominio.

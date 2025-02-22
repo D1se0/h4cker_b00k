@@ -344,7 +344,7 @@ URL = http://<IP>/wp-content/uploads/shell.php
 
 Si entramos a ella veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (182).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (182) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que tendremos una `shell` interactiva, por lo que haremos lo siguiente.
 

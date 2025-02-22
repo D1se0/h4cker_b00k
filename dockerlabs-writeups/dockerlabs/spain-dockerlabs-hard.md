@@ -1011,7 +1011,7 @@ ghidra
 
 Crearemos un nuevo proyecto y nos aparecera el siguiente icono:
 
-<figure><img src="../../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (152) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a dicho icono y despues importaremos el binario `OlympusValidator` para decompilarlo y ver donde se encuentra el `SERIAL`:
 

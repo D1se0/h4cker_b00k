@@ -85,7 +85,7 @@ ldapsearch -x -H ldap://192.168.5.5 -D 'CORP\empleado1' -w 'Passw0rd2' -b "CN=Us
 
 Con el `CN=` lo que le estamos indicando es que nos busque el apartado `Users` de esta parte:
 
-<figure><img src="../../.gitbook/assets/image (204).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (227).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que nos va a devolver todos los objetos de usuarios que haya dentro de dicha carpeta.
 
@@ -1583,22 +1583,22 @@ jxplorer
 
 Dentro de la herramienta tendremos que pulsar el siguiente boton para establecer la conexion:
 
-<figure><img src="../../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption></figcaption></figure>
 
 Se nos abrira una ventana en la que tendremos que introducir la informacion necesaria -> `Host` = `192.168.5.5` -> `Level` = `User + Password` -> `User DN` = `CN=empleado1,CN=Users,DC=corp,DC=local` -> `Password` = `Passw0rd2` -> `Ok`
 
-<figure><img src="../../.gitbook/assets/image (206).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (229).png" alt=""><figcaption></figcaption></figure>
 
 Y veremos que se nos conecto correctamente:
 
-<figure><img src="../../.gitbook/assets/image (207).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption></figcaption></figure>
 
 Si pulsamos 2 veces en `corp` veremos todos los objetos que tenemos en el `LDAP`:
 
-<figure><img src="../../.gitbook/assets/image (208).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos a `Users` y nos vamos en la seccion de `Table Editor`, podremos visualizar todo de mejor forma:
 
-<figure><img src="../../.gitbook/assets/image (209).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
 
 Incluso si tuviramos privilegios de administrador podremos editar toda esta informacion desde este entorno grafico.

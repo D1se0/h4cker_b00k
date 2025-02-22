@@ -133,7 +133,7 @@ Finished
 
 Vemos un directorio bastante interesante llamado `/strange` que si entramos dentro veremos una pagina web:
 
-<figure><img src="../../.gitbook/assets/image (171).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (171) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pero tampoco veremos nada interesante, por lo que volveremos a realizar un poco mas de `fuzzing`.
 

@@ -22,11 +22,11 @@ Una vez descargada la descomprimimos y la importaremos a `VMWare` para poderla u
 
 En la propia maquina nos porporcionara las credenciales del `Administrador` y los puertos en los que esta corriendo cada una de las aplicaciones:
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
 
 Ahora la iniciaremos, meteremos las credeciales que nos propociona y una vez dentro veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (181).png" alt=""><figcaption></figcaption></figure>
 
 Ahora en nuestro `kali` veremos que `IP` le ha dado a nuestra maquina de la siguiente forma:
 
@@ -110,6 +110,6 @@ Secret: test
 
 Y le daremos a `Create`, esto nos creara el usuario y le daremos a `Login` para logearnos con las mismas credenciales que hemos creado, una vez echo eso veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (182).png" alt=""><figcaption></figcaption></figure>
 
 Y en los demas puertos veremos diferentes paginas web en las cuales seran vulnerables unas mas dificiles que otras.

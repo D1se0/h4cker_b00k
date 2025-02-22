@@ -70,15 +70,15 @@ URL = [Download ProcDump](https://learn.microsoft.com/es-es/sysinternals/downloa
 
 Antes de realizar todo esto, lo que vamos hacer es `Crear un archivo de volcado` de `lsass`, si nos vamos al `Administrador de tareas` -> `Detalles` -> buscamos el proceso `lsass.exe` -> click derecho y pinchar en `Crear archivo de volcado`.
 
-<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
 
 Despues nos aparecera esto:
 
-<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (171).png" alt=""><figcaption></figcaption></figure>
 
 Y le daremos `Abrir ubicación del archivo`, por lo que veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (172).png" alt=""><figcaption></figcaption></figure>
 
 Y esto no salta `Windows Defender` ni ningun antivirus por alguna razon.
 
