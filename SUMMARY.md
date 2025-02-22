@@ -31,19 +31,35 @@
 * [Activación de Office Permanente](artiuclos/activacion-de-office-permanente.md)
 * [Instalar SPSS (crack)](artiuclos/instalar-spss-crack.md)
 
+## Linux
+
+* [Determinar S.O. (Victima)](linux/determinar-s.o.-victima.md)
+
+## Windows
+
+* [Comandos Windows S.0.](windows/comandos-windows-s.0..md)
+
 ## HERRAMIENTAS
 
 * [HackingWeb](herramientas/hackingweb/README.md)
   * [SQL Injection](portswigger-notes/sql-injection.md)
   * [XSS (Cross Site Scripting)](portswigger-notes/xss-cross-site-scripting.md)
+  * [NoSQL Injection](herramientas/hackingweb/nosql-injection.md)
+  * [XXE Injection](herramientas/hackingweb/xxe-injection.md)
 * [Reconocimiento](herramientas/reconocimiento/README.md)
   * [NMAP](herramientas/reconocimiento/nmap.md)
   * [Dominios/Subdominios](herramientas/reconocimiento/dominios-subdominios.md)
   * [Fuzzing](herramientas/reconocimiento/fuzzing.md)
+  * [Crackmapexec](herramientas/reconocimiento/crackmapexec.md)
 * [Explotación](herramientas/explotacion/README.md)
   * [LFI (Local File Inclusion)](herramientas/explotacion/lfi-local-file-inclusion.md)
+  * [Evil-winrm](herramientas/explotacion/evil-winrm.md)
+  * [Serealizacion/Deserealizacion](herramientas/explotacion/serealizacion-deserealizacion.md)
+  * [Poetry](herramientas/explotacion/poetry.md)
 * [Post-Explotación](herramientas/post-explotacion/README.md)
   * [Port Forwarding](herramientas/post-explotacion/port-forwarding.md)
+  * [A.D. Group Server Operators](herramientas/post-explotacion/a.d.-group-server-operators.md)
+  * [Decrypt Firefox](herramientas/post-explotacion/decrypt-firefox.md)
 * [Criptología](herramientas/criptologia/README.md)
   * [Openssl bruteforce script](openssl-tool/openssl-bruteforce-script.md)
 * [Phishing](herramientas/phishing/README.md)
@@ -72,10 +88,8 @@
   * [OSINT Industries Pagina Doxeo (Correo, numero, etc...)](herramientas/doxeo/osint-industries-pagina-doxeo-correo-numero-etc....md)
   * [Phomber GitHub (Doxeo Numero de Teléfono)](herramientas/doxeo/phomber-github-doxeo-numero-de-telefono.md)
   * [Temp Mail Pagina Correos Temporales](herramientas/doxeo/temp-mail-pagina-correos-temporales.md)
-
-## 📖The hacker's bible
-
-* [Técnicas Generales](the-hackers-bible/tecnicas-generales.md)
+* [Hacking Wifi](herramientas/hacking-wifi/README.md)
+  * [Reaver](herramientas/hacking-wifi/reaver.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 

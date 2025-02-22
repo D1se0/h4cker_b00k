@@ -161,3 +161,50 @@ echo -e "\n[!] No se encontró la contraseña correcta.\n"
 # SEED-ECB
 # SEED-OFB
 ```
+
+## <mark style="color:purple;">Openssl brute force</mark>
+
+Si en algun momento encuentras un archivo con alguna extension rara por ejemplo `.enc` o `.decrypt` etc... Y sobre todo si hacemos lo siguiente...
+
+```shell
+file example.enc
+```
+
+Info:
+
+```
+example.enc: openssl enc'd data with salted password
+```
+
+Si vemos alguna vez ese tipo de mensaje quiere decir que el contenido del archivo esta cifrado con una contraseña que tienes que saber para que pueda ser legible...
+
+```shell
+openssl aes-256-cbc -d -in example.enc
+```
+
+Te pedira la contraseña para desencriptarla y eso suponiendo que la codificacion es en `SHA-256`, pero para ello hay herramientas que te automatizan todo esto...
+
+URL = https://github.com/HrushikeshK/openssl-bruteforce/tree/master
+
+URL = https://github.com/glv2/bruteforce-salted-openssl (En vez de descargartelo desde el repositorio recomiendo instalartelo como herramienta...)
+
+```shell
+apt install bruteforce-salted-openssl
+```
+
+Una de las 2 sirve...
+
+Sin embargo para encriptar algun archivo que contenga algo, se podra hacer de la siguiente forma...
+
+```shell
+openssl aes-256-cbc -in example.txt -out example.cypted
+```
+
+Y te pedira una contraseña que sera con la que podras desencriptarlo...
+
+#### Uso de la herramienta openssl-bruteforce de la primera URL
+
+```shell
+python brute.py <WORDLIST> ciphers.txt <FILE_OPENSSL>
+```
+
