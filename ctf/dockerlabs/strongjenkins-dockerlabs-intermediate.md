@@ -135,7 +135,7 @@ Pass: rockyou
 
 Dentro del `jenkins` nos iremos a la pestaña de `Manage Jenkins` y veremos abajo del todo este apartado:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Entraremos dentro de el y veremos como un recuadro donde meter un script para ejecutar:
 
