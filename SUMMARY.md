@@ -6,6 +6,7 @@
 
 * [Tratamiento para la TTY](artiuclos/tratamiento-para-la-tty.md)
 * [Permisos SUID](artiuclos/permisos-suid.md)
+* [Honeypot](artiuclos/honeypot.md)
 * [File2ban Privilege Escalation](artiuclos/file2ban-privilege-escalation.md)
 * [Reversing Shell's (Creación)](artiuclos/reversing-shells-creacion.md)
 * [Pfsense Firewall Configuración GUIA](artiuclos/pfsense-firewall-configuracion-guia.md)
