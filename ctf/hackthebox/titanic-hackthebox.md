@@ -13,7 +13,7 @@ layout:
     visible: true
 ---
 
-# Titanic HackTheBox (Easy)
+# Titanic HackTheBox
 
 ## Escaneo de puertos
 
