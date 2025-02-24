@@ -1,3 +1,7 @@
+---
+icon: laptop-slash
+---
+
 # Bloqueo temporal de dirección IP pública
 
 `1.` La más sencilla es esperar un tiempo hasta que el servicio correspondiente (ej. Google) desbloquee tu dirección IP pública. Esto suele tardar unos minutos o, como mucho, unas pocas horas. Probablemente si repites el mismo ejercicio dentro de unos minutos, comprobarás que ya te ha desbloqueado la IP

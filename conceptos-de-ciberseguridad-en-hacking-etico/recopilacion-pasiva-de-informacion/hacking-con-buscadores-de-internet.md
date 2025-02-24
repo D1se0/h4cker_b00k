@@ -1,3 +1,7 @@
+---
+icon: landmark-magnifying-glass
+---
+
 # Hacking con buscadores de internet
 
 Una de las primeras tecnicas que realizaria un analista sin tener ningun tipo de informacion de la empresa, seria el saber que puertos tiene expuestos, como funciona por dentro y todo este tipo de cosas, pero de forma `pasiva` por lo que dentro de nuestro `kali` podremos ejecutar la primera tecnica llamada `Hacking con buscadores` es informacion que nosotros llegamos a encontrar de internet respecto a la informacion que se ha indexado en paginas, foros, etc... Con buscadores realizando busquedas avanzadas de lo que se hace normalmente, mediante una serie de simbolos, caracteres, los cuales son como filtros para llegar a encontrar informacion especifica.

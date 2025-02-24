@@ -1,3 +1,7 @@
+---
+icon: arrows-up-down-left-right
+---
+
 # Funciones de FOCA
 
 Abriremos `FOCA` seguiremos los pasos que nos pida hasta llegar a uno en concreto en el que se tenga que conectar a una `base de datos` SQL, le especificaremos la siguiente ruta.

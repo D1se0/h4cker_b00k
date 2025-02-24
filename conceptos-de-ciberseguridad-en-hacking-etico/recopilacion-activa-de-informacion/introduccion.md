@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-arc
+---
+
 # Introducción
 
 Es la recolección de información sobre un objetivo determinado utilizando _métodos que interactúan de manera directa con la organización_, normalmente mediante el envío de trafico de red.

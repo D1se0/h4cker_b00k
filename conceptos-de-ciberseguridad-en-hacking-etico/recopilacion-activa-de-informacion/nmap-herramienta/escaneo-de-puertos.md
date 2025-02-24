@@ -1,3 +1,7 @@
+---
+icon: weight-scale
+---
+
 # Escaneo de puertos
 
 Es muy importante este paso ya que con ello podemos determinar que puertos estan corriendo en dicha maquina, para investigar las posibles vulnerabilidades de dicha maquina.

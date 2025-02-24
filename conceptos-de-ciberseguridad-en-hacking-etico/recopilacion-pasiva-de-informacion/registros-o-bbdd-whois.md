@@ -1,3 +1,7 @@
+---
+icon: server
+---
+
 # Registros o BBDD Whois
 
 Este tipo de bases de datos, son cuando las empresas se dan de alta en algun cierto dominio o algo parecido a ello, es necesario que proporcionen informacion como, el nombre personal, correo, domicilio, etc... Y todo eso se queda registrado y se guardan en bases de datos llamadas `Whois`.

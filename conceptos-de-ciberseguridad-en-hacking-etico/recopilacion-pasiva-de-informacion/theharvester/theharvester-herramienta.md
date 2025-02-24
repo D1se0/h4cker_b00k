@@ -1,3 +1,7 @@
+---
+icon: toolbox
+---
+
 # TheHarvester Herramienta
 
 Es una herramienta bastante famosa la cual vamos a utilizar posteriormente, se encontraria en el siguiente repositorio de `GitHub`.

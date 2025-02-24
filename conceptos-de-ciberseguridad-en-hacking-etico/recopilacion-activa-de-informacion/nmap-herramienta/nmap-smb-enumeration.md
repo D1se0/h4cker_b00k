@@ -1,3 +1,7 @@
+---
+icon: boombox
+---
+
 # Nmap (SMB Enumeration)
 
 El puerto `SMB` es uno de los servicios mas antiguos que existen ya que se utiliza mucho y a medida que ha ido pasando el tiempo ha sido un foco de ataques enorme, pero tambien ha ido evolucionando de versiones, por lo que veremos en mas profundidad como enumerar este tipo de servicio.

@@ -1,3 +1,7 @@
+---
+icon: earth-asia
+---
+
 # Análisis de vulnerabilidades con Nmap
 
 Podemos utilizar los scripts de `namp` para hacer analisis de vulnerabilidades, en concreto los scripts llamados `vuln` por lo que si queremos hacer un escaneo de vulnerabilidades de una maquina de forma generica, pondremos el siguiente comando:

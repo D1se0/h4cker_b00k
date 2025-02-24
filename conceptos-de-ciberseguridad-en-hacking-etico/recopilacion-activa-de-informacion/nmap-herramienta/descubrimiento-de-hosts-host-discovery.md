@@ -1,3 +1,7 @@
+---
+icon: mailbox-flag-up
+---
+
 # Descubrimiento de hosts (Host Discovery)
 
 La primera tecnica que utilizaremos sera la llamada `Host Discovery`, lo haremos frente a las maquinas de nuestro entorno las llamadas `metasploitable3` tanto la de `windows` como la de `linux`.

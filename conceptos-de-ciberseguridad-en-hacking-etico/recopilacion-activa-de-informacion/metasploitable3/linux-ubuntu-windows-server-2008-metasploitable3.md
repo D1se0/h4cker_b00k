@@ -1,3 +1,7 @@
+---
+icon: ubuntu
+---
+
 # Linux Ubuntu-Windows Server 2008 - Metasploitable3
 
 Empezando por la de `ubuntu` las credenciales por defecto seran:

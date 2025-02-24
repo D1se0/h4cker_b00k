@@ -1,3 +1,7 @@
+---
+icon: earth-oceania
+---
+
 # DNSRecon Herramienta (Ficheros de zona)
 
 Si los servidores `DNS` de dicha organizacion estan mal configurados podremos obtener esos ficheros de zona, descargandonoslo mediante dicha herramienta, al lo que se le llama `Transferencia de zona`.

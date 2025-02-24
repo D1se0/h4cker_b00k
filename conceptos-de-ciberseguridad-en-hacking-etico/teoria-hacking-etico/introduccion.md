@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-arc
+---
+
 # Introducción
 
 Para ser un buen hacker etico tendremos que establecernos una `metodologia` la cual sera importante a la hora de realizar ejercicios de hacking etico y sea a nivel personal o en un entorno de empresa, pueden haber varias `metodologias`:

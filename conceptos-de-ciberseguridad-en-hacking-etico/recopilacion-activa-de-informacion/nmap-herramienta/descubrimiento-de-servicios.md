@@ -1,3 +1,7 @@
+---
+icon: usps
+---
+
 # Descubrimiento de servicios
 
 Para nosotros poder descubrir un servicio con su version en un determinado puerto o en varios puertos de un `host` o de varios `hosts` podemos hacerlo con el siguiente comando:

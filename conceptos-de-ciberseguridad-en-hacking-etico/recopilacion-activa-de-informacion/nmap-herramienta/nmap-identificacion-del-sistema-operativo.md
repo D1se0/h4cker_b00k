@@ -1,3 +1,7 @@
+---
+icon: opera
+---
+
 # Nmap (identificación del sistema operativo)
 
 Si nosotros queremos explotar alguna vulnerabilidad, escalar privilegios, etc... Una de las cosas mas importantes es saber a que sistema operativo nos estamos enfrentando, de esta forma podemos utilizar una serie de tecnicas u otras, dependiendo del S.O.

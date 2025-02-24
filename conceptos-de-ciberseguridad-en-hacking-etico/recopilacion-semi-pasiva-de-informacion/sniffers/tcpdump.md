@@ -1,3 +1,7 @@
+---
+icon: box-check
+---
+
 # TCPdump
 
 Esta herramienta va por terminal solamente, viene con `kali` por defecto y es como `wireshark` solo que por terminal, es una herramienta muy completita.

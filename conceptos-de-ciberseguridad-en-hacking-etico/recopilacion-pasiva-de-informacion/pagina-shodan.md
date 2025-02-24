@@ -1,3 +1,7 @@
+---
+icon: cup-straw-swoosh
+---
+
 # Pagina Shodan
 
 Este buscador es muy util para cuando estamos haciendo una auditoria para la recoleccion pasiva de informacion, ya que especificando a que organizacion/empresa queremos que busque, nos proporcionara informacion de puertos activos, informacion de banners, etc... de dicha empresa, por lo que podremos reolectar informacion de dichos puertos para luego posteriormente ver si tienen algun tipo de vulnerabilidad.

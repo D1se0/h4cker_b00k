@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-arc
+---
+
 # Introducción
 
 Una vez que hagamos todo el reconocimiento anterior tendremos que identificar las vulnerabilidades que tenga ese sistema para poder explotarlo o para poder introducirnos en el.

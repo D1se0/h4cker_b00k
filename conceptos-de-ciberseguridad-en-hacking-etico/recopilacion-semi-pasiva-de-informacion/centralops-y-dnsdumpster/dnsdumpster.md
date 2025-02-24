@@ -1,3 +1,7 @@
+---
+icon: sitemap
+---
+
 # DNSdumpster
 
 Esta es una pagina en la que solamente tendremos que poner el nombre de dominio el cual queremos investigar y automaticamente nos dara la IP, la informacion del mismo y nos lo geolocalizara, es una pagina muy completa y muy util a la hora de hacer reconocimiento.

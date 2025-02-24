@@ -1,3 +1,7 @@
+---
+icon: paperclip
+---
+
 # Pagina Censys
 
 URL = [Pagina Censys](https://search.censys.io)

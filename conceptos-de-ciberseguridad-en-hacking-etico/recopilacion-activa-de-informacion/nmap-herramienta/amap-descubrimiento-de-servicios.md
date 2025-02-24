@@ -1,3 +1,7 @@
+---
+icon: map
+---
+
 # Amap (descubrimiento de servicios)
 
 `amap` es una herramienta como `nmap` pero en tal caso de que queramos corroborar la informacion de `nmap`, podremos utilizar como herramienta secundaria `amap`, por defecto no viene instalada en `kali`, por lo que la instalaremos:

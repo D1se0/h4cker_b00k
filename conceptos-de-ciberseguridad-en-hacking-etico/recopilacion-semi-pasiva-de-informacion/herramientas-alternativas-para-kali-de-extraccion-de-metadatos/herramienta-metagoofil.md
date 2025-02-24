@@ -1,3 +1,7 @@
+---
+icon: cloud-binary
+---
+
 # Herramienta Metagoofil
 
 La primera herramienta que veremos sera la llamada `metagoofil` que encontraremos informacion en el siguiente repositorio de `GitHub`:

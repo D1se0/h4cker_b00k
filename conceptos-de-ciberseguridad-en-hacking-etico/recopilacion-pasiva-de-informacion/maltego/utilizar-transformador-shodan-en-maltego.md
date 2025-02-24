@@ -1,3 +1,7 @@
+---
+icon: transporter
+---
+
 # Utilizar transformador shodan en maltego
 
 Por ejemplo si hemos identificado una direccion IP de dicha empresa o usuario, podremos añadir una entidad llamada `IPv4 Address` al espacio de trabajo.

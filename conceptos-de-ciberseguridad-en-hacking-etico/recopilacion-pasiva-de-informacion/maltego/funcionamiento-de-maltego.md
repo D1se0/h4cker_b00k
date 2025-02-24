@@ -1,3 +1,7 @@
+---
+icon: file-circle-info
+---
+
 # Funcionamiento de Maltego
 
 `Maltego` actua como transformador de la informacion a la hora de hacer consultas a las bases de datos (querys), consultas a distintos repositorios, etc... Mostrandonos la informacion obtenida de forma detallada y visual en un espacion de trabajo, con diferentes transformadores que te proporciona `maltego`.

@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-arc
+---
+
 # Introducción
 
 En esta recopilacion es parecida a la `pasiva` pero con la diferencia si en la de antes no queriamos interactuar en la red, solamente recopilar informacion publica sin generar ningun tipo de trafico de red, en este caso vamos a interactuar con las redes generando algo de trafico de red, pero sin que el usuario se entere de que estamos recopilando informacion.

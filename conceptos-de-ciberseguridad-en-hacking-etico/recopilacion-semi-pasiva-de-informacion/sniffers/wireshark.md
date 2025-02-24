@@ -1,3 +1,7 @@
+---
+icon: wifi
+---
+
 # Wireshark
 
 Cuando hay una conexion entre varios equipos se le denomina `red` y cuando varios equipos estan en una `red` a estos se les llama `nodos` (Equipos de una red).

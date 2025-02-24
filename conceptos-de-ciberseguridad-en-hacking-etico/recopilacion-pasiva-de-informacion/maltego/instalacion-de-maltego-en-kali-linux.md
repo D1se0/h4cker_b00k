@@ -1,3 +1,7 @@
+---
+icon: sign-posts-wrench
+---
+
 # Instalacion de maltego en kali linux
 
 Primero actualizaremos los repositorios de `kali`.

@@ -1,3 +1,7 @@
+---
+icon: arrows-to-circle
+---
+
 # CentralOps
 
 En esta primera herramienta web llamada `centralOps` sera una pagina web bastante util en `hacking etico` sobre todo en las primeras fases de recopilacion de informacion, en concreto la parte de la pagina llamada `Domain Dossier`.

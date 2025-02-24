@@ -1,3 +1,7 @@
+---
+icon: cabinet-filing
+---
+
 # Archive (Análisis de información histórica)
 
 Muchas veces existen errores a nivel de humano, en las que para explicar una serie de cosas o publicar una serie de informacion para ayudar o para ser ayudados, se suele hacer dando informacion del error en los foros de internet, en publicaciones de `GitHub` en las cuales a veces cuando salta un error y muestras un `log` entero pueden haber credenciales del usuario, por lo que muchas veces empresas cometen estos errores y cuando se dan cuenta retiran la publicacion rapidamente, pero en muchas ocasiones esta informacion se queda en algun otro sitio o directamente la obtenemos nosotros, muchas veces aunque hayan retirado dicha informacion de esas credenciales, no cambian las credenciales y las dejan como estan, por lo que puede ser un buen vector de entrada a la hora de vulnerar algo.

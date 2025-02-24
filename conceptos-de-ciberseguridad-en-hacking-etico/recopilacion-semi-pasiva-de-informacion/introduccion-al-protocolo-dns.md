@@ -1,3 +1,7 @@
+---
+icon: calendar-users
+---
+
 # Introducción al protocolo DNS
 
 `DNS` es el acronimo de `Domain Name System`, traduce nombres de dominio a direcciones IP, basicamente resuelve estos dominios a direcciones IP para que asi nuestra red interprete bien hacia donde nos queremos conectar en vez de tener que meter la IP del dominio a pelo, metemos lo que se le llama el dominio (Ejemplo: www.youtube.com) que estara asociada a una IP y el servidor `DNS` se encarga de traducir ese dominio a la direccion IP asociada a dicho dominio.

@@ -1,3 +1,7 @@
+---
+icon: pinball
+---
+
 # Instalar FOCA
 
 Nos iremos a `google` desde nuestra maquina `windows` ya que la limitacion de esta herramienta es que solo funciona en sistemas de `windows` pero es una de las herramientas mas populares a nivel de extraccion de metadatos, buscaremos el repositorio de `GitHub` de FOCA.

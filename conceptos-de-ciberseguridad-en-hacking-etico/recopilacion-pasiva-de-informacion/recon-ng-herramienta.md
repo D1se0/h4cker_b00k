@@ -1,3 +1,7 @@
+---
+icon: face-viewfinder
+---
+
 # Recon-ng Herramienta
 
 Esta herramienta se utiliza para automatizar mucho mas esa bsuqueda de informacion publica para encontrar informacion sensible o que nos sea util.

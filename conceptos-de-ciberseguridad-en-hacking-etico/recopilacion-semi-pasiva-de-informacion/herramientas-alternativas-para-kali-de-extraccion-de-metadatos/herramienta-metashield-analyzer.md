@@ -1,3 +1,7 @@
+---
+icon: chart-pie-simple
+---
+
 # Herramienta Metashield-analyzer
 
 La encontraremos en la siguiente URL:
