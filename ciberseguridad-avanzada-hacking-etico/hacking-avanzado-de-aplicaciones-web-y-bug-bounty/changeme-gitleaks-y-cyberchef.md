@@ -1,4 +1,5 @@
 ---
+icon: user-chef
 layout:
   title:
     visible: true

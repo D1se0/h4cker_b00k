@@ -1,4 +1,5 @@
 ---
+icon: xmarks-lines
 layout:
   title:
     visible: true

@@ -1,4 +1,5 @@
 ---
+icon: land-mine-on
 layout:
   title:
     visible: true

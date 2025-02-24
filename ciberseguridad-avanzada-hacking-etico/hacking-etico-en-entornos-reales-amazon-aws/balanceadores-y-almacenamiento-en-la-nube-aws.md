@@ -1,4 +1,5 @@
 ---
+icon: album
 layout:
   title:
     visible: true

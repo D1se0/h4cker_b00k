@@ -1,4 +1,5 @@
 ---
+icon: audible
 layout:
   title:
     visible: true

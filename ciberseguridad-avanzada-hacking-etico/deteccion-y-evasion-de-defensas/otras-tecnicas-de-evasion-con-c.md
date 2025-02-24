@@ -1,4 +1,5 @@
 ---
+icon: star-of-david
 layout:
   title:
     visible: true

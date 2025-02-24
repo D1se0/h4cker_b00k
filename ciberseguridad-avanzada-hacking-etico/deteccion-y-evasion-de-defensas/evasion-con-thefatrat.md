@@ -1,4 +1,5 @@
 ---
+icon: mouse-field
 layout:
   title:
     visible: true

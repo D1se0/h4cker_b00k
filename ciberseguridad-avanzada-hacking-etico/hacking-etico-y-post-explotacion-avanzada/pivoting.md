@@ -1,4 +1,5 @@
 ---
+icon: tent-arrow-left-right
 layout:
   title:
     visible: true

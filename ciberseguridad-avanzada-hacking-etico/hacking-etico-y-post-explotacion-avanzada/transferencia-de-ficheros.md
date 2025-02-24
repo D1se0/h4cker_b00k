@@ -1,4 +1,5 @@
 ---
+icon: shuffle
 layout:
   title:
     visible: true

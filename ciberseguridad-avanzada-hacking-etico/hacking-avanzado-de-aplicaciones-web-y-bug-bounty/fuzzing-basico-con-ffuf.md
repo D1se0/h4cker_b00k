@@ -1,4 +1,5 @@
 ---
+icon: folder-check
 layout:
   title:
     visible: true

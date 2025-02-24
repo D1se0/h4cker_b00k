@@ -1,4 +1,5 @@
 ---
+icon: cloud
 layout:
   title:
     visible: true

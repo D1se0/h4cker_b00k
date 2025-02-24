@@ -1,4 +1,5 @@
 ---
+icon: bring-front
 layout:
   title:
     visible: true

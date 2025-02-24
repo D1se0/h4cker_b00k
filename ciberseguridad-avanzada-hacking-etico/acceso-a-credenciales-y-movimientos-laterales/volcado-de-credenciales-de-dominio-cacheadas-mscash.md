@@ -1,4 +1,5 @@
 ---
+icon: users-rectangle
 layout:
   title:
     visible: true

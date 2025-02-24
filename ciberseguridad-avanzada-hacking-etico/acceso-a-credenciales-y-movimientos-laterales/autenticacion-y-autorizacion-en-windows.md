@@ -1,4 +1,5 @@
 ---
+icon: user-police-tie
 layout:
   title:
     visible: true

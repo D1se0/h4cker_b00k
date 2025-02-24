@@ -1,4 +1,5 @@
 ---
+icon: compass
 layout:
   title:
     visible: true

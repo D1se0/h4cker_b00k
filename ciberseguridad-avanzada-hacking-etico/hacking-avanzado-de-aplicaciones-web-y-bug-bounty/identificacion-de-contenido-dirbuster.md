@@ -1,4 +1,5 @@
 ---
+icon: butter
 layout:
   title:
     visible: true

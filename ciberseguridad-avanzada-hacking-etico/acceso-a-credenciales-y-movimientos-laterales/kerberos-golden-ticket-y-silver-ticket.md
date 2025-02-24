@@ -1,4 +1,5 @@
 ---
+icon: coin-front
 layout:
   title:
     visible: true

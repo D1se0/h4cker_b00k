@@ -1,4 +1,5 @@
 ---
+icon: sensor-triangle-exclamation
 layout:
   title:
     visible: true

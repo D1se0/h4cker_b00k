@@ -1,4 +1,5 @@
 ---
+icon: viruses
 layout:
   title:
     visible: true

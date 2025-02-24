@@ -1,4 +1,5 @@
 ---
+icon: tickets-perforated
 layout:
   title:
     visible: true

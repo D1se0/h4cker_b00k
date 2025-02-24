@@ -1,4 +1,5 @@
 ---
+icon: aws
 layout:
   title:
     visible: true

@@ -1,4 +1,5 @@
 ---
+icon: sensor-on
 layout:
   title:
     visible: true

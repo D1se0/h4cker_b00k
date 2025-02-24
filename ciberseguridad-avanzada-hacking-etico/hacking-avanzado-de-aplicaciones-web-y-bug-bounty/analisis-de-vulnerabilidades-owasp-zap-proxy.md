@@ -1,4 +1,5 @@
 ---
+icon: bee
 layout:
   title:
     visible: true

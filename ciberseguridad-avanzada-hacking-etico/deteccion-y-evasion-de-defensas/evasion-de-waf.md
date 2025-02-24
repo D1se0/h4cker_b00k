@@ -1,4 +1,5 @@
 ---
+icon: waffle
 layout:
   title:
     visible: true

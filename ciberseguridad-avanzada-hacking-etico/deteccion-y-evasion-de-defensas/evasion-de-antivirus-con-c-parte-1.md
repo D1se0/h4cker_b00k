@@ -1,4 +1,5 @@
 ---
+icon: virus-covid-slash
 layout:
   title:
     visible: true

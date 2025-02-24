@@ -1,4 +1,5 @@
 ---
+icon: tickets
 layout:
   title:
     visible: true

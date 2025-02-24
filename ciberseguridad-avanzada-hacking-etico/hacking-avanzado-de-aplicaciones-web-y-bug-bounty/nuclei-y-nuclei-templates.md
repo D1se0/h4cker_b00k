@@ -1,4 +1,5 @@
 ---
+icon: radiation
 layout:
   title:
     visible: true

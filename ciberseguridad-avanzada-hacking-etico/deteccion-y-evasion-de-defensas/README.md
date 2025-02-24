@@ -1,4 +1,5 @@
 ---
+icon: shield-check
 layout:
   title:
     visible: true

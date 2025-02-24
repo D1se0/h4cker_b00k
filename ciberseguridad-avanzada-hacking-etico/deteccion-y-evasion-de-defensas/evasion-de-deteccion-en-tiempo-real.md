@@ -1,4 +1,5 @@
 ---
+icon: hourglass-clock
 layout:
   title:
     visible: true

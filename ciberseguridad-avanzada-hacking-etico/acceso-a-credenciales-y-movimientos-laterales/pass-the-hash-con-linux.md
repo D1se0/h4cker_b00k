@@ -1,4 +1,5 @@
 ---
+icon: unlock
 layout:
   title:
     visible: true

@@ -1,4 +1,5 @@
 ---
+icon: person-to-portal
 layout:
   title:
     visible: true

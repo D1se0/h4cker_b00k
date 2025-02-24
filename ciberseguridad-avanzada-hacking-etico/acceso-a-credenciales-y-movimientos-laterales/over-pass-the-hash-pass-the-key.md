@@ -1,4 +1,5 @@
 ---
+icon: keycdn
 layout:
   title:
     visible: true

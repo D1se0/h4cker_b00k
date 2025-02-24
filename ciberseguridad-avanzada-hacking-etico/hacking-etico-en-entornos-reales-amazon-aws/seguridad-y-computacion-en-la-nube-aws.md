@@ -1,4 +1,5 @@
 ---
+icon: computer
 layout:
   title:
     visible: true

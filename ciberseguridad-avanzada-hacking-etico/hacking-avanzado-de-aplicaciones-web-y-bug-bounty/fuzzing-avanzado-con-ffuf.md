@@ -1,4 +1,5 @@
 ---
+icon: folder-arrow-up
 layout:
   title:
     visible: true

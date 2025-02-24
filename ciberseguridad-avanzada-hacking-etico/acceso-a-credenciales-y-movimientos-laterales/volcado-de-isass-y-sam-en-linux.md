@@ -1,4 +1,5 @@
 ---
+icon: inbox-in
 layout:
   title:
     visible: true

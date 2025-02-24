@@ -1,4 +1,5 @@
 ---
+icon: ghost
 layout:
   title:
     visible: true

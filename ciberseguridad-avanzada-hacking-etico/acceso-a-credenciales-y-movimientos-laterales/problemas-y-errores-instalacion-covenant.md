@@ -1,4 +1,5 @@
 ---
+icon: triangle-exclamation
 layout:
   title:
     visible: true

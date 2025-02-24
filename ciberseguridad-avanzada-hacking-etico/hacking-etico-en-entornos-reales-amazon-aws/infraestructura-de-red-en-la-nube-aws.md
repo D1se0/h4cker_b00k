@@ -1,4 +1,5 @@
 ---
+icon: amazon
 layout:
   title:
     visible: true

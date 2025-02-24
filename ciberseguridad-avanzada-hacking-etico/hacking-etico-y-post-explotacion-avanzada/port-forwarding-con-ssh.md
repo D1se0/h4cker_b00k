@@ -1,4 +1,5 @@
 ---
+icon: building-lock
 layout:
   title:
     visible: true

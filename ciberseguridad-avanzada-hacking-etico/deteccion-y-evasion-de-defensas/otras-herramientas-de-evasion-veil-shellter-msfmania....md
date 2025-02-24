@@ -1,4 +1,5 @@
 ---
+icon: wrench-simple
 layout:
   title:
     visible: true

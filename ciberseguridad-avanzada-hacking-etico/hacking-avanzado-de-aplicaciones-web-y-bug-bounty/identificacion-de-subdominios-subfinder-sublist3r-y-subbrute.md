@@ -1,4 +1,5 @@
 ---
+icon: route
 layout:
   title:
     visible: true

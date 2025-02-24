@@ -1,4 +1,5 @@
 ---
+icon: file-signature
 layout:
   title:
     visible: true

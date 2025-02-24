@@ -1,4 +1,5 @@
 ---
+icon: passport
 layout:
   title:
     visible: true

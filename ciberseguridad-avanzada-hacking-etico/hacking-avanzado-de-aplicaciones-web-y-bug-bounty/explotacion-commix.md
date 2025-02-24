@@ -1,4 +1,5 @@
 ---
+icon: user-pen
 layout:
   title:
     visible: true

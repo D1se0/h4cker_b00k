@@ -1,4 +1,5 @@
 ---
+icon: blog
 layout:
   title:
     visible: true

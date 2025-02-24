@@ -1,4 +1,5 @@
 ---
+icon: list-dropdown
 layout:
   title:
     visible: true

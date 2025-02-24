@@ -1,4 +1,5 @@
 ---
+icon: bug
 layout:
   title:
     visible: true

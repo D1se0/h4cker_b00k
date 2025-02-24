@@ -1,4 +1,5 @@
 ---
+icon: donut
 layout:
   title:
     visible: true

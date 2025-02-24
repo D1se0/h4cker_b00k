@@ -1,4 +1,5 @@
 ---
+icon: flatbread
 layout:
   title:
     visible: true

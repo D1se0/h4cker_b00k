@@ -1,4 +1,5 @@
 ---
+icon: folder-gear
 layout:
   title:
     visible: true

@@ -1,4 +1,5 @@
 ---
+icon: camera-cctv
 layout:
   title:
     visible: true

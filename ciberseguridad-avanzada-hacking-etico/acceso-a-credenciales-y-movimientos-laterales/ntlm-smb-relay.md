@@ -1,4 +1,5 @@
 ---
+icon: airplay
 layout:
   title:
     visible: true

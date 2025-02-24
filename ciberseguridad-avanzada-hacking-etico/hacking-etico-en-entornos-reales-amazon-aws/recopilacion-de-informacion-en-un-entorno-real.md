@@ -1,4 +1,5 @@
 ---
+icon: album-collection-circle-plus
 layout:
   title:
     visible: true
