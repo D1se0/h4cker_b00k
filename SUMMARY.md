@@ -289,6 +289,7 @@
   * [CTF CineHack Intermediate](ctf/ctfs/ctf-cinehack-intermediate.md)
   * [CTF LifeOrDead Hard](ctf/ctfs/ctf-lifeordead-hard.md)
   * [CTF TpRoot Very Easy](ctf/ctfs/ctf-tproot-very-easy.md)
+  * [CTF Gitea Intermediate](ctf/ctfs/ctf-gitea-intermediate.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
