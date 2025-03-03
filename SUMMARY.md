@@ -261,6 +261,7 @@
   * [Allien DockerLabs (Easy)](ctf/dockerlabs/allien-dockerlabs-easy.md)
   * [Paradise DockerLabs (Easy)](ctf/dockerlabs/paradise-dockerlabs-easy.md)
   * [ApiBase DockerLabs (Easy)](ctf/dockerlabs/apibase-dockerlabs-easy.md)
+  * [Smashing DockerLabs (Hard)](ctf/dockerlabs/smashing-dockerlabs-hard.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
