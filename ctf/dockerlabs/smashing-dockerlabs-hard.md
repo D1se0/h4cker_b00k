@@ -307,7 +307,7 @@ nano /etc/hosts
 
 Lo guardamos y nos metemos con dicho `subdominio`.
 
-!\[\[Pasted image 20250301103755.png]]
+<figure><img src="../../.gitbook/assets/image (272).png" alt=""><figcaption></figcaption></figure>
 
 Veremos un `login`, pero no vemos que se pueda hacer mucho, si volvemos e intentamos realizar fuerza bruta con el usuario `admin` en la parte de `/api/login` de la siguiente forma:
 
@@ -388,7 +388,7 @@ Lo guardamos y entramos con dicho `subdominio` veremos lo siguiente:
 URL = http://0internal_down.cybersec.dl
 ```
 
-!\[\[Pasted image 20250301122941.png]]
+<figure><img src="../../.gitbook/assets/image (273).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que podemos descargarnos lo que parece ser un `binario` y una nota `.txt`, vamos a descargarnos las `2` cosas.
 
@@ -552,7 +552,7 @@ undefined8 main(void)
 
 Ahora tendremos que darle a este boton de aqui llendonos a la funcion `main` y probaremos a cambiar algunos `bytes` para que un texto diga otra cosa de lo que normalmente dice, en vez de que diga `Bienvenido al programa interactivo.` reemplazarlo por `Programa modificado by d1se0.`.
 
-!\[\[Pasted image 20250303121113.png]]
+<figure><img src="../../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
 Dandole a ese boton, se nos abrira la cadena de `bytes` que corresponde en la posicion de donde tengamos el programa, por lo que pincharemos donde pone la frase y nos marcara la cadena de `bytes`, una vez echo eso, pasaremos el texto de `ascii` a `bytes` con la siguiente pagina:
 
@@ -560,23 +560,23 @@ URL = [ascii to bytes Page](https://onlinetools.com/ascii/convert-ascii-to-bytes
 
 Tendremos dentro del panel de `bytes` que darle al siguiente boton para empezar a modificar el bloque:
 
-!\[\[Pasted image 20250303121411.png]]
+<figure><img src="../../.gitbook/assets/image (275).png" alt=""><figcaption></figcaption></figure>
 
 Y lo modificaremos...
 
-!\[\[Pasted image 20250303120755.png]]
+<figure><img src="../../.gitbook/assets/image (276).png" alt=""><figcaption></figcaption></figure>
 
 Una vez modificados los `bytes`, le daremos al siguiente boton para guardar la modificacion.
 
-!\[\[Pasted image 20250303120819.png]]
+<figure><img src="../../.gitbook/assets/image (277).png" alt=""><figcaption></figcaption></figure>
 
 Una vez que lo hayamos guardado se habran modificado los `bytes` por lo que el texto tambien se habra modificado, tendremos que `re-compilarlo` llendonos a `File`:
 
-!\[\[Pasted image 20250303121737.png]]
+<figure><img src="../../.gitbook/assets/image (278).png" alt=""><figcaption></figcaption></figure>
 
 De esta seccion, seleccionamos `Export Program...`:
 
-!\[\[Pasted image 20250303121811.png]]
+<figure><img src="../../.gitbook/assets/image (279).png" alt=""><figcaption></figcaption></figure>
 
 En el formato lo dejamos como `Original File` para que sea el binario y se pueda ejecutar, y el `PATH` donde queremos que lo deje, una vez echo todo esto, le daremos a `Ok` y con esto ya tendremos el binario modificado.
 
@@ -757,18 +757,18 @@ Por lo que vemos corresponde `sym.factor1` con `0x22d2`, teniendo todo esto, ya 
 
 La instrucción `call` usa una dirección **relativa** y se calcula así:
 
-!\[\[Pasted image 20250303134109.png]]
+<figure><img src="../../.gitbook/assets/image (280).png" alt=""><figcaption></figcaption></figure>
 
 Sabemos que:
 
 * `factor1` = **0x000020a7**
 * `call` en `0x000023dc`
 
-!\[\[Pasted image 20250303134123.png]]
+<figure><img src="../../.gitbook/assets/image (281).png" alt=""><figcaption></figcaption></figure>
 
 Convertimos `-0x33A` a **little-endian** en 4 bytes:
 
-!\[\[Pasted image 20250303134139.png]]
+<figure><img src="../../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
 
 Si tambien contamos con el `opcode` del `CALL` que es `e8` nos quedaria algo asi:
 
