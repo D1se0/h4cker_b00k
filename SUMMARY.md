@@ -264,6 +264,7 @@
   * [Smashing DockerLabs (Hard)](ctf/dockerlabs/smashing-dockerlabs-hard.md)
   * [Rubiks DockerLabs (Intermediate)](ctf/dockerlabs/rubiks-dockerlabs-intermediate.md)
   * [Inclusion DockerLabs (Intermediate)](ctf/dockerlabs/inclusion-dockerlabs-intermediate.md)
+  * [Sites DockerLabs (Intermediate)](ctf/dockerlabs/sites-dockerlabs-intermediate.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
