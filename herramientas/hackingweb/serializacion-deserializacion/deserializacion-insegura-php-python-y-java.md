@@ -17,7 +17,7 @@ layout:
 
 ## **Deserialización Insegura en PHP**
 
-> Explotación de ejemplo (`PHP`) = [LINK EJEMPLO](deserializacion-insegura-php-python-y-java.md#deserializacion-insegura-en-php)
+> Explotación de ejemplo (`PHP`) = [LINK EJEMPLO](deserializacion-insegura-php.md)
 
 #### **Descripción General**
 
