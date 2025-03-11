@@ -45,6 +45,8 @@ La deserialización insegura en PHP ocurre cuando datos no confiables (provenien
 
 ## **Deserialización Insegura en Python**
 
+Explotación de ejemplo (`Python`) = [LINK EJEMPLO](deserializacion-insegura-python.md)
+
 #### **Descripción General**
 
 En Python, la deserialización insegura ocurre cuando se utiliza la función **pickle** para deserializar datos sin precauciones adecuadas. **Pickle** permite ejecutar código arbitrario durante la deserialización, lo que puede ser aprovechado por un atacante para ejecutar código malicioso.

@@ -51,6 +51,7 @@
     * [Deserialización Insegura Java (LAB)](herramientas/hackingweb/serializacion-deserializacion/deserializacion-insegura-java-lab.md)
     * [Deserialización Insegura (PHP, Python y Java)](herramientas/hackingweb/serializacion-deserializacion/deserializacion-insegura-php-python-y-java.md)
     * [Deserialización Insegura PHP](herramientas/hackingweb/serializacion-deserializacion/deserializacion-insegura-php.md)
+    * [Deserialización Insegura Python](herramientas/hackingweb/serializacion-deserializacion/deserializacion-insegura-python.md)
 * [Reconocimiento](herramientas/reconocimiento/README.md)
   * [NMAP](herramientas/reconocimiento/nmap.md)
   * [Dominios/Subdominios](herramientas/reconocimiento/dominios-subdominios.md)

@@ -116,7 +116,7 @@ En el segundo reto es mas de lo mismo, solo que en este caso se quedan almacenad
 
 Y se veria algo asi:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que pasaremos al reto `3`.
 
@@ -136,7 +136,7 @@ URL = http://<IP>/laboratorio3/?opcion1=<h1>XSS</h1>&opcion2=<a style="color:blu
 
 Y si le damos a `ENTER` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que pasaremos al reto final.
 
@@ -150,7 +150,7 @@ URL = http://<IP>/laboratorio4/?data=<h1>XSS</h1>
 
 Por lo que veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 O por ejemplo si ponemos...
 
