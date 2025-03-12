@@ -54,6 +54,7 @@
     * [Deserialización Insegura Python](herramientas/hackingweb/serializacion-deserializacion/deserializacion-insegura-python.md)
   * [Vulnerabilidad Open Redirect](herramientas/hackingweb/vulnerabilidad-open-redirect.md)
   * [XEE (XML External Entity Injection)](herramientas/hackingweb/xee-xml-external-entity-injection.md)
+  * [SSTI (Server-Side Template Injection)](herramientas/hackingweb/ssti-server-side-template-injection.md)
 * [Reconocimiento](herramientas/reconocimiento/README.md)
   * [NMAP](herramientas/reconocimiento/nmap.md)
   * [Dominios/Subdominios](herramientas/reconocimiento/dominios-subdominios.md)

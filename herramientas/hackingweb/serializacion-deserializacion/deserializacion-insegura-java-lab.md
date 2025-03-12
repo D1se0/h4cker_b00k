@@ -171,7 +171,7 @@ Priority: u=0, i
 
 Ahora si la enviamos veremos lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con este mensaje veremos que el comando se ejecuto de forma correcta, por lo que habremos aprovechado dicha vulnerabilidad.
 
