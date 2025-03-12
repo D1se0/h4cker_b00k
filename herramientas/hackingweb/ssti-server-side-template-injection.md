@@ -1,4 +1,5 @@
 ---
+icon: sidebar-flip
 layout:
   title:
     visible: true
