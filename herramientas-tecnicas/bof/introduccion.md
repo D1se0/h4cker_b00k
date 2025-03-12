@@ -1,4 +1,5 @@
 ---
+icon: arrow-right-to-arc
 layout:
   title:
     visible: true

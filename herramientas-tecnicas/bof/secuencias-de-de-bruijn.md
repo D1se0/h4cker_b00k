@@ -1,4 +1,5 @@
 ---
+icon: section
 layout:
   title:
     visible: true

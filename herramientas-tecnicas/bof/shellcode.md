@@ -1,4 +1,5 @@
 ---
+icon: merge
 layout:
   title:
     visible: true
