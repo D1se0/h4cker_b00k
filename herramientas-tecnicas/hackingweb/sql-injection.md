@@ -43,7 +43,7 @@ select * from products where 'lifestyle' and released = 1;
 select * from products where 'input' or 1=1-- -' and released = 1;
 ```
 
-<figure><img src="../.gitbook/assets/sql1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sql1.png" alt=""><figcaption></figcaption></figure>
 
 ### Lab: SQL Injection vulnerability allowing login bypass
 
@@ -78,7 +78,7 @@ Con esto comprobamos que somos `admin` automaticamente ya que petamos la logica 
 
 URL (Payloads genericos para este tipo de casos) = https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/MySQL%20Injection.md
 
-<figure><img src="../.gitbook/assets/sql2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sql2.png" alt=""><figcaption></figcaption></figure>
 
 ### Lab: SQL Injection UNION attack, determining the number of columns returned by the query
 
@@ -496,7 +496,7 @@ Veremos esto...
 
 Por lo que nos logeamos con el de `admin` y ya estaria...
 
-<figure><img src="../.gitbook/assets/sql3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sql3.png" alt=""><figcaption></figcaption></figure>
 
 ### Lab: SQL injection UNION attack, determining the number of columns returned by the query
 
