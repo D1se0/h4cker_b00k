@@ -236,7 +236,7 @@ Finished
 
 Vemos una pagina llamada `/maintenance.html` que si entramos veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por el momento no hay nada mas interesante que eso, por lo que nos iremos al puerto `3000` a ver que hay.
 
@@ -321,7 +321,7 @@ sudo apt install keepassxc
 
 Una vez instalado, lo abriremos poniendo solo `keepassxc` y cargaremos el archivo `.kdbx` pero nos pedira una contraseña, meteremos como contraseña `t9sH76gpQ82UFeZ3GXZS` y veremos que se nos debloquea, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos es la contraseña de `freddy`, vamos a conectarnos por `ssh` de la siguiente forma:
 

@@ -57,6 +57,7 @@
   * [SSTI (Server-Side Template Injection)](herramientas-tecnicas/hackingweb/ssti-server-side-template-injection.md)
   * [Prototype Pollution (Contaminación de prototipos) JavaScript](herramientas-tecnicas/hackingweb/prototype-pollution-contaminacion-de-prototipos-javascript.md)
   * [IDOR (Insecure Direct Object Reference)](herramientas-tecnicas/hackingweb/idor-insecure-direct-object-reference.md)
+  * [CORS (Cross-Origin Resource Sharing)](herramientas-tecnicas/hackingweb/cors-cross-origin-resource-sharing.md)
 * [Ingeniería Inversa](herramientas-tecnicas/ingenieria-inversa/README.md)
   * [Radare2](herramientas-tecnicas/ingenieria-inversa/radare2.md)
 * [Reconocimiento](herramientas-tecnicas/reconocimiento/README.md)
