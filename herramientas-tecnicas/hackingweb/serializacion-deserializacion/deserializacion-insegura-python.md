@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
 Vemos que no valida la entrada que se serializa y la `deserializa` lo que venga de forma insegura, ya que no tiene ninguna medida de seguridad, si entramos en la pagina veremos lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 El usuario por defecto sera el siguiente:
 
@@ -190,7 +190,7 @@ Priority: u=0, i
 
 Ahora si enviamos la `peticion` veremos lo siguiente en la pagina:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que algo ha sido modificado, por lo que podemos deducir que si ha funcionado correctamente.
 
@@ -200,6 +200,6 @@ Vamos a irnos directamente a la `IP` para ver si el archivo se subio de forma co
 URL = http://<IP>/text.txt
 ```
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que ha funcionado, por lo que podremos generar `payloads` y ejecutar codigo de forma remota.
