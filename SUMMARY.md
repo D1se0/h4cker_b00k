@@ -306,6 +306,7 @@
   * [ShowTime DockerLabs (Easy)](ctf/dockerlabs/showtime-dockerlabs-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
+  * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
