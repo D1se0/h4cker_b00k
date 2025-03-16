@@ -190,7 +190,7 @@ Priority: u=0, i
 
 Ahora si enviamos la `peticion` veremos lo siguiente en la pagina:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que algo ha sido modificado, por lo que podemos deducir que si ha funcionado correctamente.
 
