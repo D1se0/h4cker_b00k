@@ -1,4 +1,5 @@
 ---
+icon: bells
 layout:
   title:
     visible: true
