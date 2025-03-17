@@ -15,6 +15,8 @@ layout:
 
 # CTF Gitea Intermediate
 
+URL Download CTF = [https://drive.google.com/file/d/1srO6rDx0jJJOQ0Bd5Vzub2WQsvyNOVTf/view?usp=sharing](https://drive.google.com/file/d/1srO6rDx0jJJOQ0Bd5Vzub2WQsvyNOVTf/view?usp=sharing)
+
 ### Instalación
 
 Cuando obtenemos el `.zip` nos lo pasamos al entorno en el que vamos a empezar a hackear la maquina y haremos lo siguiente.

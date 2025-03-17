@@ -337,7 +337,7 @@
   * [CTF LifeOrDead Hard](ctf/ctfs/ctf-lifeordead-hard.md)
   * [CTF TpRoot Very Easy](ctf/ctfs/ctf-tproot-very-easy.md)
   * [CTF Gitea Intermediate](ctf/ctfs/ctf-gitea-intermediate.md)
-  * [SecureLAB HackerLabs (Hard)](ctf/ctfs/securelab-hackerlabs-hard.md)
+  * [CTF SecureLAB Hard](ctf/ctfs/ctf-securelab-hard.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
