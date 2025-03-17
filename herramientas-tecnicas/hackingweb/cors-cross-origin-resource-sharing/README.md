@@ -137,7 +137,7 @@ Pass: user/admin
 
 Una vez que estemos dentro veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que estamos viendo nos muestra la informacion del usuario, junto con su `TOKEN`, etc... Vamos a capturar la peticion con `BuprSuite` recargando la pagina y dentro de la misma añadiremos en la cabecera despues del parametro `Connect` lo siguiente:
 
@@ -165,7 +165,7 @@ Priority: u=0, i
 
 Antes de enviarlo activaremos en `BurpSuite` el que obtengamos las respuestas del servidor:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez activado vamos a enviarlo y veremos en la respuesta lo siguiente:
 
@@ -414,7 +414,7 @@ Priority: u=0
 
 Y si le damos al boton directamente de `Intercep on` veremos en la consola que salio todo perfecto:
 
-<figure><img src="../../.gitbook/assets/image (293).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (293).png" alt=""><figcaption></figcaption></figure>
 
 Y si vamos al archivo donde se guarda todo, veremos que funciono:
 
@@ -427,7 +427,7 @@ IP Address: 172.17.0.1
 
 Ahora si probamos a meter donde la pagina de `cors.html` en `TOKEN` del usuario `admin` en este campo:
 
-<figure><img src="../../.gitbook/assets/image (294).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (294).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que es el correcto, por lo que habremos aprovechado de forma corercta la obtencion de informacion como el `TOKEN` del usuario, aprovechando la vulnerabilidad `CORS` y haciendo que el servidor confie en el `origen` de nuestro servidor.
 

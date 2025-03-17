@@ -190,7 +190,7 @@ URL = http://japan.cracker.dl
 
 Si entramos aqui, podremos ver que nos proporciona un boton en el que podremos descargar un `software` llamado `PanelAdmin`, una vez que nos lo descarguemos, si no ejecutamos veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que tendremos que introducir un `SERIAL` para poder acceder al `Panel del admin`, por lo que tendremos que realizar `ingenieria inversa` para poder descubrir dicho `SERIAL`.
 
@@ -202,17 +202,17 @@ En mi caso utilizare `ghidra` para poder decompilar el binario y poder descubrir
 
 Creamos un nuevo proyecto y dentro de dicho proyecto, le daremos al siguiente boton.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y dentro de este apartado, importaremos el archivo `PanelAdmin` para que nos lo decompile, una vez echo esto, si nos vamos en la parte izquierda veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vamos a ir a ver las funciones que hay, para ver si podemos descubrir alguna que sea interesante donde se pase el `SERIAL`.
 
 Si nos vamos a la siguiente `funcion` llamada `validate_serial` que tiene pinta de que puede contener el `SERIAL` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Podremos ver el `SERIAL` en partes y donde pone el `%s` vemos unos guiones, por lo que va sujeto a guiones, viendose de la siguiente forma:
 
@@ -224,11 +224,11 @@ Por lo que vamos a probar a ver si es el `SERIAL` correcto.
 
 Si ponemos dicho `SERIAL` veremos que es el correcto, por lo que entraremos al panel de admin, viendo algo asi:
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Hay una opcion interesante llamada `Mostrar Contraseña Secreta` que si le damos veremos algo asi:
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos, estamos viendo una contraseña que puede ser la de un usuario del sistema, no sabemos el usuario, pero vamos a probar si el usuario es `cracker` ya que la pagina se llama asi y esta dedicado al `cracking`, por lo que haremos lo siguiente.
 

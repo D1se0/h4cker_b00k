@@ -98,7 +98,7 @@ Entrando dentro de dicho laboratorio veremos una parte en el que podremos enviar
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando de forma correcta, por lo que habremos terminado dicho laboratorio.
 
@@ -112,7 +112,7 @@ Entrando dentro de dicho laboratorio veremos que hay un cuadro de texto, lo que 
 
 Y si le damos a `guardar mensaje` veremos que nos salta el `XSS` y si cargamos la pagina nos vuelve aparecer:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que habremos terminado este laboratorio.
 
@@ -156,7 +156,7 @@ Codificado:
 
 Ahora si lo enviamos veremos lo siguiente en la pagina:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que funciona de forma correcta, por lo que habremos terminado este laboratorio.
 

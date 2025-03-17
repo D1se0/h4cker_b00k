@@ -154,15 +154,15 @@ En este caso vamos a probar la opcion `2`, por lo que pondremos `2` y nos llevar
 
 En este caso podremos seleccionar el nuevo `payload` que ha salido para poder generarlo con `powershell` o podremos utilizar el viejo pero que es muy potente, vamos a darle al numero `2` y esto nos abrira una mini ventana de terminal en el que se nos generara el `payload`.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Despues de poner la `IP` y el puerto, veremos esto otro:
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Seleccionaremos la opcion `2` para que nos lo compile en `64 bits`, esto puede tardar un poco, pero cuando haya terminado veremos esto:
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aqui nos comenta que ya compilo el binario de la `backdoor` pero que lo compilo una segunda vez el original para que este de forma mas ofuscada y el segundo compilado se llama `Powerfull-fud.exe` que es el que vamos a utilizar, nos muestra que esta en la siguiente ruta:
 

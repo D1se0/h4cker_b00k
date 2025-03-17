@@ -93,7 +93,7 @@ Ahora teniendo el servidor abierto en la misma `red` que la maquina victima, si 
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que efectivamente se nos guardo en el escritorio, ya que le indicamos con la segunda ruta que nos lo guarde con ese nombre y en esa ubicacion.
 

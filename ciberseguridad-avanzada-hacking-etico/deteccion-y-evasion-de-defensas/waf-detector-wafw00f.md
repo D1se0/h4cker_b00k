@@ -31,7 +31,7 @@ wafw00f <DOMAIN>
 
 Info:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En este caso lo que estamos viendo es hacia un servidor de `AWS` en la nube de `amazon` y por lo que vemos lo detecto sin ningun problema.
 
