@@ -398,7 +398,7 @@ Table: users
 
 Vemos que nos saca varias credenciales, pero sus contraseñas estan `hasheadas` por lo que vamos a intentar `crackear` la contraseña al menos del usuario `admin` y `luisillo`, ya que los demas usuarios no tienen importancia.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 admin:0844575632

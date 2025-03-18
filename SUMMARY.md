@@ -31,6 +31,7 @@
 * [FTP vsftpd-2.3.4 backdoor](artiuclos/ftp-vsftpd-2.3.4-backdoor.md)
 * [Activación de Office Permanente](artiuclos/activacion-de-office-permanente.md)
 * [Instalar SPSS (crack)](artiuclos/instalar-spss-crack.md)
+* [Servidor Node.js en Windows](artiuclos/servidor-node.js-en-windows.md)
 
 ## Linux
 
@@ -309,6 +310,7 @@
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
   * [DogShow BugBountyLabs (Avanzado)](ctf/bugbountylabs/dogshow-bugbountylabs-avanzado.md)
+  * [Trr0rlabs BugBountyLabs (Avanzado)](ctf/bugbountylabs/trr0rlabs-bugbountylabs-avanzado.md)
 * [TheHackersLabs](ctf/thehackerslabs/README.md)
   * [Quokka (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/quokka-windows-thehackerslabs-principiante.md)
 * [CTF's](ctf/ctfs/README.md)
