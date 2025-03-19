@@ -312,6 +312,7 @@
   * [DogShow BugBountyLabs (Avanzado)](ctf/bugbountylabs/dogshow-bugbountylabs-avanzado.md)
   * [Trr0rlabs BugBountyLabs (Avanzado)](ctf/bugbountylabs/trr0rlabs-bugbountylabs-avanzado.md)
   * [XSSaS BugBountyLabs (Experto)](ctf/bugbountylabs/xssas-bugbountylabs-experto.md)
+  * [Redirection BugBountyLabs (Principiante)](ctf/bugbountylabs/redirection-bugbountylabs-principiante.md)
 * [TheHackersLabs](ctf/thehackerslabs/README.md)
   * [Quokka (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/quokka-windows-thehackerslabs-principiante.md)
   * [Microchoft (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/microchoft-windows-thehackerslabs-principiante.md)
