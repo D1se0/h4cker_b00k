@@ -316,6 +316,7 @@
 * [TheHackersLabs](ctf/thehackerslabs/README.md)
   * [Quokka (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/quokka-windows-thehackerslabs-principiante.md)
   * [Microchoft (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/microchoft-windows-thehackerslabs-principiante.md)
+  * [Ensalá Papas (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/ensala-papas-windows-thehackerslabs-principiante.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
