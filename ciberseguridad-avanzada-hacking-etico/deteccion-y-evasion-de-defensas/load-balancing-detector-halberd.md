@@ -90,6 +90,6 @@ halberd <DOMAIN>
 
 Y con esto lo que va ha realizar es hacer lo mismo que la anterior herramienta de `ldb` pero en este caso dara mas informacion como por ejemplo las `IP's` que estan corriendo dentras de dicho balanceador.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aqui nos muestra las direcciones `IP` pero de los balanceadores, la `IP` publica del servidor web real no se encuentra ahi, pero la unica forma de poder `Bypassear` esto seria intentando encontrar la direccion publica del servidor real y esto se puede conseguir utilizando tecnicas pasivas de recopilacion de informacion como por ejemplo utilizando `sodan`, `censis`, etc...

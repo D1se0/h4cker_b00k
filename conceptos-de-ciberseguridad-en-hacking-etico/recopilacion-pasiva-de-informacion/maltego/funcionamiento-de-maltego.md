@@ -8,7 +8,7 @@ icon: file-circle-info
 
 Dentro de los transformadores, tendremos que ver algo asi:
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si no aparece lo de logearte no tendremos eso, para logearnos de forma manual, nos tendremos que ir al simbolo de arriba a la izquierda de `maltego` -> `Licence Manager` -> y seguir los pasos para obtener una licencia de la comunidad logeandote o registrandote
 
@@ -26,19 +26,19 @@ A esta persona la podemos ligar alguna organizacion, buscando `Company` y arrast
 
 Si la damos al siguiente icono:
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Podremos ligarlo a la compañia poniendo el nombre de `Trabaja en` y dandole aceptar se creara una flecha.
 
 Si nos vamos a las siguientes opciones pulsando en la persona:
 
-![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Y le damos a `All Transforms` podremos ver todo lo que podemos ejecutar para buiscar informacion de esa persona, tanto correos, numeros de telefono, informacion debil, etc... De todo.
 
 Nosotros lo que vamos hacer es ejecutar todos los transformadores a la vez para ver que informacion nos reporta dandole al icono `>>` de donde pone `All Transforms`, si le damos a ejecutar todo, tendremos que ver algo asi:
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Nos habra encontrado bastante informacion sobre dicho usuario.
 

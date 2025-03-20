@@ -315,6 +315,8 @@
   * [Redirection BugBountyLabs (Principiante)](ctf/bugbountylabs/redirection-bugbountylabs-principiante.md)
   * [HiddenRedirection BugBountyLabs (Principiante)](ctf/bugbountylabs/hiddenredirection-bugbountylabs-principiante.md)
   * [Corsy BugBountyLabs (Avanzado)](ctf/bugbountylabs/corsy-bugbountylabs-avanzado.md)
+  * [Forgery BugBountyLabs (Principiante)](ctf/bugbountylabs/forgery-bugbountylabs-principiante.md)
+  * [ConnectX BugBountyLabs (Principiante)](ctf/bugbountylabs/connectx-bugbountylabs-principiante.md)
 * [TheHackersLabs](ctf/thehackerslabs/README.md)
   * [Quokka (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/quokka-windows-thehackerslabs-principiante.md)
   * [Microchoft (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/microchoft-windows-thehackerslabs-principiante.md)
