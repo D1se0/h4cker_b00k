@@ -198,7 +198,7 @@ Si nos metemos en la pagina web, vamos a ver lo siguiente:
 
 Meteremos las credenciales que ya sabemos por defecto `user:user123`, echo esto veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay varios apartados, pero entre ellos esta la opcion de poder cambiar el nombre de usuario, vamos a probar a insertar algo como esto:
 

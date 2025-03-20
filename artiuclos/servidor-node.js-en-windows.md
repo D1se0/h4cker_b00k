@@ -23,11 +23,11 @@ Antes de abrir nuestro `PowerShell` tendremos definir las variables de entorno e
 
 Abriremos `Ediatr las variables de entorno del sistema` viendo algo asi:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Tendremos que darle a `Variables de entorno...`, dentro de esta parte:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Editar` seleccionando `Path`, dentro de esa parte tendremos que darle a `Nueva` y seleccionar los ejecutables para que cuando los llamemos de forma relativa los ejecute directamente sin necesidad de llamar a la ruta absoluta:
 
