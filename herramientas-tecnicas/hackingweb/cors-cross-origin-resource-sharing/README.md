@@ -137,7 +137,7 @@ Pass: user/admin
 
 Una vez que estemos dentro veremos algo asi:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que estamos viendo nos muestra la informacion del usuario, junto con su `TOKEN`, etc... Vamos a capturar la peticion con `BuprSuite` recargando la pagina y dentro de la misma añadiremos en la cabecera despues del parametro `Connect` lo siguiente:
 
@@ -165,7 +165,7 @@ Priority: u=0, i
 
 Antes de enviarlo activaremos en `BurpSuite` el que obtengamos las respuestas del servidor:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez activado vamos a enviarlo y veremos en la respuesta lo siguiente:
 

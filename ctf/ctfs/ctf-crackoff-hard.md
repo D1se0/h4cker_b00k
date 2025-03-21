@@ -840,7 +840,7 @@ keepassxc
 
 Y nos abrira un entorno grafico para seleccionar la base de datos, seleccionaremos el archivo `alice.kdbx` y nos pedira la contraseña, metemos `flowerpower` y nos desbloqueara la base de datos dentro de la misma encontramos una carpeta con las credenciales del usuario `alice`.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos la contraseña de `alice` es `superalicepassword`, asi que cambiaremos de usuario haciendo lo siguiente.
 
