@@ -15,51 +15,7 @@ layout:
 
 # ConnectX BugBountyLabs (Principiante)
 
-## Instalación
-
-Cuando obtenemos el `.zip` nos lo pasamos al entorno en el que vamos a empezar a hackear la maquina y haremos lo siguiente.
-
-```shell
-unzip bugbountylabs_connectx.zip
-```
-
-Nos lo descomprimira y despues montamos la maquina de la siguiente forma.
-
-```shell
-python3 bugbountylabs_connectx.py
-```
-
-Info:
-
-```
-██████╗ ██╗   ██╗ ██████╗     ██████╗  ██████╗ ██╗   ██╗███╗   ██╗████████╗██╗   ██╗    ██╗      █████╗ ██████╗ ███████╗
-██╔══██╗██║   ██║██╔════╝     ██╔══██╗██╔═══██╗██║   ██║████╗  ██║╚══██╔══╝╚██╗ ██╔╝    ██║     ██╔══██╗██╔══██╗██╔════╝
-██████╔╝██║   ██║██║  ███╗    ██████╔╝██║   ██║██║   ██║██╔██╗ ██║   ██║    ╚████╔╝     ██║     ███████║██████╔╝███████╗
-██╔══██╗██║   ██║██║   ██║    ██╔══██╗██║   ██║██║   ██║██║╚██╗██║   ██║     ╚██╔╝      ██║     ██╔══██║██╔══██╗╚════██║
-██████╔╝╚██████╔╝╚██████╔╝    ██████╔╝╚██████╔╝╚██████╔╝██║ ╚████║   ██║      ██║       ███████╗██║  ██║██████╔╝███████║
-╚═════╝  ╚═════╝  ╚═════╝     ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝      ╚═╝       ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝
-
-Fundadores
-El Pingüino de Mario
-Curiosidades De Hackers
-
-Cofundadores
-Zunderrub
-CondorHacks
-Lenam
-
-Descargando la máquina connectx, espere por favor...
-
-[########################################] 100%
-Descarga completa.
-La IP de la máquina connectx es -> 172.17.0.2
-
-Presiona Ctrl+C para detener la máquina
-```
-
-Por lo que cuando terminemos de hackearla, le damos a `Ctrl+C` y nos eliminara la maquina para que no se queden archivos basura.
-
-### Escaneo de puertos
+## Escaneo de puertos
 
 ```shell
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn <IP>
