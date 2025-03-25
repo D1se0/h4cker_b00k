@@ -290,6 +290,8 @@ Vamos a leer la flag del usuario:
 hdgrfvvf8s7dre5w7vg23rfewf
 ```
 
+## Escalate Privileges
+
 Vamos a dejarlo en segundo plano `Ctrl+Z` y dandole a `Y`, despues buscaremos lo siguiente:
 
 ```
