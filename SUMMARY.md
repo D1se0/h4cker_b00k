@@ -324,6 +324,8 @@
   * [Microchoft (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/microchoft-windows-thehackerslabs-principiante.md)
   * [Ensalá Papas (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/ensala-papas-windows-thehackerslabs-principiante.md)
   * [Accounting (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/accounting-windows-thehackerslabs-principiante.md)
+  * [Cocido Andaluz (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/cocido-andaluz-windows-thehackerslabs-principiante.md)
+* [HackMyVM](ctf/hackmyvm.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
