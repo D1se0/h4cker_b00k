@@ -1,4 +1,5 @@
 ---
+icon: flag
 layout:
   title:
     visible: true
