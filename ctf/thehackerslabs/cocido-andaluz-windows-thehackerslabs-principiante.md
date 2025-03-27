@@ -110,7 +110,7 @@ dr--r--r--   1 owner    group               0 Jun 14  2024 aspnet_client
 
 Probamos a entrar al `welcome.png` desde la web del puerto `80`, si hacemos esto veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se nos esta cargando de forma correcta, por lo que el servidor de `FTP` esta alojando la pagina web que estamos viendo desde el puerto `80` por lo que nos vamos a crear un `webshell` de extension `.aspx` ya que es un `Windows Server`.
 
@@ -169,7 +169,7 @@ URL = http://<IP>/webshell.aspx?cmd=whoami
 
 Info:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### SMB Server
 

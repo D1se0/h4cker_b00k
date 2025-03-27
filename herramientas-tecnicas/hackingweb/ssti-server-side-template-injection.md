@@ -194,11 +194,11 @@ if request.method == 'POST':
 
 Si nos metemos en la pagina web, vamos a ver lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Meteremos las credenciales que ya sabemos por defecto `user:user123`, echo esto veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay varios apartados, pero entre ellos esta la opcion de poder cambiar el nombre de usuario, vamos a probar a insertar algo como esto:
 
@@ -208,7 +208,7 @@ Vemos que hay varios apartados, pero entre ellos esta la opcion de poder cambiar
 
 Esto deberia de dar como resultado `49`, si es asi veremos que es vulnerable a un `SSTI`:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando, por lo que vamos a probar a intentar ejecutar codigo de forma remota, de la siguiente forma:
 
