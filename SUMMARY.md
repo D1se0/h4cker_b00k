@@ -327,6 +327,7 @@
   * [Cocido Andaluz (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/cocido-andaluz-windows-thehackerslabs-principiante.md)
 * [HackMyVM](ctf/hackmyvm.md)
   * [Liar HackMyVM (Easy - Windows)](ctf/hackmyvm/liar-hackmyvm-easy-windows.md)
+  * [Zero HackMyVM (Easy - Windows)](ctf/hackmyvm/zero-hackmyvm-easy-windows.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
