@@ -330,6 +330,7 @@
 * [HackMyVM](ctf/hackmyvm.md)
   * [Liar HackMyVM (Easy - Windows)](ctf/hackmyvm/liar-hackmyvm-easy-windows.md)
   * [Zero HackMyVM (Easy - Windows)](ctf/hackmyvm/zero-hackmyvm-easy-windows.md)
+  * [Simple HackMyVM (Easy - Windows)](ctf/hackmyvm/simple-hackmyvm-easy-windows.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)

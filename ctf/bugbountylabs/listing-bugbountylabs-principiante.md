@@ -129,7 +129,7 @@ Finished
 
 Vemos que tiene un `/login.php` si entramos veremos un `login` que dice lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nuestro objetivo es encontrar las credenciales del `login`, si volvemos a la pagina principal e investigamos un poco el codigo veremos lo siguiente:
 
@@ -352,6 +352,6 @@ Pass: password9840
 
 Ahora las probaremos en el `login`, una vez iniciado sesion con dichas credenciales veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Con esto ya habremos completado la maquina y aprovechado la vulnerabilidad `BAC`.
