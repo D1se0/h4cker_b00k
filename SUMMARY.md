@@ -336,6 +336,7 @@
   * [Runas HackMyVM (Easy - Windows)](ctf/hackmyvm/runas-hackmyvm-easy-windows.md)
   * [Always HackMyVM (Easy - Windows)](ctf/hackmyvm/always-hackmyvm-easy-windows.md)
   * [DC01 HackMyVM (Easy - Windows)](ctf/hackmyvm/dc01-hackmyvm-easy-windows.md)
+  * [quoted HackMyVM (Easy - Windows)](ctf/hackmyvm/quoted-hackmyvm-easy-windows.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
