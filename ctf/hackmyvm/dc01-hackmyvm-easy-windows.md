@@ -305,7 +305,7 @@ User: ybob317
 Pass: ybob317
 ```
 
-Ahora vamos a probar a enumerar los recursos compartidos del servidor `SMB` con las siguientes credenciales:
+Ahora vamos a probar a enumerar los recursos compartidos del servidor `SMB` con las siguientes credenciales.
 
 ### SMB con ybob317
 
