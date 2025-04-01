@@ -196,7 +196,7 @@ Vemos un directorio bastante interesante llamado `/admin` por lo que vamos a ent
 URL = http://<IP>/admin
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos un `login`, si probamos las credenciales por defecto `admin:admin` veremos que no nos deja, pero si inspeccionamos la pagina veremos el siguiente `JS`.
 
@@ -218,7 +218,7 @@ Vemos un `login`, si probamos las credenciales por defecto `admin:admin` veremos
 
 Vemos que se esta comparando con unas credenciales, por lo que vamos a probar a meterlas, haciendo eso veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es un codigo en `Base64`, pero si lo decodificamos veremos lo siguiente:
 
@@ -264,7 +264,7 @@ Disallow: /admins-secret-pagexxx.html
 
 Si metemos directamente el `/admins-secret-pagexxx.html` veremos que funciona y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos esta proporcionando otras credenciales del usuario `always` pero la contraseña esta codificada en `Base64`, pero si la decodificamos veremos lo siguiente:
 
@@ -282,7 +282,7 @@ YouCantFindMe.!.!
 
 Pero si lo probamos en la maquina `Windows` no nos servira, pero el que si nos servira sera el del `ftpuser`:
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez que iniciemos sesion, estaremos dentro de la version escritorio de `Windows` con dicho usuario, por lo que vamos a generarnos una `reverse shell` con `msfvenom` ya que tenemos las credenciales de un usuario.
 
@@ -298,7 +298,7 @@ python3 -m http.server 8000
 
 En la maquina victima abriremos el navegador y buscaremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Desde aqui nos descargamos la `shell` que hemos generado, una vez echo esto vamos a ponernos a la escucha desde `metasploit`.
 
@@ -323,7 +323,7 @@ run
 
 Ahora desde la maquina victima ejecutamos el archivo `shell.exe` y si volvemos a donde tenemos la escucha veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 [*] Started reverse TCP handler on 192.168.1.146:7777 

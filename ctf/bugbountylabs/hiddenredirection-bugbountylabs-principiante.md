@@ -313,6 +313,6 @@ Priority: u=0, i
 
 Ahora si le damos a enviar con `google.es` y volvemos a donde le dimos en la pagina veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que ha funcionado, por lo que habremos terminado la maquina pudiendo haber explotado la vulnerabilidad de `Open Redirect`.

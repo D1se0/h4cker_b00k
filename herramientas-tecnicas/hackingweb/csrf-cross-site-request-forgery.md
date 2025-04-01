@@ -95,7 +95,7 @@ password=user123&confirm_password=user123&submit=
 
 Pero nosotros lo queremos con una peticion `GET`, por lo que le daremos a la siguiente opcion en `BurpSuite` para cambiar la peticion a `GET`.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y nos quedara algo asi:
 

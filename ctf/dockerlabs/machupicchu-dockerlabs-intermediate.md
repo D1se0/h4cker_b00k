@@ -123,7 +123,7 @@ nano /etc/hosts
 
 Lo guardamos y si lo volvemos a recargar veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 Vemos un `login` de un `software` llamado `Chamilo` pero que aun probando los `exploits` que hay asociados no funcionara, tambien vimos que hay un servidor `FTP`, por lo que vamos a investigara en el.
 
@@ -160,7 +160,7 @@ Vemos que son las credenciales de un usuario de la plataforma, por lo que vamos 
 
 Echo eso veremos que estamos dentro:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al siguiente apartado en `Red Social`:
 
@@ -176,7 +176,7 @@ Y probamos a realizar un `XSS` metiendo el siguiente `payload` veremos lo siguie
 
 Info:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando, pero no veremos nada mas interesante, si seguimos buscando algun `exploit` sobre dicho `Software` veremos lo siguiente:
 
@@ -215,7 +215,7 @@ AcceptPathInfo on
 
 Ahora tendremos que obtener la `Cookie` de la sesion en la siguiente seccion:
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y lo pondremos en el siguiente comando:
 
