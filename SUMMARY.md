@@ -340,6 +340,7 @@
   * [Nessus HackMyVM (Easy - Windows)](ctf/hackmyvm/nessus-hackmyvm-easy-windows.md)
   * [Jan HackMyVM (Easy - Linux)](ctf/hackmyvm/jan-hackmyvm-easy-linux.md)
   * [DC02 HackMyVM (Intermediate - Windows)](ctf/hackmyvm/dc02-hackmyvm-intermediate-windows.md)
+  * [Qweasd HackMyVM (Intermediate - Linux)](ctf/hackmyvm/qweasd-hackmyvm-intermediate-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
