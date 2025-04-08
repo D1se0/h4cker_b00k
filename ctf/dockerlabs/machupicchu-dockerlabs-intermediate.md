@@ -160,7 +160,7 @@ Vemos que son las credenciales de un usuario de la plataforma, por lo que vamos 
 
 Echo eso veremos que estamos dentro:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al siguiente apartado en `Red Social`:
 

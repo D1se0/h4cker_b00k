@@ -176,7 +176,7 @@ Vemos que la contraseña de dicho usuario a `expirado` al parecer por una config
 
 Tendremos que sacarnos un teclado virtual dentro de la maquina de `Windows`:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pulsamos `3` teclas, que serian `Ctrl+Alt+Supr` para poder desbloquear la pantalla de bloqueo de `Windows`, le daremos varias veces al boton `ESC` para ir a este menu:
 

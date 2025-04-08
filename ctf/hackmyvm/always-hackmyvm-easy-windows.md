@@ -218,7 +218,7 @@ Vemos un `login`, si probamos las credenciales por defecto `admin:admin` veremos
 
 Vemos que se esta comparando con unas credenciales, por lo que vamos a probar a meterlas, haciendo eso veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es un codigo en `Base64`, pero si lo decodificamos veremos lo siguiente:
 

@@ -343,6 +343,7 @@
   * [Qweasd HackMyVM (Intermediate - Linux)](ctf/hackmyvm/qweasd-hackmyvm-intermediate-linux.md)
   * [Gift HackMyVM (Easy - Linux)](ctf/hackmyvm/gift-hackmyvm-easy-linux.md)
   * [Pingme HackMyVM (Intermediate - Linux)](ctf/hackmyvm/pingme-hackmyvm-intermediate-linux.md)
+  * [Smol HackMyVM (Intermediate - Linux)](ctf/hackmyvm/smol-hackmyvm-intermediate-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
