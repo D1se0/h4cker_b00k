@@ -344,6 +344,7 @@
   * [Gift HackMyVM (Easy - Linux)](ctf/hackmyvm/gift-hackmyvm-easy-linux.md)
   * [Pingme HackMyVM (Intermediate - Linux)](ctf/hackmyvm/pingme-hackmyvm-intermediate-linux.md)
   * [Smol HackMyVM (Intermediate - Linux)](ctf/hackmyvm/smol-hackmyvm-intermediate-linux.md)
+  * [Noob HackMyVM (Easy- Linux)](ctf/hackmyvm/noob-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)

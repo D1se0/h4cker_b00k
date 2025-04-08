@@ -160,7 +160,7 @@ Vemos que son las credenciales de un usuario de la plataforma, por lo que vamos 
 
 Echo eso veremos que estamos dentro:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al siguiente apartado en `Red Social`:
 
@@ -176,7 +176,7 @@ Y probamos a realizar un `XSS` metiendo el siguiente `payload` veremos lo siguie
 
 Info:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando, pero no veremos nada mas interesante, si seguimos buscando algun `exploit` sobre dicho `Software` veremos lo siguiente:
 
