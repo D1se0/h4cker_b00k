@@ -90,7 +90,7 @@ Hi, You are close!
 
 Pero no nos dice mucho, vamos a ver la otra carpeta llamada `nt4share`, si entramos dentro veremos esto:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que vemos esta compartiendo la carpeta de una `home` de algun usuario, por lo que vemos hay un `.ssh/` en la que podremos leer la `id_rsa`.
 
@@ -189,7 +189,7 @@ lrwxrwxrwx 1 adela adela    5 Apr  8 06:19 root_directory -> /root
 
 Ahora vamos a meternos en la pagina y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se esta viendo de forma correcta, ahora vamos a probar a meternos:
 

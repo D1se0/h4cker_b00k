@@ -218,7 +218,7 @@ Vemos un `login`, si probamos las credenciales por defecto `admin:admin` veremos
 
 Vemos que se esta comparando con unas credenciales, por lo que vamos a probar a meterlas, haciendo eso veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es un codigo en `Base64`, pero si lo decodificamos veremos lo siguiente:
 
@@ -264,7 +264,7 @@ Disallow: /admins-secret-pagexxx.html
 
 Si metemos directamente el `/admins-secret-pagexxx.html` veremos que funciona y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que nos esta proporcionando otras credenciales del usuario `always` pero la contraseña esta codificada en `Base64`, pero si la decodificamos veremos lo siguiente:
 

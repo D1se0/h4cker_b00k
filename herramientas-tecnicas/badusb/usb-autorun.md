@@ -105,13 +105,13 @@ Una vez echo esto lo guardaremos en el USB y por si acaso crearemos el archivo `
 
 Llendo donde estabamos en la interfaz del `USB AutoRun Creator` de la aplicacion, tendremos que darle a `Select` en la primera opcion:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y en este seleccionaremos el archivo `wifiHack.vbs` que esta en el USB.
 
 Despues en la segunda opcion seleccionaremos `Browser`:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y seleccionaremos la letra de la unidad del USB, seguidamente le daremos a la opcion `USB Drive`:
 

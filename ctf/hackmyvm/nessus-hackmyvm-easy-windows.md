@@ -123,7 +123,7 @@ URL = https://<IP>:8834/
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que es el `Software` de `Nessus` por lo que no podremos hace mucho en esta parte de la pagina web, vamos a ver si se pudiera realizar un escaneo al servidor `SMB` de forma anonima.
 
@@ -253,7 +253,7 @@ Vamos a probar a meter las credenciales probando la contraseña con el propio no
 
 Si nosotros capturamos la peticion con `BurpSuite` al autenticarnos con cualquier credencial, para ver como se esta haciendo por detras, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se esta enviando a una `API` de `Nessus` con el parametro `session` y en la peticion veremos lo siguiente:
 
@@ -330,7 +330,7 @@ URL = https://<IP>:8834/#/settings/proxy-server
 
 Y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay un usuario que se llama `nesus`, por lo que podemos deducir que puede ser un usuario del sistema en la maquina `Windows`.
 
