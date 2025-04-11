@@ -350,6 +350,7 @@
   * [Driftingblues6 HackMyVM (Easy- Linux)](ctf/hackmyvm/driftingblues6-hackmyvm-easy-linux.md)
   * [Alzheimer HackMyVM (Easy- Linux)](ctf/hackmyvm/alzheimer-hackmyvm-easy-linux.md)
   * [Tron HackMyVM (Easy- Linux)](ctf/hackmyvm/tron-hackmyvm-easy-linux.md)
+  * [Superhuman HackMyVM (Easy- Linux)](ctf/hackmyvm/superhuman-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
