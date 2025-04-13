@@ -625,3 +625,7 @@
     * [Controles de seguridad en un entorno real](ciberseguridad-avanzada-hacking-etico/contenido.../hacking-etico-en-entornos-reales-amazon-aws/controles-de-seguridad-en-un-entorno-real.md)
     * [Auditando la infraestructura interna](ciberseguridad-avanzada-hacking-etico/contenido.../hacking-etico-en-entornos-reales-amazon-aws/auditando-la-infraestructura-interna.md)
     * [Tipos de auditorias de seguridad](ciberseguridad-avanzada-hacking-etico/contenido.../hacking-etico-en-entornos-reales-amazon-aws/tipos-de-auditorias-de-seguridad.md)
+
+## PROYECTO DAM
+
+* [Documentación PROYECTO\_DAM](proyecto-dam/documentacion-proyecto_dam.md)
