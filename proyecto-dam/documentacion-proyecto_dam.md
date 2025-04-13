@@ -101,6 +101,49 @@ remove_cookie_from_db(cookie)
 
 ***
 
+#### 🗂 **Endpoint `/eliminar-cuenta`**
+
+📁 **Ubicación:** Backend Flask – rutas de usuario\
+🔍 **Propósito:** Eliminar completamente la cuenta de un usuario autenticado.\
+🧠 **Responsabilidad principal:** Validar la identidad del usuario mediante un token, eliminar su cuenta de la base de datos y limpiar su sesión eliminando la cookie.\
+🛡 **Autenticación:** Requiere token JWT válido enviado como cookie.\
+💾 **Tabla involucrada:** `usuarios`\
+🔐 **Método HTTP:** `GET`
+
+**Pasos clave del flujo:**
+
+* **Obtener `userId` desde la URL:**\
+  Extrae el ID del usuario a eliminar desde los parámetros de la query (`request.args.get("userId")`).\
+  Si no se proporciona, devuelve un error `400`.
+* **Validación del token JWT:**\
+  Extrae el token de la cookie del navegador (`request.cookies.get("token")`).\
+  Si falta o es inválido (usando `verify_token(token)`), devuelve un error `400` o `403`.
+* **Conexión a la base de datos y eliminación:**\
+  Se conecta a la base de datos PostgreSQL y ejecuta un `DELETE FROM usuarios WHERE id = %s`.\
+  Si el usuario existe y se elimina correctamente (`cursor.rowcount > 0`), se continúa.
+* **Eliminación de la cookie de sesión:**\
+  Crea una respuesta de redirección al login y elimina la cookie `token` del navegador:
+
+```python
+response.set_cookie("token", "", max_age=0)
+```
+
+* **Redirección final:**\
+  El usuario es redirigido al login (`http://localhost:30050/`).
+
+**Código destacado:**
+
+```python
+response.set_cookie("token", "", max_age=0)
+cursor.execute("DELETE FROM usuarios WHERE id = %s", (user_id,))
+```
+
+📌 **Nota:**
+
+El endpoint gestiona errores de forma clara, devolviendo mensajes informativos ante fallos en parámetros, autenticación o conexión a base de datos.
+
+***
+
 ### 🧠 Seguridad y Buenas Prácticas
 
 * Las contraseñas se almacenan **encriptadas** (`hash`).
@@ -167,6 +210,7 @@ ft.app(target=flet_app, view=ft.WEB_BROWSER, port=30050)
 | `/login`            | GET/POST | Inicia sesión y genera una cookie con el token |
 | `/actualizar-datos` | POST     | Actualiza el perfil del usuario autenticado    |
 | `/logout`           | POST     | Cierra la sesión y elimina la cookie           |
+| `/eliminar-cuenta`  | GET      | Elimina la cuenta del usuario mediante el ID   |
 
 ***
 
@@ -881,6 +925,101 @@ public class ValidateFlagControlador extends HttpServlet {
 ```
 
 > 🔐 **Seguridad**: El uso de JWT garantiza que solo usuarios autenticados pueden validar flags.
+
+***
+
+#### 🗂 **Vista `TablaController`**
+
+📁 **Ubicación:** `controlador/TablaControlador.java`\
+🔍 **Propósito:** Controlador para gestionar operaciones CRUD sobre tablas (insertar, eliminar, actualizar).\
+🧠 **Responsabilidad principal:** Procesar solicitudes `POST` para insertar, eliminar y actualizar registros en las tablas de la base de datos.\
+🎯 **Método HTTP:** `POST`\
+🎨 **Estilo:** Tema oscuro con enfoque en lógica de negocio y acceso a datos.
+
+**Funcionalidades principales:**
+
+* **Insertar registros:**\
+  Utiliza el método `insertar` del `TablaDAO` para agregar un nuevo registro a la tabla indicada.
+* **Eliminar registros:**\
+  Llama al método `eliminar` del `TablaDAO` pasando el valor de la clave primaria y el nombre de la tabla.
+* **Actualizar registros:**\
+  Utiliza el método `actualizar` del `TablaDAO` para modificar un registro específico basándose en el valor de la clave primaria.
+
+**Código destacado:**
+
+```java
+switch (accion) {
+    case "insert":
+        dao.insertar(tabla, valores);
+        break;
+    case "delete":
+        dao.eliminar(tabla, columnaClave, valorClave);
+        break;
+    case "update":
+        dao.actualizar(tabla, valoresUpdate, valorClaveUpdate);
+        break;
+}
+```
+
+***
+
+#### 🗂 **Vista `TablaDAO`**
+
+📁 **Ubicación:** `dao/TablaDAO.java`\
+🔍 **Propósito:** Acceso a datos para realizar operaciones CRUD sobre las tablas de la base de datos.\
+🧠 **Responsabilidad principal:** Gestionar las operaciones sobre tablas y registros en la base de datos (consultas, inserciones, eliminaciones y actualizaciones).\
+🎯 **Método HTTP:** N/A (Clase de acceso a datos).
+
+**Funcionalidades principales:**
+
+* **Obtener lista de tablas:**\
+  El método `getListaTablas` obtiene los nombres de todas las tablas de la base de datos.
+* **Obtener columnas de una tabla:**\
+  `getColumnas` permite obtener los nombres de las columnas de una tabla específica.
+* **Obtener datos de una tabla:**\
+  `getDatos` obtiene todas las filas de una tabla dada.
+* **Insertar un nuevo registro:**\
+  El método `insertar` crea una sentencia SQL dinámica para insertar un registro en la tabla especificada.
+* **Eliminar un registro:**\
+  `eliminar` construye una consulta SQL para borrar un registro de la tabla según su clave primaria.
+* **Actualizar un registro:**\
+  `actualizar` construye y ejecuta una sentencia SQL `UPDATE` para modificar un registro específico de la tabla.
+
+**Código destacado:**
+
+```java
+public void insertar(String tabla, Map<String, String> valores) {
+    // Lógica de inserción dinámica
+}
+```
+
+***
+
+#### 🗂 **Vista `ViewTablesControlador`**
+
+📁 **Ubicación:** `controlador/ViewTablesControlador.java`\
+🔍 **Propósito:** Controlador para visualizar las tablas y sus datos.\
+🧠 **Responsabilidad principal:** Recuperar las tablas y sus datos desde la base de datos y generar el HTML para mostrarlas en la vista.\
+🎯 **Método HTTP:** `GET`\
+🎨 **Estilo:** Tema oscuro con vista de tablas dinámicas.
+
+**Funcionalidades principales:**
+
+* **Obtener y mostrar tablas:**\
+  El controlador obtiene el nombre de todas las tablas en la base de datos y las muestra en una estructura HTML.
+* **Obtener y mostrar columnas de cada tabla:**\
+  Para cada tabla, se obtienen las columnas y se muestran en una tabla HTML.
+* **Mostrar los datos de cada tabla:**\
+  Se consulta y muestra el contenido de cada tabla en una tabla HTML.
+
+**Código destacado:**
+
+```java
+for (String table : tables) {
+    tableHtml.append("<h3>Tabla: ").append(table).append("</h3>");
+    // Más lógica de creación de tabla HTML
+}
+```
 
 ***
 
@@ -1920,3 +2059,157 @@ window.alert = function(msg) {
   Presenta una interfaz sencilla y centrada con un mensaje de "en construcción", un emoji que refuerza el tema, y un enlace que redirige al usuario de vuelta a la página principal (`home.jsp`).
 * **Estilo básico:**\
   El estilo de la página incluye un diseño minimalista centrado, con un fondo claro, sombra para darle profundidad y un toque amigable con un emoji grande.
+
+#### 🗂 **Vista `admin-panel.jsp`**
+
+📁 **Ubicación:** `designer/admin-panel.jsp`\
+🔍 **Propósito:** Panel administrativo exclusivo para usuarios con rol `designer`.\
+🧠 **Responsabilidad principal:** Ofrecer acceso a funcionalidades avanzadas como gestión de laboratorios, logs del sistema y visualización de la base de datos.\
+🛡 **Control de acceso:** Requiere token JWT válido y rol `designer`. Si el usuario no tiene permisos, se muestra un mensaje de "No autorizado".
+
+**Funcionalidades disponibles desde el panel:**
+
+* **🔍 Ver últimos logs del sistema:**\
+  Redirecciona al formulario `verLogs.jsp` vía `POST`.
+* **🧪 Insertar nuevos laboratorios:**\
+  Redirecciona a `agregarLaboratorio.jsp`, donde se puede crear un nuevo laboratorio con nombre, flag y puntos.
+* **📊 Visualizar tablas de la base de datos:**\
+  Enlace a `viewTables.jsp` para inspeccionar tablas del backend.
+* **🛠 Insertar / Eliminar / Modificar tablas:**\
+  Redirecciona a `manageTables.jsp` para una gestión más profunda sobre la base de datos.
+* **🔙 Volver al home:**\
+  Redirige a `home.jsp?page=0`.
+
+**Código relevante:**
+
+```jsp
+if (!"designer".equals(rol)) {
+    out.println("<div class='error-message'>No autorizado.</div>");
+    return;
+}
+```
+
+***
+
+#### 🗂 **Vista `agregarLaboratorio.jsp`**
+
+📁 **Ubicación:** `designer/agregarLaboratorio.jsp`\
+🔍 **Propósito:** Formulario visual para registrar un nuevo laboratorio en la base de datos.\
+🧠 **Responsabilidad principal:** Enviar datos al endpoint `agregarLaboratorio` con nombre, flag y puntos.\
+🎯 **Método HTTP:** `POST`\
+🎨 **Estilo:** Tema oscuro con diseño centrado y tipografía tipo terminal (Courier).
+
+**Campos del formulario:**
+
+* **📌 Nombre del laboratorio:**\
+  Campo de texto requerido (`nombre`).
+* **🚩 Flag:**\
+  Campo de texto requerido (`flag`).
+* **⭐ Puntos:**\
+  Campo numérico requerido (`puntos`).
+
+**Funcionalidades adicionales:**
+
+* **💬 Mensaje de éxito:**\
+  Si el atributo `mensaje` está presente en la request (por ejemplo, tras insertar un laboratorio con éxito), se muestra como mensaje destacado.
+* **🔙 Botón para volver al panel:**\
+  Enlace estilizado que lleva de vuelta a `admin-panel.jsp`.
+
+**Código destacado:**
+
+```jsp
+<form action="<%= request.getContextPath() %>/agregarLaboratorio" method="POST">
+```
+
+#### ✅ `manageTables.jsp` – **Gestión de Tablas**
+
+📁 **Ubicación:** `designer/manageTables.jsp`
+
+**🧠 Qué hace:**
+
+* Verifica si el usuario es `designer`.
+* Permite ver, insertar, actualizar y eliminar registros de cualquier tabla en la base de datos.
+* Usa `TablaDAO` para operaciones de lectura.
+
+**🛡️ Seguridad:**
+
+* ✅ Autenticación y autorización con `JWTUtils`.
+* ⚠️ **Peligro potencial:** no hay validación de los valores insertados/actualizados directamente desde el formulario.
+* ⚠️ La detección de la clave primaria es manual y limitada (`id` o `lab_id`). Esto puede fallar para otras tablas.
+* ⚠️ **Injection risk:** si `TablaController` no realiza validación/escapado, se expone a SQL Injection.
+
+**🎨 UX/UI:**
+
+* Muy funcional pero el diseño puede saturar si hay muchas columnas o filas.
+* Los formularios de update se mezclan con los de lectura, lo que puede resultar algo confuso.
+
+**💡 Sugerencias:**
+
+* Extraer la clave primaria desde `DAO.getPrimaryKey(tabla)`.
+* Añadir confirmación JavaScript para eliminar registros.
+* Separar UI de edición (popup/modal o nueva sección).
+* Validar y sanitizar inputs tanto en frontend como backend.
+
+***
+
+#### ✅ `verLogs.jsp` – **Visualización de Logs**
+
+📁 **Ubicación:** `designer/verLogs.jsp`
+
+**🧠 Qué hace:**
+
+* Realiza polling AJAX cada 5 segundos a `/getLogs` para mostrar los últimos logs.
+* Interfaz muy minimalista.
+
+**🛡️ Seguridad:**
+
+* ⚠️ No verifica autorización del usuario en este JSP directamente (aunque el acceso es desde un panel restringido).
+* ⚠️ Si `/getLogs` no valida el rol, cualquier usuario podría explotarlo.
+
+**🎨 UX/UI:**
+
+* Simple y efectivo.
+* Autoscroll al final es útil, pero puede ser molesto en logs muy largos.
+
+**💡 Sugerencias:**
+
+* Validar en el servlet `/getLogs` que el usuario sea `designer`.
+* Añadir control para pausar la actualización automática.
+* Añadir filtros por nivel de log, fecha, etc.
+
+***
+
+#### ✅ `viewTables.jsp` – **Vista general de las tablas**
+
+📁 **Ubicación:** `designer/viewTables.jsp`
+
+**🧠 Qué hace:**
+
+* Carga dinámicamente la estructura de la base de datos vía `/getTables`.
+* Muestra todo en un `div` con AJAX.
+
+**🛡️ Seguridad:**
+
+* ✅ Autenticación y autorización correcta.
+* ⚠️ Verificar que `/getTables` haga validación del token.
+
+**🎨 UX/UI:**
+
+* Interfaz sencilla. La carga AJAX está bien pensada.
+* Puede ser útil un spinner o animación mientras carga.
+
+**💡 Sugerencias:**
+
+* Añadir botón de “Recargar” o autorefresco opcional.
+* Agregar capacidad de exportar a CSV/JSON.
+* Visualización más amigable si hay muchas columnas.
+
+***
+
+#### Conclusión general 🔍
+
+| Archivo            | Autenticación | Validación | Mejora crítica                 |
+| ------------------ | ------------- | ---------- | ------------------------------ |
+| `manageTables.jsp` | ✅             | ⚠️         | Evitar SQL Injection           |
+| `verLogs.jsp`      | ⚠️            | ⚠️         | Validar acceso en `/getLogs`   |
+| `viewTables.jsp`   | ✅             | ⚠️         | Validar acceso en `/getTables` |
