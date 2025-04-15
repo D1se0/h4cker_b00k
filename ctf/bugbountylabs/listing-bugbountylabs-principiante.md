@@ -129,7 +129,7 @@ Finished
 
 Vemos que tiene un `/login.php` si entramos veremos un `login` que dice lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nuestro objetivo es encontrar las credenciales del `login`, si volvemos a la pagina principal e investigamos un poco el codigo veremos lo siguiente:
 

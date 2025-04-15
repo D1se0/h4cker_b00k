@@ -26,13 +26,13 @@ A esta persona la podemos ligar alguna organizacion, buscando `Company` y arrast
 
 Si la damos al siguiente icono:
 
-![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Podremos ligarlo a la compañia poniendo el nombre de `Trabaja en` y dandole aceptar se creara una flecha.
 
 Si nos vamos a las siguientes opciones pulsando en la persona:
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Y le damos a `All Transforms` podremos ver todo lo que podemos ejecutar para buiscar informacion de esa persona, tanto correos, numeros de telefono, informacion debil, etc... De todo.
 

