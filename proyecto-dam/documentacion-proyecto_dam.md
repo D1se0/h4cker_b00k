@@ -1424,6 +1424,193 @@ public class LaboratorioDAO {
 * **Getters**\
   Métodos para acceder a cada uno de los atributos (nombre, apellidos, rol, email, último login, usuario, cookie, userId, token).
 
+#### ✅ **`ValidateFlagControlador.java`**
+
+📁 **Ubicación:** `controlador/ValidateFlagControlador.java`\
+**Método:** `GET`
+
+**Función:**\
+Controla la validación de flags cuando un usuario las envía.
+
+**Proceso paso a paso:**
+
+1. Obtiene el `userId` desde el JWT del usuario.
+2. Toma el `lab_id` desde la URL.
+3. Verifica si ese usuario ya validó la flag para ese laboratorio.
+4. Si no está validada:
+   * Compara la flag ingresada con la flag correcta del laboratorio.
+   * Si es correcta, guarda la validación y suma puntos.
+   * Si es incorrecta, informa el error.
+5. Redirige a la página del laboratorio correspondiente con el mensaje.
+
+**Redirecciones según lab\_id:**
+
+* 1 → `/labs/foro-xss.jsp`
+* 2 → `/labs/amashop/amashop.jsp`
+* 3 → `/labs/hacking_community/hacking_community.jsp`
+* 4 → `/labs/separo/separo.jsp`
+* Default → `/home_directory/home.jsp?page=0`
+
+***
+
+#### 📝 **`WriteupControlador.java`**
+
+📁 **Ubicación:** `controlador/WriteupControlador.java`\
+**Método:** `POST`
+
+**Función:**\
+Recibe y guarda un nuevo _writeup_ enviado por el usuario.
+
+**Parámetros esperados:**
+
+* `lab_id`: ID del laboratorio
+* `user_id`: ID del usuario
+* `username`: nombre de usuario
+* `url_writeup`: URL del writeup
+
+**Proceso:**
+
+* Usa `WriteupDAO.insertWriteup(...)` para guardar el writeup en la BD.
+* Si se guarda con éxito → redirige a `/sendWriteups.jsp`
+* Si falla → redirige a `/error.jsp`
+
+***
+
+#### 📄 **`WriteupTablaControlador.java`**
+
+📁 **Ubicación:** `controlador/WriteupTablaControlador.java`\
+**Método:** `GET`
+
+**Función:**\
+Carga todos los writeups disponibles para un laboratorio específico.
+
+**Proceso:**
+
+1. Toma el `lab_id` desde la URL.
+2. Llama a `WriteupUserDAO.obtenerWriteupsPorLabId(...)` para traer los writeups.
+3. Los pasa como atributo a `tablaWriteups.jsp` para renderizarlos.
+
+***
+
+#### 🔧 **`HttpUtils.java`**
+
+📁 **Ubicación:** `utils/HttpUtils.java`**Función:**\
+Utilidad para hacer una solicitud HTTP a un servidor Flask y obtener el nombre de usuario asociado a un `userId`.
+
+**Método:**
+
+* `getUsernameFromFlask(int userId)`:\
+  Hace un GET a `http://localhost:5000/get_username/{userId}`\
+  Devuelve el `username` (desde JSON) o `null` si hay error.
+
+**Ejemplo de respuesta JSON esperada:**
+
+```java
+{
+  "username": "pepe_el_destroyer"
+}
+```
+
+#### 🧠 **Clase `RankingControlador`**
+
+📁 **Ubicación:** `controlador/RankingControlador.java`\
+🔍 **Propósito:** Consultar y devolver el ranking de usuarios según sus puntajes.\
+🧠 **Responsabilidad principal:** Gestionar la lógica de negocio para obtener los datos del ranking.
+
+**Método clave:**
+
+*   **`obtenerRankingUsuarios()`**\
+    Se conecta a la base de datos y delega a `RankingDAO` la consulta.\
+    Retorna una lista de objetos `RankingEntry` con los usuarios y sus puntajes.
+
+    🔧 Usa:
+
+    * `ConexionDDBB` para abrir y cerrar la conexión.
+    * `RankingDAO.getRankingFromAllTables()` para la lógica SQL.
+
+    ⚠️ En caso de error, imprime el stacktrace y devuelve una lista vacía.
+
+***
+
+#### 📝 **Clase `WriteupDAO`**
+
+📁 **Ubicación:** `dao/WriteupDAO.java`\
+🔍 **Propósito:** Insertar o actualizar un writeup en la base de datos.\
+🧠 **Responsabilidad principal:** Mantener la tabla `writeups` actualizada con las URLs compartidas por los usuarios.
+
+**Método clave:**
+
+*   **`insertWriteup(int labId, int userId, String url, String username)`**\
+    Inserta un writeup o lo actualiza si ya existe uno del mismo `userId` para ese `labId`.
+
+    ✅ Usa `ON CONFLICT (lab_id, user_id)` para actualizar automáticamente.\
+    Retorna `true` si la operación tuvo éxito.
+
+    ⚠️ Maneja errores SQL y cierra la conexión al final.
+
+***
+
+#### ✅ **Clase `ValidateFlagDAO`**
+
+📁 **Ubicación:** `dao/ValidateFlagDAO.java`\
+🔍 **Propósito:** Gestionar la validación de flags de los laboratorios.\
+🧠 **Responsabilidad principal:** Controlar registros de flags validadas por los usuarios.
+
+**Métodos clave:**
+
+* **`ensureTableExists()`**\
+  Verifica si la tabla `validate_flag` existe. Si no, la crea con las columnas necesarias (`user_id`, `lab_id`, `flag`, `puntos`).
+* **`hasFlagBeenValidated(int userId, int labId)`**\
+  Retorna `true` si ese usuario ya validó la flag de ese laboratorio.
+*   **`registerFlagValidation(int userId, int labId, String flag, int puntos)`**\
+    Inserta un nuevo registro de validación (una sola vez por usuario y laboratorio).
+
+    ⚠️ Todas las operaciones usan `ConexionDDBB` para gestionar la conexión.
+
+***
+
+#### 📊 **Clase `RankingDAO`**
+
+📁 **Ubicación:** `dao/RankingDAO.java`\
+🔍 **Propósito:** Consultar los puntajes totales de los usuarios desde distintas tablas.\
+🧠 **Responsabilidad principal:** Armar el ranking completo sumando puntos desde la base.
+
+**Método clave:**
+
+* **`getRankingFromAllTables(Connection conn)`**\
+  Consulta a la tabla `validate_flag` para sumar los puntos por usuario y devolver un ranking ordenado.
+
+***
+
+#### 🔢 **Modelo `RankingEntry`**
+
+📁 **Ubicación:** `modelo/RankingEntry.java`\
+🔍 **Propósito:** Representar una fila del ranking de usuarios.\
+🧠 **Responsabilidad principal:** Encapsular datos de ranking (`username` y `totalPoints`).
+
+**Atributos:**
+
+* `username` → nombre del usuario
+* `totalPoints` → puntos acumulados
+
+✔️ Constructor y getters incluidos.
+
+***
+
+#### 🌐 **Modelo `Writeup`**
+
+📁 **Ubicación:** `modelo/Writeup.java`\
+🔍 **Propósito:** Representar un writeup asociado a un laboratorio.\
+🧠 **Responsabilidad principal:** Encapsular info de un writeup compartido.
+
+**Atributos:**
+
+* `username` → autor del writeup
+* `url` → enlace al writeup
+* `nombreLaboratorio` → nombre del lab asociado
+
+✔️ Constructor y getters incluidos.
+
 #### 🌀 `animation.jsp`
 
 📁 **Ubicación:** `webapp/animation.jsp`
@@ -2213,3 +2400,162 @@ if (!"designer".equals(rol)) {
 | `manageTables.jsp` | ✅             | ⚠️         | Evitar SQL Injection           |
 | `verLogs.jsp`      | ⚠️            | ⚠️         | Validar acceso en `/getLogs`   |
 | `viewTables.jsp`   | ✅             | ⚠️         | Validar acceso en `/getTables` |
+
+#### 📊 **Página de Progreso del Usuario**
+
+📁 **Ubicación:** `webapp/progreso.jsp`\
+🔍 **Propósito:** Mostrar el progreso del usuario en diferentes laboratorios mediante gráficos y puntuaciones.\
+🧠 **Responsabilidad principal:** Visualizar el avance del usuario autenticado y mostrar su foto de perfil, junto a una gráfica tipo _pie chart_ de puntuaciones.
+
+**Lógica del backend embebida en JSP:**
+
+* Autenticación mediante `JWTUtils` para obtener el objeto `UsuarioJWT`.
+* Validación del `userId`.
+* Obtención de la ruta de la foto del perfil vía `FotoDAO`.
+* Si no hay foto, se establece una por defecto (`img/Profile.png`).
+* Formulario oculto que envía `userId` vía POST para actualizar los puntos.
+
+**Interfaz:**
+
+* Foto de perfil del usuario.
+* Gráfico circular (_Chart.js_) que representa puntuaciones individuales por laboratorio:
+  * `foro-xss`, `amashop`, `separo`, `hacking_community`, `RCE`, `LFI`, `IDOR`
+* Sección de puntuaciones individuales y totales por categoría.
+* Botón para exportar a PDF (pendiente de implementación JS).
+
+***
+
+#### 🏆 **Ranking de Usuarios**
+
+📁 **Ubicación:** `webapp/ranking.jsp`\
+🔍 **Propósito:** Mostrar un ranking con los usuarios y sus puntos totales ordenados de mayor a menor.\
+🧠 **Responsabilidad principal:** Visualizar en tabla los resultados de todos los usuarios obtenidos desde el controlador `RankingControlador`.
+
+**Lógica del backend embebida en JSP:**
+
+* Autenticación mediante `JWTUtils`.
+* Llamada a `RankingControlador.obtenerRankingUsuarios()`.
+* Iteración de la lista para mostrar los datos.
+
+**Estética especial para los top 3:**
+
+* 🥇 Oro → posición 1
+* 🥈 Plata → posición 2
+* 🥉 Bronce → posición 3
+
+**Interfaz:**
+
+* Tabla con tres columnas: `Posición`, `Usuario`, `Puntos Totales`.
+* Botón para volver al home.
+
+***
+
+#### 📝 **Página de Envío de Writeups (Ranking en contexto de envíos)**
+
+📁 **Ubicación:** `webapp/sendWriteups.jsp`\
+🔍 **Propósito:** Mostrar el mismo ranking de usuarios como parte de la interfaz de envío de writeups.\
+🧠 **Responsabilidad principal:** Reutilizar lógica de ranking dentro del entorno de envío de soluciones.
+
+**Lógica:**
+
+* Igual que `ranking.jsp`: se obtiene el usuario con JWT y luego el ranking.
+* Diferencia: esta página se usará en contexto de envío de writeups.
+
+**Interfaz:**
+
+* Tabla de ranking con los mismos estilos (oro, plata, bronce).
+* Botón para volver al inicio.
+
+***
+
+#### 📚 **Tabla de Writeups del Laboratorio**
+
+📁 **Ubicación:** `webapp/tablaWriteups.jsp`\
+🔍 **Propósito:** Mostrar todos los writeups disponibles para un laboratorio específico.\
+🧠 **Responsabilidad principal:** Mostrar una tabla con los writeups enviados por usuarios sobre un laboratorio específico.
+
+**Lógica:**
+
+* Autenticación con `JWTUtils`.
+* Se obtiene el atributo `writeups` desde la request (establecido por un servlet controlador).
+* Se extrae el nombre del laboratorio del primer writeup (si existe).
+* Se recorre la lista `writeups` para armar la tabla.
+
+**Interfaz:**
+
+* Tabla HTML con estilo retro tipo terminal.
+* Columnas con información del writeup (no detallado aún en tu código, pero probablemente autor, fecha, link).
+* Colores oscuros con verde neón y hover destacando filas.
+
+#### 🖥️ **Vista JSP: separo.jsp**
+
+📁 **Ubicación:** `labs/separo/separo.jsp`\
+🔍 **Propósito:** Mostrar el portal principal del laboratorio **SEPARO**, simulando una interfaz institucional donde los usuarios pueden acceder a recursos, enviar writeups, o validar flags.\
+🧠 **Responsabilidad principal:**\
+Cargar dinámicamente los datos del usuario autenticado mediante JWT, obtener el `labId` desde la base de datos, y renderizar el contenido visual del laboratorio.
+
+**🛠️ Dependencias Importadas:**
+
+* `utils.JWTUtils` → Para autenticar al usuario y recuperar su información desde la cookie JWT.
+* `utils.UsuarioJWT` → Modelo que representa al usuario autenticado.
+* `dao.LaboratorioDAO` → Acceso a la base de datos para obtener el ID del laboratorio SEPARO.
+
+***
+
+**⚙️ Lógica Principal en Scriptlet JSP:**
+
+* **Autenticación JWT:**
+
+```jsp
+UsuarioJWT usuarioJWT = JWTUtils.obtenerUsuarioDesdeRequest(request);
+```
+
+🔐 Recupera y valida el token del usuario desde las cookies.\
+⚠️ Si el token no es válido o ha expirado, redirige automáticamente al servlet de logout.
+
+* **Obtención de ID del laboratorio:**
+
+```jsp
+int labId = LaboratorioDAO.obtenerIdLaboratorioSeparo();
+```
+
+📌 Permite identificar de forma única el laboratorio SEPARO en la base de datos.
+
+* **Manejo de mensajes desde la URL:**
+
+```jsp
+String resultadoFlag = request.getParameter("mensaje");
+```
+
+📨 Recupera posibles mensajes (como éxito/error al enviar FLAG) desde los parámetros GET.
+
+***
+
+**🧩 Componentes Interactivos:**
+
+* **Botón "Enviar Writeup / FLAG"**\
+  📤 Abre un popup modal donde el usuario puede:
+  * Enviar un enlace a su writeup (POST).
+  * Enviar una FLAG del laboratorio (GET).
+* **Botón "Ver Writeups"**\
+  📚 Redirige a la vista `verWriteups`, mostrando los writeups de este laboratorio.
+* **Popup emergente de mensaje:**\
+  🔔 Muestra feedback dinámico (por ejemplo, resultado al validar FLAG).
+
+***
+
+**🎨 Estilos destacados en CSS:**
+
+* **Diseño responsivo y accesible:**\
+  Se adapta a pantallas móviles y de escritorio.
+* **Colores institucionales:**\
+  Predominan azul oscuro (`#003366`, `#002855`) y amarillo dorado (`#ffd700`).
+* **Estilo profesional con sombras, bordes redondeados y animaciones suaves.**
+
+***
+
+**🧠 Notas Técnicas:**
+
+* Se evita el uso de lógica compleja en la vista. Toda la autenticación y recuperación de datos se hace con clases utilitarias externas.
+* Usa `<%= usuarioJWT.getUsuario() %>` y otros métodos para mostrar valores dinámicos desde el objeto `UsuarioJWT`.
+* El popup modal reutiliza formularios seguros con `hidden inputs` que validan tanto `user_id`, `username` y `lab_id`.
