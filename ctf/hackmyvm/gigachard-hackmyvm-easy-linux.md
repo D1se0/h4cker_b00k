@@ -163,7 +163,7 @@ Session completed.
 
 Veremos que ha funcionado, pero no encontraremos gran cosa, por lo que vamos a pasar ahora a intentar ver que imagen nos descargamos:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos un meme en si, pero puede ser que tenga algo que ver esa torre de fondo, por lo que ahora si vamos a extraer los `metadatos` de la imagen a ver si conseguimos encontrar dicha ubicacion de la imagen.
 
@@ -175,7 +175,7 @@ exiftool drippinchad.png
 
 Pero no veremos que contenga datos de `geolocalizacion` por lo que vamos a buscar dicha torre a mano, con `Google Lens` y veremos que la hemos encontrado, nos informamos y veremos en `Wikipedia` como se llama la torre.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se llama `Maiden's Tower`, pero vamos a dejarlo sin las `'` y un poco mas limpio de estas formas:
 

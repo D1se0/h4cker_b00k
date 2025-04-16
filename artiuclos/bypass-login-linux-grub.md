@@ -17,25 +17,25 @@ layout:
 
 Para `bypassear` un login de practicamente cualquier `linux` tendra que ser mediante el `GRUP` que es el metodo de arranque que utilizan generalmente los sistemas `linux` en formato de un menu, por lo que para que aparezca este menu en muchas ocasiones aparece de forma automatica y en otras como por ejemplo en `hipervisores` donde tenemos maquinas virtuales `linux` tendremos que pulsar `F2` y hacer `click iquierdo` a la vez nada mas se esta arrancando, en otros casos se nos abrira la `BIOS` y le tendremos que dar al `F10` para cerrarlo, seguidamente cuando se cierre darle `click iquierdo` con esto aparecera el `GRUB` de `linux`, tendremos que ver algo tal que esto:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Estando en este punto le tendremos que dar a la tecla `E` para entrar a la edicion del `GRUB` en el que tendremos que modificar unas lineas en concreto.
 
 Llendonos abajo del todo y viendo algo similar a esto:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tendremos que eliminar desde la linea `$vt_handoff` hasta la linea `find_preseed` con esta incluida, quedando algo asi:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora donde pone `ro` que seran los permisos, tendremos que poner permisos de `lectura` y `escritura` ya que todo esto se ejecuta bajo el usuario `root`, por lo que tendremos que modificar eso y poner `rw` seguido de la siguiente linea `init=/bin/bash` para que asi podamos obtener una shell de `root` cuando se siga la ejecucion, viendose algo asi:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y solo le tendremos que dar a `Ctrl+X` para continuar con el arranque del sistema con dicha configuracion, por lo que cuando le demos a esta combinacion y arranque el sistema veremos que obtendremos una shell autenticada como `root`:
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por lo que ahora cambiaremos la contraseña al usuario que queramos en mi caso se llama `d1se0` por lo que pondremos lo siguiente:
 
@@ -52,7 +52,7 @@ Retype new password: <REPIT_PASSWORD>
 passwd: password updated successfully
 ```
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que con esto ya habremos modificado la contraseña con exito, por lo que si ahora reiniciamos la maquina y probamos las credenciales que hemos modificado como `root` veremos que nos podremos logear y habremos `bypasseado` de alguna manera este login sin sabernos la contraseña anterior.
 

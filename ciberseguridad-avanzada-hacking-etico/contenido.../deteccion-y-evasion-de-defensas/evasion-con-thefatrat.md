@@ -154,7 +154,7 @@ En este caso vamos a probar la opcion `2`, por lo que pondremos `2` y nos llevar
 
 En este caso podremos seleccionar el nuevo `payload` que ha salido para poder generarlo con `powershell` o podremos utilizar el viejo pero que es muy potente, vamos a darle al numero `2` y esto nos abrira una mini ventana de terminal en el que se nos generara el `payload`.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Despues de poner la `IP` y el puerto, veremos esto otro:
 
