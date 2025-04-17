@@ -40,6 +40,7 @@
 ## Windows
 
 * [Comandos Windows S.0.](windows/comandos-windows-s.0..md)
+* [Bypass UAC (Windows)](windows/bypass-uac-windows.md)
 
 ## HERRAMIENTAS/TÉCNICAS
 
