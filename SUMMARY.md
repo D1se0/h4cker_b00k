@@ -358,6 +358,7 @@
   * [Gigachard HackMyVM (Easy- Linux)](ctf/hackmyvm/gigachard-hackmyvm-easy-linux.md)
   * [Hidden HackMyVM (Easy- Linux)](ctf/hackmyvm/hidden-hackmyvm-easy-linux.md)
   * [Method HackMyVM (Easy- Linux)](ctf/hackmyvm/method-hackmyvm-easy-linux.md)
+  * [Hostname HackMyVM (Easy- Linux)](ctf/hackmyvm/hostname-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
