@@ -360,6 +360,7 @@
   * [Method HackMyVM (Easy- Linux)](ctf/hackmyvm/method-hackmyvm-easy-linux.md)
   * [Hostname HackMyVM (Easy- Linux)](ctf/hackmyvm/hostname-hackmyvm-easy-linux.md)
   * [BaseME HackMyVM (Easy- Linux)](ctf/hackmyvm/baseme-hackmyvm-easy-linux.md)
+  * [May HackMyVM (Easy- Linux)](ctf/hackmyvm/may-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
