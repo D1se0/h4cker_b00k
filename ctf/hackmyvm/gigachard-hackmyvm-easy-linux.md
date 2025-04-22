@@ -163,7 +163,7 @@ Session completed.
 
 Veremos que ha funcionado, pero no encontraremos gran cosa, por lo que vamos a pasar ahora a intentar ver que imagen nos descargamos:
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos un meme en si, pero puede ser que tenga algo que ver esa torre de fondo, por lo que ahora si vamos a extraer los `metadatos` de la imagen a ver si conseguimos encontrar dicha ubicacion de la imagen.
 

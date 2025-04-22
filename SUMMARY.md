@@ -33,6 +33,7 @@
 * [Instalar SPSS (crack)](artiuclos/instalar-spss-crack.md)
 * [Servidor Node.js en Windows](artiuclos/servidor-node.js-en-windows.md)
 * [Establecer Banner de entrada Ubuntu Server](artiuclos/establecer-banner-de-entrada-ubuntu-server.md)
+* [Configuración de VLANs en Switch (PuTTY)](artiuclos/configuracion-de-vlans-en-switch-putty.md)
 
 ## Linux
 

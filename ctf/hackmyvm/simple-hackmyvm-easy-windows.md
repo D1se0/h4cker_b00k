@@ -111,7 +111,7 @@ Finished
 
 No vemos nada interesante, pero si vemos mejor en la pagina web principal, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay varios nombres de usuario en los cuales se estan nombrando sobre las gracias de la pagina, por lo que nos montaremos una lista de usuarios.
 
@@ -176,11 +176,11 @@ Vemos que la contraseña de dicho usuario a `expirado` al parecer por una config
 
 Tendremos que sacarnos un teclado virtual dentro de la maquina de `Windows`:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pulsamos `3` teclas, que serian `Ctrl+Alt+Supr` para poder desbloquear la pantalla de bloqueo de `Windows`, le daremos varias veces al boton `ESC` para ir a este menu:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Seleccionaremos el usuario `bogo` e ingresaremos la contraseña `bogo`, cuando la metamos pondra lo siguiente:
 

@@ -64,7 +64,7 @@ Vemos que lo que podamos decodificar lo tendremos que poner en dicho formato, po
 
 URL = [Decod Rosicrucian Cipher](https://www.dcode.fr/rosicrucian-cipher)
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que el resultado es `SYSHIDDENHMV` por lo que tendremos que pasarlo al formato que encontramos:
 
