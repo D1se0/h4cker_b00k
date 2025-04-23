@@ -365,6 +365,7 @@
   * [May HackMyVM (Intermediate - Linux)](ctf/hackmyvm/may-hackmyvm-intermediate-linux.md)
   * [Driftingblues3 HackMyVM (Easy- Linux)](ctf/hackmyvm/driftingblues3-hackmyvm-easy-linux.md)
   * [hommie HackMyVM (Easy- Linux)](ctf/hackmyvm/hommie-hackmyvm-easy-linux.md)
+  * [forbidden HackMyVM (Intermediate- Linux)](ctf/hackmyvm/forbidden-hackmyvm-intermediate-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
