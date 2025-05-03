@@ -400,6 +400,7 @@
   * [CTF TpRoot Very Easy](ctf/ctfs/ctf-tproot-very-easy.md)
   * [CTF Gitea Intermediate](ctf/ctfs/ctf-gitea-intermediate.md)
   * [CTF SecureLAB Hard](ctf/ctfs/ctf-securelab-hard.md)
+  * [CTF Goodness Easy](ctf/ctfs/ctf-goodness-easy.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
