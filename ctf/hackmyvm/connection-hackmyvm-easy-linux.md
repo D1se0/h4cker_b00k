@@ -449,6 +449,12 @@ root
 
 Con esto veremos que ha funcionado, por lo que seremos `root` y leeremos la `flag` de dicho usuario:
 
+> user.txt
+
+```
+3f491443a2a6aa82bc86a3cda8c39617
+```
+
 > root.txt
 
 ```
