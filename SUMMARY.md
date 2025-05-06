@@ -314,6 +314,7 @@
   * [ChocoPing DockerLabs (Intermediate)](ctf/dockerlabs/chocoping-dockerlabs-intermediate.md)
   * [Crystalteam DockerLabs (Intermediate)](ctf/dockerlabs/crystalteam-dockerlabs-intermediate.md)
   * [Balufood DockerLabs (Easy)](ctf/dockerlabs/balufood-dockerlabs-easy.md)
+  * [Bicho DockerLabs (Easy)](ctf/dockerlabs/bicho-dockerlabs-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
