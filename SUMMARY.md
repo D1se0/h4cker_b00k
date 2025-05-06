@@ -372,6 +372,7 @@
   * [t800 HackMyVM (Easy - Linux)](ctf/hackmyvm/t800-hackmyvm-easy-linux.md)
   * [Twisted HackMyVM (Easy- Linux)](ctf/hackmyvm/twisted-hackmyvm-easy-linux.md)
   * [Connection HackMyVM (Easy - Linux)](ctf/hackmyvm/connection-hackmyvm-easy-linux.md)
+  * [Flower HackMyVM (Easy- Linux)](ctf/hackmyvm/flower-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
