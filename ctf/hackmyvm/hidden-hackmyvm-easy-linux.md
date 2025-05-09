@@ -50,7 +50,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.02 seconds
 
 Veremos que hay un puerto `80` en la que hay una pagina web alojada, vamos a entrar dentro a ver que vemos:
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos esto lo que parece ser un codigo codificado en signos, si investigamos un poco el tipo de cifrado se llama `braille binario visual` o tambien `Rosicrucian`
 
@@ -64,7 +64,7 @@ Vemos que lo que podamos decodificar lo tendremos que poner en dicho formato, po
 
 URL = [Decod Rosicrucian Cipher](https://www.dcode.fr/rosicrucian-cipher)
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que el resultado es `SYSHIDDENHMV` por lo que tendremos que pasarlo al formato que encontramos:
 
@@ -89,7 +89,7 @@ URL = http://SYS.HIDDEN.HMV/
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que tendremos que pasar otro nivel, pero en este caso no veremos nada interesante, por lo que vamos a realizar un poco de `fuzzing` de la siguiente forma:
 

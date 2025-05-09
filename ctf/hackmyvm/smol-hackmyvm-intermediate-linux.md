@@ -59,7 +59,7 @@ nano /etc/hosts
 
 Lo guardamos y volveremos a cargar la pagina, veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos que ahora si funciona, si bajamos al `footer` veremos que esta `hosteado` por `wordpress` por lo que vamos a realizar un escaneo con la herramienta llamada `wpscan`.
 

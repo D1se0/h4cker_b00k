@@ -178,13 +178,13 @@ Vemos varios puertos, entre ellos uno que es el `80` y el otro el `5000` que pod
 
 Si entramos en el puerto `80` veremos una serie de archivos:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que en este puerto esta alojado un servidor de `python` que esta corriendo en el puerto `5000`, por lo que esto ya de primeras es un fallo, ya que podremos ver como esta compuesto a nivel de codigo.
 
 Si nos metemos en el puerto `5000` veremos un `login`, en el que nos podremos registrar, vamos a crear una cuenta e iniciaremos sesion dentro de la pagina web, una vez dentro veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si le damos a `cambiar contraseña` veremos que podemos elegir el `ID` que queramos y la nueva contraseña por lo que esto podria ser atacado con un `CSRF` ya que tambien vemos que admite un metodo `GET` mediante la `URL` si capturamos la peticion con `BurpSuite` veremos lo siguiente:
 

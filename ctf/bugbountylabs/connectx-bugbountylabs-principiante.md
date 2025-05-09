@@ -83,7 +83,7 @@ username=admin'
 
 Ahora si seleccionamos antes de enviar que nos muestre la respuesta del servidor:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Cuando lo enviemos veremos lo siguiente:
 
@@ -576,7 +576,7 @@ Si lo enviamos en la respuesta del servidor nos dara un `500 error` pero si nos 
 URL = http://connectx.bbl/text.txt
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora vamos hacer esto mismo, pero para subir un archivo en `PHP` y poder ejecutar codigo de forma remota mediante ese codigo en `PHP`.
 

