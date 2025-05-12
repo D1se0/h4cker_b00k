@@ -381,6 +381,7 @@
   * [WebMaster HackMyVM (Easy - Linux)](ctf/hackmyvm/webmaster-hackmyvm-easy-linux.md)
   * [Locker HackMyVM (Easy - Linux)](ctf/hackmyvm/locker-hackmyvm-easy-linux.md)
   * [Soul HackMyVM (Hard - Linux)](ctf/hackmyvm/soul-hackmyvm-hard-linux.md)
+  * [Visions HackMyVM (Easy - Linux)](ctf/hackmyvm/visions-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
