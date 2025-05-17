@@ -389,6 +389,7 @@
   * [Friendly2 HackMyVM (Easy - Linux)](ctf/hackmyvm/friendly2-hackmyvm-easy-linux.md)
   * [Comingsoon HackMyVM (Easy - Linux)](ctf/hackmyvm/comingsoon-hackmyvm-easy-linux.md)
   * [SuidyRevenge HackMyVM (Hard - Linux)](ctf/hackmyvm/suidyrevenge-hackmyvm-hard-linux.md)
+  * [Insomnia HackMyVM (Easy - Linux)](ctf/hackmyvm/insomnia-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
