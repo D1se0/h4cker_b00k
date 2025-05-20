@@ -190,7 +190,7 @@ URL = http://japan.cracker.dl
 
 Si entramos aqui, podremos ver que nos proporciona un boton en el que podremos descargar un `software` llamado `PanelAdmin`, una vez que nos lo descarguemos, si no ejecutamos veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que tendremos que introducir un `SERIAL` para poder acceder al `Panel del admin`, por lo que tendremos que realizar `ingenieria inversa` para poder descubrir dicho `SERIAL`.
 
@@ -202,7 +202,7 @@ En mi caso utilizare `ghidra` para poder decompilar el binario y poder descubrir
 
 Creamos un nuevo proyecto y dentro de dicho proyecto, le daremos al siguiente boton.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y dentro de este apartado, importaremos el archivo `PanelAdmin` para que nos lo decompile, una vez echo esto, si nos vamos en la parte izquierda veremos lo siguiente:
 

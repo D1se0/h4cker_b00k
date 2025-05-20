@@ -461,7 +461,7 @@ Pass: )4UJM)JGab
 
 Veremos que si nos ha dejado entrar con dicho usuario:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si abrimos el menu de `haburguesa` veremos con este usuario la opcion `Bandeja de entrada`, pero si entramos con otro usuario no lo veremos, por lo que tendremos que entrar con este usuario y si entramos en dicha opcion, veremos lo siguiente:
 
@@ -572,7 +572,7 @@ Veremos que hemos conseguido la `clave maestra` de dicho archivo, por lo que vam
 
 Desde un `Windows` instalaremos `KeePass` pero el `XC` no serviria, tiene que ser el normal, una vez instalado e importado la `DDBB` meteremos como clave maestra `EMINEM` y se nos desbloqueara de forma correcta.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Veremos credenciales, pero los usuarios no coinciden con ninguno del sistema, por lo que vamos a probar a meter la primera contraseña del primer usuario por si fuera la misma que la de `root`.
 

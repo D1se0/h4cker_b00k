@@ -169,7 +169,7 @@ Esto almacenará la configuración en la memoria `NVRAM`, preservándola despué
 
 > Diagrama de lo que sucede en general en la red la realizar estos pasos:
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

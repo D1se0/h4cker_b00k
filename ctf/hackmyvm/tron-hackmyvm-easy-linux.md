@@ -153,7 +153,7 @@ Buscando un rato, si vamos a la pagina principal e inspeccionamos el codigo vere
 
 Vamos a utilizar esto para aplicar la decodificacion de sustitucion con la palabra que encontramos a ver que vemos:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que ha funcionado y la contraseña de `player` es `SyWP9j94ZgE9jD` por lo que vamos a conetcarnos por `SSH`.
 

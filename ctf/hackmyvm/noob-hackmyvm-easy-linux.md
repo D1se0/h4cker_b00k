@@ -189,7 +189,7 @@ lrwxrwxrwx 1 adela adela    5 Apr  8 06:19 root_directory -> /root
 
 Ahora vamos a meternos en la pagina y veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se esta viendo de forma correcta, ahora vamos a probar a meternos:
 
