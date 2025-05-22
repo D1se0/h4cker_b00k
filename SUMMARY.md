@@ -393,6 +393,7 @@
   * [Uvalde HackMyVM (Easy - Linux)](ctf/hackmyvm/uvalde-hackmyvm-easy-linux.md)
   * [System HackMyVM (Easy - Linux)](ctf/hackmyvm/system-hackmyvm-easy-linux.md)
   * [Crossroads HackMyVM (Easy - Linux)](ctf/hackmyvm/crossroads-hackmyvm-easy-linux.md)
+  * [Stars HackMyVM (Easy - Linux)](ctf/hackmyvm/stars-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
