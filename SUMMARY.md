@@ -396,6 +396,8 @@
   * [Stars HackMyVM (Easy - Linux)](ctf/hackmyvm/stars-hackmyvm-easy-linux.md)
   * [Preload HackMyVM (Easy - Linux)](ctf/hackmyvm/preload-hackmyvm-easy-linux.md)
   * [Find HackMyVM (Easy - Linux)](ctf/hackmyvm/find-hackmyvm-easy-linux.md)
+  * [Driftingblues5 HackMyVM (Easy - Linux)](ctf/hackmyvm/driftingblues5-hackmyvm-easy-linux.md)
+  * [Warez HackMyVM (Easy - Linux)](ctf/hackmyvm/warez-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
