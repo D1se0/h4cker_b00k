@@ -400,6 +400,7 @@
   * [Warez HackMyVM (Easy - Linux)](ctf/hackmyvm/warez-hackmyvm-easy-linux.md)
   * [P4l4nc4 HackMyVM (Easy - Linux)](ctf/hackmyvm/p4l4nc4-hackmyvm-easy-linux.md)
   * [bah HackMyVM (Easy - Linux)](ctf/hackmyvm/bah-hackmyvm-easy-linux.md)
+  * [Doc HackMyVM (Easy - Linux)](ctf/hackmyvm/doc-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
