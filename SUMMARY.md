@@ -320,6 +320,7 @@
   * [Ciberguard DockerLabs (Intermediate)](ctf/dockerlabs/ciberguard-dockerlabs-intermediate.md)
   * [Galeria DockerLabs (Easy)](ctf/dockerlabs/galeria-dockerlabs-easy.md)
   * [TheDog DockerLabs (Intermediate)](ctf/dockerlabs/thedog-dockerlabs-intermediate.md)
+  * [Pkgpoison DockerLabs (Easy)](ctf/dockerlabs/pkgpoison-dockerlabs-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
