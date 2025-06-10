@@ -440,6 +440,7 @@
   * [CTF SecureLAB Hard](ctf/ctfs/ctf-securelab-hard.md)
   * [CTF Goodness Easy](ctf/ctfs/ctf-goodness-easy.md)
   * [CTF LogisticCloud Intermediate](ctf/ctfs/ctf-logisticcloud-intermediate.md)
+  * [CTF ForbiddenHack Easy](ctf/ctfs/ctf-forbiddenhack-easy.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
