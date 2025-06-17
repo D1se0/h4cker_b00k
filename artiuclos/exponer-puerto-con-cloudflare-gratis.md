@@ -1,5 +1,5 @@
 ---
-icon: flag
+icon: cloudflare
 layout:
   title:
     visible: true
