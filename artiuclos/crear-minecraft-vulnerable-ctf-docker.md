@@ -118,7 +118,7 @@ Lo guardamos y seguiremos con la configuracion.
 Ahora tendremos que instalar el servidor en el cual se van a poder implementar los `plugins`, tendremos que hacerlo de esta forma.
 
 ```shell
-java -jar BuildTools.jar --rev 1.12.2
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar BuildTools.jar --rev 1.12.2
 ```
 
 Esto puede tardar un rato largo ya que se esta instalando todo lo necesario para que funcione, una vez que se haya instalado todo, veremos que se han añadido cosas nuevas, entre ellas los siguientes archivos.
