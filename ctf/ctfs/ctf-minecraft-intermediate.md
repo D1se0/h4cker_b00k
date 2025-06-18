@@ -15,7 +15,7 @@ layout:
 
 # CTF Minecraft Intermediate
 
-URL Download CTF = [https://drive.google.com/file/d/1FyUwl6\_mT8zVZv3zRTTLMUWTg8TK-Pb8/view?usp=sharing](https://drive.google.com/file/d/1FyUwl6_mT8zVZv3zRTTLMUWTg8TK-Pb8/view?usp=sharing)
+URL Download CTF = [https://drive.google.com/file/d/1-h9Qw6N\_2SGy50rs4ia3YfX8tvZU9x3l/view?usp=sharing](https://drive.google.com/file/d/1-h9Qw6N_2SGy50rs4ia3YfX8tvZU9x3l/view?usp=sharing)
 
 ## Instalación
 
