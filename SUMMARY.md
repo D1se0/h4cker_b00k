@@ -448,6 +448,7 @@
   * [CTF Goodness Easy](ctf/ctfs/ctf-goodness-easy.md)
   * [CTF LogisticCloud Intermediate](ctf/ctfs/ctf-logisticcloud-intermediate.md)
   * [CTF ForbiddenHack Easy](ctf/ctfs/ctf-forbiddenhack-easy.md)
+  * [CTF Minecraft Intermediate](ctf/ctfs/ctf-minecraft-intermediate.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
