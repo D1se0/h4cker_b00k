@@ -414,6 +414,7 @@
   * [Whitedoor HackMyVM (Easy - Linux)](ctf/hackmyvm/whitedoor-hackmyvm-easy-linux.md)
   * [Translator HackMyVM (Easy - Linux)](ctf/hackmyvm/translator-hackmyvm-easy-linux.md)
   * [Crazymed HackMyVM (Easy - Linux)](ctf/hackmyvm/crazymed-hackmyvm-easy-linux.md)
+  * [Art HackMyVM (Easy - Linux)](ctf/hackmyvm/art-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
