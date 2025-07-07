@@ -1,16 +1,5 @@
 ---
 icon: clipboard-list
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Lista de signos Digispark

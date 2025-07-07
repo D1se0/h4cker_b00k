@@ -1,16 +1,5 @@
 ---
 icon: triangle-exclamation
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Problemas y errores instalación Covenant

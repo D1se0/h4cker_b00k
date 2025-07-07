@@ -1,16 +1,5 @@
 ---
 icon: key
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Kerberos en Active Directory

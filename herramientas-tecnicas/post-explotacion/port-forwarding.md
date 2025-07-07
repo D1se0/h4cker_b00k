@@ -1,16 +1,5 @@
 ---
 icon: right-to-line
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Port Forwarding

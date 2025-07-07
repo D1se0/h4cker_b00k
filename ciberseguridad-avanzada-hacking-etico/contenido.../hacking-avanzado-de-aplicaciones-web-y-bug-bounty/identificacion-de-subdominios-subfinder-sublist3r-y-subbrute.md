@@ -1,16 +1,5 @@
 ---
 icon: route
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Identificación de subdominios - Subfinder, Sublist3r y Subbrute

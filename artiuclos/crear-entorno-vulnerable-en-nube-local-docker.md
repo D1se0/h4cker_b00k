@@ -1,16 +1,5 @@
 ---
 icon: cloud-binary
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Crear Entorno Vulnerable en Nube Local (Docker)

@@ -1,16 +1,5 @@
 ---
 icon: brake-warning
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Determinar S.O. (Victima)

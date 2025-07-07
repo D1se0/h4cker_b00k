@@ -1,16 +1,5 @@
 ---
 icon: phone-arrow-up-right
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Syscalls (Llamadas al Sistema)

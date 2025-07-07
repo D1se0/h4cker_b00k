@@ -1,16 +1,5 @@
 ---
 icon: folder-check
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Fuzzing básico con ffuf

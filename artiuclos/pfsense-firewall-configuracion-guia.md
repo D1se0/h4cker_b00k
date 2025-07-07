@@ -1,16 +1,5 @@
 ---
 icon: block-brick-fire
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Pfsense Firewall Configuración GUIA

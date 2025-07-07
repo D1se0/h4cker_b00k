@@ -1,19 +1,8 @@
 ---
 icon: flag
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
-# May HackMyVM (Easy- Linux)
+# May HackMyVM (Intermediate - Linux)
 
 ## Escaneo de puertos
 

@@ -1,16 +1,5 @@
 ---
 icon: cat
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Alternativas a Nmap - Naabu y Netcat

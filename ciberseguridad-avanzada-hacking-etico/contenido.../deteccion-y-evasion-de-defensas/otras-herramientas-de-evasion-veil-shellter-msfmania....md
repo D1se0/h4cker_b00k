@@ -1,16 +1,5 @@
 ---
 icon: wrench-simple
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Otras herramientas de evasión - Veil, Shellter, MSFManía...

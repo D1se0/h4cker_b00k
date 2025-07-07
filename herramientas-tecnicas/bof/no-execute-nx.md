@@ -1,16 +1,5 @@
 ---
 icon: plug-circle-xmark
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # No eXecute (NX)

@@ -1,16 +1,5 @@
 ---
 icon: tickets-perforated
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # TGS-REP Roasting (Kerberoasting)

@@ -1,16 +1,5 @@
 ---
 icon: users-between-lines
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Características de AD - Usuarios, Grupos y OUs

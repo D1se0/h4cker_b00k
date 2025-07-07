@@ -1,16 +1,5 @@
 ---
 icon: server
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # A.D. Group Server Operators

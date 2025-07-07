@@ -1,16 +1,5 @@
 ---
 icon: network-wired
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Crear Dominio y Subdominio en apache2

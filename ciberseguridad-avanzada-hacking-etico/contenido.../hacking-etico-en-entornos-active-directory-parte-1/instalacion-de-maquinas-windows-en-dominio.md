@@ -1,16 +1,5 @@
 ---
 icon: laptop
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Instalación de máquinas Windows en dominio

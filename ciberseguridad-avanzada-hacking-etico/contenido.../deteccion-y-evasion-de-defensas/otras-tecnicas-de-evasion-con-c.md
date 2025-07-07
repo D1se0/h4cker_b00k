@@ -1,16 +1,5 @@
 ---
 icon: star-of-david
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Otras técnicas de evasión con C

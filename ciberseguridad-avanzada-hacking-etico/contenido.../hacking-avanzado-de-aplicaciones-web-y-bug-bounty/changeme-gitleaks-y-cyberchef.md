@@ -1,16 +1,5 @@
 ---
 icon: user-chef
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Changeme, Gitleaks y CyberChef

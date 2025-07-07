@@ -1,16 +1,5 @@
 ---
 icon: virus-covid-slash
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Evasión de antivirus con C - Parte 2

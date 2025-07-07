@@ -1,16 +1,5 @@
 ---
 icon: pen-swirl
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Sobrescritura de la Tabla de Desplazamiento Global (GOT)

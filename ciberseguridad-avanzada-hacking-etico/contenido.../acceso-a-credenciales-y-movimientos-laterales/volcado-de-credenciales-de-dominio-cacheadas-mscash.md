@@ -1,16 +1,5 @@
 ---
 icon: users-rectangle
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Volcado de credenciales de dominio cacheadas (mscash)

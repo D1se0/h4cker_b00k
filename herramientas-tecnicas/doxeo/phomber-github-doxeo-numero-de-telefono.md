@@ -1,16 +1,5 @@
 ---
 icon: mobile-notch
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Phomber GitHub (Doxeo Numero de Teléfono)

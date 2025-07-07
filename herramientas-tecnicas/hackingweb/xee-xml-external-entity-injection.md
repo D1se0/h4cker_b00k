@@ -1,16 +1,5 @@
 ---
 icon: file-xml
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # XEE (XML External Entity Injection)

@@ -1,16 +1,5 @@
 ---
 icon: person-to-portal
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Netcat Port-Pivot Relay

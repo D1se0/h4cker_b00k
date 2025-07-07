@@ -1,16 +1,5 @@
 ---
 icon: radar
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Escaneo avanzado de puertos

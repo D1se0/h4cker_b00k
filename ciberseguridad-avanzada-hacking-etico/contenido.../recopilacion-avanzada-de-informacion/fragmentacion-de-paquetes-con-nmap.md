@@ -1,16 +1,5 @@
 ---
 icon: circle-nodes
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Fragmentación de paquetes con Nmap

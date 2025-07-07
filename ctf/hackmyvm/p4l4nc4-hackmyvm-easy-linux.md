@@ -1,16 +1,5 @@
 ---
 icon: flag
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # P4l4nc4 HackMyVM (Easy - Linux)

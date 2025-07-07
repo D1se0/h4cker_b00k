@@ -1,16 +1,5 @@
 ---
 icon: openid
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Vulnerabilidad Open Redirect

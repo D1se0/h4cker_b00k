@@ -1,16 +1,5 @@
 ---
 icon: magnifying-glass-waveform
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Epieos Pagina Doxeo

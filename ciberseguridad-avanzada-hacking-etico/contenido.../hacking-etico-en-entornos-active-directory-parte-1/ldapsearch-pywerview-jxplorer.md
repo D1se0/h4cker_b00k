@@ -1,16 +1,5 @@
 ---
 icon: laptop-binary
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Ldapsearch, pywerview, jxplorer

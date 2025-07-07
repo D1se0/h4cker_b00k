@@ -1,16 +1,5 @@
 ---
 icon: file-shield
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Descriptores de seguridad y ACLs

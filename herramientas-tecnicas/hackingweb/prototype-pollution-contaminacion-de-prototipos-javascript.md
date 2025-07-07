@@ -1,16 +1,5 @@
 ---
 icon: smog
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Prototype Pollution (Contaminación de prototipos) JavaScript

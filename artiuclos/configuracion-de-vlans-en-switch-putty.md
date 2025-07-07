@@ -1,16 +1,5 @@
 ---
 icon: network-wired
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Configuración de VLANs en Switch (PuTTY)

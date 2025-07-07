@@ -1,16 +1,5 @@
 ---
 icon: camera-cctv
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Tipos de auditorias de seguridad

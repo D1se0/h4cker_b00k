@@ -1,16 +1,5 @@
 ---
 icon: folder-arrow-up
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Fuzzing avanzado con ffuf

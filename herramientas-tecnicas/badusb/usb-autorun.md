@@ -1,16 +1,5 @@
 ---
 icon: scroll-old
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # USB AutoRun

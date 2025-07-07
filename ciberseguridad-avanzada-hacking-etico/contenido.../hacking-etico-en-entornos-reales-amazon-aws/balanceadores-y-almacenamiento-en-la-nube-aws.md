@@ -1,16 +1,5 @@
 ---
 icon: album
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Balanceadores y almacenamiento en la nube (AWS)

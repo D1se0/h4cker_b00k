@@ -1,16 +1,5 @@
 ---
 icon: ubuntu
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Establecer Banner de entrada Ubuntu Server

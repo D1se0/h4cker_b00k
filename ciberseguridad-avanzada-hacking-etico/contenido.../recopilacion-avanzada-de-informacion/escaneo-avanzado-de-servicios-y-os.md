@@ -1,16 +1,5 @@
 ---
 icon: bell-concierge
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Escaneo avanzado de servicios y OS

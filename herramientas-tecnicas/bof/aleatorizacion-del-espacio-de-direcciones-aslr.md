@@ -1,16 +1,5 @@
 ---
 icon: rectangles-mixed
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Aleatorización del Espacio de Direcciones (ASLR)

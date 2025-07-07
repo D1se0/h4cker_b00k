@@ -1,16 +1,5 @@
 ---
 icon: ticket-perforated
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # KERBEROASTING Active Directory

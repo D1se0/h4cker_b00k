@@ -1,16 +1,5 @@
 ---
 icon: user-police-tie
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Autenticación y Autorización en Windows

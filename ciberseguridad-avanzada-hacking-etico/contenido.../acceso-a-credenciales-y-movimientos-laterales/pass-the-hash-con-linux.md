@@ -1,16 +1,5 @@
 ---
 icon: unlock
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Pass-The-Hash con Linux

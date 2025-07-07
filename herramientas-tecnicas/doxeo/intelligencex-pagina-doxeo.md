@@ -1,16 +1,5 @@
 ---
 icon: brain
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # IntelligenceX Pagina Doxeo

@@ -1,16 +1,5 @@
 ---
 icon: scale-balanced
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Load Balancing detector - halberd

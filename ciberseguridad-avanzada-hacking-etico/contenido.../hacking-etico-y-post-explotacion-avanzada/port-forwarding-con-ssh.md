@@ -1,16 +1,5 @@
 ---
 icon: building-lock
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Port Forwarding con SSH

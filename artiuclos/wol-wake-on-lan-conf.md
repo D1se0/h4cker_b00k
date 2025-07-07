@@ -1,16 +1,5 @@
 ---
 icon: power-off
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # WOL (Wake On Lan) Conf

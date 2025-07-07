@@ -1,16 +1,5 @@
 ---
 icon: pickaxe
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Crear Minecraft Vulnerable CTF (Docker)

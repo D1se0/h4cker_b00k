@@ -2,20 +2,6 @@
 icon: hand-wave
 cover: .gitbook/assets/banner-1.png
 coverY: -17
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Whoami

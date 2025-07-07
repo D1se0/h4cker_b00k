@@ -1,16 +1,5 @@
 ---
 icon: calendar-exclamation
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Error de Cadena de Formato

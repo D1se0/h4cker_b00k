@@ -1,16 +1,5 @@
 ---
 icon: globe-wifi
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Identificación de tecnologías web - WhatWeb y WebAnalyzer

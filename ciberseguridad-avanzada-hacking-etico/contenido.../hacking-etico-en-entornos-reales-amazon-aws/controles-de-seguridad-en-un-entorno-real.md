@@ -1,16 +1,5 @@
 ---
 icon: file-signature
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Controles de seguridad en un entorno real
