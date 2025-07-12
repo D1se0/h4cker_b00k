@@ -327,6 +327,7 @@
   * [Ofuskeit DockerLabs (Intermediate)](ctf/dockerlabs/ofuskeit-dockerlabs-intermediate.md)
   * [ApacheByte DockerLabs (Intermediate)](ctf/dockerlabs/apachebyte-dockerlabs-intermediate.md)
   * [Bola DockerLabs (Intermediate)](ctf/dockerlabs/bola-dockerlabs-intermediate.md)
+  * [InfluencerHate DockerLabs (Easy)](ctf/dockerlabs/influencerhate-dockerlabs-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
