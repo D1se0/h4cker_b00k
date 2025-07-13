@@ -765,7 +765,7 @@ su baluton
 
 Metemos como contraseña `123123` y veremos que seremos dicho usuario.
 
-## Escalate user
+## Escalate Privileges
 
 Si hacemos `sudo -l` veremos lo siguiente:
 
