@@ -137,6 +137,8 @@
   * [Explotación a Través de Sockets](herramientas-tecnicas/bof/explotacion-a-traves-de-sockets.md)
   * [Creación de Procesos: fork](herramientas-tecnicas/bof/creacion-de-procesos-fork.md)
   * [Stack Pivoting](herramientas-tecnicas/bof/stack-pivoting.md)
+* [Análisis Forense](herramientas-tecnicas/analisis-forense/README.md)
+  * [Herramienta Volatility2/3 + LAB](herramientas-tecnicas/analisis-forense/herramienta-volatility2-3-+-lab.md)
 
 ## CTF
 
