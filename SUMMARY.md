@@ -138,7 +138,8 @@
   * [Creación de Procesos: fork](herramientas-tecnicas/bof/creacion-de-procesos-fork.md)
   * [Stack Pivoting](herramientas-tecnicas/bof/stack-pivoting.md)
 * [Análisis Forense](herramientas-tecnicas/analisis-forense/README.md)
-  * [Herramienta Volatility2/3 + LAB](herramientas-tecnicas/analisis-forense/herramienta-volatility2-3-+-lab.md)
+  * [Herramienta Volatility2/3 + LAB (Windows)](herramientas-tecnicas/analisis-forense/herramienta-volatility2-3-+-lab-windows.md)
+  * [Herramienta Volatility2 (Linux)](herramientas-tecnicas/analisis-forense/herramienta-volatility2-linux.md)
 
 ## CTF
 
