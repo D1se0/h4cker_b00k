@@ -426,6 +426,7 @@
   * [Faust HackMyVM (Easy - Linux)](ctf/hackmyvm/faust-hackmyvm-easy-linux.md)
   * [VMessage HackMyVM (Easy - Linux)](ctf/hackmyvm/vmessage-hackmyvm-easy-linux.md)
   * [Icecream HackMyVM (Easy - Linux)](ctf/hackmyvm/icecream-hackmyvm-easy-linux.md)
+  * [Pipy HackMyVM (Easy - Linux)](ctf/hackmyvm/pipy-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
