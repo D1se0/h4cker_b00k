@@ -1,17 +1,5 @@
 ---
 icon: redhat
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Herramienta Volatility2 (Linux)

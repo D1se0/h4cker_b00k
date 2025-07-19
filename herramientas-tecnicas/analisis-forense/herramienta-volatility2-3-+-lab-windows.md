@@ -1,20 +1,8 @@
 ---
 icon: hard-drive
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
-# Herramienta Volatility2/3 + LAB
+# Herramienta Volatility2/3 + LAB (Windows)
 
 ## Fase 1
 
