@@ -431,6 +431,7 @@
   * [Quick2 HackMyVM (Easy - Linux)](ctf/hackmyvm/quick2-hackmyvm-easy-linux.md)
   * [Quick3 HackMyVM (Easy - Linux)](ctf/hackmyvm/quick3-hackmyvm-easy-linux.md)
   * [Quick4 HackMyVM (Easy - Linux)](ctf/hackmyvm/quick4-hackmyvm-easy-linux.md)
+  * [Liceo HackMyVM (Easy - Linux)](ctf/hackmyvm/liceo-hackmyvm-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
