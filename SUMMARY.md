@@ -438,6 +438,7 @@
   * [Experience Vulnyx (Very Easy- Windows)](ctf/vulnyx/experience-vulnyx-very-easy-windows.md)
   * [Eternal Vulnyx (Very Easy- Windows)](ctf/vulnyx/eternal-vulnyx-very-easy-windows.md)
   * [Build Vulnyx (Very Easy- Windows)](ctf/vulnyx/build-vulnyx-very-easy-windows.md)
+  * [Admin Vulnyx (Easy - Windows)](ctf/vulnyx/admin-vulnyx-easy-windows.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
