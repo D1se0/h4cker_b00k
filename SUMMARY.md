@@ -443,6 +443,7 @@
   * [Hosting Vulnyx (Easy - Windows)](ctf/vulnyx/hosting-vulnyx-easy-windows.md)
   * [War Vulnyx (Easy - Windows)](ctf/vulnyx/war-vulnyx-easy-windows.md)
   * [Controler Vulnyx (Intermediate - Windows)](ctf/vulnyx/controler-vulnyx-intermediate-windows.md)
+  * [Change Vulnyx (Intermediate - Windows)](ctf/vulnyx/change-vulnyx-intermediate-windows.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
