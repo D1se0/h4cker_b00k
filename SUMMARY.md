@@ -446,6 +446,7 @@
   * [Change Vulnyx (Intermediate - Windows)](ctf/vulnyx/change-vulnyx-intermediate-windows.md)
   * [Plex Vulnyx (Easy - Linux)](ctf/vulnyx/plex-vulnyx-easy-linux.md)
   * [Shop Vulnyx (Easy - Linux)](ctf/vulnyx/shop-vulnyx-easy-linux.md)
+  * [Ready Vulnyx (Easy - Linux)](ctf/vulnyx/ready-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
