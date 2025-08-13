@@ -175,7 +175,7 @@ Priority: u=0
 	</details>
 ```
 
-Veremos algo muy interesante y es que esta utilizando `XML`, vamos a probar una vulnerabilidad famosa llamada `a`, si le damos a enviar y ponemos en `BurpSuite` que capture tambien la respuesta del servidor, veremos que muestra el nombre de `admin` en texto plano, por lo que ese va a ser nuestra injeccion de leer archivos quedando de esta forma:
+Veremos algo muy interesante y es que esta utilizando `XML`, vamos a probar una vulnerabilidad famosa llamada `XXE`, si le damos a enviar y ponemos en `BurpSuite` que capture tambien la respuesta del servidor, veremos que muestra el nombre de `admin` en texto plano, por lo que ese va a ser nuestra injeccion de leer archivos quedando de esta forma:
 
 ```
 POST /form.php HTTP/1.1
