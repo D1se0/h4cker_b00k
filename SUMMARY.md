@@ -450,6 +450,7 @@
   * [Load Vulnyx (Easy - Linux)](ctf/vulnyx/load-vulnyx-easy-linux.md)
   * [External Vulnyx (Easy - Linux)](ctf/vulnyx/external-vulnyx-easy-linux.md)
   * [Remote Vulnyx (Easy - Linux)](ctf/vulnyx/remote-vulnyx-easy-linux.md)
+  * [Sandwich Vulnyx (Intermediate - Linux)](ctf/vulnyx/sandwich-vulnyx-intermediate-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
