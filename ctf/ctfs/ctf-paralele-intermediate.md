@@ -18,7 +18,7 @@ layout:
 
 # CTF Paralele Intermediate
 
-URL Download CTF = [https://drive.google.com/file/d/1n6p83ULWIgTmy02D3NgPQcC8IzwBoNPs/view?usp=sharing](https://drive.google.com/file/d/1n6p83ULWIgTmy02D3NgPQcC8IzwBoNPs/view?usp=sharing)
+URL Download CTF = [https://drive.google.com/file/d/1HAG4Lp8809IVbkR8mER6TxSuRXZC7lfT/view?usp=sharing](https://drive.google.com/file/d/1HAG4Lp8809IVbkR8mER6TxSuRXZC7lfT/view?usp=sharing)
 
 ## Instalación
 
