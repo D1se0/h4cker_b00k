@@ -455,6 +455,7 @@
   * [Blog Vulnyx (Easy - Linux)](ctf/vulnyx/blog-vulnyx-easy-linux.md)
   * [Hook Vulnyx (Easy - Linux)](ctf/vulnyx/hook-vulnyx-easy-linux.md)
   * [Dump Vulnyx (Easy - Linux)](ctf/vulnyx/dump-vulnyx-easy-linux.md)
+  * [Play Vulnyx (Easy - Linux)](ctf/vulnyx/play-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
@@ -492,7 +493,6 @@
   * [CTF Minecraft Intermediate](ctf/ctfs/ctf-minecraft-intermediate.md)
   * [CTF WinFake Easy](ctf/ctfs/ctf-winfake-easy.md)
   * [CTF Paralele Intermediate](ctf/ctfs/ctf-paralele-intermediate.md)
-  * [Play Vulnyx (Easy - Linux)](ctf/ctfs/play-vulnyx-easy-linux.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
