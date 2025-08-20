@@ -492,6 +492,7 @@
   * [CTF Minecraft Intermediate](ctf/ctfs/ctf-minecraft-intermediate.md)
   * [CTF WinFake Easy](ctf/ctfs/ctf-winfake-easy.md)
   * [CTF Paralele Intermediate](ctf/ctfs/ctf-paralele-intermediate.md)
+  * [Play Vulnyx (Easy - Linux)](ctf/ctfs/play-vulnyx-easy-linux.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
