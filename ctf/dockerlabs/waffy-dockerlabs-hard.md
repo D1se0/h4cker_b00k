@@ -248,4 +248,4 @@ bash-5.2# whoami
 root
 ```
 
-Con esto ya seremos `root`, por lo que habremos terminado la maquina.
+Con esto ya seremos `root`, por lo que habremos terminado la maquina con éxito.
