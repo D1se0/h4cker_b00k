@@ -337,7 +337,6 @@
   * [Grooti DockerLabs (Easy)](ctf/dockerlabs/grooti-dockerlabs-easy.md)
   * [PingCTF DockerLabs (Easy)](ctf/dockerlabs/pingctf-dockerlabs-easy.md)
   * [Waffy DockerLabs (Hard)](ctf/dockerlabs/waffy-dockerlabs-hard.md)
-  * [Waffy DockerLabs (Hard)1](ctf/dockerlabs/waffy-dockerlabs-hard-1.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
