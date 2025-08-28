@@ -460,6 +460,7 @@
   * [Printer Vulnyx (Easy - Linux)](ctf/vulnyx/printer-vulnyx-easy-linux.md)
   * [Open Vulnyx (Easy - Linux)](ctf/vulnyx/open-vulnyx-easy-linux.md)
   * [Swamp Vulnyx (Easy - Linux)](ctf/vulnyx/swamp-vulnyx-easy-linux.md)
+  * [Ober Vulnyx (Easy - Linux)](ctf/vulnyx/ober-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
