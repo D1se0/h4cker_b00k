@@ -462,6 +462,7 @@
   * [Swamp Vulnyx (Easy - Linux)](ctf/vulnyx/swamp-vulnyx-easy-linux.md)
   * [Ober Vulnyx (Easy - Linux)](ctf/vulnyx/ober-vulnyx-easy-linux.md)
   * [Sun Vulnyx (Easy - Linux)](ctf/vulnyx/sun-vulnyx-easy-linux.md)
+  * [Magic Vulnyx (Easy - Linux)](ctf/vulnyx/magic-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
