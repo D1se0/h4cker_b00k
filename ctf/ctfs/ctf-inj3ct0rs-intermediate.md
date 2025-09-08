@@ -17,7 +17,7 @@ unzip inj3ct0rs.zip
 Nos lo descomprimira y despues montamos la maquina de la siguiente forma.
 
 ```shell
-bash auto_mount.sh inj3ct0rss.tar
+bash auto_run.sh inj3ct0rss.tar
 ```
 
 Info:
