@@ -437,6 +437,7 @@
   * [Quick3 HackMyVM (Easy - Linux)](ctf/hackmyvm/quick3-hackmyvm-easy-linux.md)
   * [Quick4 HackMyVM (Easy - Linux)](ctf/hackmyvm/quick4-hackmyvm-easy-linux.md)
   * [Liceo HackMyVM (Easy - Linux)](ctf/hackmyvm/liceo-hackmyvm-easy-linux.md)
+  * [Deeper HackMyVM (Easy - Linux)](ctf/hackmyvm/deeper-hackmyvm-easy-linux.md)
 * [Vulnyx](ctf/vulnyx/README.md)
   * [Experience Vulnyx (Very Easy- Windows)](ctf/vulnyx/experience-vulnyx-very-easy-windows.md)
   * [Eternal Vulnyx (Very Easy- Windows)](ctf/vulnyx/eternal-vulnyx-very-easy-windows.md)
