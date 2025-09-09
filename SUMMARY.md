@@ -466,6 +466,7 @@
   * [Sun Vulnyx (Easy - Linux)](ctf/vulnyx/sun-vulnyx-easy-linux.md)
   * [Magic Vulnyx (Easy - Linux)](ctf/vulnyx/magic-vulnyx-easy-linux.md)
   * [Fire Vulnyx (Easy - Linux)](ctf/vulnyx/fire-vulnyx-easy-linux.md)
+  * [Brain Vulnyx (Easy - Linux)](ctf/vulnyx/brain-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
