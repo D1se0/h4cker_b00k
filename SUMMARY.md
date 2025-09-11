@@ -468,6 +468,7 @@
   * [Fire Vulnyx (Easy - Linux)](ctf/vulnyx/fire-vulnyx-easy-linux.md)
   * [Brain Vulnyx (Easy - Linux)](ctf/vulnyx/brain-vulnyx-easy-linux.md)
   * [Observer Vulnyx (Easy - Linux)](ctf/vulnyx/observer-vulnyx-easy-linux.md)
+  * [YourWAF Vulnyx (Easy - Linux)](ctf/vulnyx/yourwaf-vulnyx-easy-linux.md)
 * [CTF's](ctf/ctfs/README.md)
   * [CTF Avengers Easy](ctf/ctfs/ctf-avengers-easy.md)
   * [CTF Ciberhack Intermediate](ctf/ctfs/ctf-ciberhack-intermediate.md)
