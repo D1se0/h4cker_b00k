@@ -506,6 +506,7 @@
   * [CTF Minecraft Intermediate](ctf/ctfs/ctf-minecraft-intermediate.md)
   * [CTF WinFake Easy](ctf/ctfs/ctf-winfake-easy.md)
   * [CTF Paralele Intermediate](ctf/ctfs/ctf-paralele-intermediate.md)
+  * [CTF Smishing Intermediate](ctf/ctfs/ctf-smishing-intermediate.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
