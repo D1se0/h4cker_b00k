@@ -214,6 +214,7 @@
   * [Bizness HackTheBox](hackthebox-writeups/hackthebox/write-up-bizness-hackthebox.md)
   * [Chemistry HackTheBox](ctf/hackthebox/chemistry-hackthebox.md)
   * [Titanic HackTheBox](ctf/hackthebox/titanic-hackthebox.md)
+  * [Planning HackTheBox (Easy)](ctf/hackthebox/planning-hackthebox-easy.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
