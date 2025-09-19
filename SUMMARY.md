@@ -217,6 +217,7 @@
   * [Planning HackTheBox (Easy)](ctf/hackthebox/planning-hackthebox-easy.md)
   * [Artificial HackTheBox (Easy)](ctf/hackthebox/artificial-hackthebox-easy.md)
   * [Editor HackTheBox (Easy)](ctf/hackthebox/editor-hackthebox-easy.md)
+  * [CodePartTwo HackTheBox (Easy)](ctf/hackthebox/codeparttwo-hackthebox-easy.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
