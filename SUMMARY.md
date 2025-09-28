@@ -224,6 +224,7 @@
   * [Previous HackTheBox (Intermediate)](ctf/hackthebox/previous-hackthebox-intermediate.md)
   * [Era HackTheBox (Intermediate)](ctf/hackthebox/era-hackthebox-intermediate.md)
   * [Cap HackTheBox (Easy)](ctf/hackthebox/cap-hackthebox-easy.md)
+  * [Guardian HackTheBox (Hard)](ctf/hackthebox/guardian-hackthebox-hard.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
