@@ -227,6 +227,7 @@
   * [Guardian HackTheBox (Hard)](ctf/hackthebox/guardian-hackthebox-hard.md)
   * [WhiteRabbit HackTheBox (Insane)](ctf/hackthebox/whiterabbit-hackthebox-insane.md)
   * [TwoMillion HackTheBox (Easy)](ctf/hackthebox/twomillion-hackthebox-easy.md)
+  * [Strutted HackTheBox (Intermediate)](ctf/hackthebox/strutted-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
