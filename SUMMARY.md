@@ -228,6 +228,7 @@
   * [WhiteRabbit HackTheBox (Insane)](ctf/hackthebox/whiterabbit-hackthebox-insane.md)
   * [TwoMillion HackTheBox (Easy)](ctf/hackthebox/twomillion-hackthebox-easy.md)
   * [Strutted HackTheBox (Intermediate)](ctf/hackthebox/strutted-hackthebox-intermediate.md)
+  * [Imagery HackTheBox (Intermediate)](ctf/hackthebox/imagery-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
