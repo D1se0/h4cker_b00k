@@ -231,6 +231,7 @@
   * [Imagery HackTheBox (Intermediate)](ctf/hackthebox/imagery-hackthebox-intermediate.md)
   * [HackNet HackTheBox (Intermediate)](ctf/hackthebox/hacknet-hackthebox-intermediate.md)
   * [DarkZero HackTheBox (Hard)](ctf/hackthebox/darkzero-hackthebox-hard.md)
+  * [TombWatcher HackTheBox (Intermediate)](ctf/hackthebox/tombwatcher-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
