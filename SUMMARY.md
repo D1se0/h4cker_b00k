@@ -233,6 +233,7 @@
   * [DarkZero HackTheBox (Hard)](ctf/hackthebox/darkzero-hackthebox-hard.md)
   * [TombWatcher HackTheBox (Intermediate)](ctf/hackthebox/tombwatcher-hackthebox-intermediate.md)
   * [Signed HackTheBox (Intermediate)](ctf/hackthebox/signed-hackthebox-intermediate.md)
+  * [The Puppet Master HackTheBox (Very Easy) - OSINT](ctf/hackthebox/the-puppet-master-hackthebox-very-easy-osint.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
