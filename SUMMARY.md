@@ -237,6 +237,7 @@
   * [Voleur HackTheBox (Intermediate)](ctf/hackthebox/voleur-hackthebox-intermediate.md)
   * [RustyKey HackTheBox (Hard)](ctf/hackthebox/rustykey-hackthebox-hard.md)
   * [Certificate HackTheBox (Hard)](ctf/hackthebox/certificate-hackthebox-hard.md)
+  * [Hercules HackTheBox (Insane)](ctf/hackthebox/hercules-hackthebox-insane.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
