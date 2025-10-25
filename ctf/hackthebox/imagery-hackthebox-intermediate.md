@@ -1,4 +1,5 @@
 ---
+hidden: true
 icon: flag
 layout:
   width: default
