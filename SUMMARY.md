@@ -37,6 +37,7 @@
 * [Crear Entorno Vulnerable en Nube Local (Docker)](artiuclos/crear-entorno-vulnerable-en-nube-local-docker.md)
 * [Exponer Puerto con Cloudflare Gratis](artiuclos/exponer-puerto-con-cloudflare-gratis.md)
 * [Crear Minecraft Vulnerable CTF (Docker)](artiuclos/crear-minecraft-vulnerable-ctf-docker.md)
+* [Configurar SSH en Switch](artiuclos/configurar-ssh-en-switch.md)
 
 ## Linux
 
