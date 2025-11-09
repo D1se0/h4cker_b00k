@@ -244,6 +244,7 @@
   * [Mirage HackTheBox (Hard)](ctf/hackthebox/mirage-hackthebox-hard.md)
   * [Cobblestone HackTheBox (Insane)](ctf/hackthebox/cobblestone-hackthebox-insane.md)
   * [Giveback HackTheBox (Intermediate)](ctf/hackthebox/giveback-hackthebox-intermediate.md)
+  * [NanoCorp HackTheBox (Hard)](ctf/hackthebox/nanocorp-hackthebox-hard.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
