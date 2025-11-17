@@ -1,5 +1,5 @@
 ---
-icon: cloud
+icon: raspberry-pi
 layout:
   width: default
   title:
