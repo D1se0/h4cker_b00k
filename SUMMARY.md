@@ -49,6 +49,11 @@
 * [Bypass UAC (Windows)](windows/bypass-uac-windows.md)
 * [Comandos PowerShell Windows](windows/comandos-powershell-windows.md)
 
+***
+
+* [Proyectos con una Raspberry Pi](proyectos-con-una-raspberry-pi/README.md)
+  * [Nube local + Jellyfin (Docker) con Raspberry Pi](proyectos-con-una-raspberry-pi/nube-local-+-jellyfin-docker-con-raspberry-pi.md)
+
 ## HERRAMIENTAS/TÉCNICAS
 
 * [HackingWeb](herramientas-tecnicas/hackingweb/README.md)
