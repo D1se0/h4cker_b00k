@@ -89,7 +89,7 @@ Hecho esto tendremos que conectar la `Raspberry Pi` al `Router` mediante un cabl
 Instalado todos estos pasos, vamos a volver a nuestro PC, abriremos la terminal y ejecutaremos un `ping` al dominio que viene por defecto de la `Raspberry Pi` para saber la IP con la que esta asociada.
 
 ```shell
-ping raspberrypi.local
+ping -4 raspberrypi.local
 ```
 
 Con el `output` de este comando como ya mencione obtendremos la IP que tiene dicho `Raspberry Pi`, en mi caso sera la `192.168.1.167`.
@@ -168,7 +168,7 @@ Cuando ejecutemos esto nos podremos tirar unos `30 minutos` de instalacion, por 
 Puede ser por que la `IP` haya cambiado, ya que se toca de forma automatica configuraciones de `red`, por lo que nos iremos a otra terminal y le haremos un `ping` al dominio del dispositivo.
 
 ```shell
-ping raspberrypi.local
+ping -4 raspberrypi.local
 ```
 
 En mi caso me paso, y ahora tengo la `IP` asignada `192.168.1.168`, por lo que podremos cerrar la terminal anterior y entrar por la `web` con la `IP` directamente, ya que de forma secundaria se habra instalado.
