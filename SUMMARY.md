@@ -374,6 +374,7 @@
   * [PingCTF DockerLabs (Easy)](ctf/dockerlabs/pingctf-dockerlabs-easy.md)
   * [Waffy DockerLabs (Hard)](ctf/dockerlabs/waffy-dockerlabs-hard.md)
   * [SpiderPort DockerLabs (Intermediate)](ctf/dockerlabs/spiderport-dockerlabs-intermediate.md)
+  * [Aidor DockerLabs (Easy)](ctf/dockerlabs/aidor-dockerlabs-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
