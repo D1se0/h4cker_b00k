@@ -73,6 +73,7 @@
   * [CORS (Cross-Origin Resource Sharing)](herramientas-tecnicas/hackingweb/cors-cross-origin-resource-sharing/README.md)
     * [PortSwigger - CORS vulnerability with basic origin reflection](herramientas-tecnicas/hackingweb/cors-cross-origin-resource-sharing/portswigger-cors-vulnerability-with-basic-origin-reflection.md)
   * [CSRF (Cross-Site Request Forgery)](herramientas-tecnicas/hackingweb/csrf-cross-site-request-forgery.md)
+  * [Time-based Token Vulnerability Exploitation](herramientas-tecnicas/hackingweb/time-based-token-vulnerability-exploitation.md)
 * [Ingeniería Inversa](herramientas-tecnicas/ingenieria-inversa/README.md)
   * [Radare2](herramientas-tecnicas/ingenieria-inversa/radare2.md)
 * [Reconocimiento](herramientas-tecnicas/reconocimiento/README.md)
