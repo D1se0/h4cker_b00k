@@ -380,6 +380,7 @@
   * [Aidor DockerLabs (Easy)](ctf/dockerlabs/aidor-dockerlabs-easy.md)
   * [Crossfi DockerLabs (Intermediate)](ctf/dockerlabs/crossfi-dockerlabs-intermediate.md)
   * [Perrito Magico DockerLabs (Intermediate)](ctf/dockerlabs/perrito-magico-dockerlabs-intermediate.md)
+  * [Race DockerLabs (Intermediate)](ctf/dockerlabs/race-dockerlabs-intermediate.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
