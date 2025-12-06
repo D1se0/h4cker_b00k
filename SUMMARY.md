@@ -550,6 +550,7 @@
   * [CTF WinFake Easy](ctf/ctfs/ctf-winfake-easy.md)
   * [CTF Paralele Intermediate](ctf/ctfs/ctf-paralele-intermediate.md)
   * [CTF Smishing Intermediate](ctf/ctfs/ctf-smishing-intermediate.md)
+  * [CTF Tokenaso Intermediate](ctf/ctfs/ctf-tokenaso-intermediate.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
