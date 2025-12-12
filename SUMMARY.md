@@ -42,6 +42,7 @@
 ## Linux
 
 * [Determinar S.O. (Victima)](linux/determinar-s.o.-victima.md)
+* [Linux básico (BASH)](linux/linux-basico-bash.md)
 
 ## Windows
 
