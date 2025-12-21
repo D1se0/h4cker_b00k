@@ -122,6 +122,7 @@
 * [Hacking Wifi](herramientas-tecnicas/hacking-wifi/README.md)
   * [Reaver](herramientas-tecnicas/hacking-wifi/reaver.md)
   * [Aircrack-ng (Practica)](herramientas-tecnicas/hacking-wifi/aircrack-ng-practica.md)
+  * [Hacking WiFi (Wifi Pineapple Mark VII)](herramientas-tecnicas/hacking-wifi/hacking-wifi-wifi-pineapple-mark-vii.md)
 * [BOF](herramientas-tecnicas/bof/README.md)
   * [Introducción](herramientas-tecnicas/bof/introduccion.md)
   * [ret2win](herramientas-tecnicas/bof/ret2win.md)
