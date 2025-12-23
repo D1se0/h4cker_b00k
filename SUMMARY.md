@@ -54,6 +54,7 @@
 
 * [Nube local + Jellyfin (Docker) con Raspberry Pi](proyectos-con-una-raspberry-pi/nube-local-+-jellyfin-docker-con-raspberry-pi.md)
 * [Instalar Home Assistant + MQTT en Raspberry Pi](proyectos-con-una-raspberry-pi/instalar-home-assistant-+-mqtt-en-raspberry-pi.md)
+* [WireGuard (VPN) en una Raspberry Pi](proyectos-con-una-raspberry-pi/wireguard-vpn-en-una-raspberry-pi.md)
 
 ## HERRAMIENTAS/TÉCNICAS
 
