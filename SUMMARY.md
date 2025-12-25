@@ -259,6 +259,7 @@
   * [Gavel HackTheBox (Intermediate)](ctf/hackthebox/gavel-hackthebox-intermediate.md)
   * [MonitorsFour HackTheBox (Easy)](ctf/hackthebox/monitorsfour-hackthebox-easy.md)
   * [Eloquia HackTheBox (Insane)](ctf/hackthebox/eloquia-hackthebox-insane.md)
+  * [Page](ctf/hackthebox/page.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
