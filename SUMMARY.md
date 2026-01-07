@@ -393,6 +393,7 @@
   * [Jason DockerLabs (Intermediate)](ctf/dockerlabs/jason-dockerlabs-intermediate.md)
   * [Ekisese DockerLabs (Intermediate)](ctf/dockerlabs/ekisese-dockerlabs-intermediate.md)
   * [SocialHub DockerLabs (Hard)](ctf/dockerlabs/socialhub-dockerlabs-hard.md)
+  * [Rolarola DockerLabs (Intermediate)](ctf/dockerlabs/rolarola-dockerlabs-intermediate.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
