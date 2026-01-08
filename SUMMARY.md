@@ -93,6 +93,7 @@
   * [Port Forwarding](herramientas-tecnicas/post-explotacion/port-forwarding.md)
   * [A.D. Group Server Operators](herramientas-tecnicas/post-explotacion/a.d.-group-server-operators.md)
   * [Decrypt Firefox](herramientas-tecnicas/post-explotacion/decrypt-firefox.md)
+  * [Transferencia de archivos](herramientas-tecnicas/post-explotacion/transferencia-de-archivos.md)
 * [Criptología](herramientas-tecnicas/criptologia/README.md)
   * [Openssl bruteforce script](herramientas-tecnicas/criptologia/openssl-bruteforce-script.md)
 * [Phishing](herramientas-tecnicas/phishing/README.md)
