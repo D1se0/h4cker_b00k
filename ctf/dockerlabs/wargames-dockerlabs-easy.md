@@ -44,13 +44,13 @@ Comprometer completamente el sistema obteniendo acceso **root**, siguiendo una c
 
 ### Vulnerabilidades identificadas
 
-<figure><img src="../../.gitbook/assets/vuln1.png" alt=""><figcaption><p>Vuln Server Expuesto</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln1 (1).png" alt=""><figcaption><p>Vuln Server Expuesto</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/vuln2.png" alt=""><figcaption><p>Vuln Prompt Injection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln2 (1).png" alt=""><figcaption><p>Vuln Prompt Injection</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/vuln3.png" alt=""><figcaption><p>Vuln Contraseña debil "hash"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln3 (1).png" alt=""><figcaption><p>Vuln Contraseña debil "hash"</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/vuln4.png" alt=""><figcaption><p>Vuln SUID explotable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln4 (1).png" alt=""><figcaption><p>Vuln SUID explotable</p></figcaption></figure>
 
 ## Instalación
 
@@ -188,7 +188,7 @@ Resultado:
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260108093634.png" alt=""><figcaption><p>Vista Pagina web</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/vulnCard1.png" alt=""><figcaption><p>Info vuln Server expuesto</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vulnCard1 (1).png" alt=""><figcaption><p>Info vuln Server expuesto</p></figcaption></figure>
 
 A continuación, probamos a acceder al puerto `5000` desde el navegador:
 
@@ -210,7 +210,7 @@ AVAILABLE: help, list games, play <game>, logon Joshua
 
 El nombre `Joshua` es una referencia directa a la película _Wargames_, lo cual nos da una pista clara del enfoque de la máquina.
 
-<figure><img src="../../.gitbook/assets/vulnCard2.png" alt=""><figcaption><p>Info vuln prompt injection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vulnCard2 (1).png" alt=""><figcaption><p>Info vuln prompt injection</p></figcaption></figure>
 
 Dado que no parece una web tradicional, sino un servicio interactivo, decidimos conectarnos directamente mediante `netcat`:
 
@@ -359,7 +359,7 @@ SSH PASSWORD: 60a3f3cb2811ddcea679773863baabd1c78420a13b197b16725905230589bbdb
 
 Aquí obtenemos lo que parecen ser credenciales de acceso por `SSH`. La contraseña se presenta en forma de `hash`, por lo que procedemos a `crackearla`.
 
-<figure><img src="../../.gitbook/assets/vulnCard3.png" alt=""><figcaption><p>Info vuln contraseña debil "hash"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vulnCard3 (1).png" alt=""><figcaption><p>Info vuln contraseña debil "hash"</p></figcaption></figure>
 
 URL = [Hash Decrypt Page](https://hashes.com/en/decrypt/hash/?r=7)
 
@@ -394,7 +394,7 @@ Con esto confirmamos que hemos accedido correctamente como el usuario `joshua`.
 
 ## Escalate Privileges
 
-<figure><img src="../../.gitbook/assets/vulnCard4.png" alt=""><figcaption><p>Info vuln SUID explotable</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vulnCard4 (1).png" alt=""><figcaption><p>Info vuln SUID explotable</p></figcaption></figure>
 
 Una vez dentro, enumeramos los binarios con permisos **SUID** para identificar posibles vectores de escalada de privilegios:
 
