@@ -77,6 +77,7 @@
     * [PortSwigger - CORS vulnerability with basic origin reflection](herramientas-tecnicas/hackingweb/cors-cross-origin-resource-sharing/portswigger-cors-vulnerability-with-basic-origin-reflection.md)
   * [CSRF (Cross-Site Request Forgery)](herramientas-tecnicas/hackingweb/csrf-cross-site-request-forgery.md)
   * [Time-based Token Vulnerability Exploitation](herramientas-tecnicas/hackingweb/time-based-token-vulnerability-exploitation.md)
+  * [Webhooks para recepción de datos sin exponer tu red](herramientas-tecnicas/hackingweb/webhooks-para-recepcion-de-datos-sin-exponer-tu-red.md)
 * [Ingeniería Inversa](herramientas-tecnicas/ingenieria-inversa/README.md)
   * [Radare2](herramientas-tecnicas/ingenieria-inversa/radare2.md)
 * [Reconocimiento](herramientas-tecnicas/reconocimiento/README.md)
@@ -566,6 +567,7 @@
   * [CTF Paralele Intermediate](ctf/ctfs/ctf-paralele-intermediate.md)
   * [CTF Smishing Intermediate](ctf/ctfs/ctf-smishing-intermediate.md)
   * [CTF Tokenaso Intermediate](ctf/ctfs/ctf-tokenaso-intermediate.md)
+  * [Challenge Webhooks Easy](ctf/ctfs/challenge-webhooks-easy.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
