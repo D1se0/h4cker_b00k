@@ -38,6 +38,7 @@
 * [Exponer Puerto con Cloudflare Gratis](articulos/exponer-puerto-con-cloudflare-gratis.md)
 * [Crear Minecraft Vulnerable CTF (Docker)](articulos/crear-minecraft-vulnerable-ctf-docker.md)
 * [Configurar SSH en Switch](articulos/configurar-ssh-en-switch.md)
+* [Instalación Lazyvim en nvim + Plugin LSP (Debian)](articulos/instalacion-lazyvim-en-nvim-+-plugin-lsp-debian.md)
 
 ## Linux
 
