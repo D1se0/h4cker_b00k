@@ -399,6 +399,8 @@
   * [SocialHub DockerLabs (Hard)](ctf/dockerlabs/socialhub-dockerlabs-hard.md)
   * [Rolarola DockerLabs (Intermediate)](ctf/dockerlabs/rolarola-dockerlabs-intermediate.md)
   * [Wargames DockerLabs (Easy)](ctf/dockerlabs/wargames-dockerlabs-easy.md)
+* [PicoCTF](ctf/picoctf/README.md)
+  * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
