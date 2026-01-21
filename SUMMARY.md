@@ -40,6 +40,14 @@
 * [Configurar SSH en Switch](articulos/configurar-ssh-en-switch.md)
 * [Instalación Lazyvim en nvim + Plugin LSP (Debian)](articulos/instalacion-lazyvim-en-nvim-+-plugin-lsp-debian.md)
 
+## COMANDOS ÚTILES
+
+* [Fuzzing Web](comandos-utiles/fuzzing-web.md)
+* [Shell Management](comandos-utiles/shell-management.md)
+* [Privilege Escalation](comandos-utiles/privilege-escalation.md)
+* [Reconocimiento](comandos-utiles/reconocimiento.md)
+* [Web Assessment](comandos-utiles/web-assessment.md)
+
 ## Linux
 
 * [Determinar S.O. (Victima)](linux/determinar-s.o.-victima.md)
