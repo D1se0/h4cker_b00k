@@ -40,6 +40,10 @@
 * [Configurar SSH en Switch](articulos/configurar-ssh-en-switch.md)
 * [Instalación Lazyvim en nvim + Plugin LSP (Debian)](articulos/instalacion-lazyvim-en-nvim-+-plugin-lsp-debian.md)
 
+## PROYECTOS
+
+* [Password Manager Local (BETA)](proyectos/password-manager-local-beta.md)
+
 ## COMANDOS ÚTILES
 
 * [Fuzzing Web](comandos-utiles/fuzzing-web.md)
