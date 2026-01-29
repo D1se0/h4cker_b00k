@@ -279,6 +279,7 @@
   * [Context Fortress HackTheBox](ctf/hackthebox/context-fortress-hackthebox.md)
   * [Browsed HackTheBox (Intermediate)](ctf/hackthebox/browsed-hackthebox-intermediate.md)
   * [AirTouch HackTheBox (Intermediate)](ctf/hackthebox/airtouch-hackthebox-intermediate.md)
+  * [Overwatch HackTheBox (Intermediate)](ctf/hackthebox/overwatch-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
