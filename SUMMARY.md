@@ -418,6 +418,7 @@
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
   * [Cookie Monster Secret Recipe PicoCTF (Easy)](ctf/picoctf/cookie-monster-secret-recipe-picoctf-easy.md)
+  * [PIE TIME PicoCTF (Easy)](ctf/picoctf/pie-time-picoctf-easy.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)
