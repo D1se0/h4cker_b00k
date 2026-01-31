@@ -43,6 +43,7 @@
 ## PROYECTOS
 
 * [Password Manager Local (BETA)](proyectos/password-manager-local-beta.md)
+* [Command Vault (BETA)](proyectos/command-vault-beta.md)
 
 ## COMANDOS ÚTILES
 
