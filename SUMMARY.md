@@ -282,6 +282,7 @@
   * [AirTouch HackTheBox (Intermediate)](ctf/hackthebox/airtouch-hackthebox-intermediate.md)
   * [Overwatch HackTheBox (Intermediate)](ctf/hackthebox/overwatch-hackthebox-intermediate.md)
   * [Facts HackTheBox (Easy)](ctf/hackthebox/facts-hackthebox-easy.md)
+  * [Pterodactyl HackTheBox (Intermediate)](ctf/hackthebox/pterodactyl-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
