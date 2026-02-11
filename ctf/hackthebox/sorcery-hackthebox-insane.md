@@ -1,23 +1,9 @@
 ---
 hidden: true
 icon: flag
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
-# Page
+# Sorcery HackTheBox (Insane)
 
 ## Escaneo de puertos
 

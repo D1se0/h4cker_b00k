@@ -424,6 +424,7 @@
   * [PIE TIME 2 PicoCTF (Intermediate)](ctf/picoctf/pie-time-2-picoctf-intermediate.md)
   * [Flag Hunters PicoCTF (Easy)](ctf/picoctf/flag-hunters-picoctf-easy.md)
   * [Hashcrack PicoCTF (Easy)](ctf/picoctf/hashcrack-picoctf-easy.md)
+  * [Crack the Power PicoCTF (Intermediate)](ctf/picoctf/crack-the-power-picoctf-intermediate.md)
 * [BugBountyLabs](ctf/bugbountylabs/README.md)
   * [Reflection BugBountyLabs (Principiante)](ctf/bugbountylabs/reflection-bugbountylabs-principiante.md)
   * [Escape BugBountyLabs (Principiante)](ctf/bugbountylabs/escape-bugbountylabs-principiante.md)

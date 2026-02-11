@@ -1,19 +1,5 @@
 ---
 icon: reel
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # WireGuard (VPN) en una Raspberry Pi
