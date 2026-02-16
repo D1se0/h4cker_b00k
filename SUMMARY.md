@@ -416,6 +416,7 @@
   * [SocialHub DockerLabs (Hard)](ctf/dockerlabs/socialhub-dockerlabs-hard.md)
   * [Rolarola DockerLabs (Intermediate)](ctf/dockerlabs/rolarola-dockerlabs-intermediate.md)
   * [Wargames DockerLabs (Easy)](ctf/dockerlabs/wargames-dockerlabs-easy.md)
+  * [Profetas DockerLabs (Intermediate)](ctf/dockerlabs/profetas-dockerlabs-intermediate.md)
 * [PicoCTF](ctf/picoctf/README.md)
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
