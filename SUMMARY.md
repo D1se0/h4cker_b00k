@@ -261,6 +261,7 @@
   * [Certificate HackTheBox (Hard)](ctf/hackthebox/certificate-hackthebox-hard.md)
   * [Mirage HackTheBox (Hard)](ctf/hackthebox/mirage-hackthebox-hard.md)
   * [Giveback HackTheBox (Intermediate)](ctf/hackthebox/giveback-hackthebox-intermediate.md)
+  * [Guardian HackTheBox (Hard)](ctf/hackthebox/guardian-hackthebox-hard.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
