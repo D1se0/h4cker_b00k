@@ -397,6 +397,7 @@
   * [Wargames DockerLabs (Easy)](ctf/dockerlabs/wargames-dockerlabs-easy.md)
   * [Profetas DockerLabs (Intermediate)](ctf/dockerlabs/profetas-dockerlabs-intermediate.md)
   * [Internal DockerLabs (Easy)](ctf/dockerlabs/internal-dockerlabs-easy.md)
+  * [Talent DockerLabs (Intermediate)](ctf/dockerlabs/talent-dockerlabs-intermediate.md)
 * [PicoCTF](ctf/picoctf/README.md)
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
