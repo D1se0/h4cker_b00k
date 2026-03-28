@@ -267,6 +267,7 @@
   * [Principal HackTheBox (Intermediate)](ctf/hackthebox/principal-hackthebox-intermediate.md)
   * [Conversor HackTheBox (Easy)](ctf/hackthebox/conversor-hackthebox-easy.md)
   * [Support HackTheBox (Easy)](ctf/hackthebox/support-hackthebox-easy.md)
+  * [Snapped HackTheBox (Hard)](ctf/hackthebox/snapped-hackthebox-hard.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
