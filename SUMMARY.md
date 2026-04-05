@@ -409,6 +409,7 @@
   * [CuentaAtrás DockerLabs (Intermediate)](ctf/dockerlabs/cuentaatras-dockerlabs-intermediate.md)
   * [Flasky DockerLabs (Intermediate)](ctf/dockerlabs/flasky-dockerlabs-intermediate.md)
   * [SECorNOTsec DockerLabs (Intermediate)](ctf/dockerlabs/secornotsec-dockerlabs-intermediate.md)
+  * [NightBlade DockerLabs (Intermediate)](ctf/dockerlabs/nightblade-dockerlabs-intermediate.md)
 * [PicoCTF](ctf/picoctf/README.md)
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
