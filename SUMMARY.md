@@ -63,6 +63,7 @@
 * [Comandos Windows S.0.](windows/comandos-windows-s.0..md)
 * [Bypass UAC (Windows)](windows/bypass-uac-windows.md)
 * [Comandos PowerShell Windows](windows/comandos-powershell-windows.md)
+* [Solución Ping Windows](windows/solucion-ping-windows.md)
 
 ## Proyectos con una Raspberry Pi
 
