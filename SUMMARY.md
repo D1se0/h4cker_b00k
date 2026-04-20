@@ -272,6 +272,7 @@
   * [Browsed HackTheBox (Intermediate)](ctf/hackthebox/browsed-hackthebox-intermediate.md)
   * [DarkZero HackTheBox (Hard)](ctf/hackthebox/darkzero-hackthebox-hard.md)
   * [Eighteen HackTheBox (Easy)](ctf/hackthebox/eighteen-hackthebox-easy.md)
+  * [AirTouch HackTheBox (Intermediate)](ctf/hackthebox/airtouch-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
