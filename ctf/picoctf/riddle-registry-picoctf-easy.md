@@ -85,7 +85,7 @@ Al abrir el PDF observamos un documento aparentemente normal, con ciertas línea
 
 Si intentamos seleccionar el texto oculto, comprobamos que no contiene información relevante:
 
-<figure><img src="../../.gitbook/assets/Pasted image 20260226110047 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20260226110047.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260226110057.png" alt=""><figcaption></figcaption></figure>
 

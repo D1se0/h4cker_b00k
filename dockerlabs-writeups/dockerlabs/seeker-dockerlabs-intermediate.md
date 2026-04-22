@@ -157,7 +157,7 @@ URL = http://crosswords.5eek3r.dl/
 
 Veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (173) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (172) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si inspeccionamos la pagina y bajamos abajo del todo veremos lo siguiente:
 

@@ -343,7 +343,7 @@ Sabiendo esto, procedemos a realizar tareas de **enumeración de usuarios y plug
 
 ## Enumeración con WPScan
 
-<figure><img src="../../.gitbook/assets/vuln2Card_cuentaAtras (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln2Card_cuentaAtras.png" alt=""><figcaption></figcaption></figure>
 
 Para enumerar usuarios y plugins utilizamos la herramienta `wpscan`.
 

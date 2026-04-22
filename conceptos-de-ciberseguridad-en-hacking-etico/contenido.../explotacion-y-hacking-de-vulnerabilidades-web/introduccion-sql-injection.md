@@ -60,7 +60,7 @@ Aqui lo que estamos haciendo es con el operador `UNION` unir lo que venga de det
 
 Y con esto nos va a dar un error, pero diferente, ya que nos esta diciendo que no coincide el numero de columnas de la primera consulta con la consulta que nosotros le estamos indicando, por lo que como no sabemos cuantas columnas hay, podremos mediante injeccion de comandos de `sql` descubrir, la columna exacta en la que poder injectar esta consulta que nosotros estamos haciendo.
 
-<figure><img src="../../../.gitbook/assets/image (71) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (70) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y para ir descubriendo esto, se tiene que ir haciendo poco a poco lo siguiente.
 

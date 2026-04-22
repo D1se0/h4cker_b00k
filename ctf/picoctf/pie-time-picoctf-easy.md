@@ -10,7 +10,7 @@ icon: flag
 
 <figure><img src="../../.gitbook/assets/trayectoria_pie_time.png" alt=""><figcaption></figcaption></figure>
 
-### Descripción[^1]
+### Descripción
 
 **PIE TIME** es un reto de **ingeniería inversa y explotación binaria** centrado en la manipulación del flujo de ejecución de un programa compilado con **PIE (Position Independent Executable)**. El binario permite al usuario introducir una dirección de memoria arbitraria que posteriormente es ejecutada como puntero a función, lo que conduce a una **ejecución de código arbitraria**.
 
@@ -133,7 +133,7 @@ Esto implica que **cualquier dirección válida dentro del binario puede ser eje
 
 ## Control Flow Hijack (Binary)
 
-<figure><img src="../../.gitbook/assets/vuln1Card_Pie_time (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln1Card_Pie_time.png" alt=""><figcaption></figcaption></figure>
 
 Dado que el binario está compilado con **PIE**, las direcciones de memoria cambian en cada ejecución. Sin embargo, el **offset entre funciones permanece constante**.
 
@@ -280,5 +280,3 @@ Con esto confirmamos que la explotación funciona correctamente también en remo
 ```
 picoCTF{b4s1c_p051t10n_1nd3p3nd3nc3_28a46dcd}
 ```
-
-[^1]: 

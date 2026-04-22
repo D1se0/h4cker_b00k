@@ -459,7 +459,7 @@ Se añaden reglas en BurpSuite para:
 * Reescribir cabeceras `Location`
 * Mantener la navegación dentro del entorno accesible
 
-<figure><img src="../../.gitbook/assets/Pasted image 20260405100641 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20260405100641.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260405100650.png" alt=""><figcaption></figcaption></figure>
 

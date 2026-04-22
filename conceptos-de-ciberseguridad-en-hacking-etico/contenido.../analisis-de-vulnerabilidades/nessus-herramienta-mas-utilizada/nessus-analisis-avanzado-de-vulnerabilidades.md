@@ -44,7 +44,7 @@ Lo unico que diferencia al `Escaneo avanzado` es la seccion que se llama `Dynami
 
 Dejando esto de lado, si volvemos al escaneo que teniamos en ejecuccion, una vez que haya terminado, podremos exportar dichos resultados de una forma muy sencilla y que esteticamente se veria genial, ya que esto puede servir como informe de auditoria para una empresa realmente.
 
-<figure><img src="../../../../.gitbook/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para ello le podremos dar en la opcion de `Report` -> `HTML` -> `Generating Report` -> Y con esto ya se nos habria generado un reporte sobre las 2 maquinas con sus vulnerabilidades, con toda la informacion detallada de cada una de ellas, explicando absolutamente todo, esto puede servir para presentarlo en una organizacion a nivel real.
 

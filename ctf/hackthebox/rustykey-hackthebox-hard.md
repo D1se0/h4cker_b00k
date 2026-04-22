@@ -437,11 +437,11 @@ Veremos que ha funcionado y nos saca una contraseña solamente llamada `Rusty88!
 
 Si buscamos por `1125` en el buscador de `BloodHound` nos aparecera este equipo con dicho identificador:
 
-<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-10-15 113318 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-10-15 113318.png" alt=""><figcaption></figcaption></figure>
 
 Y este equipo tiene estos privilegios asociados de `AddSelf` al grupo llamado `HELPDESK`.
 
-<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-10-15 113259 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-10-15 113259.png" alt=""><figcaption></figcaption></figure>
 
 Con estos privilegios y sabiendo que tenemos la contraseña de dicho equipo, podremos utilizar su autenticacion aprovechando estos privilegios respecto a dicho grupo.
 

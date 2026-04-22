@@ -33,7 +33,7 @@ A continuación se enumeran las vulnerabilidades explotadas durante el compromis
 
 <figure><img src="../../.gitbook/assets/card1Rolarola.png" alt=""><figcaption><p>Vulnerabilidad RCE</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/card2Rolarola (1).png" alt=""><figcaption><p>Vulnerabilidad ".git" expuesto</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/card2Rolarola.png" alt=""><figcaption><p>Vulnerabilidad ".git" expuesto</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/card3Rolarola.png" alt=""><figcaption><p>Vulnerabilidad pickle deserialization (python)</p></figcaption></figure>
 

@@ -50,7 +50,7 @@ Si nosotros por ejemplo pinchamos en cualquier apartado de la pagina con el `Bur
 
 Por lo que vemos el `uid` va en orden a las cuentas que se han ido creando y podremos deducir que el primer usuario de la pagina podria ser el administrador, por lo que si cambiamos el `uid` donde pone `42` que es nuestro identificador por el `1` a ver que usuario somos.
 
-<figure><img src="../../../../.gitbook/assets/image (117) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (116) (1).png" alt=""><figcaption></figcaption></figure>
 
 Le daremos a `Forward` y dejaremos de interceptar, por lo que si nos vamos a la pagina y vemos que usuario somos:
 

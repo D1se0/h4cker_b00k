@@ -618,9 +618,7 @@ De esta forma, accedemos correctamente como usuario autenticado dentro del panel
 
 Investigando un poco más, observamos que con este `rol` inicial no tenemos demasiadas capacidades. Sin embargo, si desde el apartado de `rol` modificamos el valor a `admin`, comprobamos que ahora sí se habilitan funcionalidades adicionales.
 
-
-
-<figure><img src="../../.gitbook/assets/Pasted image 20260120163705 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20260120163705.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260120163715.png" alt=""><figcaption></figcaption></figure>
 

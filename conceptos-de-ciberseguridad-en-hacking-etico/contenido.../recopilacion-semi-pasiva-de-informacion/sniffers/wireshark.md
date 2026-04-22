@@ -64,7 +64,7 @@ Donde pone `Display Filter` por ejemplo ponemos que nos filtre por `String` y bu
 
 Si pinchamos en uno, nos pondra que la busqueda es de tipo `(query)`:
 
-<figure><img src="../../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si desplegamos `Domain Name System (query)` veremos que si bajamos un poco es de `tipo A` por lo que es lo que estamos buscando ya que significa que podremos acceder a la petición a ese servidor web de dicho dominio y que nos devuelva la pagina web que queremos renderizar en nuestro navegador.
 

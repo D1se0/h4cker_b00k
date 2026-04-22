@@ -238,7 +238,7 @@ Esta información es crucial, ya que nos indica que el sistema utiliza la librer
 
 ## CVE-2026-29000
 
-<figure><img src="../../.gitbook/assets/vuln1Card_principal (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln1Card_principal.png" alt=""><figcaption></figcaption></figure>
 
 #### Identificación de la Vulnerabilidad
 
@@ -511,7 +511,7 @@ A partir de aquí podemos continuar investigando el panel para encontrar nuevas 
 
 ## Escalate user svc-deploy
 
-<figure><img src="../../.gitbook/assets/vuln2Card_principal (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln2Card_principal.png" alt=""><figcaption></figcaption></figure>
 
 Si accedemos a la sección **Users**, veremos varios usuarios registrados en el sistema.
 
