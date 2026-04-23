@@ -61,6 +61,8 @@ Tras conseguir acceso inicial como usuario `microjoan`, la escalada a privilegio
 
 <figure><img src="../../.gitbook/assets/vuln2_blind.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/vuln3_blind.png" alt=""><figcaption></figcaption></figure>
+
 ## Escaneo de puertos
 
 Comenzamos con un reconocimiento inicial para identificar servicios expuestos en la máquina objetivo.
