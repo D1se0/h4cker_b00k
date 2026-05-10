@@ -274,6 +274,7 @@
   * [Eighteen HackTheBox (Easy)](ctf/hackthebox/eighteen-hackthebox-easy.md)
   * [AirTouch HackTheBox (Intermediate)](ctf/hackthebox/airtouch-hackthebox-intermediate.md)
   * [Sorcery HackTheBox (Insane)](ctf/hackthebox/sorcery-hackthebox-insane.md)
+  * [Overwatch HackTheBox (Intermediate)](ctf/hackthebox/overwatch-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
