@@ -417,6 +417,7 @@
   * [NightBlade DockerLabs (Intermediate)](ctf/dockerlabs/nightblade-dockerlabs-intermediate.md)
   * [BigWear DockerLabs (Intermediate)](ctf/dockerlabs/bigwear-dockerlabs-intermediate.md)
   * [Autoescuela DockerLabs (Easy)](ctf/dockerlabs/autoescuela-dockerlabs-easy.md)
+  * [Duque DockerLabs (Easy)](ctf/dockerlabs/duque-dockerlabs-easy.md)
 * [PicoCTF](ctf/picoctf/README.md)
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
