@@ -276,6 +276,7 @@
   * [Sorcery HackTheBox (Insane)](ctf/hackthebox/sorcery-hackthebox-insane.md)
   * [Overwatch HackTheBox (Intermediate)](ctf/hackthebox/overwatch-hackthebox-intermediate.md)
   * [Pterodactyl HackTheBox (Intermediate)](ctf/hackthebox/pterodactyl-hackthebox-intermediate.md)
+  * [MonitorsFour HackTheBox (Easy)](ctf/hackthebox/monitorsfour-hackthebox-easy.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
