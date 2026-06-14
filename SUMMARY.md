@@ -279,6 +279,7 @@
   * [MonitorsFour HackTheBox (Easy)](ctf/hackthebox/monitorsfour-hackthebox-easy.md)
   * [Interpreter HackTheBox (Intermediate)](ctf/hackthebox/interpreter-hackthebox-intermediate.md)
   * [Facts HackTheBox (Easy)](ctf/hackthebox/facts-hackthebox-easy.md)
+  * [VariaType HackTheBox (Intermediate)](ctf/hackthebox/variatype-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
