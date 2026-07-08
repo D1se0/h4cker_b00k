@@ -498,6 +498,7 @@
   * [Facts HackTheBox (Easy)](ctf/hackthebox/facts-hackthebox-easy.md)
   * [VariaType HackTheBox (Intermediate)](ctf/hackthebox/variatype-hackthebox-intermediate.md)
   * [NanoCorp HackTheBox (Hard)](ctf/hackthebox/nanocorp-hackthebox-hard.md)
+  * [WingData HackTheBox (Easy)](ctf/hackthebox/wingdata-hackthebox-easy.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
