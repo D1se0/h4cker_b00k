@@ -503,6 +503,7 @@
   * [Orion HackTheBox (Easy)](ctf/hackthebox/orion-hackthebox-easy.md)
   * [Abducted HackTheBox (Intermediate)](ctf/hackthebox/abducted-hackthebox-intermediate.md)
   * [Nexus HackTheBox (Easy)](ctf/hackthebox/nexus-hackthebox-easy.md)
+  * [Fireflow HackTheBox (Intermediate)](ctf/hackthebox/fireflow-hackthebox-intermediate.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
