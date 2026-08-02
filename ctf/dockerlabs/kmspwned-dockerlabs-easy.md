@@ -334,6 +334,7 @@ Ya somos `root`. Leemos la flag final:
 
 > root.txt
 
+
 ```
 flag{r00t_cr0n_job_3sc4l4t10n_pwn3d}
 ```
