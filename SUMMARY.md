@@ -651,6 +651,7 @@
   * [Kmspwned DockerLabs (Easy)](ctf/dockerlabs/kmspwned-dockerlabs-easy.md)
   * [Baluhome DockerLabs (Intermediate)](ctf/dockerlabs/baluhome-dockerlabs-intermediate.md)
   * [ApkAdmin DockerLabs (Easy)](ctf/dockerlabs/apkadmin-dockerlabs-easy.md)
+  * [Gotham DockerLabs (Easy)](ctf/dockerlabs/gotham-dockerlabs-easy.md)
 * [PicoCTF](ctf/picoctf/README.md)
   * [STTI1 PicoCTF (Easy)](ctf/picoctf/stti1-picoctf-easy.md)
   * [STTI2 PicoCTF (Intermediate)](ctf/picoctf/stti2-picoctf-intermediate.md)
