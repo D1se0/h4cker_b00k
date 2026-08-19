@@ -116,7 +116,17 @@
 
 ## Hacking con IA
 
-* [Page 1](hacking-con-ia/page-1.md)
+* [Hacking Ético con IA](hacking-con-ia/README.md)
+* [¿Por qué usar IA para Bug Bounty?](hacking-con-ia/por-que-usar-ia-bugbounty.md)
+* [Instalación de Claude Code en Linux](hacking-con-ia/instalacion-claude-code-linux.md)
+* [Estructura de proyecto y archivos de contexto](hacking-con-ia/estructura-de-proyecto.md)
+* [Qué es un CLAUDE.md y cómo escribir el tuyo](hacking-con-ia/que-es-claude-md.md)
+* [PROGRESS.md — memoria de trabajo](hacking-con-ia/progress-md.md)
+* [RECON.md — mapa de superficie](hacking-con-ia/recon-md.md)
+* [Flujo de trabajo completo, paso a paso](hacking-con-ia/flujo-de-trabajo-completo.md)
+* [Agentes en paralelo](hacking-con-ia/agentes-en-paralelo.md)
+* [Prompts clave, plantilla por plantilla](hacking-con-ia/prompts-clave.md)
+* [Ideas y automatizaciones adicionales](hacking-con-ia/ideas-y-automatizaciones.md)
 
 ## HERRAMIENTAS/TÉCNICAS
 
