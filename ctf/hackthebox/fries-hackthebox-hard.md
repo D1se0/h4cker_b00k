@@ -220,7 +220,7 @@ nano /etc/hosts
 
 Si entramos dentro de dicho `subdominio` veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 112815 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 112815.png" alt=""><figcaption></figcaption></figure>
 
 Veremos un `PgAdmin` el `login`, si probamos las credenciales encontradas no tendremos suerte, pero si reutilizamos contraseñas y ponemos la del usuario que ya tenemos de `HTB`.
 
@@ -233,11 +233,7 @@ Veremos que si funciona y estaremos dentro:
 
 <figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 112958.png" alt=""><figcaption></figcaption></figure>
 
-
-
 Si abrimos la `DDBB` nos pedira la contraseña de `root`, ponemos la que obtuvimos desde `gitea` que seria `PsqLR00tpaSS11` y veremos que nos despliega toda la informacion de la `DDBB`.
-
-
 
 <figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 113112.png" alt=""><figcaption></figcaption></figure>
 

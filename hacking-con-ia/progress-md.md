@@ -128,3 +128,7 @@ recursos propios excluidos por CLAUDE.md).
 ## 🔄 Cómo mantenerlo actualizado sin esfuerzo
 
 No lo actualizo yo a mano: se lo pido directamente a Claude como parte del propio flujo de trabajo (ver [Flujo de trabajo completo](flujo-de-trabajo-completo.md) y [Prompts clave](prompts-clave.md)) — en el `CLAUDE.md` dejo indicado que cualquier hallazgo confirmado se anota en `PROGRESS.md` **en el momento en que se confirma**, no al final de la sesión, precisamente para no perderlo si la sesión se corta a mitad de camino.
+
+### Plantilla descargable PROGRESS.md
+
+{% file src="../.gitbook/assets/PROGRESS.md" %}

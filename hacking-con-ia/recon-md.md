@@ -122,3 +122,7 @@ siguiente fase de pruebas de IDOR sobre la API móvil.
 ## 🎯 Cómo se usa en la práctica
 
 Le pido a los agentes de recon (ver [Agentes en paralelo](agentes-en-paralelo.md)) que devuelvan su resumen a la sesión principal, y es la propia sesión principal la que decide qué se apunta en `RECON.md` frente a qué merece subir directamente a `PROGRESS.md` como hallazgo o pendiente urgente — así se evita que `RECON.md` se convierta en un volcado desordenado de todo lo que hizo cada agente.
+
+### Plantilla descargable RECON.md
+
+{% file src="../.gitbook/assets/RECON.md" %}

