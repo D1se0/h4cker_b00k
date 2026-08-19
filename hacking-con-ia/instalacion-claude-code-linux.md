@@ -1,11 +1,33 @@
+---
+icon: claude
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Instalación de Claude Code en Linux
 
 > 💡 Antes de nada: comprueba la documentación oficial más reciente en [docs.claude.com](https://docs.claude.com), ya que los pasos de instalación pueden cambiar. Lo de abajo son las formas habituales de instalarlo en Linux (probado en Kali).
 
 ## Requisitos previos
 
-- **Node.js** (versión reciente, LTS recomendada) y `npm`.
-- Una cuenta de Claude con **plan Pro o Max** para poder usar Claude Code con límites de uso razonables (ver aviso más abajo).
+* **Node.js** (versión reciente, LTS recomendada) y `npm`.
+* Una cuenta de Claude con **plan Pro o Max** para poder usar Claude Code con límites de uso razonables (ver aviso más abajo).
 
 ## Opción 1 — Instalación vía npm (la más habitual)
 
@@ -66,8 +88,8 @@ Sustituyendo `<ID>` por el que copiaste con `/status` en la sesión original.
 
 Esto es especialmente útil en Bug Bounty porque:
 
-- Puedes cerrar el terminal, apagar el ordenador, y retomar exactamente el mismo hilo de investigación días después sin perder el razonamiento intermedio que Claude ya había hecho.
-- Te permite tener **conversaciones distintas por programa** (una por cada empresa/scope que estés auditando) y saltar entre ellas por ID sin mezclarlas.
+* Puedes cerrar el terminal, apagar el ordenador, y retomar exactamente el mismo hilo de investigación días después sin perder el razonamiento intermedio que Claude ya había hecho.
+* Te permite tener **conversaciones distintas por programa** (una por cada empresa/scope que estés auditando) y saltar entre ellas por ID sin mezclarlas.
 
 > 💡 **Tip**: lleva un pequeño registro propio (puede ser tan simple como una nota) de qué ID de conversación corresponde a qué programa, especialmente si trabajas varios a la vez.
 

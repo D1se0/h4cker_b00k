@@ -1,3 +1,25 @@
+---
+icon: diagram-sankey
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Flujo de trabajo completo, paso a paso
 
 Este es mi ciclo real de trabajo con Claude Code para un programa de Bug Bounty, de principio a fin. Cada paso incluye el prompt exacto (o muy cercano al exacto) que uso.
@@ -38,9 +60,9 @@ reportar
 
 ### Por qué funciona este prompt
 
-- **`/goal`**: en Claude Code, prefijar con `/goal` (o el modificador equivalente de "modo objetivo/autónomo" de tu versión) le indica que trabaje de forma continuada hacia un objetivo, **sin pararse a preguntar en cada paso individual** — clave para dejarlo trabajando de forma semi-autónoma en vez de tener que aprobar cada acción una por una.
-- **"lanza distintos agentes"**: activa explícitamente la metodología de [subagentes en paralelo](agentes-en-paralelo.md) descrita en el `CLAUDE.md` del programa.
-- **"debes parar hasta encontrar alguna digna de reportar"**: fija la condición de parada — no quiero que siga indefinidamente ni que se pare al primer indicio dudoso, sino que continúe investigando hasta dar con algo que, tras verificación básica, merezca pasar a la fase de reproducción manual.
+* **`/goal`**: en Claude Code, prefijar con `/goal` (o el modificador equivalente de "modo objetivo/autónomo" de tu versión) le indica que trabaje de forma continuada hacia un objetivo, **sin pararse a preguntar en cada paso individual** — clave para dejarlo trabajando de forma semi-autónoma en vez de tener que aprobar cada acción una por una.
+* **"lanza distintos agentes"**: activa explícitamente la metodología de [subagentes en paralelo](agentes-en-paralelo.md) descrita en el `CLAUDE.md` del programa.
+* **"debes parar hasta encontrar alguna digna de reportar"**: fija la condición de parada — no quiero que siga indefinidamente ni que se pare al primer indicio dudoso, sino que continúe investigando hasta dar con algo que, tras verificación básica, merezca pasar a la fase de reproducción manual.
 
 > 💡 Todo el detalle de "qué está permitido hacer sin preguntar" y "qué debe seguir preguntando" no vive en este prompt — vive en el `CLAUDE.md`, que Claude ya ha leído al arrancar. Este prompt es corto precisamente porque todo el contexto pesado ya está en los archivos del proyecto.
 
@@ -76,10 +98,10 @@ fácil de reproducir por alguien que no entienda mucho
 
 ### Por qué funciona este prompt
 
-- **`<PATH_IMAGES>`**: le doy la ruta exacta (`images/`) para que inspeccione directamente el contenido visual de cada captura — no tengo que describirle qué hay en cada imagen, Claude las analiza directamente.
-- **"todo en inglés"**: la mayoría de programas y triagers internacionales trabajan en inglés — redactar directamente en el idioma final ahorra una fase de traducción posterior.
-- **"que sigas la estructura de example/"**: aquí es donde `example/report_example.md` entra en juego — le da a Claude un patrón de estilo y estructura ya validado por mí anteriormente, para que el nuevo reporte mantenga el mismo nivel de detalle y el mismo formato que reportes anteriores.
-- **"fácil de reproducir por alguien que no entienda mucho"**: refuerza explícitamente el principio de [Anatomía de un buen reporte](../bugbounty/04-como-escribir-reportes/anatomia-de-un-buen-reporte.md) — nada de dar cosas por sabidas.
+* **`<PATH_IMAGES>`**: le doy la ruta exacta (`images/`) para que inspeccione directamente el contenido visual de cada captura — no tengo que describirle qué hay en cada imagen, Claude las analiza directamente.
+* **"todo en inglés"**: la mayoría de programas y triagers internacionales trabajan en inglés — redactar directamente en el idioma final ahorra una fase de traducción posterior.
+* **"que sigas la estructura de example/"**: aquí es donde `example/report_example.md` entra en juego — le da a Claude un patrón de estilo y estructura ya validado por mí anteriormente, para que el nuevo reporte mantenga el mismo nivel de detalle y el mismo formato que reportes anteriores.
+* **"fácil de reproducir por alguien que no entienda mucho"**: refuerza explícitamente el principio de [Anatomía de un buen reporte](../bugbounty/04-como-escribir-reportes/anatomia-de-un-buen-reporte.md) — nada de dar cosas por sabidas.
 
 ## 6️⃣ Pedir que rellene los campos exactos de la plataforma
 
@@ -94,7 +116,7 @@ con el nombre de la vulnerabilidad correspondiente para no confundirme
 
 ### Cómo uso esto en la práctica
 
-Le pego literalmente la estructura de campos vacía del formulario de la plataforma (título, tipo, endpoint, payload, impacto, etc. — ver las [plantillas de plataforma](../bugbounty/05-plataformas/README.md) de este manual) para que Claude sepa exactamente qué campos existen y cómo trocear el contenido del reporte ya redactado entre ellos. El resultado se deposita en `temp/vulnN/`, con un archivo por bloque de campos (ver [Estructura de proyecto](estructura-de-proyecto.md#-carpetas-temp--campos-ya-troceados-por-plataforma)), listo para copiar/pegar directamente en cada caja de texto del formulario web.
+Le pego literalmente la estructura de campos vacía del formulario de la plataforma (título, tipo, endpoint, payload, impacto, etc. — ver las [plantillas de plataforma](../bugbounty/05-plataformas/) de este manual) para que Claude sepa exactamente qué campos existen y cómo trocear el contenido del reporte ya redactado entre ellos. El resultado se deposita en `temp/vulnN/`, con un archivo por bloque de campos (ver [Estructura de proyecto](estructura-de-proyecto.md#-carpetas-temp--campos-ya-troceados-por-plataforma)), listo para copiar/pegar directamente en cada caja de texto del formulario web.
 
 ## 7️⃣ Envío manual — siempre decisión humana
 
@@ -104,6 +126,6 @@ Pulsar "Enviar" en la plataforma **lo hago siempre yo, manualmente**. Ni Claude 
 
 Una vez enviado el reporte, actualizo el estado en `PROGRESS.md` (o le pido a Claude que lo haga) y vuelvo a lanzar el mismo `promptInicio.txt` para seguir investigando el resto del scope.
 
----
+***
 
 > 📌 **Resumen de la filosofía**: la IA automatiza recon, exploración e investigación en paralelo, y acelera muchísimo la redacción y el formateo del reporte final — pero **la verificación del hallazgo y el envío del reporte siguen siendo siempre pasos manuales y humanos**, precisamente los dos puntos donde un error tiene consecuencias reales.

@@ -1,12 +1,16 @@
+---
+icon: mobile
+---
+
 # Análisis de apps móviles (Android/iOS)
 
 Las apps móviles son una fuente enorme de hallazgos porque **el binario que descargas contiene, literalmente, parte del "código fuente"** de cómo la app habla con el backend — incluyendo, a veces, cosas que nunca deberían estar ahí (tokens, claves de API, endpoints internos).
 
 ## 📦 Conseguir el APK/IPA
 
-- Descarga directa desde tiendas alternativas públicas (APKPure, APKMirror, etc.) sin necesidad de cuenta.
-- Extracción desde un dispositivo/emulador donde la tengas instalada.
-- El propio Google Play, si tienes cuenta, con herramientas de extracción de APK instalado.
+* Descarga directa desde tiendas alternativas públicas (APKPure, APKMirror, etc.) sin necesidad de cuenta.
+* Extracción desde un dispositivo/emulador donde la tengas instalada.
+* El propio Google Play, si tienes cuenta, con herramientas de extracción de APK instalado.
 
 ## 🔓 Desempaquetar
 
@@ -18,9 +22,9 @@ unzip xapk_extracted/com.empresa.app.apk -d apk_base
 
 A partir de aquí tienes acceso a:
 
-- `AndroidManifest.xml` → permisos, actividades, deep links.
-- `assets/` y `res/` → recursos, y en apps React Native, el **bundle de JavaScript** (`index.android.bundle`).
-- `classes.dex` → código compilado, descompilable con `jadx`/`apktool`.
+* `AndroidManifest.xml` → permisos, actividades, deep links.
+* `assets/` y `res/` → recursos, y en apps React Native, el **bundle de JavaScript** (`index.android.bundle`).
+* `classes.dex` → código compilado, descompilable con `jadx`/`apktool`.
 
 ## 🔍 Buscar secretos en texto plano
 
@@ -45,9 +49,9 @@ Para ver qué hace la app realmente al usarla:
 
 ## ✅ Checklist rápida para apps móviles
 
-- [ ] ¿Hay tokens/claves hardcodeadas en el bundle o en recursos?
-- [ ] ¿El certificate pinning está bien implementado (o se puede saltar)?
-- [ ] ¿Los endpoints usados por la app validan igual que la versión web (o son más laxos)?
-- [ ] ¿Hay deep links (`intent-filter`) que se puedan abusar?
-- [ ] ¿Se guardan datos sensibles sin cifrar en almacenamiento local (`SharedPreferences`, `Keychain`)?
-- [ ] ¿La app confía ciegamente en datos que le manda el backend sin validarlos (o viceversa)?
+* [ ] ¿Hay tokens/claves hardcodeadas en el bundle o en recursos?
+* [ ] ¿El certificate pinning está bien implementado (o se puede saltar)?
+* [ ] ¿Los endpoints usados por la app validan igual que la versión web (o son más laxos)?
+* [ ] ¿Hay deep links (`intent-filter`) que se puedan abusar?
+* [ ] ¿Se guardan datos sensibles sin cifrar en almacenamiento local (`SharedPreferences`, `Keychain`)?
+* [ ] ¿La app confía ciegamente en datos que le manda el backend sin validarlos (o viceversa)?

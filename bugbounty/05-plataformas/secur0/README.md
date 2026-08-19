@@ -1,4 +1,8 @@
-# Secur0
+---
+icon: eyes
+---
+
+# Visión general
 
 ## 🧭 Qué es
 
@@ -13,9 +17,10 @@ Esto significa que en Secur0 **tú mismo repartes el contenido de tu reporte ent
 ## 🧮 La calculadora CVSS de Secur0
 
 Secur0 permite:
-- **Omitir criticidad** (dejar que el equipo del programa la evalúe).
-- **Calcular automáticamente** rellenando el vector CVSS v4.0 completo (Explotabilidad, Impacto en sistema vulnerable, Impacto en sistema subsiguiente) — es la opción recomendada si ya sabes justificar cada métrica (ver [Cálculo de severidad](../../04-como-escribir-reportes/calculo-cvss.md)).
-- **Añadir manualmente** un valor si ya tienes el vector calculado por otro medio.
+
+* **Omitir criticidad** (dejar que el equipo del programa la evalúe).
+* **Calcular automáticamente** rellenando el vector CVSS v4.0 completo (Explotabilidad, Impacto en sistema vulnerable, Impacto en sistema subsiguiente) — es la opción recomendada si ya sabes justificar cada métrica (ver [Cálculo de severidad](../../04-como-escribir-reportes/calculo-cvss.md)).
+* **Añadir manualmente** un valor si ya tienes el vector calculado por otro medio.
 
 ## 👥 Colaboradores y reparto de bounty
 

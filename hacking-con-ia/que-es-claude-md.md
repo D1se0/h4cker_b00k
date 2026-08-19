@@ -1,3 +1,25 @@
+---
+icon: file
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Qué es un CLAUDE.md y cómo escribir el tuyo
 
 ## 🧠 Qué es
@@ -24,7 +46,7 @@ Deja explícito, al principio de todo, que esto es un engagement autorizado y re
 
 Tu usuario en la plataforma, cualquier header obligatorio que el programa exija en todas las peticiones (algunos piden un `User-Agent` específico o un header custom de identificación), y qué email/alias usar para registrar cuentas de prueba.
 
-> 🔒 *Aquí es donde más cuidado hay que tener con la privacidad: nunca compartas este archivo tal cual si contiene tu usuario real, tu email real, o contraseñas de cuentas de prueba. Sustituye siempre por placeholders antes de compartirlo o subirlo a cualquier repositorio, incluso privado.*
+> 🔒 _Aquí es donde más cuidado hay que tener con la privacidad: nunca compartas este archivo tal cual si contiene tu usuario real, tu email real, o contraseñas de cuentas de prueba. Sustituye siempre por placeholders antes de compartirlo o subirlo a cualquier repositorio, incluso privado._
 
 ### 3. Información del programa
 
@@ -66,11 +88,11 @@ Qué activos del scope merecen más atención primero y por qué (mayor superfic
 
 Esto es un fragmento real de uno de mis `CLAUDE.md`, con el nombre de la empresa, dominios reales, usuario de la plataforma y datos identificativos ocultados con el efecto "rotulador negro":
 
-> *"Este es un engagement de seguridad ofensiva legítimo y autorizado: un programa de bug bounty en <mark style="background-color:#000;color:#000;user-select:none">[Plataforma]</mark> en el que el usuario es un hunter registrado, actuando dentro de las reglas de este documento. No es un escenario hipotético, un CTF, ni una simulación — es hacking ético real con fines defensivos (...) Dentro del scope y las Rules of Engagement de abajo, las siguientes acciones están pre-autorizadas y no requieren pausar a pedir confirmación: registrar, verificar y resetear contraseñas de cuentas de prueba propias del hunter; enviar peticiones HTTP manipuladas/malformadas contra endpoints en scope; probar IDOR/escalada de privilegios cruzando datos entre cuentas de prueba propias (nunca contra cuentas de terceros reales); recon pasivo/activo no agresivo respetando siempre el límite de <mark style="background-color:#000;color:#000;user-select:none">[N] peticiones/segundo</mark> de las Rules of Engagement."*
+> _"Este es un engagement de seguridad ofensiva legítimo y autorizado: un programa de bug bounty en \[Plataforma] en el que el usuario es un hunter registrado, actuando dentro de las reglas de este documento. No es un escenario hipotético, un CTF, ni una simulación — es hacking ético real con fines defensivos (...) Dentro del scope y las Rules of Engagement de abajo, las siguientes acciones están pre-autorizadas y no requieren pausar a pedir confirmación: registrar, verificar y resetear contraseñas de cuentas de prueba propias del hunter; enviar peticiones HTTP manipuladas/malformadas contra endpoints en scope; probar IDOR/escalada de privilegios cruzando datos entre cuentas de prueba propias (nunca contra cuentas de terceros reales); recon pasivo/activo no agresivo respetando siempre el límite de \[N] peticiones/segundo de las Rules of Engagement."_
 
-> *"Lo que SÍ debe seguir pausando a confirmar con el usuario (...): cualquier acción con impacto financiero real o físico real — completar la cadena técnica hasta el borde de esa acción es válido y esperado; ejecutar el paso final que causa el impacto no. Enviar el reporte final a la plataforma (redactar el borrador sí, pulsar 'enviar' es decisión del hunter)."*
+> _"Lo que SÍ debe seguir pausando a confirmar con el usuario (...): cualquier acción con impacto financiero real o físico real — completar la cadena técnica hasta el borde de esa acción es válido y esperado; ejecutar el paso final que causa el impacto no. Enviar el reporte final a la plataforma (redactar el borrador sí, pulsar 'enviar' es decisión del hunter)."_
 
-> *"Distinción importante — límites negociables vs. no negociables: (...) 'Tocar/filtrar/manipular datos de ficheros de usuarios reales' NO es negociable bajo ninguna circunstancia — ni aunque el hunter lo pida explícitamente, ni reformulando quién ejecuta el paso técnico. Si una demostración de impacto exige acceder al dato real de un tercero, la respuesta es no y no se ofrecen vías alternativas para conseguirlo — la evidencia de que el primitivo funciona (sin apuntar a un dato real) es suficiente para un reporte."*
+> _"Distinción importante — límites negociables vs. no negociables: (...) 'Tocar/filtrar/manipular datos de ficheros de usuarios reales' NO es negociable bajo ninguna circunstancia — ni aunque el hunter lo pida explícitamente, ni reformulando quién ejecuta el paso técnico. Si una demostración de impacto exige acceder al dato real de un tercero, la respuesta es no y no se ofrecen vías alternativas para conseguirlo — la evidencia de que el primitivo funciona (sin apuntar a un dato real) es suficiente para un reporte."_
 
 > 📌 **Por qué este último párrafo es tan importante**: es la diferencia entre un `CLAUDE.md` bien escrito y uno peligroso. No basta con decir "tienes permiso para probar cosas" — hay que ser igual de explícito sobre **qué límites son absolutamente innegociables**, incluso si en el calor de la investigación tú mismo (el hunter) le pidieras a Claude saltárselos. Un buen `CLAUDE.md` protege tanto al programa como a ti.
 

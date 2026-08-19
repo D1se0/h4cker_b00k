@@ -1,14 +1,14 @@
-# 🏆 Ejemplo real — Secur0
-
-> 🔒 **CONFIDENCIAL — INFORMACIÓN REDACTADA**
-> Este es un reporte real que envié, con el nombre del proyecto/repositorio y la ruta interna ocultados con efecto "rotulador negro" donde podían identificar a terceros. Se comparte solo como referencia de **formato y metodología**, no como PoC explotable.
-
-**Plataforma:** Secur0
-**Programa:** VDP público de <mark style="background-color:#000;color:#000;user-select:none">[Producto CRM — nombre redactado]</mark>
-**Estado final:** Arreglado (`Fixed`)
-**CVSS asignado:** 7.6 (Alto)
-
 ---
+icon: trophy-star
+---
+
+# Secur0 — Contraseña por defecto hardcodeada
+
+> 🔒 **CONFIDENCIAL — INFORMACIÓN REDACTADA** Este es un reporte real que envié, con el nombre del proyecto/repositorio y la ruta interna ocultados con efecto "rotulador negro" donde podían identificar a terceros. Se comparte solo como referencia de **formato y metodología**, no como PoC explotable.
+
+**Plataforma:** Secur0 **Programa:** VDP público de \[Producto CRM — nombre redactado] **Estado final:** Arreglado (`Fixed`) **CVSS asignado:** 7.6 (Alto)
+
+***
 
 ## Título
 
@@ -51,11 +51,11 @@ Totalmente reproducible vía HTTP puro — comandos `curl` exactos y pasos de ve
 
 ## Impacto
 
-- Bypass total de autenticación para cada cuenta de empleado creada por el flujo estándar y nunca reasignada manualmente a una contraseña personalizada — es decir, **todas** las creadas por esta vía, ya que la interfaz no ofrece forma de establecer una.
-- **No requiere ningún privilegio** para explotar una cuenta ya existente — solo su email, visible para cualquier compañero con permiso de "lectura RRHH" o adivinable por el patrón de correo corporativo.
-- Confirmado como **crackeable por diccionario en menos de 2 minutos** contra una wordlist estándar (rockyou.txt) — no es una contraseña obscura.
-- Los registros de empleado incluyen campos sensibles (IBAN, fecha de alta, relaciones de jefatura); el acceso posterior escala con los permisos que se le asignen después (crear-y-luego-asignar es una secuencia habitual en el mundo real).
-- Ninguna señal dentro del sistema (cambio forzado, email de bienvenida/reseteo) avisa al empleado legítimo de que debe cambiar la contraseña por defecto — la ventana de exposición queda abierta indefinidamente.
+* Bypass total de autenticación para cada cuenta de empleado creada por el flujo estándar y nunca reasignada manualmente a una contraseña personalizada — es decir, **todas** las creadas por esta vía, ya que la interfaz no ofrece forma de establecer una.
+* **No requiere ningún privilegio** para explotar una cuenta ya existente — solo su email, visible para cualquier compañero con permiso de "lectura RRHH" o adivinable por el patrón de correo corporativo.
+* Confirmado como **crackeable por diccionario en menos de 2 minutos** contra una wordlist estándar (rockyou.txt) — no es una contraseña obscura.
+* Los registros de empleado incluyen campos sensibles (IBAN, fecha de alta, relaciones de jefatura); el acceso posterior escala con los permisos que se le asignen después (crear-y-luego-asignar es una secuencia habitual en el mundo real).
+* Ninguna señal dentro del sistema (cambio forzado, email de bienvenida/reseteo) avisa al empleado legítimo de que debe cambiar la contraseña por defecto — la ventana de exposición queda abierta indefinidamente.
 
 ## Información adicional y sugerencia de solución
 
@@ -69,12 +69,12 @@ Totalmente reproducible vía HTTP puro — comandos `curl` exactos y pasos de ve
 
 ## Alcance
 
-<mark style="background-color:#000;color:#000;user-select:none">https://github.com/[organizacion]/[proyecto-crm]</mark>
+https://github.com/\[organizacion]/\[proyecto-crm]
 
 ## Endpoint
 
-<mark style="background-color:#000;color:#000;user-select:none">https://[entorno-de-pruebas].local/rrhh/employee/save</mark>
+https://\[entorno-de-pruebas].local/rrhh/employee/save
 
----
+***
 
 > 📌 **Por qué este reporte funcionó bien**: no se quedó en "encontré una contraseña hardcodeada en el código". Se demostró el ciclo completo — desde el formulario real sin campo de contraseña, pasando por la extracción del hash generado por el propio servidor, hasta el login efectivo con esa cuenta — cerrando cualquier duda sobre si el hallazgo era solo teórico.

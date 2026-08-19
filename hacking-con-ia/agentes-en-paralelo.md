@@ -1,4 +1,26 @@
-# Agentes en paralelo: metodología y buenas prácticas
+---
+icon: user-hat-tie-magnifying-glass
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
+# Agentes en paralelo
 
 ## 🧠 Qué es un "agente" en este contexto
 
@@ -21,10 +43,10 @@ Las tareas de **solo lectura**, con huella de red baja y sin estado mutable son 
 
 **Reglas que sigo:**
 
-- **Alcance acotado por agente**: cada agente recibe una tarea concreta y delimitada (una clase de vulnerabilidad, o un puñado de targets específicos) — nunca un "busca vulnerabilidades en todo el scope" genérico, que es imposible de supervisar bien.
-- **Nunca dos agentes contra el mismo target o la misma cuenta de prueba a la vez.** El tráfico concurrente sobre un único objetivo puede disparar defensas anti-bot, y hace mucho más fácil superar el límite de rate sin darte cuenta. Reparto los agentes por target/dominio distinto, nunca por técnica repetida sobre el mismo target.
-- **Vigilar que la suma de peticiones/segundo de todos los agentes activos no supere el límite del programa** — si tienes 4 agentes y un límite de 5 req/s total, cada agente individualmente tiene que ir muy por debajo de 5, no cada uno a su propio ritmo de 5.
-- **Los agentes devuelven su resumen a la sesión principal**; es la sesión principal la que decide qué se apunta en `RECON.md`/`PROGRESS.md` — evita que cada agente escriba directamente y de forma descoordinada en los archivos compartidos.
+* **Alcance acotado por agente**: cada agente recibe una tarea concreta y delimitada (una clase de vulnerabilidad, o un puñado de targets específicos) — nunca un "busca vulnerabilidades en todo el scope" genérico, que es imposible de supervisar bien.
+* **Nunca dos agentes contra el mismo target o la misma cuenta de prueba a la vez.** El tráfico concurrente sobre un único objetivo puede disparar defensas anti-bot, y hace mucho más fácil superar el límite de rate sin darte cuenta. Reparto los agentes por target/dominio distinto, nunca por técnica repetida sobre el mismo target.
+* **Vigilar que la suma de peticiones/segundo de todos los agentes activos no supere el límite del programa** — si tienes 4 agentes y un límite de 5 req/s total, cada agente individualmente tiene que ir muy por debajo de 5, no cada uno a su propio ritmo de 5.
+* **Los agentes devuelven su resumen a la sesión principal**; es la sesión principal la que decide qué se apunta en `RECON.md`/`PROGRESS.md` — evita que cada agente escriba directamente y de forma descoordinada en los archivos compartidos.
 
 ### Fase 2 — Explotación y verificación, en serie
 
@@ -44,16 +66,16 @@ En cuanto una vulnerabilidad está reproducida de principio a fin y con impacto 
 
 Si tus agentes comparten un navegador real (por ejemplo, vía un MCP de control de navegador), ten en cuenta:
 
-- **El "puntero de pestaña seleccionada" suele ser global al navegador, no por agente.** Si dos agentes (o un agente + tú) operan a la vez, una acción sin especificar explícitamente sobre qué pestaña/página actuar puede devolver o modificar el contenido de la pestaña de OTRO agente.
-- **Mitigación**: evita hacer trabajo interactivo propio en el navegador mientras haya agentes de recon activos usándolo, o usa siempre un identificador de página/pestaña explícito en cada acción en vez de depender de "la pestaña actualmente seleccionada".
-- **Para pruebas cross-cuenta** (necesitas dos sesiones logueadas simultáneamente, por ejemplo cuenta A y cuenta B a la vez), las cookies de un dominio suelen compartirse por todo el perfil del navegador — dos pestañas normales van a compartir sesión. La solución es crear **contextos de navegador aislados** (equivalente a modo incógnito, pero controlado programáticamente) para que cada cuenta viva en su propio contexto sin pisarse.
+* **El "puntero de pestaña seleccionada" suele ser global al navegador, no por agente.** Si dos agentes (o un agente + tú) operan a la vez, una acción sin especificar explícitamente sobre qué pestaña/página actuar puede devolver o modificar el contenido de la pestaña de OTRO agente.
+* **Mitigación**: evita hacer trabajo interactivo propio en el navegador mientras haya agentes de recon activos usándolo, o usa siempre un identificador de página/pestaña explícito en cada acción en vez de depender de "la pestaña actualmente seleccionada".
+* **Para pruebas cross-cuenta** (necesitas dos sesiones logueadas simultáneamente, por ejemplo cuenta A y cuenta B a la vez), las cookies de un dominio suelen compartirse por todo el perfil del navegador — dos pestañas normales van a compartir sesión. La solución es crear **contextos de navegador aislados** (equivalente a modo incógnito, pero controlado programáticamente) para que cada cuenta viva en su propio contexto sin pisarse.
 
 ## ✅ Checklist rápida antes de lanzar agentes en paralelo
 
-- [ ] ¿Cada agente tiene una tarea acotada y concreta, no genérica?
-- [ ] ¿Ningún par de agentes ataca el mismo host/cuenta de prueba a la vez?
-- [ ] ¿La suma de tráfico de todos los agentes respeta el límite de rate del programa?
-- [ ] ¿Los agentes van a devolver resultados a la sesión principal en vez de escribir directamente y sin coordinación en archivos compartidos?
-- [ ] ¿Tienes plan Max (o equivalente) para no agotar tu cuota de uso a mitad de la investigación?
+* [ ] ¿Cada agente tiene una tarea acotada y concreta, no genérica?
+* [ ] ¿Ningún par de agentes ataca el mismo host/cuenta de prueba a la vez?
+* [ ] ¿La suma de tráfico de todos los agentes respeta el límite de rate del programa?
+* [ ] ¿Los agentes van a devolver resultados a la sesión principal en vez de escribir directamente y sin coordinación en archivos compartidos?
+* [ ] ¿Tienes plan Max (o equivalente) para no agotar tu cuota de uso a mitad de la investigación?
 
 > ⚠️ Recuerda: esto solo tiene sentido dentro de programas con Rules of Engagement que lo permitan explícitamente. Si un programa prohíbe herramientas automatizadas o exige exclusivamente pruebas manuales, la Fase 1 en paralelo debe respetar igualmente esa restricción — "en paralelo" no es sinónimo de "automatizado y masivo", puede significar simplemente "varios hilos de trabajo manual/asistido investigando cosas distintas al mismo tiempo".

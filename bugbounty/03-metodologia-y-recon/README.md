@@ -1,4 +1,8 @@
-# 🔍 Metodología y Recon
+---
+icon: magnifying-glass
+---
+
+# Metodología y Recon
 
 Antes de poder romper algo, hay que entenderlo. Esta sección cubre cómo investigar de forma sistemática:
 

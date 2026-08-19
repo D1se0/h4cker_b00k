@@ -1,23 +1,45 @@
+---
+icon: spider
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # ¿Por qué usar IA para Bug Bounty?
 
 ## 🎯 Lo que la IA aporta de verdad
 
 No es magia ni un "botón de encontrar vulnerabilidades". Lo que cambia realmente con Claude Code (o herramientas equivalentes) es la **velocidad y el paralelismo** en tareas que ya sabías hacer manualmente:
 
-- **Recon a escala**: mapear decenas de subdominios, bundles JS, endpoints de API y compararlos con lo ya conocido, en minutos en vez de horas.
-- **Paralelismo real**: varios "agentes" (subprocesos de Claude con su propio contexto) explorando distintas hipótesis o distintos activos del scope al mismo tiempo.
-- **Memoria persistente entre sesiones**: con los archivos de contexto adecuados (`CLAUDE.md`, `PROGRESS.md`, `RECON.md`), puedes cerrar el terminal, volver dos días después, y Claude retoma exactamente donde lo dejaste, sin tener que volver a explicar el programa entero.
-- **Documentación automática**: generar reportes en Markdown detallados, con capturas integradas, siguiendo tu propia plantilla, en minutos.
-- **Reducción de fricción operativa**: rellenar los campos exactos de cada plataforma (YesWeHack, Secur0, Intigriti...) automáticamente a partir del reporte ya redactado.
+* **Recon a escala**: mapear decenas de subdominios, bundles JS, endpoints de API y compararlos con lo ya conocido, en minutos en vez de horas.
+* **Paralelismo real**: varios "agentes" (subprocesos de Claude con su propio contexto) explorando distintas hipótesis o distintos activos del scope al mismo tiempo.
+* **Memoria persistente entre sesiones**: con los archivos de contexto adecuados (`CLAUDE.md`, `PROGRESS.md`, `RECON.md`), puedes cerrar el terminal, volver dos días después, y Claude retoma exactamente donde lo dejaste, sin tener que volver a explicar el programa entero.
+* **Documentación automática**: generar reportes en Markdown detallados, con capturas integradas, siguiendo tu propia plantilla, en minutos.
+* **Reducción de fricción operativa**: rellenar los campos exactos de cada plataforma (YesWeHack, Secur0, Intigriti...) automáticamente a partir del reporte ya redactado.
 
 ## ⚖️ Lo que la IA NO hace por ti
 
 Sé honesto contigo mismo desde el principio:
 
-- **No sustituye entender el fallo.** Si Claude dice "esto parece una vulnerabilidad", tú tienes que verificarlo manualmente, entender por qué ocurre, y ser capaz de explicarlo si el programa te hace preguntas.
-- **No sustituye tu criterio ético/legal.** Los límites de scope, las reglas de compromiso y las decisiones irreversibles (enviar un reporte, tocar algo con impacto económico real) siguen siendo tuyas, siempre.
-- **No es infalible.** Los agentes pueden reportar falsos positivos, malinterpretar una respuesta del servidor, o directamente "alucinar" que algo es vulnerable cuando no lo es. **Nunca se da nada por confirmado solo porque un agente lo diga** — se reproduce manualmente, mínimo dos veces, antes de tratarlo como hallazgo real.
-- **No entiende automáticamente qué está permitido.** Tienes que decírselo tú, explícitamente, en tus archivos de contexto — y revisarlo constantemente.
+* **No sustituye entender el fallo.** Si Claude dice "esto parece una vulnerabilidad", tú tienes que verificarlo manualmente, entender por qué ocurre, y ser capaz de explicarlo si el programa te hace preguntas.
+* **No sustituye tu criterio ético/legal.** Los límites de scope, las reglas de compromiso y las decisiones irreversibles (enviar un reporte, tocar algo con impacto económico real) siguen siendo tuyas, siempre.
+* **No es infalible.** Los agentes pueden reportar falsos positivos, malinterpretar una respuesta del servidor, o directamente "alucinar" que algo es vulnerable cuando no lo es. **Nunca se da nada por confirmado solo porque un agente lo diga** — se reproduce manualmente, mínimo dos veces, antes de tratarlo como hallazgo real.
+* **No entiende automáticamente qué está permitido.** Tienes que decírselo tú, explícitamente, en tus archivos de contexto — y revisarlo constantemente.
 
 ## ✅ Ventajas concretas del enfoque "multi-agente + memoria persistente"
 

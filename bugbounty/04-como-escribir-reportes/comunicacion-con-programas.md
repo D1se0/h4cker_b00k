@@ -1,3 +1,7 @@
+---
+icon: window
+---
+
 # Comunicación con los programas
 
 ## 🕰️ Qué esperar del ciclo de vida de un reporte
@@ -29,15 +33,15 @@ Este estado **no es un rechazo**. Es, literalmente, el equipo dándote la oportu
 
 ## 🙅 Cómo aceptar un "N/A" (No Aplica) con elegancia
 
-- Lee la explicación completa antes de responder.
-- Si no la entiendes, pregunta con educación y de forma concreta: "¿Podríais aclarar si X está intencionalmente permitido / fuera de scope?"
-- Si sigues en desacuerdo con argumentos técnicos sólidos, puedes exponerlos una vez, de forma clara y sin repetir el mismo argumento en bucle.
-- Evita la confrontación. La relación a largo plazo con un programa vale más que "ganar" una discusión puntual.
+* Lee la explicación completa antes de responder.
+* Si no la entiendes, pregunta con educación y de forma concreta: "¿Podríais aclarar si X está intencionalmente permitido / fuera de scope?"
+* Si sigues en desacuerdo con argumentos técnicos sólidos, puedes exponerlos una vez, de forma clara y sin repetir el mismo argumento en bucle.
+* Evita la confrontación. La relación a largo plazo con un programa vale más que "ganar" una discusión puntual.
 
 ## 🤝 Buenas prácticas generales de comunicación
 
-- Usa un tono profesional y neutro, incluso si el rechazo te parece injusto.
-- Agradece al equipo su tiempo de revisión — cuesta poco y genera buena relación.
-- Si trabajas en colaboración con otra persona, decláralo desde el principio (ver "Colaboradores" en las plantillas de plataforma).
-- Si detectas por casualidad otra vulnerabilidad distinta mientras investigas esta, **no la mezcles en el mismo hilo** — abre un reporte nuevo.
-- Guarda un histórico propio de tus interacciones con cada programa: te ayuda a calibrar su nivel de exigencia y estilo de comunicación para futuros reportes.
+* Usa un tono profesional y neutro, incluso si el rechazo te parece injusto.
+* Agradece al equipo su tiempo de revisión — cuesta poco y genera buena relación.
+* Si trabajas en colaboración con otra persona, decláralo desde el principio (ver "Colaboradores" en las plantillas de plataforma).
+* Si detectas por casualidad otra vulnerabilidad distinta mientras investigas esta, **no la mezcles en el mismo hilo** — abre un reporte nuevo.
+* Guarda un histórico propio de tus interacciones con cada programa: te ayuda a calibrar su nivel de exigencia y estilo de comunicación para futuros reportes.

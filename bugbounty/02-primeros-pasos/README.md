@@ -1,4 +1,8 @@
-# 🚀 Primeros pasos
+---
+icon: meteor
+---
+
+# Primeros pasos
 
 Todo lo que me hubiese gustado leer el primer día:
 

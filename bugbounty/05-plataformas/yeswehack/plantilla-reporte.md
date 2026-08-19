@@ -1,4 +1,8 @@
-# Plantilla de reporte — YesWeHack
+---
+icon: cards-blank
+---
+
+# Plantilla de reporte
 
 Estos son los campos exactos que maneja YesWeHack en el panel de **Report metadata** de un reporte, más el cuerpo en Markdown de **Bug description**.
 
@@ -61,9 +65,9 @@ IP used
 
 ## ✅ Checklist antes de enviar en YWH
 
-- [ ] El `Bug type` tiene el CWE correcto y enlazado.
-- [ ] `Scope`, `Host` y `Endpoint` son exactos y coinciden con lo descrito en el cuerpo.
-- [ ] El `Payload` es el mínimo necesario para reproducir (sin datos reales de terceros).
-- [ ] `Technical env.` está relleno — ayuda al triager a reproducir en condiciones similares.
-- [ ] La `IP used` es la real de tus pruebas.
-- [ ] El CVSS calculado en el cuerpo del reporte coincide con el de la calculadora integrada.
+* [ ] El `Bug type` tiene el CWE correcto y enlazado.
+* [ ] `Scope`, `Host` y `Endpoint` son exactos y coinciden con lo descrito en el cuerpo.
+* [ ] El `Payload` es el mínimo necesario para reproducir (sin datos reales de terceros).
+* [ ] `Technical env.` está relleno — ayuda al triager a reproducir en condiciones similares.
+* [ ] La `IP used` es la real de tus pruebas.
+* [ ] El CVSS calculado en el cuerpo del reporte coincide con el de la calculadora integrada.

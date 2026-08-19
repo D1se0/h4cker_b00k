@@ -1,3 +1,25 @@
+---
+icon: lightbulb
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Ideas y automatizaciones adicionales
 
 Cosas que ya uso, cosas que estoy explorando, y cosas que tiene sentido probar más adelante para llevar este flujo aún más lejos.
@@ -6,18 +28,18 @@ Cosas que ya uso, cosas que estoy explorando, y cosas que tiene sentido probar m
 
 Los **MCP (Model Context Protocol)** son conectores que le dan a Claude acceso a herramientas externas de forma estructurada. Algunos especialmente útiles para Bug Bounty:
 
-- **MCP de navegador (control de Chrome/Chromium vía DevTools Protocol)**: permite que Claude navegue, rellene formularios con eventos reales (útil para saltarse detección anti-bot basada en manipulación directa del DOM), y capture snapshots del DOM/red — clave para automatizar la fase de recon y exploración dentro de un navegador real con tu proxy (Burp/ZAP) ya configurado.
-- **MCP de sistema de ficheros**: ya viene integrado en Claude Code de forma nativa, es lo que permite todo el flujo de `CLAUDE.md`/`PROGRESS.md`/`RECON.md`/`images/`/`temp/`/`reportar/`.
-- **MCPs de gestión de proyecto/notas** (si usas alguna herramienta externa para llevar el seguimiento de programas): pueden sincronizar tu `PROGRESS.md` con un tablero visual si trabajas en equipo.
+* **MCP de navegador (control de Chrome/Chromium vía DevTools Protocol)**: permite que Claude navegue, rellene formularios con eventos reales (útil para saltarse detección anti-bot basada en manipulación directa del DOM), y capture snapshots del DOM/red — clave para automatizar la fase de recon y exploración dentro de un navegador real con tu proxy (Burp/ZAP) ya configurado.
+* **MCP de sistema de ficheros**: ya viene integrado en Claude Code de forma nativa, es lo que permite todo el flujo de `CLAUDE.md`/`PROGRESS.md`/`RECON.md`/`images/`/`temp/`/`reportar/`.
+* **MCPs de gestión de proyecto/notas** (si usas alguna herramienta externa para llevar el seguimiento de programas): pueden sincronizar tu `PROGRESS.md` con un tablero visual si trabajas en equipo.
 
 ## 🗃️ Un `CLAUDE.md` "base" reutilizable entre programas
 
 Además del `CLAUDE.md` específico de cada programa, tiene sentido mantener un **`CLAUDE.md` de nivel superior** (en la carpeta padre que contiene todos tus proyectos de Bug Bounty) con las reglas que son iguales SIEMPRE, independientemente del programa:
 
-- Tu metodología general de verificación (nunca dar por confirmado sin reproducir dos veces).
-- Tu criterio ético no negociable (nunca tocar datos reales de terceros, bajo ninguna circunstancia).
-- Tu estructura de carpetas estándar.
-- Tu estilo preferido de reportes.
+* Tu metodología general de verificación (nunca dar por confirmado sin reproducir dos veces).
+* Tu criterio ético no negociable (nunca tocar datos reales de terceros, bajo ninguna circunstancia).
+* Tu estructura de carpetas estándar.
+* Tu estilo preferido de reportes.
 
 Así, el `CLAUDE.md` específico de cada programa solo necesita añadir lo que cambia: scope, recompensas, reglas técnicas concretas del programa.
 
@@ -41,13 +63,13 @@ Pedirle a Claude, al final de cada sesión, un resumen tipo "changelog" de lo he
 
 Todo este flujo se traslada casi 1:1 a CTFs (Capture The Flag), con algunos ajustes:
 
-- El equivalente a `CLAUDE.md` sería las reglas del CTF concreto (qué herramientas están permitidas, qué máquinas/retos están en scope, formato de la flag).
-- `PROGRESS.md` funciona igual de bien para llevar el estado de qué retos ya están resueltos, cuáles están en curso, y qué pistas/hipótesis se han probado ya.
-- La metodología de agentes en paralelo es especialmente potente en CTFs con múltiples retos independientes abiertos a la vez (web, pwn, forense, cripto...) — puedes tener un agente explorando cada categoría simultáneamente.
-- La diferencia principal es que en un CTF no hay "reporte" que enviar a una plataforma — el equivalente sería simplemente el flujo hasta obtener y validar la flag.
+* El equivalente a `CLAUDE.md` sería las reglas del CTF concreto (qué herramientas están permitidas, qué máquinas/retos están en scope, formato de la flag).
+* `PROGRESS.md` funciona igual de bien para llevar el estado de qué retos ya están resueltos, cuáles están en curso, y qué pistas/hipótesis se han probado ya.
+* La metodología de agentes en paralelo es especialmente potente en CTFs con múltiples retos independientes abiertos a la vez (web, pwn, forense, cripto...) — puedes tener un agente explorando cada categoría simultáneamente.
+* La diferencia principal es que en un CTF no hay "reporte" que enviar a una plataforma — el equivalente sería simplemente el flujo hasta obtener y validar la flag.
 
 ## ⚠️ Límites que conviene tener siempre presentes
 
-- **La cuota de uso es un recurso real y limitado**, incluso con plan Max. Lanzar demasiados agentes simultáneos sin criterio agota la cuota rápido y sin necesariamente aportar valor proporcional — prioriza calidad de las tareas por agente sobre cantidad de agentes.
-- **La IA puede sonar muy segura de sí misma incluso cuando se equivoca.** Mantén siempre el hábito de verificación manual descrito en este manual, por muy convincente que suene el resumen de un agente.
-- **Automatizar la redacción no debe convertirse en automatizar la comprensión.** Si no puedes explicar tú mismo, con tus propias palabras, por qué existe la vulnerabilidad y cuál es su impacto real, no estás listo para reportarla — independientemente de lo bien redactado que esté el Markdown que generó Claude.
+* **La cuota de uso es un recurso real y limitado**, incluso con plan Max. Lanzar demasiados agentes simultáneos sin criterio agota la cuota rápido y sin necesariamente aportar valor proporcional — prioriza calidad de las tareas por agente sobre cantidad de agentes.
+* **La IA puede sonar muy segura de sí misma incluso cuando se equivoca.** Mantén siempre el hábito de verificación manual descrito en este manual, por muy convincente que suene el resumen de un agente.
+* **Automatizar la redacción no debe convertirse en automatizar la comprensión.** Si no puedes explicar tú mismo, con tus propias palabras, por qué existe la vulnerabilidad y cuál es su impacto real, no estás listo para reportarla — independientemente de lo bien redactado que esté el Markdown que generó Claude.

@@ -1,4 +1,26 @@
-# 🤖 Hacking Ético con IA (Claude)
+---
+icon: microchip-ai
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
+# Hacking Ético con IA
 
 Esta sección explica cómo uso **Claude Code** (la CLI de Claude para terminal) como copiloto para hacer Bug Bounty y CTFs: cómo lo instalo, cómo estructuro mis proyectos para que Claude tenga contexto persistente entre sesiones, cómo lanzo agentes en paralelo para explorar superficie de ataque, y los prompts exactos que uso en cada fase del proceso.
 

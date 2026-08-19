@@ -1,8 +1,30 @@
-# PROGRESS.md — memoria de trabajo entre sesiones
+---
+icon: file-powerpoint
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
+# PROGRESS.md — memoria de trabajo
 
 ## 🧠 Para qué sirve
 
-Si `CLAUDE.md` es "lo que no cambia" de un programa, `PROGRESS.md` es exactamente lo contrario: **el estado vivo de la investigación**. Es el primer archivo que le pido a Claude que lea al empezar una sesión nueva, porque contesta a la pregunta más importante: *"¿dónde lo dejamos la última vez?"*
+Si `CLAUDE.md` es "lo que no cambia" de un programa, `PROGRESS.md` es exactamente lo contrario: **el estado vivo de la investigación**. Es el primer archivo que le pido a Claude que lea al empezar una sesión nueva, porque contesta a la pregunta más importante: _"¿dónde lo dejamos la última vez?"_
 
 Sin este archivo, cada sesión nueva empezaría de cero — tendrías que volver a explicar qué cuentas de prueba existen, qué ya se probó y descartó, y qué hallazgos están a medio confirmar. Con él, retomar un programa después de una semana sin tocarlo es tan simple como decir "lee `PROGRESS.md` y `RECON.md` y continúa".
 
@@ -26,14 +48,14 @@ Qué cuentas existen, en qué ecosistema/dominio, y notas relevantes sobre para 
 
 El corazón del archivo: cada fila es una vulnerabilidad investigada, con fecha, target, tipo, severidad estimada, y **estado** usando una leyenda simple y consistente. La que uso yo:
 
-| Símbolo | Significado |
-|---|---|
-| `[ ]` | Pendiente |
-| `[~]` | En curso |
-| `[x]` | Cerrado/explorado sin hallazgo |
-| `[!]` | Hallazgo confirmado, reproducido de principio a fin y guardado en `reportar/`, pendiente de revisión/envío |
-| `[R]` | Reportado (ya enviado a la plataforma) |
-| `[BLOQUEADO]` | Confirmado pero con algún impedimento que bloquea el envío (problema de scope, decisión pendiente, etc.) |
+| Símbolo       | Significado                                                                                                |
+| ------------- | ---------------------------------------------------------------------------------------------------------- |
+| `[ ]`         | Pendiente                                                                                                  |
+| `[~]`         | En curso                                                                                                   |
+| `[x]`         | Cerrado/explorado sin hallazgo                                                                             |
+| `[!]`         | Hallazgo confirmado, reproducido de principio a fin y guardado en `reportar/`, pendiente de revisión/envío |
+| `[R]`         | Reportado (ya enviado a la plataforma)                                                                     |
+| `[BLOQUEADO]` | Confirmado pero con algún impedimento que bloquea el envío (problema de scope, decisión pendiente, etc.)   |
 
 ### 5. Estado por target/activo
 

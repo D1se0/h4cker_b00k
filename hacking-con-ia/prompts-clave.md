@@ -1,3 +1,25 @@
+---
+icon: square-terminal
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Prompts clave, plantilla por plantilla
 
 Biblioteca de prompts que uso en cada fase del proceso. Los cuatro primeros son los que forman el ciclo principal (ver [Flujo de trabajo completo](flujo-de-trabajo-completo.md)); el resto son variaciones y prompts de apoyo que uso según la situación.
@@ -42,9 +64,9 @@ me deposites los archivos correspondientes a los campos en temp/
 con el nombre de la vulnerabilidad correspondiente para no confundirme
 ```
 
-**Cuándo usarlo**: con el reporte ya redactado en `reportar/`, justo antes de ir a enviar en la plataforma correspondiente. Pega la estructura vacía de campos del formulario real (ver las [plantillas de plataforma](../bugbounty/05-plataformas/README.md)).
+**Cuándo usarlo**: con el reporte ya redactado en `reportar/`, justo antes de ir a enviar en la plataforma correspondiente. Pega la estructura vacía de campos del formulario real (ver las [plantillas de plataforma](../bugbounty/05-plataformas/)).
 
----
+***
 
 ## 🧭 Prompts de apoyo adicionales
 
@@ -118,11 +140,11 @@ mismo formato y las capturas ya integradas, y guárdalo en temp/vulnN/
 listo para adjuntar en el formulario de la plataforma.
 ```
 
----
+***
 
 ## 🧱 Buenas prácticas al escribir tus propios prompts
 
-- **Sé explícito con las rutas** (`images/`, `example/`, `temp/vulnN/`) — Claude Code trabaja directamente sobre el sistema de ficheros de tu proyecto, así que cuanto más preciso seas con dónde leer y dónde escribir, menos ambigüedad hay.
-- **Referencia siempre tus propios archivos de contexto** (`CLAUDE.md`, `PROGRESS.md`, `RECON.md`, `example/`) en vez de repetir las reglas en cada prompt — es la ventaja principal de tenerlos bien escritos.
-- **Divide en pasos pequeños y verificables**, como en el flujo de 4 prompts principal, en vez de pedir "investiga y repórtame todo" de una sola vez — así puedes intervenir y corregir el rumbo entre cada fase.
-- **Usa `/goal` (o el modo autónomo equivalente) solo para las fases que quieres que corran sin supervisión constante** (recon, exploración inicial) — no para las fases de verificación y envío, donde quieres mantener control manual explícito.
+* **Sé explícito con las rutas** (`images/`, `example/`, `temp/vulnN/`) — Claude Code trabaja directamente sobre el sistema de ficheros de tu proyecto, así que cuanto más preciso seas con dónde leer y dónde escribir, menos ambigüedad hay.
+* **Referencia siempre tus propios archivos de contexto** (`CLAUDE.md`, `PROGRESS.md`, `RECON.md`, `example/`) en vez de repetir las reglas en cada prompt — es la ventaja principal de tenerlos bien escritos.
+* **Divide en pasos pequeños y verificables**, como en el flujo de 4 prompts principal, en vez de pedir "investiga y repórtame todo" de una sola vez — así puedes intervenir y corregir el rumbo entre cada fase.
+* **Usa `/goal` (o el modo autónomo equivalente) solo para las fases que quieres que corran sin supervisión constante** (recon, exploración inicial) — no para las fases de verificación y envío, donde quieres mantener control manual explícito.

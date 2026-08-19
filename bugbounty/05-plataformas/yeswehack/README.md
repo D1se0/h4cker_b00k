@@ -1,4 +1,8 @@
-# YesWeHack
+---
+icon: eyes
+---
+
+# Visión general
 
 ## 🧭 Qué es
 
@@ -19,8 +23,8 @@ En YesWeHack, es habitual que el equipo del programa **reescriba el título y aj
 
 YWH mantiene un hilo de actividad cronológico con cada cambio de estado y cada comentario, tanto tuyo como del programa/triager. Es importante:
 
-- Revisar todo el historial antes de responder, para no repetir lo que ya se dijo.
-- Etiquetar bien a los colaboradores si trabajas en equipo (se añaden como "Collaborators" desde el propio reporte).
+* Revisar todo el historial antes de responder, para no repetir lo que ya se dijo.
+* Etiquetar bien a los colaboradores si trabajas en equipo (se añaden como "Collaborators" desde el propio reporte).
 
 ## 📎 Ver también
 

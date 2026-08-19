@@ -1,4 +1,8 @@
-# 📘 Introducción
+---
+icon: book-blank
+---
+
+# Introducción
 
 Esta sección es la puerta de entrada al manual. Si vienes de cero, empieza aquí.
 

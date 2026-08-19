@@ -1,4 +1,8 @@
-# Plantilla de reporte — Secur0
+---
+icon: cards-blank
+---
+
+# Plantilla de reporte
 
 Estos son los campos exactos del formulario **"Enviar reporte"** de Secur0.
 
@@ -92,8 +96,8 @@ Colaboradores (Opcional)
 
 ## ✅ Checklist antes de enviar en Secur0
 
-- [ ] El título cabe en 100 caracteres y es descriptivo.
-- [ ] El campo "Payload" incluye todos los comandos necesarios para reproducir sin tener que ir a buscarlos a otro lado.
-- [ ] La "Prueba de concepto" está numerada y es autocontenida.
-- [ ] Si colaboras con alguien, el reparto de porcentaje suma 100%.
-- [ ] Adjuntaste capturas — y vídeo si el flujo tiene varios pasos encadenados.
+* [ ] El título cabe en 100 caracteres y es descriptivo.
+* [ ] El campo "Payload" incluye todos los comandos necesarios para reproducir sin tener que ir a buscarlos a otro lado.
+* [ ] La "Prueba de concepto" está numerada y es autocontenida.
+* [ ] Si colaboras con alguien, el reparto de porcentaje suma 100%.
+* [ ] Adjuntaste capturas — y vídeo si el flujo tiene varios pasos encadenados.

@@ -1,4 +1,8 @@
-# Plantilla de reporte — Intigriti
+---
+icon: cards-blank
+---
+
+# Plantilla de reporte
 
 Estos son los campos exactos del formulario de envío de Intigriti.
 
@@ -76,8 +80,8 @@ Details
 
 ## ✅ Checklist antes de enviar en Intigriti
 
-- [ ] El asset elegido es el correcto dentro del scope (revisa el Tier).
-- [ ] El tipo de vulnerabilidad elegido es el más específico disponible en el catálogo (evita "Other" si existe una entrada más precisa).
-- [ ] El vector CVSS 3.1 está completo, incluyendo el `Scope (S)` (a menudo olvidado, y cambia bastante el resultado si tu vulnerabilidad afecta a un componente distinto del vulnerado inicialmente).
-- [ ] El PoC usa el margen de caracteres disponible para ser exhaustivo, no minimalista.
-- [ ] La IP de pruebas está rellena (con "Fetch my IP" o manualmente si usas VPS/proxy).
+* [ ] El asset elegido es el correcto dentro del scope (revisa el Tier).
+* [ ] El tipo de vulnerabilidad elegido es el más específico disponible en el catálogo (evita "Other" si existe una entrada más precisa).
+* [ ] El vector CVSS 3.1 está completo, incluyendo el `Scope (S)` (a menudo olvidado, y cambia bastante el resultado si tu vulnerabilidad afecta a un componente distinto del vulnerado inicialmente).
+* [ ] El PoC usa el margen de caracteres disponible para ser exhaustivo, no minimalista.
+* [ ] La IP de pruebas está rellena (con "Fetch my IP" o manualmente si usas VPS/proxy).

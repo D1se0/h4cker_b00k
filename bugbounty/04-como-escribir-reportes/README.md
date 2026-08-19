@@ -1,4 +1,8 @@
-# ✍️ Cómo escribir reportes
+---
+icon: pen-line
+---
+
+# Cómo escribir reportes
 
 Esta es, probablemente, la sección más importante de todo el manual. **Un hallazgo brillante mal explicado se rechaza; un hallazgo modesto bien explicado se acepta y se paga.**
 

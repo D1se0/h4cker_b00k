@@ -1,3 +1,7 @@
+---
+icon: brain
+---
+
 # Mentalidad y metodología general
 
 ## 🧭 El cambio de chip más importante
@@ -20,13 +24,14 @@ Cuando empiezas, tiendes a pensar "voy a buscar una vulnerabilidad guay tipo RCE
 
 ## ⚠️ "Impacto ≠ diferencia de código de estado"
 
-Uno de los rechazos más comunes para principiantes es: *"Solo demuestras un 200 en vez de un 401, pero no demuestras impacto real."* Esto es MUY importante y aparece literalmente en uno de los ejemplos reales de este manual (ver [YesWeHack — JWT hardcodeado](../06-ejemplos-reales/yeswehack-jwt-hardcodeado.md)).
+Uno de los rechazos más comunes para principiantes es: _"Solo demuestras un 200 en vez de un 401, pero no demuestras impacto real."_ Esto es MUY importante y aparece literalmente en uno de los ejemplos reales de este manual (ver [YesWeHack — JWT hardcodeado](../06-ejemplos-reales/yeswehack-jwt-hardcodeado.md)).
 
 No basta con decir "obtengo una respuesta distinta". Hay que demostrar **qué puede hacer un atacante con eso**:
-- ¿Puede leer datos que no son suyos?
-- ¿Puede escribir/modificar datos de otro usuario?
-- ¿Puede eliminar algo?
-- ¿Puede evitar un control de seguridad (login, 2FA, rate limit)?
+
+* ¿Puede leer datos que no son suyos?
+* ¿Puede escribir/modificar datos de otro usuario?
+* ¿Puede eliminar algo?
+* ¿Puede evitar un control de seguridad (login, 2FA, rate limit)?
 
 Si tu PoC solo muestra "antes daba 401 y ahora da 200", el triager tiene todo el derecho a pedirte más. Anticípate: añade siempre la prueba del **antes/después con datos reales de tus propias cuentas de prueba**, mostrando lectura, escritura o eliminación de un recurso.
 
@@ -43,7 +48,7 @@ Cuando audites algo, ve capa por capa, no lo tires todo a la vez:
 
 ## 🕐 Gestión del tiempo (y de la frustración)
 
-- No vas a encontrar nada los primeros días/semanas. Es normal.
-- Time-boxing: dedica bloques de tiempo definidos a un programa, no te obsesiones sin límite con uno solo.
-- Lleva notas de lo que ya probaste (para no repetirte) y de ideas pendientes.
-- Cuando encuentres algo, para y documenta ANTES de seguir buscando más — se te olvidan los detalles rápido.
+* No vas a encontrar nada los primeros días/semanas. Es normal.
+* Time-boxing: dedica bloques de tiempo definidos a un programa, no te obsesiones sin límite con uno solo.
+* Lleva notas de lo que ya probaste (para no repetirte) y de ideas pendientes.
+* Cuando encuentres algo, para y documenta ANTES de seguir buscando más — se te olvidan los detalles rápido.

@@ -1,18 +1,18 @@
-# 🏆 Ejemplo real — Intigriti
-
-> 🔒 **CONFIDENCIAL — INFORMACIÓN REDACTADA**
-> Este es un reporte real que envié, con el dominio real, los UUID de las cuentas de prueba y la IP ocultados con efecto "rotulador negro". Se comparte solo como referencia de **formato y metodología**, no como PoC explotable.
-
-**Plataforma:** Intigriti
-**Programa:** <mark style="background-color:#000;color:#000;user-select:none">[Grupo de medios de comunicación — nombre redactado]</mark>
-**Severidad:** Media (4.2)
-**Estado:** Triage
-
 ---
+icon: trophy-star
+---
+
+# Intigriti — IDOR en API de favoritos
+
+> 🔒 **CONFIDENCIAL — INFORMACIÓN REDACTADA** Este es un reporte real que envié, con el dominio real, los UUID de las cuentas de prueba y la IP ocultados con efecto "rotulador negro". Se comparte solo como referencia de **formato y metodología**, no como PoC explotable.
+
+**Plataforma:** Intigriti **Programa:** \[Grupo de medios de comunicación — nombre redactado] **Severidad:** Media (4.2) **Estado:** Triage
+
+***
 
 ## Título
 
-IDOR en la API de favoritos de <mark style="background-color:#000;color:#000;user-select:none">[medio.ejemplo]</mark> permite a cualquier usuario autenticado leer, añadir y borrar los guardados de otro usuario
+IDOR en la API de favoritos de \[medio.ejemplo] permite a cualquier usuario autenticado leer, añadir y borrar los guardados de otro usuario
 
 ## Resumen
 
@@ -26,19 +26,19 @@ Todos los datos de prueba se limpiaron inmediatamente tras cada reproducción; a
 
 ## Detalles técnicos
 
-| Campo | Valor |
-|---|---|
-| CWE | CWE-639 (Authorization Bypass Through User-Controlled Key) |
-| Endpoints | `POST /api/_next-api/bookmarks/` (escritura/borrado) y `GET /api/_next-api/bookmarks/?userId=<uuid>` (lectura) |
+| Campo                   | Valor                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| CWE                     | CWE-639 (Authorization Bypass Through User-Controlled Key)                                                                           |
+| Endpoints               | `POST /api/_next-api/bookmarks/` (escritura/borrado) y `GET /api/_next-api/bookmarks/?userId=<uuid>` (lectura)                       |
 | Autenticación requerida | Sí — dos cuentas distintas y autenticadas (el atacante solo necesita su propia sesión válida; no requiere interacción de la víctima) |
-| Tipo de identificador | UUIDv4 (`userId`) |
+| Tipo de identificador   | UUIDv4 (`userId`)                                                                                                                    |
 
 ## Pasos de reproducción (resumen)
 
 Dos cuentas de prueba desechables, creadas específicamente para este test:
 
-- Cuenta A (atacante): `userId = `<mark style="background-color:#000;color:#000;user-select:none">[UUID redactado]</mark>
-- Cuenta B (víctima): `userId = `<mark style="background-color:#000;color:#000;user-select:none">[UUID redactado]</mark>
+* Cuenta A (atacante): `userId =` \[UUID redactado]
+* Cuenta B (víctima): `userId =` \[UUID redactado]
 
 **1 — Línea base**: confirmar que la lista de la cuenta B empieza vacía, autenticado como B.
 
@@ -70,19 +70,19 @@ Esta es la evidencia clave: la misma línea de consola muestra quién está aute
 
 ## Reproducido varias veces, de forma consistente
 
-| Ronda | Método | Resultado |
-|---|---|---|
-| 1 | Consola del navegador, cuentas A/B (evidencia de este reporte) | Ciclo completo lectura→escritura→control→lectura, timestamps `changedOn` coincidentes exactamente entre escritura y relectura |
-| 2 | Consola del navegador, mismas cuentas, sesión distinta el mismo día | Mismo resultado: 200 en escritura cruzada, `[]` en control del atacante, relectura de la víctima con el mismo `changedOn` |
-| 3-5 | Consola del navegador, otro par de cuentas, 3 rondas independientes con distintos artículos, incluyendo ciclos completos de añadir+borrar | 200 consistente en cada escritura/borrado cruzado; la lista de la víctima se actualizó en todos los casos sin interacción de la víctima |
+| Ronda | Método                                                                                                                                    | Resultado                                                                                                                               |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | Consola del navegador, cuentas A/B (evidencia de este reporte)                                                                            | Ciclo completo lectura→escritura→control→lectura, timestamps `changedOn` coincidentes exactamente entre escritura y relectura           |
+| 2     | Consola del navegador, mismas cuentas, sesión distinta el mismo día                                                                       | Mismo resultado: 200 en escritura cruzada, `[]` en control del atacante, relectura de la víctima con el mismo `changedOn`               |
+| 3-5   | Consola del navegador, otro par de cuentas, 3 rondas independientes con distintos artículos, incluyendo ciclos completos de añadir+borrar | 200 consistente en cada escritura/borrado cruzado; la lista de la víctima se actualizó en todos los casos sin interacción de la víctima |
 
 ## Impacto
 
 BOLA completo, no solo divulgación. Un atacante que conozca (u obtenga) el `userId` de otra cuenta puede, sin consentimiento y sin ninguna señal visible para la víctima:
 
-- Leer su lista completa de artículos guardados (puede revelar hábitos de lectura/intereses).
-- Añadir artículos arbitrarios a su lista.
-- Borrar artículos que la víctima sí guardó realmente — una pérdida de datos real y persistente, no solo una fuga de privacidad.
+* Leer su lista completa de artículos guardados (puede revelar hábitos de lectura/intereses).
+* Añadir artículos arbitrarios a su lista.
+* Borrar artículos que la víctima sí guardó realmente — una pérdida de datos real y persistente, no solo una fuga de privacidad.
 
 El `userId` no está bien protegido como secreto: es accesible desde cualquier script que corra en la sesión autenticada del propio dueño de la cuenta (cookie no `HttpOnly` legible por JavaScript, y también expuesto en el `dataLayer` de analítica en cada carga de página autenticada). Esto significa que cualquier script de terceros que se ejecute en el navegador de un usuario logueado (publicidad, analítica, o un XSS no relacionado en otra propiedad del mismo grupo) podría recolectar ese `userId` y usarlo contra este endpoint.
 
@@ -96,6 +96,6 @@ El backend de `/api/_next-api/bookmarks/` debe derivar el `userId` propietario d
 
 Como medida adicional de refuerzo, considerar sacar el valor de `userId`/ID de cuenta de una cookie plana y legible por script, y del `dataLayer`, ya que — independientemente de este fallo concreto — funciona como identificador estable entre distintas propiedades del mismo grupo.
 
----
+***
 
 > 📌 **Por qué este reporte funcionó bien**: el script de consola que imprime "quién soy yo" + "qué pido" + "qué contesta el servidor" en una sola línea elimina cualquier ambigüedad sobre si la sesión activa era realmente la del atacante. Combinado con el timestamp `changedOn` idéntico entre la escritura de A y la lectura de B, la persistencia del efecto queda demostrada sin lugar a dudas — sin necesidad de tocar ninguna cuenta real.
