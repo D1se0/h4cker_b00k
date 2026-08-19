@@ -71,6 +71,10 @@
 * [Instalar Home Assistant + MQTT en Raspberry Pi](proyectos-con-una-raspberry-pi/instalar-home-assistant-+-mqtt-en-raspberry-pi.md)
 * [WireGuard (VPN) en una Raspberry Pi](proyectos-con-una-raspberry-pi/wireguard-vpn-en-una-raspberry-pi.md)
 
+## BugBounty
+
+* [Page 1](bugbounty/page-1.md)
+
 ## HERRAMIENTAS/TÉCNICAS
 
 * [HackingWeb](herramientas-tecnicas/hackingweb/README.md)
