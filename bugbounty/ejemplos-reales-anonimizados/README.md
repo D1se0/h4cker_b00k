@@ -1,0 +1,2 @@
+# Ejemplos reales (anonimizados)
+

@@ -1,12 +1,16 @@
-# 📖 Bug Bounty Handbook
+---
+icon: book
+---
+
+# Inicio
 
 > Documentación personal de metodología, plataformas y ejemplos reales de Bug Bounty.
 
-Bienvenido/a a mi manual de Bug Bounty. Este espacio recoge todo lo que he ido aprendiendo desde cero: qué es esto del *bug bounty*, cómo empezar sin morir en el intento, cómo se investiga (recon), cómo se escribe un reporte que un triager entienda a la primera, y las plantillas exactas que usan las plataformas por las que reporto: **YesWeHack**, **Secur0** e **Intigriti**.
+Bienvenido/a a mi manual de Bug Bounty. Este espacio recoge todo lo que he ido aprendiendo desde cero: qué es esto del _bug bounty_, cómo empezar sin morir en el intento, cómo se investiga (recon), cómo se escribe un reporte que un triager entienda a la primera, y las plantillas exactas que usan las plataformas por las que reporto: **YesWeHack**, **Secur0** e **Intigriti**.
 
 También incluye una sección con **ejemplos reales de reportes que he enviado**, redactados con la información sensible ocultada (efecto "rotulador negro"), para que sirvan de referencia de calidad y formato — no de contenido explotable contra terceros. Y una sección dedicada a cómo uso **Claude Code (IA)** como copiloto para acelerar todo este proceso, con mi propio setup real de archivos de contexto, prompts y metodología de agentes.
 
----
+***
 
 ## 🗂️ Cómo está organizado esto
 
@@ -29,6 +33,6 @@ También incluye una sección con **ejemplos reales de reportes que he enviado**
 3. **Capturas y, si se puede, vídeo.** Un triager que ve el bug en 10 segundos aprueba más rápido que uno que tiene que interpretar texto.
 4. **Nunca tocar datos reales de terceros.** Todos los ejemplos de este manual usan datos inventados o de cuentas de prueba propias.
 
----
+***
 
-📌 *Este manual es un documento vivo: se actualiza según voy aprendiendo cosas nuevas o cambian las plataformas.*
+📌 _Este manual es un documento vivo: se actualiza según voy aprendiendo cosas nuevas o cambian las plataformas._

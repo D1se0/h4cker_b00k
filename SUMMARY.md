@@ -74,45 +74,45 @@
 ## BugBounty
 
 * [Inicio](bugbounty/README.md)
-* **Introducción**
-  * [Introducción](bugbounty/01-introduccion/README.md)
+* [Introducción](bugbounty/introduccion/README.md)
+  * [📘 Introducción](bugbounty/01-introduccion/README.md)
   * [¿Qué es el Bug Bounty?](bugbounty/01-introduccion/que-es-bug-bounty.md)
   * [Glosario de términos](bugbounty/01-introduccion/glosario-terminos.md)
-* **Primeros pasos**
-  * [Primeros pasos](bugbounty/02-primeros-pasos/README.md)
+* [Primeros pasos](bugbounty/primeros-pasos/README.md)
+  * [🚀 Primeros pasos](bugbounty/02-primeros-pasos/README.md)
   * [Mentalidad y metodología general](bugbounty/02-primeros-pasos/mentalidad-y-metodologia.md)
   * [Herramientas esenciales](bugbounty/02-primeros-pasos/herramientas-esenciales.md)
   * [Recursos y comunidad](bugbounty/02-primeros-pasos/recursos-y-comunidad.md)
   * [Errores comunes de principiante](bugbounty/02-primeros-pasos/errores-comunes-principiantes.md)
-* **Metodología y Recon**
-  * [Metodología y Recon](bugbounty/03-metodologia-y-recon/README.md)
+* [Metodología y Recon](bugbounty/metodologia-y-recon/README.md)
+  * [🔍 Metodología y Recon](bugbounty/03-metodologia-y-recon/README.md)
   * [Reconocimiento (Recon)](bugbounty/03-metodologia-y-recon/reconocimiento.md)
   * [Análisis de apps móviles (Android/iOS)](bugbounty/03-metodologia-y-recon/analisis-apps-moviles.md)
   * [Análisis de APIs y aplicaciones web](bugbounty/03-metodologia-y-recon/analisis-apis-web.md)
-* **Cómo escribir reportes**
-  * [Cómo escribir reportes](bugbounty/04-como-escribir-reportes/README.md)
+* [Cómo escribir reportes](bugbounty/como-escribir-reportes/README.md)
+  * [✍️ Cómo escribir reportes](bugbounty/04-como-escribir-reportes/README.md)
   * [Anatomía de un buen reporte](bugbounty/04-como-escribir-reportes/anatomia-de-un-buen-reporte.md)
   * [Evidencias: capturas y vídeos](bugbounty/04-como-escribir-reportes/evidencias-capturas-videos.md)
   * [Cálculo de severidad (CVSS)](bugbounty/04-como-escribir-reportes/calculo-cvss.md)
   * [Comunicación con los programas](bugbounty/04-como-escribir-reportes/comunicacion-con-programas.md)
-* **Plataformas**
-  * [Plataformas](bugbounty/05-plataformas/README.md)
-  * **YesWeHack**
+* [Plataformas](bugbounty/plataformas/README.md)
+  * [🧩 Plataformas](bugbounty/05-plataformas/README.md)
+  * [YesWeHack](bugbounty/plataformas/yeswehack/README.md)
     * [Visión general](bugbounty/05-plataformas/yeswehack/README.md)
     * [Plantilla de reporte](bugbounty/05-plataformas/yeswehack/plantilla-reporte.md)
-  * **Secur0**
+  * [Secur0](bugbounty/plataformas/secur0/README.md)
     * [Visión general](bugbounty/05-plataformas/secur0/README.md)
     * [Plantilla de reporte](bugbounty/05-plataformas/secur0/plantilla-reporte.md)
-  * **Intigriti**
+  * [Intigriti](bugbounty/plataformas/intigriti/README.md)
     * [Visión general](bugbounty/05-plataformas/intigriti/README.md)
     * [Plantilla de reporte](bugbounty/05-plataformas/intigriti/plantilla-reporte.md)
-* **Ejemplos reales (anonimizados)**
-  * [Ejemplos reales](bugbounty/06-ejemplos-reales/README.md)
-  * [YesWeHack — JWT hardcodeado en app Android](bugbounty/06-ejemplos-reales/yeswehack-jwt-hardcodeado.md)
-  * [Secur0 — Contraseña por defecto hardcodeada](bugbounty/06-ejemplos-reales/secur0-password-hardcodeada.md)
-  * [Intigriti — IDOR en API de favoritos](bugbounty/06-ejemplos-reales/intigriti-idor-favoritos.md)
-* **Referencia**
-  * [Chuleta rápida de CWEs](bugbounty/07-referencia-cwe/README.md)
+* [Ejemplos reales (anonimizados)](bugbounty/ejemplos-reales-anonimizados/README.md)
+  * [🏆 Ejemplos reales](bugbounty/06-ejemplos-reales/README.md)
+  * [🏆 YesWeHack — JWT hardcodeado en app Android](bugbounty/06-ejemplos-reales/yeswehack-jwt-hardcodeado.md)
+  * [🏆 Secur0 — Contraseña por defecto hardcodeada](bugbounty/06-ejemplos-reales/secur0-password-hardcodeada.md)
+  * [🏆 Intigriti — IDOR en API de favoritos](bugbounty/06-ejemplos-reales/intigriti-idor-favoritos.md)
+* [Referencia](bugbounty/referencia/README.md)
+  * [📚 Chuleta rápida de CWEs](bugbounty/07-referencia-cwe/README.md)
 
 ## HERRAMIENTAS/TÉCNICAS
 
