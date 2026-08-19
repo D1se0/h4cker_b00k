@@ -505,6 +505,7 @@
   * [Nexus HackTheBox (Easy)](ctf/hackthebox/nexus-hackthebox-easy.md)
   * [Fireflow HackTheBox (Intermediate)](ctf/hackthebox/fireflow-hackthebox-intermediate.md)
   * [Ghostlink HackTheBox (Hard)](ctf/hackthebox/ghostlink-hackthebox-hard.md)
+  * [CCTV HackTheBox (Easy)](ctf/hackthebox/cctv-hackthebox-easy.md)
 * [TryHackMe](tryhackme-writeups/tryhackme/README.md)
   * [RootMe TryHackMe](tryhackme-writeups/tryhackme/write-up-rootme-tryhackme.md)
   * [Bounty Hacker TryHackMe](tryhackme-writeups/tryhackme/write-up-bounty-hacker-tryhackme.md)
