@@ -747,6 +747,8 @@
   * [NeoMarket BugBountyLabs (Avanzado)](ctf/bugbountylabs/neomarket-bugbountylabs-avanzado.md)
   * [Access BugBountyLabs (Principiante)](ctf/bugbountylabs/access-bugbountylabs-principiante.md)
   * [Listing BugBountyLabs (Principiante)](ctf/bugbountylabs/listing-bugbountylabs-principiante.md)
+* [BBLabs](ctf/bblabs/README.md)
+  * [Reflected XSS on 404 Error Page BBLabs (Easy)](ctf/bblabs/reflected-xss-on-404-error-page-bblabs-easy.md)
 * [TheHackersLabs](ctf/thehackerslabs/README.md)
   * [Quokka (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/quokka-windows-thehackerslabs-principiante.md)
   * [Microchoft (Windows) TheHackersLabs (Principiante)](ctf/thehackerslabs/microchoft-windows-thehackerslabs-principiante.md)
