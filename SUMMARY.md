@@ -114,6 +114,10 @@
 * [Referencia](bugbounty/referencia/README.md)
   * [📚 Chuleta rápida de CWEs](bugbounty/07-referencia-cwe/README.md)
 
+## Hacking con IA
+
+* [Page 1](hacking-con-ia/page-1.md)
+
 ## HERRAMIENTAS/TÉCNICAS
 
 * [HackingWeb](herramientas-tecnicas/hackingweb/README.md)
