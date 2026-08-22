@@ -398,6 +398,8 @@
   * [KeyCroc](herramientas-tecnicas/badusb/keycroc.md)
   * [Rubber Ducky](herramientas-tecnicas/badusb/rubber-ducky.md)
   * [USB AutoRun](herramientas-tecnicas/badusb/usb-autorun.md)
+* [Hacking Impresoras](herramientas-tecnicas/hacking-impresoras/README.md)
+  * [Documentación Hacking Impresoras](herramientas-tecnicas/hacking-impresoras/documentacion-hacking-impresoras.md)
 * [Hacking ActiveDirectory](herramientas-tecnicas/hacking-activedirectory/README.md)
   * [KERBEROASTING Active Directory](herramientas-tecnicas/hacking-activedirectory/kerberoasting-active-directory.md)
   * [Active Directory Hacking (Practicas-Teoria)](herramientas-tecnicas/hacking-activedirectory/active-directory-hacking-practicas-teoria.md)
