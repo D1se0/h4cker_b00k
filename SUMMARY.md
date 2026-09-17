@@ -128,6 +128,19 @@
 * [Prompts clave, plantilla por plantilla](hacking-con-ia/prompts-clave.md)
 * [Ideas y automatizaciones adicionales](hacking-con-ia/ideas-y-automatizaciones.md)
 
+## SQL
+
+* [SQL — Fundamentals](SQL/README.md)
+* [1 · Fundamentos: Bases de Datos y SQL](SQL/00-fundamentos.md)
+* [2 · Query Basics: Tus Primeras Consultas](SQL/01-query-basics.md)
+* [3 · Filtrado Avanzado](SQL/02-filtrado-avanzado.md)
+* [4 · Consultas Multi-Tabla](SQL/03-multi-tabla.md)
+* [5 · Funciones Agregadas](SQL/04-funciones-agregadas.md)
+* [6 · Funciones de Utilidad](SQL/05-funciones-utilidad.md)
+* [7 · Tablas y DDL: Diseño de la Base de Datos](SQL/06-tablas-ddl.md)
+* [8 · SQL para Hacking: Inyección SQL](SQL/07-sql-para-hacking.md)
+* [9 · Recursos, Playground y Chuleta Final](SQL/08-recursos.md)
+
 ## HERRAMIENTAS/TÉCNICAS
 
 * [HackingWeb](herramientas-tecnicas/hackingweb/README.md)
