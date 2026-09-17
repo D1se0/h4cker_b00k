@@ -1,16 +1,20 @@
-# 🔍 Capítulo 2 — Filtrado Avanzado
+---
+icon: magnifying-glass
+---
+
+# 3 · Filtrado Avanzado
 
 > Ya sabes leer y filtrar con `WHERE`. Ahora aprendemos a filtrar con precisión quirúrgica: operadores lógicos, ordenación, patrones, listas, rangos y valores únicos. Ejemplos ejecutables en el [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## AND, OR y NOT — Operadores lógicos
 
 La cláusula `WHERE` se puede combinar con los operadores `AND`, `OR` y `NOT` para filtrar con más de una condición:
 
-- **AND** muestra un registro si **TODAS** las condiciones son verdaderas.
-- **OR** muestra un registro si **ALGUNA** de las condiciones es verdadera.
-- **NOT** muestra un registro si la condición **NO** es verdadera.
+* **AND** muestra un registro si **TODAS** las condiciones son verdaderas.
+* **OR** muestra un registro si **ALGUNA** de las condiciones es verdadera.
+* **NOT** muestra un registro si la condición **NO** es verdadera.
 
 ### Sintaxis
 
@@ -48,20 +52,21 @@ WHERE NOT province_id = 'ON';
 ```
 
 > 💡 Puedes combinarlos con paréntesis para controlar el orden de evaluación:
+>
 > ```sql
 > SELECT * FROM patients
 > WHERE (city = 'Hamilton' OR city = 'Toronto')
 >   AND gender = 'F';
 > ```
 
----
+***
 
 ## ORDER BY — Ordenar resultados
 
 La palabra clave `ORDER BY` **ordena** el result-set de forma ascendente o descendente.
 
-- Por defecto ordena **ascendente** (ASC, de la A a la Z / del 1 al 9).
-- Con `DESC` ordena **descendente**.
+* Por defecto ordena **ascendente** (ASC, de la A a la Z / del 1 al 9).
+* Con `DESC` ordena **descendente**.
 
 ### Sintaxis
 
@@ -92,7 +97,7 @@ SELECT * FROM patients
 ORDER BY first_name ASC, last_name DESC;
 ```
 
----
+***
 
 ## LIKE — Búsqueda por patrón
 
@@ -100,10 +105,10 @@ El operador `LIKE` se usa en `WHERE` para buscar un **patrón** en una columna.
 
 Hay dos comodines (wildcards) que se usan con `LIKE`:
 
-| Comodín | Significado |
-|---------|-------------|
-| `%` | Representa **cero, uno o varios** caracteres |
-| `_` | Representa **un solo** carácter |
+| Comodín | Significado                                  |
+| ------- | -------------------------------------------- |
+| `%`     | Representa **cero, uno o varios** caracteres |
+| `_`     | Representa **un solo** carácter              |
 
 Se pueden combinar entre sí.
 
@@ -148,7 +153,7 @@ SELECT * FROM patients WHERE first_name NOT LIKE 'a%';-- NO empieza por 'a'
 
 > 🔥 **Nota para hacking:** `LIKE` esconde técnica. En inyecciones **blind SQLi** (capítulo 7) se usa `LIKE 'a%'` para adivinar contenido carácter a carácter cuando la web no muestra errores. Recuérdalo.
 
----
+***
 
 ## IN — Filtrar por lista de valores
 
@@ -186,7 +191,7 @@ SELECT * FROM patients
 WHERE first_name IN (SELECT first_name FROM doctors);
 ```
 
----
+***
 
 ## BETWEEN — Filtrar por rango
 
@@ -223,7 +228,7 @@ WHERE first_name BETWEEN 'Alex' AND 'Ben';
 
 > 💡 Con texto, la comparación usa el código ASCII: `'c'` (99) está entre `'a'` (97) y `'e'` (101), pero `'C'` (67) no, porque las mayúsculas van antes en la tabla ASCII.
 
----
+***
 
 ## DISTINCT — Valores únicos
 
@@ -249,7 +254,7 @@ SELECT DISTINCT first_name FROM patients;
 SELECT COUNT(DISTINCT first_name) FROM patients;
 ```
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -260,6 +265,7 @@ SELECT COUNT(DISTINCT first_name) FROM patients;
 5. Nombres de 4 letras exactas que empiecen por 'J' (pista: `___` con tres guiones bajos).
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -277,17 +283,18 @@ WHERE patient_id BETWEEN 10 AND 20 AND province_id <> 'ON';
 -- 5
 SELECT * FROM patients WHERE first_name LIKE 'J___';
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Herramienta | Para qué |
-|-------------|----------|
-| `AND` / `OR` / `NOT` | Combinar o invertir condiciones |
-| `ORDER BY` | Ordenar (ASC por defecto, DESC para invertir) |
-| `LIKE` + `%` `_` | Buscar por patrones |
-| `IN` / `NOT IN` | Coincidir contra una lista o subconsulta |
-| `BETWEEN` | Rango inclusivo (números, texto, fechas) |
-| `DISTINCT` | Eliminar duplicados del resultado |
+| Herramienta          | Para qué                                      |
+| -------------------- | --------------------------------------------- |
+| `AND` / `OR` / `NOT` | Combinar o invertir condiciones               |
+| `ORDER BY`           | Ordenar (ASC por defecto, DESC para invertir) |
+| `LIKE` + `%` `_`     | Buscar por patrones                           |
+| `IN` / `NOT IN`      | Coincidir contra una lista o subconsulta      |
+| `BETWEEN`            | Rango inclusivo (números, texto, fechas)      |
+| `DISTINCT`           | Eliminar duplicados del resultado             |
 
-➡️ **Siguiente capítulo:** [Consultas Multi-Tabla](./03-multi-tabla.md)
+➡️ **Siguiente capítulo:** [Consultas Multi-Tabla](03-multi-tabla.md)

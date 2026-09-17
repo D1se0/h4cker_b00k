@@ -1,8 +1,12 @@
-# 💉 Capítulo 7 — SQL para Hacking: Inyección SQL
+---
+icon: syringe
+---
+
+# 8 · SQL para Hacking: Inyección SQL
 
 > **⚠️ AVISO LEGAL:** Este capítulo es **solo educativo**. Atacar sistemas sin autorización expresa es **ilegal**. Practica únicamente en laboratorios propios, HackTheBox, TryHackMe, PortSwigger Academy, OWASP Juice Shop o programas de bug bounty con scope autorizado.
 
----
+***
 
 ## ¿Qué es la Inyección SQL (SQLi)?
 
@@ -19,14 +23,14 @@ Entonces la web "pega" tu input dentro de la consulta. **Tú escribes SQL, la ba
 
 ## Tipos de inyección SQL
 
-| Tipo | Cómo se manifiesta |
-|------|--------------------|
-| **Error-based** | Los errores de la BD se muestran en la web (filtrar info) |
-| **UNION-based** | Usas `UNION SELECT` para añadir tus propios resultados a la página |
-| **Boolean-based blind** | No ves errores, pero la página cambia según sea TRUE/FALSE |
-| **Time-based blind** | No cambia nada visible; usas `SLEEP()` para medir tiempos |
-| **Out-of-band (OOB)** | La BD hace peticiones externas (DNS/HTTP) con los datos |
-| **In-band stacked queries** | Puedes apilar consultas con `;` (depende del driver) |
+| Tipo                        | Cómo se manifiesta                                                 |
+| --------------------------- | ------------------------------------------------------------------ |
+| **Error-based**             | Los errores de la BD se muestran en la web (filtrar info)          |
+| **UNION-based**             | Usas `UNION SELECT` para añadir tus propios resultados a la página |
+| **Boolean-based blind**     | No ves errores, pero la página cambia según sea TRUE/FALSE         |
+| **Time-based blind**        | No cambia nada visible; usas `SLEEP()` para medir tiempos          |
+| **Out-of-band (OOB)**       | La BD hace peticiones externas (DNS/HTTP) con los datos            |
+| **In-band stacked queries** | Puedes apilar consultas con `;` (depende del driver)               |
 
 ## Paso 1 — Detectar la vulnerabilidad
 
@@ -44,12 +48,12 @@ La técnica básica: **romper la consulta** y ver cómo reacciona la web. Los pa
 
 ### Comentarios SQL (cierran el resto de la consulta)
 
-| Comentario | Dialecto |
-|-----------|----------|
-| `-- ` (con espacio) | MySQL, SQL Server (URL-encoded: `--+` o `-- -`) |
-| `#` | MySQL |
-| `/* ... */` | Comentario de bloque (multi-motor) |
-| `;` | Apilar consultas (solo algunos drivers) |
+| Comentario         | Dialecto                                        |
+| ------------------ | ----------------------------------------------- |
+| `--` (con espacio) | MySQL, SQL Server (URL-encoded: `--+` o `-- -`) |
+| `#`                | MySQL                                           |
+| `/* ... */`        | Comentario de bloque (multi-motor)              |
+| `;`                | Apilar consultas (solo algunos drivers)         |
 
 ## Paso 2 — Determinar el número de columnas (UNION-based)
 
@@ -122,7 +126,7 @@ Cuando la web no muestra errores ni datos, explotas respuestas **binarias** (sí
 1' AND IF(SUBSTRING(username,1,1)='a', SLEEP(5), 0)-- -
 ```
 
-Así se adivina el contenido **carácter a carácter** (automatizable con scripts o sqlmap). Aquí es donde `LIKE`, `SUBSTRING()`, `ASCII()` y las funciones del [capítulo 5](./05-funciones-utilidad.md) brillan.
+Así se adivina el contenido **carácter a carácter** (automatizable con scripts o sqlmap). Aquí es donde `LIKE`, `SUBSTRING()`, `ASCII()` y las funciones del [capítulo 5](05-funciones-utilidad.md) brillan.
 
 ## 🛠️ sqlmap — El automatizador
 
@@ -158,35 +162,37 @@ sqlmap -u "..." --os-shell --batch
 
 ## 🧪 Laboratorios legales para practicar
 
-| Recurso | Qué ofrece |
-|---------|-----------|
-| [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection) | Los mejores labs de SQLi, gratis |
-| [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) | App vulnerable para docker (`docker run -p 3000:3000 bkimminich/juice-shop`) |
-| HackTheBox / TryHackMe | Máquinas con SQLi en contexto real |
-| [sqlzoo.net](https://sqlzoo.net) / sql-learning playground | Para afianzar SQL puro |
+| Recurso                                                                     | Qué ofrece                                                                   |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection) | Los mejores labs de SQLi, gratis                                             |
+| [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)               | App vulnerable para docker (`docker run -p 3000:3000 bkimminich/juice-shop`) |
+| HackTheBox / TryHackMe                                                      | Máquinas con SQLi en contexto real                                           |
+| [sqlzoo.net](https://sqlzoo.net) / sql-learning playground                  | Para afianzar SQL puro                                                       |
 
 ## 🛡️ Prevención (para defenders y devs)
 
 1. **Consultas parametrizadas (prepared statements)** — la defensa nº 1:
+
 ```php
 // ✅ SEGURO (PHP + PDO)
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = ? AND password = ?');
 $stmt->execute([$user, $pass]);
 ```
+
 2. **Validar la entrada** del usuario (listas blancas, tipos, longitud).
 3. **Escapar correctamente** solo como última capa (no es suficiente por sí solo).
 4. **Mínimo privilegio** en el usuario de BD (nada de root para la web).
 5. **No mostrar errores de BD** al usuario (error-based se muere con esto).
 6. **WAF + logs** como defensa en profundidad.
 
----
+***
 
 ## 📌 Resumen del capítulo
 
-- SQLi = **tu input se convierte en SQL** porque el código concatena sin parametrizar.
-- Flujo clásico: detectar (`'`, `AND 1=1/1=2`) → contar columnas (`ORDER BY`, `UNION NULL`) → localizar columnas visibles → extraer con `information_schema` → dump.
-- Blind: boolean (`AND ...='a'`) o time (`SLEEP()`), carácter a carácter.
-- `sqlmap` automatiza todo: `-u`, `--dbs`, `--tables`, `--dump`, `--os-shell`.
-- La defensa real: **prepared statements**, siempre.
+* SQLi = **tu input se convierte en SQL** porque el código concatena sin parametrizar.
+* Flujo clásico: detectar (`'`, `AND 1=1/1=2`) → contar columnas (`ORDER BY`, `UNION NULL`) → localizar columnas visibles → extraer con `information_schema` → dump.
+* Blind: boolean (`AND ...='a'`) o time (`SLEEP()`), carácter a carácter.
+* `sqlmap` automatiza todo: `-u`, `--dbs`, `--tables`, `--dump`, `--os-shell`.
+* La defensa real: **prepared statements**, siempre.
 
-➡️ **Siguiente capítulo:** [Recursos y Retos](./08-recursos.md)
+➡️ **Siguiente capítulo:** [Recursos y Retos](08-recursos.md)

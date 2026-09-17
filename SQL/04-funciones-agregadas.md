@@ -1,8 +1,12 @@
-# 🧮 Capítulo 4 — Funciones Agregadas
+---
+icon: file-code
+---
+
+# 5 · Funciones Agregadas
 
 > Las funciones agregadas **resumen** muchas filas en un solo valor: cuántos son, cuánto suman, cuál es el mayor... Son el "Excel" de SQL. Ejemplos ejecutables en el [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## COUNT() — Contar filas
 
@@ -30,7 +34,7 @@ WHERE weight > 120;
 
 > 💡 Variantes útiles: `COUNT(*)` cuenta todas las filas; `COUNT(columna)` solo las que tienen esa columna con valor no-NULL; `COUNT(DISTINCT columna)` las distintas.
 
----
+***
 
 ## AVG() — Promedio
 
@@ -58,7 +62,7 @@ Con alias para que la columna tenga nombre bonito:
 SELECT AVG(weight) AS average_weight FROM patients;
 ```
 
----
+***
 
 ## SUM() — Suma total
 
@@ -80,7 +84,7 @@ Encuentra la suma de los pesos de todos los pacientes:
 SELECT SUM(weight) FROM patients;
 ```
 
----
+***
 
 ## MAX() — Valor máximo
 
@@ -104,7 +108,7 @@ SELECT MAX(weight) FROM patients;
 
 > 💡 `MAX()` también funciona con texto y fechas: `MAX(birth_date)` da la fecha más reciente.
 
----
+***
 
 ## MIN() — Valor mínimo
 
@@ -126,11 +130,11 @@ Encuentra el menor peso entre los pacientes:
 SELECT MIN(weight) FROM patients;
 ```
 
----
+***
 
 ## Combinando agregadas con GROUP BY y HAVING
 
-El verdadero poder de las agregadas aparece al combinarlas con lo aprendido en el [capítulo 3](./03-multi-tabla.md):
+El verdadero poder de las agregadas aparece al combinarlas con lo aprendido en el [capítulo 3](03-multi-tabla.md):
 
 ```sql
 -- Peso promedio por provincia
@@ -153,7 +157,7 @@ GROUP BY gender;
 
 > 🧠 **Recuerda:** toda columna del `SELECT` que NO esté dentro de una función agregada debe ir en el `GROUP BY`. Ej: si seleccionas `province_id, AVG(weight)` → `GROUP BY province_id`.
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -164,6 +168,7 @@ GROUP BY gender;
 5. El diagnóstico más repetido (con su cantidad).
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -179,18 +184,19 @@ SELECT MAX(birth_date) FROM patients;
 SELECT diagnosis, COUNT(*) AS total FROM admissions
 GROUP BY diagnosis ORDER BY total DESC LIMIT 1;
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Función | Devuelve |
-|---------|----------|
-| `COUNT()` | Número de filas |
-| `AVG()` | Media de una columna numérica |
-| `SUM()` | Suma total de una columna numérica |
-| `MAX()` | Valor máximo (números, texto, fechas) |
-| `MIN()` | Valor mínimo (números, texto, fechas) |
+| Función   | Devuelve                              |
+| --------- | ------------------------------------- |
+| `COUNT()` | Número de filas                       |
+| `AVG()`   | Media de una columna numérica         |
+| `SUM()`   | Suma total de una columna numérica    |
+| `MAX()`   | Valor máximo (números, texto, fechas) |
+| `MIN()`   | Valor mínimo (números, texto, fechas) |
 
 > 🔥 **Nota para hacking:** en extracción de datos con SQLi a ciegas, `COUNT(*)` se usa para saber cuántas tablas/columnas existen, y `MAX()`/`MIN()` para acotar valores carácter a carácter.
 
-➡️ **Siguiente capítulo:** [Funciones de Utilidad](./05-funciones-utilidad.md)
+➡️ **Siguiente capítulo:** [Funciones de Utilidad](05-funciones-utilidad.md)

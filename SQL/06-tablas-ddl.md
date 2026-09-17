@@ -1,8 +1,12 @@
-# 🏗️ Capítulo 6 — Tablas y DDL: Diseño de la Base de Datos
+---
+icon: code
+---
+
+# 7 · Tablas y DDL: Diseño de la Base de Datos
 
 > Hasta ahora has manipulado datos dentro de tablas existentes (DML). Ahora pasas al **DDL (Data Definition Language)**: crear, modificar y borrar la **estructura** de la base de datos. Ejemplos en el [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## Tipos de datos (Data Types)
 
@@ -14,43 +18,43 @@ El **tipo de dato** de una columna define qué valores puede almacenar: enteros,
 
 **Cadenas (String):**
 
-| Tipo | Descripción |
-|------|-------------|
-| `CHAR(size)` | Cadena de longitud fija, 0-255 caracteres |
-| `VARCHAR(size)` | Cadena de longitud variable, hasta 65535 caracteres |
-| `BINARY(size)` / `VARBINARY(size)` | Binarios de longitud fija / variable |
-| `TINYTEXT` / `TINYBLOB` | Máx. 255 bytes / caracteres |
-| `TEXT` / `BLOB` | Máx. 65535 bytes / caracteres |
-| `MEDIUMTEXT` / `MEDIUMBLOB` | Máx. 16.777.215 bytes / caracteres |
-| `LONGTEXT` / `LONGBLOB` | Máx. 4.294.967.295 bytes / caracteres |
-| `ENUM` / `SET` | Listas predefinidas de valores |
+| Tipo                               | Descripción                                         |
+| ---------------------------------- | --------------------------------------------------- |
+| `CHAR(size)`                       | Cadena de longitud fija, 0-255 caracteres           |
+| `VARCHAR(size)`                    | Cadena de longitud variable, hasta 65535 caracteres |
+| `BINARY(size)` / `VARBINARY(size)` | Binarios de longitud fija / variable                |
+| `TINYTEXT` / `TINYBLOB`            | Máx. 255 bytes / caracteres                         |
+| `TEXT` / `BLOB`                    | Máx. 65535 bytes / caracteres                       |
+| `MEDIUMTEXT` / `MEDIUMBLOB`        | Máx. 16.777.215 bytes / caracteres                  |
+| `LONGTEXT` / `LONGBLOB`            | Máx. 4.294.967.295 bytes / caracteres               |
+| `ENUM` / `SET`                     | Listas predefinidas de valores                      |
 
 **Numéricos:**
 
-| Tipo | Descripción |
-|------|-------------|
-| `TINYINT` / `SMALLINT` / `MEDIUMINT` / `INT` / `INTEGER` / `BIGINT` | Enteros con varios rangos |
-| `FLOAT` / `DOUBLE` / `DECIMAL` | Punto flotante y numéricos exactos |
-| `BIT` | Valores de bit, 1-64 bits |
-| `BOOL` / `BOOLEAN` | Verdadero/Falso |
+| Tipo                                                                | Descripción                        |
+| ------------------------------------------------------------------- | ---------------------------------- |
+| `TINYINT` / `SMALLINT` / `MEDIUMINT` / `INT` / `INTEGER` / `BIGINT` | Enteros con varios rangos          |
+| `FLOAT` / `DOUBLE` / `DECIMAL`                                      | Punto flotante y numéricos exactos |
+| `BIT`                                                               | Valores de bit, 1-64 bits          |
+| `BOOL` / `BOOLEAN`                                                  | Verdadero/Falso                    |
 
 **Fecha y hora:**
 
-| Tipo | Formato |
-|------|---------|
-| `DATE` | `YYYY-MM-DD` |
-| `DATETIME` / `TIMESTAMP` | Fecha y hora |
-| `TIME` | Solo hora |
-| `YEAR` | Año de 4 dígitos |
+| Tipo                     | Formato          |
+| ------------------------ | ---------------- |
+| `DATE`                   | `YYYY-MM-DD`     |
+| `DATETIME` / `TIMESTAMP` | Fecha y hora     |
+| `TIME`                   | Solo hora        |
+| `YEAR`                   | Año de 4 dígitos |
 
 ### SQL Server
 
-| Categoría | Tipos |
-|-----------|-------|
-| Cadenas | `char(n)`, `varchar(n)`, `varchar(max)`, `text`, `nchar`, `nvarchar(n)`, `nvarchar(max)`, `ntext` |
-| Numéricos | `bit`, `tinyint`, `smallint`, `int`, `bigint`, `decimal(p,s)`, `numeric(p,s)`, `smallmoney`, `money`, `float(n)`, `real` |
-| Fecha/Hora | `datetime`, `datetime2`, `smalldatetime`, `date`, `time`, `datetimeoffset`, `timestamp` |
-| Otros | `sql_variant`, `uniqueidentifier`, `xml`, `cursor`, `table` |
+| Categoría  | Tipos                                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Cadenas    | `char(n)`, `varchar(n)`, `varchar(max)`, `text`, `nchar`, `nvarchar(n)`, `nvarchar(max)`, `ntext`                        |
+| Numéricos  | `bit`, `tinyint`, `smallint`, `int`, `bigint`, `decimal(p,s)`, `numeric(p,s)`, `smallmoney`, `money`, `float(n)`, `real` |
+| Fecha/Hora | `datetime`, `datetime2`, `smalldatetime`, `date`, `time`, `datetimeoffset`, `timestamp`                                  |
+| Otros      | `sql_variant`, `uniqueidentifier`, `xml`, `cursor`, `table`                                                              |
 
 ### MS Access
 
@@ -58,15 +62,16 @@ El **tipo de dato** de una columna define qué valores puede almacenar: enteros,
 
 > 🔥 **Nota para hacking:** reconocer tipos de datos te ayuda a entender errores de SQLi. Un clásico: si la web concatena `id` en una consulta sin comillas, es probable que el campo sea numérico → la inyección va sin comillas (`AND 1=1`); si va entre comillas, hay que cerrarlas (`' AND 1=1-- -`).
 
----
+***
 
 ## Constraints — Restricciones
 
 Las **constraints** (restricciones) de SQL se usan para **especificar reglas para los datos** de una tabla.
 
 Se pueden especificar:
-- Al crear la tabla → `CREATE TABLE`.
-- Después de crearla → `ALTER TABLE`.
+
+* Al crear la tabla → `CREATE TABLE`.
+* Después de crearla → `ALTER TABLE`.
 
 ### Sintaxis
 
@@ -81,20 +86,20 @@ CREATE TABLE table_name (
 
 ### Las constraints principales
 
-| Constraint | Qué garantiza |
-|------------|---------------|
-| `NOT NULL` | La columna no puede tener valor `NULL` |
-| `UNIQUE` | Todos los valores de la columna son distintos |
+| Constraint    | Qué garantiza                                          |
+| ------------- | ------------------------------------------------------ |
+| `NOT NULL`    | La columna no puede tener valor `NULL`                 |
+| `UNIQUE`      | Todos los valores de la columna son distintos          |
 | `PRIMARY KEY` | Combinación de NOT NULL + UNIQUE. Identifica cada fila |
-| `FOREIGN KEY` | Evita acciones que destruyan los enlaces entre tablas |
-| `CHECK` | Los valores cumplen una condición específica |
-| `DEFAULT` | Valor por defecto si no se especifica otro |
+| `FOREIGN KEY` | Evita acciones que destruyan los enlaces entre tablas  |
+| `CHECK`       | Los valores cumplen una condición específica           |
+| `DEFAULT`     | Valor por defecto si no se especifica otro             |
 
 Las constraints pueden ser **de columna** (afectan a una columna) o **de tabla** (afectan a toda la tabla).
 
-> 🧠 Si se viola una constraint, la acción se **aborta**: la base de datos rechaza la operación. Esto es la "integridad de los datos" y es lo que un atacante intenta *sortear* cuando explota una inyección SQL (por ejemplo, actualizando la tabla de usuarios directamente).
+> 🧠 Si se viola una constraint, la acción se **aborta**: la base de datos rechaza la operación. Esto es la "integridad de los datos" y es lo que un atacante intenta _sortear_ cuando explota una inyección SQL (por ejemplo, actualizando la tabla de usuarios directamente).
 
----
+***
 
 ## CREATE TABLE — Crear tablas
 
@@ -149,14 +154,14 @@ FROM patients;
 SELECT * FROM TestPatients;
 ```
 
----
+***
 
 ## PRIMARY KEY — Clave primaria
 
 La constraint `PRIMARY KEY` **identifica de forma única** cada registro de una tabla.
 
-- Los valores deben ser **UNIQUE** y no pueden ser **NULL**.
-- Una tabla solo puede tener **UNA** primary key, que puede ser de una o varias columnas.
+* Los valores deben ser **UNIQUE** y no pueden ser **NULL**.
+* Una tabla solo puede tener **UNA** primary key, que puede ser de una o varias columnas.
 
 ### En CREATE TABLE
 
@@ -218,15 +223,15 @@ ALTER TABLE Persons
 DROP CONSTRAINT PK_Person;
 ```
 
----
+***
 
 ## FOREIGN KEY — Clave foránea
 
 La constraint `FOREIGN KEY` **evita acciones que destruyan los enlaces entre tablas**.
 
-- Una FK es un campo (o conjunto de campos) de una tabla que apunta a la **PRIMARY KEY** de otra.
-- La tabla con la FK se llama tabla **hija**; la tabla con la PK referenciada es la tabla **padre**.
-- Evita insertar datos inválidos en la columna FK: el valor **debe existir** en la tabla padre.
+* Una FK es un campo (o conjunto de campos) de una tabla que apunta a la **PRIMARY KEY** de otra.
+* La tabla con la FK se llama tabla **hija**; la tabla con la PK referenciada es la tabla **padre**.
+* Evita insertar datos inválidos en la columna FK: el valor **debe existir** en la tabla padre.
 
 ### En CREATE TABLE
 
@@ -287,14 +292,14 @@ ALTER TABLE Orders
 DROP CONSTRAINT FK_PersonOrder;
 ```
 
----
+***
 
 ## UNIQUE — Valores únicos
 
 La constraint `UNIQUE` garantiza que **todos los valores de una columna sean diferentes**.
 
-- `UNIQUE` y `PRIMARY KEY` dan garantía de unicidad, pero: una tabla tiene **solo una PK** y puede tener **muchas UNIQUE**.
-- Una `PRIMARY KEY` lleva automáticamente una constraint `UNIQUE`.
+* `UNIQUE` y `PRIMARY KEY` dan garantía de unicidad, pero: una tabla tiene **solo una PK** y puede tener **muchas UNIQUE**.
+* Una `PRIMARY KEY` lleva automáticamente una constraint `UNIQUE`.
 
 ### En CREATE TABLE
 
@@ -352,7 +357,7 @@ ALTER TABLE Persons
 DROP CONSTRAINT UC_Person;
 ```
 
----
+***
 
 ## NOT NULL — Valores obligatorios
 
@@ -376,14 +381,14 @@ ALTER TABLE Persons
 MODIFY Age int NOT NULL;
 ```
 
----
+***
 
 ## CHECK — Validar condiciones
 
 La constraint `CHECK` **limita el rango de valores** que puede almacenar una columna.
 
-- Si defines un `CHECK` en una columna, solo se permiten ciertos valores en ella.
-- Si lo defines en la tabla, puede limitar valores de unas columnas según otras de la misma fila.
+* Si defines un `CHECK` en una columna, solo se permiten ciertos valores en ella.
+* Si lo defines en la tabla, puede limitar valores de unas columnas según otras de la misma fila.
 
 ### En CREATE TABLE
 
@@ -444,7 +449,7 @@ ALTER TABLE Persons
 DROP CONSTRAINT CHK_PersonAge;
 ```
 
----
+***
 
 ## DEFAULT — Valores por defecto
 
@@ -508,7 +513,7 @@ ALTER TABLE Persons
 ALTER COLUMN City DROP DEFAULT;
 ```
 
----
+***
 
 ## AUTO INCREMENT — Contador automático
 
@@ -584,14 +589,14 @@ VALUES (seq_person.nextval, 'Lars', 'Monsen');
 
 > 🔥 **Nota para hacking:** reconocer el patrón de auto-increment te ayuda en SQLi: si los `id` de una web son 1, 2, 3..., es una columna auto-increment, y `UPDATE`/`DELETE` sin `WHERE` (o con el `WHERE` troyanizado por una inyección) afectan a todo.
 
----
+***
 
 ## Índices (CREATE INDEX)
 
 La sentencia `CREATE INDEX` se usa para **crear índices** en las tablas. Los índices ayudan a **recuperar datos más rápido** (como el índice de un libro).
 
-- Los usuarios no ven los índices: solo se usan para acelerar búsquedas y consultas.
-- ⚠️ Actualizar una tabla con índices cuesta más tiempo (hay que actualizar también el índice). Solo crea índices en columnas que se busquen **frecuentemente**.
+* Los usuarios no ven los índices: solo se usan para acelerar búsquedas y consultas.
+* ⚠️ Actualizar una tabla con índices cuesta más tiempo (hay que actualizar también el índice). Solo crea índices en columnas que se busquen **frecuentemente**.
 
 ### Crear un índice
 
@@ -636,7 +641,7 @@ ALTER TABLE table_name
 DROP INDEX index_name;
 ```
 
----
+***
 
 ## ALTER TABLE — Modificar tablas
 
@@ -665,7 +670,7 @@ ALTER TABLE table_name
 DROP COLUMN column_name;
 ```
 
-Ejemplo: borrar la columna "last_name" de `patients`:
+Ejemplo: borrar la columna "last\_name" de `patients`:
 
 ```sql
 ALTER TABLE patients
@@ -690,7 +695,7 @@ ALTER TABLE table_name
 MODIFY column_name datatype;
 ```
 
----
+***
 
 ## DROP TABLE — Borrar tablas
 
@@ -714,13 +719,14 @@ SELECT * FROM patients;
 ```
 
 > 💡 **Diferencias clave:**
-> - `DELETE FROM tabla` → borra **filas** (puede llevar WHERE), la tabla sigue existiendo.
-> - `TRUNCATE TABLE tabla` → vacía la tabla **completa** rápidamente, mantiene la estructura.
-> - `DROP TABLE tabla` → elimina la **tabla entera** (estructura + datos).
+>
+> * `DELETE FROM tabla` → borra **filas** (puede llevar WHERE), la tabla sigue existiendo.
+> * `TRUNCATE TABLE tabla` → vacía la tabla **completa** rápidamente, mantiene la estructura.
+> * `DROP TABLE tabla` → elimina la **tabla entera** (estructura + datos).
 
 > 🔥 **Nota para hacking:** `'; DROP TABLE usuarios; --` es el payload de broma de las películas, pero `DROP` y `DELETE` troyanizados son un riesgo real en SQLi destructiva. Nunca los lances sin autorización: la destrucción de datos NO es reversible y te convierte en delincuente.
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -731,6 +737,7 @@ SELECT * FROM patients;
 5. Vacía la tabla sin borrar su estructura... y luego bórrala del todo.
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -752,20 +759,21 @@ CREATE INDEX idx_alias ON hackers (alias);
 TRUNCATE TABLE hackers;
 DROP TABLE hackers;
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Sentencia / Constraint | Para qué |
-|------------------------|----------|
-| `CREATE TABLE` | Crear tablas (nombre + tipo + constraints) |
-| `ALTER TABLE` | Añadir/borrar/modificar columnas y constraints |
-| `DROP TABLE` | Eliminar tabla y datos ⚠️ |
-| `PRIMARY KEY` | Identificador único de fila |
-| `FOREIGN KEY` | Enlace íntegro entre tablas |
-| `UNIQUE` / `NOT NULL` | Unicidad y obligatoriedad |
-| `CHECK` / `DEFAULT` | Validación y valores por defecto |
-| `AUTO_INCREMENT` / `IDENTITY` / `SEQUENCE` | Contadores automáticos (según motor) |
-| `CREATE INDEX` | Acelerar búsquedas frecuentes |
+| Sentencia / Constraint                     | Para qué                                       |
+| ------------------------------------------ | ---------------------------------------------- |
+| `CREATE TABLE`                             | Crear tablas (nombre + tipo + constraints)     |
+| `ALTER TABLE`                              | Añadir/borrar/modificar columnas y constraints |
+| `DROP TABLE`                               | Eliminar tabla y datos ⚠️                      |
+| `PRIMARY KEY`                              | Identificador único de fila                    |
+| `FOREIGN KEY`                              | Enlace íntegro entre tablas                    |
+| `UNIQUE` / `NOT NULL`                      | Unicidad y obligatoriedad                      |
+| `CHECK` / `DEFAULT`                        | Validación y valores por defecto               |
+| `AUTO_INCREMENT` / `IDENTITY` / `SEQUENCE` | Contadores automáticos (según motor)           |
+| `CREATE INDEX`                             | Acelerar búsquedas frecuentes                  |
 
-➡️ **Siguiente capítulo:** [SQL para Hacking — Inyección SQL](./07-sql-para-hacking.md)
+➡️ **Siguiente capítulo:** [SQL para Hacking — Inyección SQL](07-sql-para-hacking.md)

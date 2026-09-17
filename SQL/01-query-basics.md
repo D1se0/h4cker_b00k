@@ -1,8 +1,12 @@
-# 📖 Capítulo 1 — Query Basics: Tus Primeras Consultas
+---
+icon: display-code
+---
+
+# 2 · Query Basics: Tus Primeras Consultas
 
 > Aquí aprendes las 5 sentencias que usarás el 90% del tiempo: `SELECT`, `WHERE`, `INSERT`, `UPDATE` y `DELETE`. Todas las tablas de ejemplo son las del hospital (`patients`, `admissions`, `doctors`) del [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## SELECT — Leer datos
 
@@ -37,7 +41,7 @@ SELECT first_name, last_name FROM patients;
 SELECT * FROM patients;
 ```
 
----
+***
 
 ## WHERE — Filtrar registros
 
@@ -62,8 +66,8 @@ WHERE gender = 'F';
 
 ### ⚠️ Texto vs números (¡muy importante!)
 
-- Los **valores de texto** van entre **comillas simples**: `'Toronto'`.
-- Los **valores numéricos** van **sin comillas**: `1`.
+* Los **valores de texto** van entre **comillas simples**: `'Toronto'`.
+* Los **valores numéricos** van **sin comillas**: `1`.
 
 ```sql
 -- Texto: con comillas
@@ -75,17 +79,17 @@ SELECT * FROM patients WHERE patient_id = 1;
 
 ### Operadores disponibles en WHERE
 
-| Operador | Significado | Ejemplo |
-|----------|-------------|---------|
-| `=` | Igual | `WHERE patient_id = 1` |
-| `>` | Mayor que | `WHERE patient_id > 5` |
-| `<` | Menor que | `WHERE patient_id < 5` |
-| `>=` | Mayor o igual | `WHERE patient_id >= 5` |
-| `<=` | Menor o igual | `WHERE patient_id <= 5` |
-| `<>` | Distinto | `WHERE patient_id <> 5` |
-| `BETWEEN` | En un rango inclusivo | `WHERE patient_id BETWEEN 4 AND 6` |
-| `LIKE` | Búsqueda por patrón | `WHERE first_name LIKE 'a%'` |
-| `IN` | En una lista de valores | `WHERE patient_id IN (1, 3, 6, 9)` |
+| Operador  | Significado             | Ejemplo                            |
+| --------- | ----------------------- | ---------------------------------- |
+| `=`       | Igual                   | `WHERE patient_id = 1`             |
+| `>`       | Mayor que               | `WHERE patient_id > 5`             |
+| `<`       | Menor que               | `WHERE patient_id < 5`             |
+| `>=`      | Mayor o igual           | `WHERE patient_id >= 5`            |
+| `<=`      | Menor o igual           | `WHERE patient_id <= 5`            |
+| `<>`      | Distinto                | `WHERE patient_id <> 5`            |
+| `BETWEEN` | En un rango inclusivo   | `WHERE patient_id BETWEEN 4 AND 6` |
+| `LIKE`    | Búsqueda por patrón     | `WHERE first_name LIKE 'a%'`       |
+| `IN`      | En una lista de valores | `WHERE patient_id IN (1, 3, 6, 9)` |
 
 Ejemplos de todos:
 
@@ -101,9 +105,9 @@ SELECT * FROM patients WHERE first_name LIKE 'a%';  -- nombres que empiezan por 
 SELECT * FROM patients WHERE patient_id IN (1, 3, 6, 9);  -- los valores pueden ser una subconsulta
 ```
 
-> 🔗 `LIKE`, `IN`, `BETWEEN` y los operadores lógicos se explican a fondo en el [capítulo 2](./02-filtrado-avanzado.md).
+> 🔗 `LIKE`, `IN`, `BETWEEN` y los operadores lógicos se explican a fondo en el [capítulo 2](02-filtrado-avanzado.md).
 
----
+***
 
 ## INSERT — Insertar registros
 
@@ -148,9 +152,9 @@ SELECT * FROM patients
 WHERE patient_id = (SELECT MAX(patient_id) FROM patients);
 ```
 
-> 💡 Si la columna no admite NULL y no tiene valor por defecto (`DEFAULT`), el INSERT fallará. Esto se ve en el [capítulo 6](./06-tablas-ddl.md).
+> 💡 Si la columna no admite NULL y no tiene valor por defecto (`DEFAULT`), el INSERT fallará. Esto se ve en el [capítulo 6](06-tablas-ddl.md).
 
----
+***
 
 ## UPDATE — Modificar registros
 
@@ -193,7 +197,7 @@ WHERE allergies IS NULL;
 SELECT * FROM patients;
 ```
 
----
+***
 
 ## DELETE — Borrar registros
 
@@ -220,7 +224,7 @@ SELECT * FROM patients WHERE first_name = 'Paul';
 
 > 💡 `DELETE` borra filas, no la tabla. Para borrar la tabla entera se usa `DROP TABLE` (capítulo 6), y para vaciarla manteniendo la estructura, `TRUNCATE TABLE`.
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -233,6 +237,7 @@ Hazlos en el [playground](https://d1se0.github.io/sql-learning/) sin mirar la so
 5. Borra tu paciente.
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -247,16 +252,17 @@ UPDATE patients SET weight = 75 WHERE first_name = 'Tú';
 -- 5
 DELETE FROM patients WHERE first_name = 'Tú';
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Sentencia | Para qué | Punto clave |
-|-----------|----------|-------------|
-| `SELECT` | Leer datos | `*` = todas las columnas |
-| `WHERE` | Filtrar | Texto con `'comillas'`, números sin |
-| `INSERT INTO` | Crear filas | Especifica siempre las columnas |
-| `UPDATE` | Modificar filas | Sin `WHERE` actualizas todo ⚠️ |
-| `DELETE` | Borrar filas | Sin `WHERE` borras todo ⚠️ |
+| Sentencia     | Para qué        | Punto clave                         |
+| ------------- | --------------- | ----------------------------------- |
+| `SELECT`      | Leer datos      | `*` = todas las columnas            |
+| `WHERE`       | Filtrar         | Texto con `'comillas'`, números sin |
+| `INSERT INTO` | Crear filas     | Especifica siempre las columnas     |
+| `UPDATE`      | Modificar filas | Sin `WHERE` actualizas todo ⚠️      |
+| `DELETE`      | Borrar filas    | Sin `WHERE` borras todo ⚠️          |
 
-➡️ **Siguiente capítulo:** [Filtrado Avanzado](./02-filtrado-avanzado.md)
+➡️ **Siguiente capítulo:** [Filtrado Avanzado](02-filtrado-avanzado.md)

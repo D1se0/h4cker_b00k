@@ -1,8 +1,12 @@
-# 🔗 Capítulo 3 — Consultas Multi-Tabla
+---
+icon: link
+---
+
+# 4 · Consultas Multi-Tabla
 
 > Las bases de datos reales no guardan todo en una tabla: relacionan varias. Aquí aprendes a combinarlas (`JOIN`, `UNION`), a agrupar (`GROUP BY`, `HAVING`) y a usar subconsultas (`EXISTS`, `ANY/ALL`), además de manejar `NULL` y alias. Ejemplos listos para el [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## JOIN — Combinar tablas
 
@@ -10,12 +14,12 @@ Una cláusula `JOIN` se usa para **combinar filas de dos o más tablas**, basán
 
 ### Tipos de JOIN
 
-| Tipo | Qué devuelve |
-|------|--------------|
-| `(INNER) JOIN` | Los registros con valores coincidentes en **ambas** tablas |
-| `LEFT (OUTER) JOIN` | **Todos** los de la tabla izquierda + los coincidentes de la derecha |
+| Tipo                 | Qué devuelve                                                         |
+| -------------------- | -------------------------------------------------------------------- |
+| `(INNER) JOIN`       | Los registros con valores coincidentes en **ambas** tablas           |
+| `LEFT (OUTER) JOIN`  | **Todos** los de la tabla izquierda + los coincidentes de la derecha |
 | `RIGHT (OUTER) JOIN` | **Todos** los de la tabla derecha + los coincidentes de la izquierda |
-| `FULL (OUTER) JOIN` | Todo de ambas tablas, haya o no coincidencia |
+| `FULL (OUTER) JOIN`  | Todo de ambas tablas, haya o no coincidencia                         |
 
 > 💡 En la práctica, casi siempre se usa `(INNER) JOIN`. El playground de sql-learning soporta INNER y LEFT JOIN.
 
@@ -71,16 +75,17 @@ JOIN doctors ph ON ph.doctor_id = a.attending_doctor_id;
 
 > 🔗 Los alias `p`, `a`, `ph` se explican más abajo en este capítulo.
 
----
+***
 
 ## UNION — Combinar resultados
 
 El operador `UNION` combina el result-set de **dos o más sentencias SELECT**.
 
 Reglas obligatorias:
-- Cada `SELECT` debe tener el **mismo número de columnas**.
-- Las columnas deben tener **tipos de datos similares**.
-- Las columnas de cada `SELECT` deben ir en el **mismo orden**.
+
+* Cada `SELECT` debe tener el **mismo número de columnas**.
+* Las columnas deben tener **tipos de datos similares**.
+* Las columnas de cada `SELECT` deben ir en el **mismo orden**.
 
 ### Sintaxis
 
@@ -118,7 +123,7 @@ ORDER BY first_name;
 
 > 🔥 **Nota para hacking:** `UNION SELECT` es la base del ataque **UNION-based SQLi** (capítulo 7): permite "apilar" los resultados de una consulta propia sobre la respuesta legítima de la web para **extraer datos de otras tablas**. Memoriza sus 3 reglas.
 
----
+***
 
 ## GROUP BY — Agrupar filas
 
@@ -150,9 +155,9 @@ GROUP BY province_id
 ORDER BY COUNT(*) DESC;
 ```
 
-> 📚 Las funciones agregadas se detallan en el [capítulo 4](./04-funciones-agregadas.md).
+> 📚 Las funciones agregadas se detallan en el [capítulo 4](04-funciones-agregadas.md).
 
----
+***
 
 ## HAVING — Filtrar grupos
 
@@ -188,7 +193,7 @@ ORDER BY COUNT(*) DESC;
 
 > 🧠 **Regla de oro:** `WHERE` filtra **filas** (antes de agrupar), `HAVING` filtra **grupos** (después de agrupar).
 
----
+***
 
 ## EXISTS — Probar si una subconsulta devuelve filas
 
@@ -222,14 +227,14 @@ JOIN admissions ON patients.patient_id = admissions.patient_id
 WHERE diagnosis = 'Pregnancy';
 ```
 
----
+***
 
 ## ANY y ALL — Comparar contra un conjunto
 
 Los operadores `ANY` y `ALL` permiten comparar el valor de una columna contra un **rango de otros valores**.
 
-- **ANY**: devuelve `TRUE` si **cualquiera** de los valores de la subconsulta cumple la condición.
-- **ALL**: devuelve `TRUE` si **todos** los valores de la subconsulta cumplen la condición.
+* **ANY**: devuelve `TRUE` si **cualquiera** de los valores de la subconsulta cumple la condición.
+* **ALL**: devuelve `TRUE` si **todos** los valores de la subconsulta cumplen la condición.
 
 ### Sintaxis ANY
 
@@ -257,7 +262,7 @@ WHERE column_name operator ALL
 
 > ℹ️ El playground de sql-learning no soporta ANY/ALL, pero sí la mayoría de motores reales (MySQL, PostgreSQL, SQL Server).
 
----
+***
 
 ## NULL — Valores vacíos
 
@@ -297,18 +302,18 @@ FROM patients
 WHERE allergies IS NOT NULL;
 ```
 
----
+***
 
 ## IFNULL / ISNULL / COALESCE / NVL — Sustituir NULL
 
 La función para sustituir `NULL` por otro valor **cambia de nombre según el dialecto** (todas funcionan parecido):
 
-| Dialecto | Función |
-|----------|---------|
-| MySQL | `IFNULL()`, `COALESCE()` |
-| SQL Server | `ISNULL()` |
-| MS Access | `IsNull()` (+ `IIF`) |
-| Oracle | `NVL()` |
+| Dialecto   | Función                  |
+| ---------- | ------------------------ |
+| MySQL      | `IFNULL()`, `COALESCE()` |
+| SQL Server | `ISNULL()`               |
+| MS Access  | `IsNull()` (+ `IIF`)     |
+| Oracle     | `NVL()`                  |
 
 ### Ejemplo
 
@@ -336,14 +341,14 @@ SELECT first_name, NVL(allergies, 'none') AS allergies
 FROM patients;
 ```
 
----
+***
 
 ## Alias — Nombres temporales
 
 Los alias de SQL se usan para dar a una tabla, o a una columna, un **nombre temporal**. Se usan mucho para hacer los nombres de columnas más legibles.
 
-- El alias **solo existe durante la duración de esa consulta**.
-- Se crea con la palabra clave `AS` (en algunos dialectos es opcional).
+* El alias **solo existe durante la duración de esa consulta**.
+* Se crea con la palabra clave `AS` (en algunos dialectos es opcional).
 
 ### Sintaxis
 
@@ -373,7 +378,7 @@ JOIN admissions AS a ON a.patient_id = p.patient_id;
 
 > 💡 En los JOIN con alias, puedes prefijar las columnas con el alias (`p.patient_id`) para evitar ambigüedades cuando dos tablas tienen columnas con el mismo nombre.
 
----
+***
 
 ## CASE — Lógica if/then/else en SQL
 
@@ -413,7 +418,7 @@ ORDER BY
   END);
 ```
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -424,6 +429,7 @@ ORDER BY
 5. Nombres de pacientes con más de 30 repeticiones.
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -445,19 +451,20 @@ FROM patients WHERE allergies IS NULL;
 SELECT COUNT(*), first_name FROM patients
 GROUP BY first_name HAVING COUNT(*) > 30;
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Herramienta | Para qué |
-|-------------|----------|
-| `JOIN ... ON` | Combinar tablas relacionadas (INNER, LEFT, RIGHT, FULL) |
-| `UNION [ALL]` | Apilar resultados de varios SELECT |
-| `GROUP BY` | Agrupar filas por valores comunes |
-| `HAVING` | Filtrar grupos (WHERE no vale con agregados) |
-| `EXISTS` / `ANY` / `ALL` | Subconsultas condicionales |
-| `IS NULL` / `IFNULL()` | Manejar valores vacíos |
-| `AS` | Alias de columnas y tablas |
-| `CASE WHEN` | Lógica condicional dentro de la consulta |
+| Herramienta              | Para qué                                                |
+| ------------------------ | ------------------------------------------------------- |
+| `JOIN ... ON`            | Combinar tablas relacionadas (INNER, LEFT, RIGHT, FULL) |
+| `UNION [ALL]`            | Apilar resultados de varios SELECT                      |
+| `GROUP BY`               | Agrupar filas por valores comunes                       |
+| `HAVING`                 | Filtrar grupos (WHERE no vale con agregados)            |
+| `EXISTS` / `ANY` / `ALL` | Subconsultas condicionales                              |
+| `IS NULL` / `IFNULL()`   | Manejar valores vacíos                                  |
+| `AS`                     | Alias de columnas y tablas                              |
+| `CASE WHEN`              | Lógica condicional dentro de la consulta                |
 
-➡️ **Siguiente capítulo:** [Funciones Agregadas](./04-funciones-agregadas.md)
+➡️ **Siguiente capítulo:** [Funciones Agregadas](04-funciones-agregadas.md)

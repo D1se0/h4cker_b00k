@@ -1,51 +1,56 @@
-# 🧭 Capítulo 8 — Recursos, Playground y Chuleta Final
+---
+icon: compass
+---
+
+# 9 · Recursos, Playground y Chuleta Final
 
 > El mapa para seguir practicando: tu playground, herramientas, retos y una chuleta con TODO el curso en una página.
 
----
+***
 
 ## 🎮 Tu playground: SQL Learning
 
 **URL:** [https://d1se0.github.io/sql-learning/](https://d1se0.github.io/sql-learning/)
 
-- **SQLite real en el navegador** (nada que instalar).
-- Base de datos de hospital lista para usar: `patients`, `admissions`, `doctors`.
-- Buscador de querys y comandos.
-- Secciones organizadas igual que esta guía: Query Basics, Filtering, Functions, Tables.
-- Retos para practicar.
+* **SQLite real en el navegador** (nada que instalar).
+* Base de datos de hospital lista para usar: `patients`, `admissions`, `doctors`.
+* Buscador de querys y comandos.
+* Secciones organizadas igual que esta guía: Query Basics, Filtering, Functions, Tables.
+* Retos para practicar.
 
 **Cómo sacarle partido:**
+
 1. Lee un capítulo de esta guía → 2. Repite TODOS los ejemplos en el playground → 3. Haz los mini-retos → 4. Intenta los retos del playground.
 
----
+***
 
 ## 🛠️ Herramientas imprescindibles
 
-| Herramienta | Para qué |
-|-------------|----------|
-| [DB Browser for SQLite](https://sqlitebrowser.org/) | Explorar archivos `.db`/`.sqlite` con GUI |
-| `sqlite3` (CLI) | Consola rápida para SQLite |
-| `mysql` (CLI) | Cliente MySQL/MariaDB |
-| [DBeaver](https://dbeaver.io/) | Cliente universal (MySQL, Postgres, SQLite...) |
-| [sqlmap](https://sqlmap.org/) | Automatización de inyección SQL (solo legal ✋) |
-| Burp Suite | Interceptar parámetros donde probar SQLi |
-| [CyberChef](https://gchq.github.io/CyberChef/) | Decodificar payloads y hashes |
+| Herramienta                                         | Para qué                                       |
+| --------------------------------------------------- | ---------------------------------------------- |
+| [DB Browser for SQLite](https://sqlitebrowser.org/) | Explorar archivos `.db`/`.sqlite` con GUI      |
+| `sqlite3` (CLI)                                     | Consola rápida para SQLite                     |
+| `mysql` (CLI)                                       | Cliente MySQL/MariaDB                          |
+| [DBeaver](https://dbeaver.io/)                      | Cliente universal (MySQL, Postgres, SQLite...) |
+| [sqlmap](https://sqlmap.org/)                       | Automatización de inyección SQL (solo legal ✋) |
+| Burp Suite                                          | Interceptar parámetros donde probar SQLi       |
+| [CyberChef](https://gchq.github.io/CyberChef/)      | Decodificar payloads y hashes                  |
 
----
+***
 
 ## 🏆 Retos y práctica
 
-| Plataforma | Nivel | Nota |
-|-----------|-------|------|
-| [sql-learning](https://d1se0.github.io/sql-learning/) retos | 🟢 | Empieza aquí |
-| [SQLZoo](https://sqlzoo.net) | 🟢 | Ejercicios de SQL puro |
-| [pgexercises.com](https://pgexercises.com) | 🟡 | PostgreSQL interactivo |
-| [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection) | 🟠 | El estándar para SQLi |
-| OWASP Juice Shop | 🟠 | App vulnerable completa |
-| HackTheBox / TryHackMe | 🔴 | SQLi en máquinas reales |
-| [CTFs de tu repo](https://github.com/D1se0) | 🔴 | Writeups propios |
+| Plataforma                                                                  | Nivel | Nota                    |
+| --------------------------------------------------------------------------- | ----- | ----------------------- |
+| [sql-learning](https://d1se0.github.io/sql-learning/) retos                 | 🟢    | Empieza aquí            |
+| [SQLZoo](https://sqlzoo.net)                                                | 🟢    | Ejercicios de SQL puro  |
+| [pgexercises.com](https://pgexercises.com)                                  | 🟡    | PostgreSQL interactivo  |
+| [PortSwigger SQLi Labs](https://portswigger.net/web-security/sql-injection) | 🟠    | El estándar para SQLi   |
+| OWASP Juice Shop                                                            | 🟠    | App vulnerable completa |
+| HackTheBox / TryHackMe                                                      | 🔴    | SQLi en máquinas reales |
+| [CTFs de tu repo](https://github.com/D1se0)                                 | 🔴    | Writeups propios        |
 
----
+***
 
 ## 📋 Chuleta final — Todo el curso en una página
 
@@ -117,7 +122,7 @@ ORDER BY  → 6. se ordena
 LIMIT     → 7. se recorta
 ```
 
----
+***
 
 ## 🎓 ¿Y ahora qué?
 
@@ -127,6 +132,6 @@ LIMIT     → 7. se recorta
 4. ✅ Mete los writeups de tus CTFs en tu GitBook, junto a esta guía.
 5. ✅ Enseña lo aprendido: la mejor forma de afianzar SQL es explicarlo (como esta guía 😉).
 
----
+***
 
-[⬅️ Volver al índice](./README.md) | [⬅️ Capítulo anterior: SQL para Hacking](./07-sql-para-hacking.md)
+[⬅️ Volver al índice](./) | [⬅️ Capítulo anterior: SQL para Hacking](07-sql-para-hacking.md)

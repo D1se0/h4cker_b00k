@@ -1,8 +1,12 @@
-# 🛠️ Capítulo 5 — Funciones de Utilidad
+---
+icon: toolbox
+---
+
+# 6 · Funciones de Utilidad
 
 > Funciones para transformar texto, calcular números, manipular fechas y analizar filas "ventana a ventana". Son el cuchillo suizo de SQL. Ejemplos en el [playground](https://d1se0.github.io/sql-learning/).
 
----
+***
 
 ## 📝 Funciones de cadena
 
@@ -86,7 +90,7 @@ FROM patients;
 
 > 🔥 **Nota para hacking:** `CONCAT()` es clave en SQLi de MySQL (permite juntar datos de varias columnas en una sola salida) y `UPPER()`/`LOWER()` ayudan a evadir filtros que distinguen mayúsculas (`SeLeCt`).
 
----
+***
 
 ## 🔢 Funciones numéricas
 
@@ -102,7 +106,7 @@ La función `RAND()` devuelve un **número aleatorio entre 0 y 1**.
 RAND(seed)
 ```
 
-- `seed` (opcional): si se indica, devuelve una secuencia **repetible** de números aleatorios.
+* `seed` (opcional): si se indica, devuelve una secuencia **repetible** de números aleatorios.
 
 **Ejemplo:**
 
@@ -120,8 +124,8 @@ La función `ROUND()` devuelve un número **redondeado a la posición decimal** 
 ROUND(number, decimals)
 ```
 
-- `number`: obligatorio, el número a redondear.
-- `decimals`: opcional, decimales a redondear. Si se omite, el resultado es un entero.
+* `number`: obligatorio, el número a redondear.
+* `decimals`: opcional, decimales a redondear. Si se omite, el resultado es un entero.
 
 **Ejemplo:** redondea 135.375 a 2 decimales:
 
@@ -161,7 +165,7 @@ CEIL(number)
 SELECT CEIL(25.1);
 ```
 
----
+***
 
 ## ➗ Funciones matemáticas
 
@@ -209,7 +213,7 @@ La función `SQRT()` devuelve la **raíz cuadrada** de un número.
 SQRT(number)
 ```
 
-- `number`: obligatorio, debe ser **mayor que 0**.
+* `number`: obligatorio, debe ser **mayor que 0**.
 
 **Ejemplo:**
 
@@ -217,11 +221,11 @@ SQRT(number)
 SELECT SQRT(13);
 ```
 
----
+***
 
 ## 📅 Funciones de fecha
 
-### CURRENT_TIMESTAMP — Fecha y hora actuales
+### CURRENT\_TIMESTAMP — Fecha y hora actuales
 
 La función `CURRENT_TIMESTAMP` devuelve la **fecha y hora actuales**.
 
@@ -283,7 +287,7 @@ SELECT DAY(CURRENT_TIMESTAMP);
 
 > 💡 Estas funciones funcionan sobre cualquier fecha, no solo la actual: `SELECT YEAR(birth_date) FROM patients;`
 
----
+***
 
 ## 🪟 Window Functions — Funciones de ventana
 
@@ -325,30 +329,30 @@ window_function_name ( expression ) OVER (
 
 **Explicación de las cláusulas:**
 
-- `window_function_name`: la función (`ROW_NUMBER()`, `RANK()`, `SUM()`, `AVG()`, etc.).
-- `expression`: la columna o expresión objetivo.
-- **`OVER`**: define particiones y el orden de las filas.
-- **`partition_clause`**: divide las filas en particiones → `PARTITION BY expr1, expr2, ...`
-- **`order_clause`**: ordena las filas dentro de la partición → `ORDER BY expression [ASC|DESC] [NULL {FIRST|LAST}], ...`
-- **`frame_clause`**: subconjunto de la partición → `{ROWS|RANGE} frame_start [{BETWEEN frame_start AND frame_end}]`
+* `window_function_name`: la función (`ROW_NUMBER()`, `RANK()`, `SUM()`, `AVG()`, etc.).
+* `expression`: la columna o expresión objetivo.
+* **`OVER`**: define particiones y el orden de las filas.
+* **`partition_clause`**: divide las filas en particiones → `PARTITION BY expr1, expr2, ...`
+* **`order_clause`**: ordena las filas dentro de la partición → `ORDER BY expression [ASC|DESC] [NULL {FIRST|LAST}], ...`
+* **`frame_clause`**: subconjunto de la partición → `{ROWS|RANGE} frame_start [{BETWEEN frame_start AND frame_end}]`
 
 **Opciones del frame:**
 
-| Opción | Significado |
-|--------|-------------|
+| Opción                | Significado                                |
+| --------------------- | ------------------------------------------ |
 | `UNBOUNDED PRECEDING` | Empieza en la primera fila de la partición |
-| `N PRECEDING` | Empieza N filas antes de la actual |
-| `CURRENT ROW` | Fila actual |
-| `N FOLLOWING` | Termina N filas después de la actual |
-| `UNBOUNDED FOLLOWING` | Termina en la última fila de la partición |
+| `N PRECEDING`         | Empieza N filas antes de la actual         |
+| `CURRENT ROW`         | Fila actual                                |
+| `N FOLLOWING`         | Termina N filas después de la actual       |
+| `UNBOUNDED FOLLOWING` | Termina en la última fila de la partición  |
 
 **Tipos de window functions:**
 
-| Tipo | Funciones |
-|------|-----------|
-| De valor | `FIRST_VALUE()`, `LAST_VALUE()`, `LAG()`, `LEAD()` |
+| Tipo       | Funciones                                                                            |
+| ---------- | ------------------------------------------------------------------------------------ |
+| De valor   | `FIRST_VALUE()`, `LAST_VALUE()`, `LAG()`, `LEAD()`                                   |
 | De ranking | `CUME_DIST()`, `DENSE_RANK()`, `NTILE()`, `PERCENT_RANK()`, `RANK()`, `ROW_NUMBER()` |
-| Agregadas | `AVG()`, `COUNT()`, `MAX()`, `MIN()`, `SUM()` |
+| Agregadas  | `AVG()`, `COUNT()`, `MAX()`, `MIN()`, `SUM()`                                        |
 
 ### LAG() — El valor de la fila anterior
 
@@ -360,8 +364,8 @@ La función `LAG()` devuelve el registro **desplazado hacia atrás** la cantidad
 LAG(expression [, offset])
 ```
 
-- `expression`: obligatorio. Debe ser un valor escalar (no puede ser otra función analítica).
-- `offset`: opcional. Filas hacia atrás desde la actual. Por defecto `1`. Debe ser positivo.
+* `expression`: obligatorio. Debe ser un valor escalar (no puede ser otra función analítica).
+* `offset`: opcional. Filas hacia atrás desde la actual. Por defecto `1`. Debe ser positivo.
 
 **Ejemplo:** muestra cada nombre junto al del paciente anterior:
 
@@ -383,8 +387,8 @@ La función `LEAD()` devuelve el registro **desplazado hacia adelante** la canti
 LEAD(expression [, offset])
 ```
 
-- `expression`: obligatorio. Valor escalar.
-- `offset`: opcional. Filas hacia adelante desde la actual. Por defecto `1`. Debe ser positivo.
+* `expression`: obligatorio. Valor escalar.
+* `offset`: opcional. Filas hacia adelante desde la actual. Por defecto `1`. Debe ser positivo.
 
 **Ejemplo:** muestra cada nombre junto al del paciente siguiente:
 
@@ -396,7 +400,7 @@ SELECT
 FROM patients;
 ```
 
-### FIRST_VALUE() — Primer valor de la partición
+### FIRST\_VALUE() — Primer valor de la partición
 
 La función `FIRST_VALUE()` devuelve el **primer valor** de una partición ordenada del result-set.
 
@@ -409,7 +413,7 @@ FIRST_VALUE ( scalar_expression ) OVER (
 )
 ```
 
-- `scalar_expression`: obligatorio. Expresión evaluada contra el valor de la **primera fila** de la partición ordenada. Puede ser una columna, subconsulta o expresión que evalúe a un único valor. No puede ser otra window function.
+* `scalar_expression`: obligatorio. Expresión evaluada contra el valor de la **primera fila** de la partición ordenada. Puede ser una columna, subconsulta o expresión que evalúe a un único valor. No puede ser otra window function.
 
 **Ejemplo:** la fecha de nacimiento del paciente **más mayor** de cada provincia:
 
@@ -426,7 +430,7 @@ FROM patients
 ORDER BY patient_id;
 ```
 
-### LAST_VALUE() — Último valor de la partición
+### LAST\_VALUE() — Último valor de la partición
 
 La función `LAST_VALUE()` devuelve el **último valor** de una partición ordenada del result-set.
 
@@ -495,7 +499,7 @@ FROM rolling_sum_table
 WHERE rolling_sum < 1000;
 ```
 
----
+***
 
 ## 🧪 Mini-retos del capítulo
 
@@ -506,6 +510,7 @@ WHERE rolling_sum < 1000;
 5. Cada paciente junto al nombre del paciente 2 posiciones detrás (LAG con offset 2).
 
 <details>
+
 <summary>👀 Soluciones</summary>
 
 ```sql
@@ -520,16 +525,17 @@ SELECT first_name, YEAR(CURRENT_TIMESTAMP) - YEAR(birth_date) AS approx_age FROM
 -- 5
 SELECT patient_id, first_name, LAG(first_name, 2) OVER() AS prev2_name FROM patients;
 ```
+
 </details>
 
 ## 📌 Resumen del capítulo
 
-| Categoría | Funciones |
-|-----------|-----------|
-| Cadena | `CONCAT()`, `LEN()`, `UPPER()`, `LOWER()` |
-| Numéricas | `RAND()`, `ROUND()`, `FLOOR()`, `CEIL()` |
-| Matemáticas | `ABS()`, `POWER()`, `SQRT()` |
-| Fecha | `CURRENT_TIMESTAMP`, `YEAR()`, `MONTH()`, `DAY()` |
-| Ventana | `LAG()`, `LEAD()`, `FIRST_VALUE()`, `LAST_VALUE()` + agregadas con `OVER()` |
+| Categoría   | Funciones                                                                   |
+| ----------- | --------------------------------------------------------------------------- |
+| Cadena      | `CONCAT()`, `LEN()`, `UPPER()`, `LOWER()`                                   |
+| Numéricas   | `RAND()`, `ROUND()`, `FLOOR()`, `CEIL()`                                    |
+| Matemáticas | `ABS()`, `POWER()`, `SQRT()`                                                |
+| Fecha       | `CURRENT_TIMESTAMP`, `YEAR()`, `MONTH()`, `DAY()`                           |
+| Ventana     | `LAG()`, `LEAD()`, `FIRST_VALUE()`, `LAST_VALUE()` + agregadas con `OVER()` |
 
-➡️ **Siguiente capítulo:** [Tablas y DDL](./06-tablas-ddl.md)
+➡️ **Siguiente capítulo:** [Tablas y DDL](06-tablas-ddl.md)
