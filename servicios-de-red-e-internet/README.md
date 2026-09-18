@@ -34,26 +34,6 @@ icon: globe
 
 ***
 
-## 🗂️ Esquema de subida al GitBook (SUMMARY.md)
-
-**Nombre de la sección:** `## Servicios de Red e Internet` **Carpeta en el repo:** `servicios-de-red-e-internet/` (en minúsculas y con guiones, como el resto de tu GitBook)
-
-**Ubicación recomendada:** entre `## Hacking con IA` y la sección `## SQL` (si ya la subiste). Así el orden de lectura queda lógico:
-
-```
-BugBounty → Hacking con IA → Servicios de Red e Internet → SQL → HERRAMIENTAS/TÉCNICAS → CTF → Conceptos...
-```
-
-Primero redes (la base), luego SQL, y después las técnicas ofensivas. El bloque exacto para copiar y pegar en tu `SUMMARY.md` está en [`summary-patch.txt`](summary-patch.txt).
-
-**Pasos:**
-
-1. Sube primero la carpeta `servicios-de-red-e-internet/` completa a la raíz del repo del GitBook.
-2. Pega después el bloque del `summary-patch.txt` en tu `SUMMARY.md`.
-3. Commit → GitBook sincroniza. El orden del índice = el orden de las líneas.
-
-***
-
 ## 🔗 Prerrequisitos y siguientes pasos
 
 * **Prerrequisitos:** ninguno. Esto es la base.
