@@ -128,18 +128,34 @@
 * [Prompts clave, plantilla por plantilla](hacking-con-ia/prompts-clave.md)
 * [Ideas y automatizaciones adicionales](hacking-con-ia/ideas-y-automatizaciones.md)
 
+## Servicios de Red e Internet
+
+* [Servicios de Red e Internet (Inicio)](servicios-de-red-e-internet/README.md)
+* [Fundamentos: Cómo Funciona una Red](servicios-de-red-e-internet/00-fundamentos-redes.md)
+* [DNS: El Teléfono de Internet](servicios-de-red-e-internet/01-dns.md)
+* [El Servicio de Correo Electrónico](servicios-de-red-e-internet/02-correo-electronico.md)
+* [Direccionamiento IP y Subnetting](servicios-de-red-e-internet/03-direccionamiento-ip.md)
+* [NAT, CGNAT y Hole Punching](servicios-de-red-e-internet/04-nat-y-cgnat.md)
+* [Cableado Físico y Práctica](servicios-de-red-e-internet/05-cableado-fisico.md)
+* [Tramas, MTU y Fragmentación](servicios-de-red-e-internet/06-tramas-mtu-fragmentacion.md)
+* [Dominios de Colisión y Switching](servicios-de-red-e-internet/07-dominios-colision-y-switching.md)
+* [VLANs y VTP](servicios-de-red-e-internet/08-vlans-y-vtp.md)
+* [Herramientas de Diagnóstico de Red](servicios-de-red-e-internet/09-herramientas-diagnostico.md)
+* [POSIX, ACL y Glosario Completo](servicios-de-red-e-internet/10-glosario-posix-acl.md)
+* [Todo Aplicado al Hacking](servicios-de-red-e-internet/11-aplicacion-al-hacking.md)
+
 ## SQL
 
 * [SQL — Fundamentals](SQL/README.md)
-* [1 · Fundamentos: Bases de Datos y SQL](SQL/00-fundamentos.md)
-* [2 · Query Basics: Tus Primeras Consultas](SQL/01-query-basics.md)
-* [3 · Filtrado Avanzado](SQL/02-filtrado-avanzado.md)
-* [4 · Consultas Multi-Tabla](SQL/03-multi-tabla.md)
-* [5 · Funciones Agregadas](SQL/04-funciones-agregadas.md)
-* [6 · Funciones de Utilidad](SQL/05-funciones-utilidad.md)
-* [7 · Tablas y DDL: Diseño de la Base de Datos](SQL/06-tablas-ddl.md)
-* [8 · SQL para Hacking: Inyección SQL](SQL/07-sql-para-hacking.md)
-* [9 · Recursos, Playground y Chuleta Final](SQL/08-recursos.md)
+* [Fundamentos: Bases de Datos y SQL](SQL/00-fundamentos.md)
+* [Query Basics: Tus Primeras Consultas](SQL/01-query-basics.md)
+* [Filtrado Avanzado](SQL/02-filtrado-avanzado.md)
+* [Consultas Multi-Tabla](SQL/03-multi-tabla.md)
+* [Funciones Agregadas](SQL/04-funciones-agregadas.md)
+* [Funciones de Utilidad](SQL/05-funciones-utilidad.md)
+* [Tablas y DDL: Diseño de la Base de Datos](SQL/06-tablas-ddl.md)
+* [SQL para Hacking: Inyección SQL](SQL/07-sql-para-hacking.md)
+* [Recursos, Playground y Chuleta Final](SQL/08-recursos.md)
 
 ## HERRAMIENTAS/TÉCNICAS
 
