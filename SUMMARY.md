@@ -418,6 +418,7 @@
 * [Phishing](herramientas-tecnicas/phishing/README.md)
   * [Phishing - Tools](herramientas-tecnicas/phishing/phishing-tools.md)
   * [Phishing Técnicas y Resultados](herramientas-tecnicas/phishing/phishing-tecnicas-y-resultados.md)
+  * [Ataque Brower-in-the-browser (BitB)](herramientas-tecnicas/phishing/ataque-brower-in-the-browser-bitb.md)
 * [BadUSB](herramientas-tecnicas/badusb/README.md)
   * [Digispark/USB Ninja (Función)](herramientas-tecnicas/badusb/digispark-usb-ninja-funcion.md)
   * [Digispark (Script)](herramientas-tecnicas/badusb/digispark-script.md)
