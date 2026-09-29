@@ -63,13 +63,13 @@ http://<IP_ATACANTE>:5800/
 
 Respuesta:
 
-![[Pasted image 20260929162250.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929162250.png" alt=""><figcaption></figcaption></figure>
 
 Lo que la víctima ve en su pantalla es, en realidad, el navegador que corre dentro del contenedor del atacante, transmitido como streaming web. Cualquier cosa que teclee o pulse ahí ocurre físicamente en la máquina del atacante.
 
 Antes de que la víctima acceda, el atacante debe configurar previamente estas opciones para adaptar la presentación del navegador:
 
-![[Pasted image 20260929162329.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929162329.png" alt=""><figcaption></figcaption></figure>
 
 De este modo el navegador se expande a pantalla completa. Aun así, este primer montaje sigue siendo delatante: la víctima ve un navegador dentro de otro navegador, con sus propias pestañas visibles, lo cual resulta sospechoso para cualquier usuario mínimamente atento. Por eso, en la siguiente fase, se detiene este contenedor para desplegar una versión mejorada: la misma técnica, pero en modo *kiosco*, sin barra de pestañas visible y apuntando directamente a un destino concreto, de forma que la víctima no perciba que está dentro de un navegador ajeno.
 
@@ -113,7 +113,7 @@ http://<IP_ATACANTE>:5800/
 
 Respuesta:
 
-![[Pasted image 20260929164143.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929164143.png" alt=""><figcaption></figcaption></figure>
 
 Esta vez, al no mostrarse las pestañas ni ningún elemento identificativo del navegador contenedor, la página aparenta ser un navegador normal cargando Google de forma nativa. Todo lo que el usuario busque o escriba a partir de aquí se refleja en tiempo real en la pantalla del atacante.
 
@@ -130,19 +130,19 @@ http://localhost:5800/
 
 Respuesta:
 
-![[Pasted image 20260929164326.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929164326.png" alt=""><figcaption></figcaption></figure>
 
 Configuramos la vista del lado del atacante de la misma forma:
 
-![[Pasted image 20260929164428.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929164428.png" alt=""><figcaption></figcaption></figure>
 
 Con esto, el navegador se expande y se autocompletan los huecos de la interfaz. A partir de aquí, si la víctima realiza cualquier búsqueda —por ejemplo, entra a YouTube—:
 
-![[Pasted image 20260929164610.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929164610.png" alt=""><figcaption></figcaption></figure>
 
 El atacante observa exactamente la misma acción en tiempo real, sin que la víctima tenga forma de notarlo desde su lado:
 
-![[Pasted image 20260929164640.png]]
+<figure><img src="../../.gitbook/assets/Pasted image 20260929164640.png" alt=""><figcaption></figcaption></figure>
 
 Con el contenedor funcionando correctamente, cualquier registro o inicio de sesión que la víctima realice dentro de ese navegador queda expuesto al atacante en directo: usuario, contraseña e incluso los pasos de verificación en dos factores, ya que es la propia víctima quien los introduce en la sesión ya autenticada del navegador remoto. No hay ninguna contraseña que "robar" ni ninguna verificación que "saltarse" en sentido técnico — el atacante simplemente observa una sesión legítima mientras se crea.
 
