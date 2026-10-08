@@ -1,4 +1,28 @@
-# 03 · Triage collections y artefactos (Velociraptor/KAPE)
+---
+icon: album-collection-circle-user
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# Triage collections y artefactos (Velociraptor/KAPE)
 
 > Cada vez más retos (y más IRs reales) te dan en lugar de una imagen de disco una **colección triage**: un ZIP/7z con artefactos seleccionados generada por **Velociraptor** (`Windows.KapeFiles.Targets` / `Windows.Triage.Targets`) o **KAPE**. Saber reconocer y parsear cada artefacto es la clave.
 
@@ -61,7 +85,7 @@ with evtx.Evtx('System.evtx') as log:
 } > all.xml
 ```
 
-### Opción B · evtx_dump (Rust, mucho más rápido en logs grandes)
+### Opción B · evtx\_dump (Rust, mucho más rápido en logs grandes)
 
 ```bash
 # Instalación: https://github.com/omerbenamram/EVTX (binario precompilado)
@@ -71,19 +95,19 @@ evtx_dump -o xml file.evtx > out.xml
 
 ### Eventos Sysmon que importan
 
-| EID | Significado | Qué buscar |
-|---|---|---|
-| 1 | Process Creation | `CommandLine`, `CurrentDirectory`, `ParentImage` |
-| 3 | Network Connection | Proceso que se conecta a qué IP:puerto |
-| 5 | Process Terminate | Duración del proceso |
-| 7 | Image Load | DLLs cargadas (orden = orden real de arranque) |
-| 11 | FileCreate | Qué proceso creó qué fichero |
-| 13 | Registry Set | Persistencia en `Run`/`RunOnce` |
-| 15 | FileCreateStreamHash | ADS `Zone.Identifier` (fichero descargado) |
-| 17/18 | Pipe Created/Connected | `PSHost` pipe = PowerShell interactivo |
-| 22 | DNS Query | Dominios consultados por proceso |
-| 23 | FileDelete | Borrado de ficheros (anti-forense) |
-| 29 | File Executable Detected | Creación de un PE (exe/dll) |
+| EID   | Significado              | Qué buscar                                       |
+| ----- | ------------------------ | ------------------------------------------------ |
+| 1     | Process Creation         | `CommandLine`, `CurrentDirectory`, `ParentImage` |
+| 3     | Network Connection       | Proceso que se conecta a qué IP:puerto           |
+| 5     | Process Terminate        | Duración del proceso                             |
+| 7     | Image Load               | DLLs cargadas (orden = orden real de arranque)   |
+| 11    | FileCreate               | Qué proceso creó qué fichero                     |
+| 13    | Registry Set             | Persistencia en `Run`/`RunOnce`                  |
+| 15    | FileCreateStreamHash     | ADS `Zone.Identifier` (fichero descargado)       |
+| 17/18 | Pipe Created/Connected   | `PSHost` pipe = PowerShell interactivo           |
+| 22    | DNS Query                | Dominios consultados por proceso                 |
+| 23    | FileDelete               | Borrado de ficheros (anti-forense)               |
+| 29    | File Executable Detected | Creación de un PE (exe/dll)                      |
 
 ### Filtrado con Python (probado)
 
@@ -179,8 +203,8 @@ for i in range(8):
 
 ### Alternativas CLI
 
-- **PECmd** (Eric Zimmerman): `PECmd.exe -d C:\Windows\Prefetch --csv .`
-- **WinPrefetchView** (NirSoft, GUI, Windows).
+* **PECmd** (Eric Zimmerman): `PECmd.exe -d C:\Windows\Prefetch --csv .`
+* **WinPrefetchView** (NirSoft, GUI, Windows).
 
 ### Cómo interpretar Prefetch
 
@@ -209,14 +233,14 @@ regipy-dump SYSTEM | grep -i "wsock32"
 
 ### Hives que importan
 
-| Hive | Qué contiene |
-|---|---|
-| `SYSTEM` | Servicios, dispositivos, control sets, timezone |
-| `SOFTWARE` | Apps instaladas, `Run` global, info del sistema |
-| `SAM` | Usuarios locales (hashes NTLM si el reto lo permite) |
-| `NTUSER.DAT` | Por usuario: RecentDocs, RunMRU, Shellbags, UserAssist |
-| `UsrClass.dat` | Shellbags (por usuario) |
-| `Amcache.hve` | Evidencia de ejecución: SHA1 de cada binario ejecutado |
+| Hive           | Qué contiene                                           |
+| -------------- | ------------------------------------------------------ |
+| `SYSTEM`       | Servicios, dispositivos, control sets, timezone        |
+| `SOFTWARE`     | Apps instaladas, `Run` global, info del sistema        |
+| `SAM`          | Usuarios locales (hashes NTLM si el reto lo permite)   |
+| `NTUSER.DAT`   | Por usuario: RecentDocs, RunMRU, Shellbags, UserAssist |
+| `UsrClass.dat` | Shellbags (por usuario)                                |
+| `Amcache.hve`  | Evidencia de ejecución: SHA1 de cada binario ejecutado |
 
 ## LNK / Shell Items — accesos recientes
 
@@ -273,7 +297,7 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 1. ☐ `ConsoleHost_history.txt` de todos los usuarios
 2. ☐ Procesos: `Windows.System.Pslist.json` (NDJSON)
 3. ☐ Prefetch: buscar rutas fuera de `\Windows\` y `\Program Files\`
-4. ☐ Recent/*.lnk con `dissect.shellitem`
+4. ☐ Recent/\*.lnk con `dissect.shellitem`
 5. ☐ EVTX de Sysmon: EID 1 con `CurrentDirectory` en `\Temp\` o `\Downloads\`
 6. ☐ Hives: `Run`/`RunOnce` en SOFTWARE y NTUSER.DAT, Amcache para SHA1
 7. ☐ Correlacionar timestamps y construir una timeline única

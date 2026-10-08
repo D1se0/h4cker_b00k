@@ -1,4 +1,28 @@
-# 05 · Scripts genéricos Python3 listos para usar
+---
+icon: python
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# Scripts genéricos Python3 listos para usar
 
 > Todos los scripts de esta página han sido **ejecutados y verificados** en un entorno con `pytsk3`, `dissect`, `python-registry` y `python-evtx`. Instala las dependencias con:
 
@@ -7,7 +31,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install pytsk3 dissect python-registry python-evtx
 ```
 
----
+***
 
 ## 1 · Listar y extraer ficheros de una imagen de disco (pytsk3)
 
@@ -71,7 +95,7 @@ if __name__ == "__main__":
         walk(fs, "/")
 ```
 
----
+***
 
 ## 2 · Carving por firma + parseo de LNK
 
@@ -109,7 +133,7 @@ if __name__ == "__main__":
     carve(img, offs)
 ```
 
----
+***
 
 ## 3 · Decodificador genérico del patrón `%var:~N,1%` (cmd.exe)
 
@@ -139,7 +163,7 @@ if f"Set {VAR}=" in decoded:
 print(decoded)
 ```
 
----
+***
 
 ## 4 · Parser de Prefetch (.pf de Windows 10/11)
 
@@ -231,7 +255,7 @@ for fname, n in freq.most_common(40):
         print(f"    → {pf.split('/')[-1]}")
 ```
 
----
+***
 
 ## 5 · EVTX a XML + filtros Sysmon
 
@@ -305,7 +329,7 @@ with open(sys.argv[1], "rb") as f:
         ev.clear()
 ```
 
----
+***
 
 ## 6 · Parser del NDJSON de procesos de Velociraptor
 
@@ -329,7 +353,7 @@ for line in open(sys.argv[1]):
         print(f"        exe: {o['Exe']}")
 ```
 
----
+***
 
 ## 7 · Búsqueda de dominios / URLs en cualquier evidencia
 
@@ -358,7 +382,7 @@ for label, blob in (("ASCII", ascii_blob), ("UTF-16LE", utf16_blob)):
         print("  url:", m)
 ```
 
----
+***
 
 ## 8 · Utilidades varias
 

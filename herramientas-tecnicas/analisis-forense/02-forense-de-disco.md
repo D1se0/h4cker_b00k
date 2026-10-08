@@ -1,4 +1,28 @@
-# 02 · Forense de disco/USB con The Sleuth Kit y pytsk3
+---
+icon: floppy-disks
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# Forense de disco/USB con TSK y pytsk3
 
 > Cuando la evidencia es una **imagen de disco** (HDD, SSD, USB, tarjeta SD), la herramienta estándar es **The Sleuth Kit (TSK)** y su binding Python **pytsk3**. Ambos leen el filesystem **sin montar** la imagen (no necesitas root, no modificas nada).
 
@@ -23,9 +47,10 @@ file usb_mnt20202703.img
 ```
 
 Interpretación típica:
-- **DOS/MBR** vs **GPT**: `mmls` lo confirma.
-- **ID de partición**: `0x7` = NTFS/HPFS, `0x83` = Linux, `0xC` = FAT32 LBA, `0xEF` = EFI System.
-- **startsector** = offset en **sectores de 512 bytes** donde empieza la partición. En el ejemplo: `64 × 512 = 32768 bytes`.
+
+* **DOS/MBR** vs **GPT**: `mmls` lo confirma.
+* **ID de partición**: `0x7` = NTFS/HPFS, `0x83` = Linux, `0xC` = FAT32 LBA, `0xEF` = EFI System.
+* **startsector** = offset en **sectores de 512 bytes** donde empieza la partición. En el ejemplo: `64 × 512 = 32768 bytes`.
 
 ```bash
 # Estructura de particiones
@@ -50,6 +75,7 @@ fls -r -p -o 64 usb_mnt20202703.img
 ```
 
 Salida típica:
+
 ```
 d/d 36:    /System Volume Information
 + d/d 39:  /System Volume Information/ClientRecoveryPasswordRotation
@@ -59,9 +85,10 @@ r/r 43:    /backup.zip
 ```
 
 **Convención de `fls`:**
-- `r/r` = nombre regular / metadata regular; `d/d` = directorio.
-- `*` = entrada **desasignada** (borrada) — la metadata puede seguir ahí.
-- El número de la izquierda es el **inodo (inode / MFT entry)** → lo necesitas para extraer.
+
+* `r/r` = nombre regular / metadata regular; `d/d` = directorio.
+* `*` = entrada **desasignada** (borrada) — la metadata puede seguir ahí.
+* El número de la izquierda es el **inodo (inode / MFT entry)** → lo necesitas para extraer.
 
 ## Paso 3 · Ver metadatos de un inodo
 
@@ -73,9 +100,10 @@ istat -o 64 usb_mnt20202703.img 42
 Devuelve: fechas (acceso/modificación/cambio/creación — MACB), tamaño, lista de clusters ADS (`$DATA`), `Zone.Identifier` si fue descargado de internet, etc.
 
 **Timestamps NTFS/MFT que verás:**
-- `Standard Information` (SI) — lo que ve el usuario.
-- `File Name` (FN) — cuando se renombró o movió por última vez.
-- **Timestomping**: si SI ≪ FN, el atacante falseó las fechas.
+
+* `Standard Information` (SI) — lo que ve el usuario.
+* `File Name` (FN) — cuando se renombró o movió por última vez.
+* **Timestomping**: si SI ≪ FN, el atacante falseó las fechas.
 
 ## Paso 4 · Extraer ficheros por inodo
 
@@ -136,11 +164,12 @@ with open("autorun.inf", "wb") as out:
 ### Recorrer sin recursión manual: `fs.open_dir(path="/")`
 
 Cada `entry.info` tiene:
-- `name.name` (bytes) → nombre
-- `name.flags` → `TSK_FS_NAME_FLAG_ALLOC` (1) o `UNALLOC` (2, borrado)
-- `meta.type` → `TSK_FS_META_TYPE_REG` (fichero), `_DIR` (dir), etc.
-- `meta.addr` → inodo
-- `meta.size`, `meta.mtime`, `meta.ctime`, `meta.atime`, `meta.crtime`
+
+* `name.name` (bytes) → nombre
+* `name.flags` → `TSK_FS_NAME_FLAG_ALLOC` (1) o `UNALLOC` (2, borrado)
+* `meta.type` → `TSK_FS_META_TYPE_REG` (fichero), `_DIR` (dir), etc.
+* `meta.addr` → inodo
+* `meta.size`, `meta.mtime`, `meta.ctime`, `meta.atime`, `meta.crtime`
 
 ## Sistemas de archivos Linux
 
@@ -169,6 +198,7 @@ debugfs -R "logdump -a" imagen.img | less
 ### XFS, Btrfs
 
 TSK tiene soporte parcial; para Btrfs suele ser mejor `btrfs restore` (requiere root o loop-mount):
+
 ```bash
 sudo mount -o loop,ro imagen.img /mnt
 # o sin montar:
@@ -177,12 +207,12 @@ sudo btrfs restore -i imagen.img /mnt/recuperado
 
 ## Montar vs no montar
 
-| Montar (`mount -o loop`) | TSK / pytsk3 / debugfs |
-|---|---|
-| Requiere root | No requiere root |
-| Puede modificar la imagen (journal replay, atime) | Lectura pura, no modifica nada |
-| Cómodo para explorar | Más trabajo manual |
-| No funciona en filesystems corruptos | Permite leer incluso FS dañados |
+| Montar (`mount -o loop`)                          | TSK / pytsk3 / debugfs          |
+| ------------------------------------------------- | ------------------------------- |
+| Requiere root                                     | No requiere root                |
+| Puede modificar la imagen (journal replay, atime) | Lectura pura, no modifica nada  |
+| Cómodo para explorar                              | Más trabajo manual              |
+| No funciona en filesystems corruptos              | Permite leer incluso FS dañados |
 
 **Regla forense: SIEMPRE no-montar.** Si necesitas montar, hazlo `ro` sobre una **copia**.
 

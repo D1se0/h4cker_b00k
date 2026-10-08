@@ -1,4 +1,28 @@
-# 00 · Metodología General
+---
+icon: arrow-progress
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# Metodología general
 
 > Esta página es el **cerebro** del kit: cómo decidir en los primeros 5 minutos qué camino seguir ante cualquier evidencia forense.
 
@@ -28,17 +52,17 @@ pip install pytsk3 dissect evtx python-registry
 file evidencia_*
 ```
 
-| Salida de `file` | Tipo | Herramienta |
-|---|---|---|
-| `DOS/MBR boot sector` | Imagen de disco (HDD/USB) | TSK / pytsk3 |
-| `GPT partition table` | Imagen de disco moderno | TSK / pytsk3 |
-| `Linux rev 1.0 ext4 ...` | Filesystem sin particionar | TSK / debugfs |
-| `data` pero enorme (>1GB) y suele llamarse `.raw`/`.mem`/`.lime` | Posible volcado RAM | `vol.py banners` para confirmar |
-| `ELF core` | Core dump de proceso | Volatility 3 / gdb |
-| `EVTX` (`Windows Event Log`) | Registro de eventos Windows | python-evtx / evtx_dump |
-| `Zip archive` con `Windows.KapeFiles.Targets/` | Triage Velociraptor/KAPE | Parseadores dissect + scripts (03) |
-| `PE32 executable` | Binario Windows | strings, binwalk, análisis PE |
-| `PDF` / `Office` | Documento (¿phishing?) | pdfid/peepdf, olevba |
+| Salida de `file`                                                 | Tipo                        | Herramienta                        |
+| ---------------------------------------------------------------- | --------------------------- | ---------------------------------- |
+| `DOS/MBR boot sector`                                            | Imagen de disco (HDD/USB)   | TSK / pytsk3                       |
+| `GPT partition table`                                            | Imagen de disco moderno     | TSK / pytsk3                       |
+| `Linux rev 1.0 ext4 ...`                                         | Filesystem sin particionar  | TSK / debugfs                      |
+| `data` pero enorme (>1GB) y suele llamarse `.raw`/`.mem`/`.lime` | Posible volcado RAM         | `vol.py banners` para confirmar    |
+| `ELF core`                                                       | Core dump de proceso        | Volatility 3 / gdb                 |
+| `EVTX` (`Windows Event Log`)                                     | Registro de eventos Windows | python-evtx / evtx\_dump           |
+| `Zip archive` con `Windows.KapeFiles.Targets/`                   | Triage Velociraptor/KAPE    | Parseadores dissect + scripts (03) |
+| `PE32 executable`                                                | Binario Windows             | strings, binwalk, análisis PE      |
+| `PDF` / `Office`                                                 | Documento (¿phishing?)      | pdfid/peepdf, olevba               |
 
 ### Si `file` dice "data"
 
@@ -107,12 +131,12 @@ flowchart TD
 
 ## La regla de oro para CTFs
 
-> El enunciado **siempre** te dice qué tipo de evidencia es. Lee entre líneas: *"volcado de memoria"*, *"el USB del atacante"*, *"colección de artefactos"*, *"los logs del sistema"*. Aparece el patrón correcto y te ahorra 30 minutos de exploración a ciegas.
+> El enunciado **siempre** te dice qué tipo de evidencia es. Lee entre líneas: _"volcado de memoria"_, _"el USB del atacante"_, _"colección de artefactos"_, _"los logs del sistema"_. Aparece el patrón correcto y te ahorra 30 minutos de exploración a ciegas.
 
 ## Errores típicos de principiante
 
-- Abrir Volatility 3 con una imagen de disco (y viceversa) → errores confusos de símbolos.
-- Olvidar que `grep` sobre binario necesita `-a` → "no hay resultados" falsos.
-- Creer que un fichero con extensión `.exe` es malicioso → validar siempre con `strings` / firma / hash público.
-- No hacer copia de trabajo y desconfigurar la evidencia original.
-- Quedarse en el primer hallazgo: el IOC real suele estar en el 4º-5º artefacto que revisas, no en el primero.
+* Abrir Volatility 3 con una imagen de disco (y viceversa) → errores confusos de símbolos.
+* Olvidar que `grep` sobre binario necesita `-a` → "no hay resultados" falsos.
+* Creer que un fichero con extensión `.exe` es malicioso → validar siempre con `strings` / firma / hash público.
+* No hacer copia de trabajo y desconfigurar la evidencia original.
+* Quedarse en el primer hallazgo: el IOC real suele estar en el 4º-5º artefacto que revisas, no en el primero.

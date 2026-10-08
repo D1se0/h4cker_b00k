@@ -1,33 +1,57 @@
-# 04 · Carving y recuperación de datos
+---
+icon: skull-crossbones
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# Carving y recuperación de datos
 
 > **Carving** = recuperar ficheros que ya no tienen inodo válido (borrados, fragmentados o huérfanos) buscando **firmas** en los bytes crudos de la imagen. Es la técnica que salva retos donde `fls` no muestra nada útil.
 
 ## Cuándo necesitas carving
 
-- El fichero aparece en `fls` marcado con `*` (borrado) y `icat` devuelve basura o nada.
-- El fichero ni siquiera aparece listado pero sabes que existió.
-- El fichero está **fragmentado** y las estructuras del FS están dañadas.
-- Buscas payloads embebidos dentro de otros ficheros (PDFs con EXEs, imágenes con ZIPs…).
+* El fichero aparece en `fls` marcado con `*` (borrado) y `icat` devuelve basura o nada.
+* El fichero ni siquiera aparece listado pero sabes que existió.
+* El fichero está **fragmentado** y las estructuras del FS están dañadas.
+* Buscas payloads embebidos dentro de otros ficheros (PDFs con EXEs, imágenes con ZIPs…).
 
 ## Firmas clave que conviene memorizar
 
-| Firma (hex) | Tipo |
-|---|---|
-| `4C 00 00 00` + GUID `00021401-0000-0000-C000-000000000046` | Windows Shortcut (.LNK) |
-| `4D 5A` (`MZ`) | Ejecutable Windows (PE) |
-| `7F 45 4C 46` (`\x7fELF`) | Ejecutable Linux |
-| `50 4B 03 04` (`PK`) | ZIP / DOCX / XLSX / JAR |
-| `1F 8B 08` | GZIP |
-| `42 4D` (`BM`) | BMP |
-| `FF D8 FF` | JPEG |
-| `89 50 4E 47` (`\x89PNG`) | PNG |
-| `52 61 72 21` (`Rar!`) | RAR |
-| `4D 41 4D 04` (`MAM\x04`) | Prefetch Windows 10/11 |
-| `4C 69 4D 45` (`LiME`) | Volcado de memoria LiME |
-| `25 50 44 46` (`%PDF`) | PDF |
-| `37 7A BC AF 27 1C` | 7-Zip |
-| `46 49 4C 45` + `N/4` alternando | Cabecera MFT (NTFS) |
-| `D0 CF 11 E0 A1 B1 1A E1` | OLE (DOC/XLS antiguos, MSI) |
+| Firma (hex)                                                 | Tipo                        |
+| ----------------------------------------------------------- | --------------------------- |
+| `4C 00 00 00` + GUID `00021401-0000-0000-C000-000000000046` | Windows Shortcut (.LNK)     |
+| `4D 5A` (`MZ`)                                              | Ejecutable Windows (PE)     |
+| `7F 45 4C 46` (`\x7fELF`)                                   | Ejecutable Linux            |
+| `50 4B 03 04` (`PK`)                                        | ZIP / DOCX / XLSX / JAR     |
+| `1F 8B 08`                                                  | GZIP                        |
+| `42 4D` (`BM`)                                              | BMP                         |
+| `FF D8 FF`                                                  | JPEG                        |
+| `89 50 4E 47` (`\x89PNG`)                                   | PNG                         |
+| `52 61 72 21` (`Rar!`)                                      | RAR                         |
+| `4D 41 4D 04` (`MAM\x04`)                                   | Prefetch Windows 10/11      |
+| `4C 69 4D 45` (`LiME`)                                      | Volcado de memoria LiME     |
+| `25 50 44 46` (`%PDF`)                                      | PDF                         |
+| `37 7A BC AF 27 1C`                                         | 7-Zip                       |
+| `46 49 4C 45` + `N/4` alternando                            | Cabecera MFT (NTFS)         |
+| `D0 CF 11 E0 A1 B1 1A E1`                                   | OLE (DOC/XLS antiguos, MSI) |
 
 ## Carving manual con Python (método quirúrgico)
 
