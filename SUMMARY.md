@@ -474,6 +474,12 @@
 * [Análisis Forense](herramientas-tecnicas/analisis-forense/README.md)
   * [Herramienta Volatility2/3 + LAB (Windows)](herramientas-tecnicas/analisis-forense/herramienta-volatility2-3-+-lab-windows.md)
   * [Herramienta Volatility2 (Linux)](herramientas-tecnicas/analisis-forense/herramienta-volatility2-linux.md)
+  * [00 · Metodología general](herramientas-tecnicas/analisis-forense/00-metodologia.md)
+  * [01 · Forense de RAM con Volatility 3](herramientas-tecnicas/analisis-forense/01-forense-de-ram.md)
+  * [02 · Forense de disco/USB con TSK y pytsk3](herramientas-tecnicas/analisis-forense/02-forense-de-disco.md)
+  * [03 · Triage collections y artefactos (Velociraptor/KAPE)](herramientas-tecnicas/analisis-forense/03-triage-y-artefactos.md)
+  * [04 · Carving y recuperación de datos](herramientas-tecnicas/analisis-forense/04-carving-y-recuperacion.md)
+  * [05 · Scripts genéricos Python3 listos para usar](herramientas-tecnicas/analisis-forense/05-scripts-genericos.md)
 
 ## CTF
 
