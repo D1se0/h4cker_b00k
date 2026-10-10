@@ -422,6 +422,7 @@
 * [BadUSB](herramientas-tecnicas/badusb/README.md)
   * [Digispark/USB Ninja (Función)](herramientas-tecnicas/badusb/digispark-usb-ninja-funcion.md)
   * [Digispark (Script)](herramientas-tecnicas/badusb/digispark-script.md)
+  * [RubberDucky de keylogger con Digispark](herramientas-tecnicas/badusb/rubberducky-de-keylogger-con-digispark.md)
   * [Lista de signos Digispark](herramientas-tecnicas/badusb/lista-de-signos-digispark.md)
   * [Bash Bunny](herramientas-tecnicas/badusb/bash-bunny.md)
   * [ScreenCrab](herramientas-tecnicas/badusb/screencrab.md)
