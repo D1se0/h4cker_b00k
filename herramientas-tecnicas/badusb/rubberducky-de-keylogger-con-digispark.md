@@ -32,7 +32,7 @@ Archivos utilizados en esta practica:
 
 {% file src="../../.gitbook/assets/rubberDucky_firmware.ino" %}
 
-{% file src="../../.gitbook/assets/cliente-servidor-keylogger-python.zip" %}
+{% file src="../../.gitbook/assets/cliente-servidor-keylogger-python (1).zip" %}
 
 ## Rubber Ducky — Laboratorio didáctico de keylogger exfiltrando por TCP
 
