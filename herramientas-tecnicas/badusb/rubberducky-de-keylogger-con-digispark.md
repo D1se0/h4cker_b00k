@@ -22,14 +22,7 @@ layout:
     visible: true
 ---
 
-# RubberDucky de keylogger con Digispark
-
----
-description: >-
-  Laboratorio didáctico y aislado: un Digispark (Rubber Ducky) teclea un
-  comando en una VM Windows que descarga y ejecuta un cliente que exfiltra
-  pulsaciones de teclado a un VPS controlado. Incluye análisis defensivo,
-  MITRE ATT&CK y reglas de detección.
+> Laboratorio didáctico y aislado: un Digispark (Rubber Ducky) teclea un comando en una VM Windows que descarga y ejecuta un cliente que exfiltra pulsaciones de teclado a un VPS controlado. Incluye análisis defensivo, MITRE ATT&CK y reglas de detección.
 ---
 
 # Rubber Ducky — Laboratorio didáctico de keylogger exfiltrando por TCP
