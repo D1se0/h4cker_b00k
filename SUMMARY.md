@@ -951,6 +951,7 @@
   * [CTF Tokenaso Intermediate](ctf/ctfs/ctf-tokenaso-intermediate.md)
   * [Challenge Webhooks Easy](ctf/ctfs/challenge-webhooks-easy.md)
   * [CTF Acmesupport Hard](ctf/ctfs/ctf-acmesupport-hard.md)
+  * [CTF Noctis Intermediate](ctf/ctfs/ctf-noctis-intermediate.md)
 
 ## Conceptos de Ciberseguridad en Hacking Ético
 
