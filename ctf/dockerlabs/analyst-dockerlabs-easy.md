@@ -27,7 +27,7 @@ layout:
 # Contexto de la maquina
 ## Trayectoria Analyst
 
-<figure><img src="images/trayectoria_dfaab08df4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/trayectoria_dfaab08df4.png" alt=""><figcaption></figcaption></figure>
 
 ## Descripción
 
@@ -53,9 +53,9 @@ El ataque documentado en la captura sigue la secuencia clásica de un **file upl
     - Wireshark para análisis de tráfico.
 ## Análisis de vulnerabilidades (en el sistema atacado)
 
-<figure><img src="images/carta_File_Upload_Bypass_mediante_do_1793441893332.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="images/carta_Reverse_Shell_por_archivo_PHP__1793441893813.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="images/carta_Enumeraci_n_de_usuarios_del_si_1793441894304.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/carta_File_Upload_Bypass_mediante_do_1793441893332.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/carta_Reverse_Shell_por_archivo_PHP__1793441893813.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/carta_Enumeraci_n_de_usuarios_del_si_1793441894304.png" alt=""><figcaption></figcaption></figure>
 
 ## Instalación
 
@@ -82,7 +82,7 @@ Presiona Ctrl+C cuando termines con la máquina para eliminarla
 Cuando terminemos le damos a `Ctrl+C` para eliminar el contenedor y no dejar archivos residuales.
 # Escaneo de puertos
 
-<figure><img src="images/vuln_File_Upload_Bypass_mediante_do_e7204e45.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln_File_Upload_Bypass_mediante_do_e7204e45.png" alt=""><figcaption></figcaption></figure>
 
 ```shell
 nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn <IP>
@@ -119,7 +119,7 @@ URL = http://<IP>/
 
 Respuesta:
 
-<figure><img src="images/Pasted image 20261007205904.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007205904.png" alt=""><figcaption></figcaption></figure>
 
 Encontramos el laboratorio *"El caso de Pinguinito"*. Bajando en la página hay dos archivos descargables:
 
@@ -128,11 +128,11 @@ Encontramos el laboratorio *"El caso de Pinguinito"*. Bajando en la página hay 
 
 Descargamos ambos y abrimos el PCAP en Wireshark. Lo que vemos a primera vista es un volumen importante de tráfico HTTP, lo que indica que el ataque se realizó sobre la capa web:
 
-<figure><img src="images/Pasted image 20261007210157.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007210157.png" alt=""><figcaption></figcaption></figure>
 
 Más abajo en la aplicación hay una sección de preguntas que tenemos que ir respondiendo para reconstruir el incidente paso a paso:
 
-<figure><img src="images/Pasted image 20261007211104.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007211104.png" alt=""><figcaption></figcaption></figure>
 # Análisis del ataque en Wireshark
 ## Pregunta 1: IP del atacante
 
@@ -144,7 +144,7 @@ http.request.method == "POST"
 
 Respuesta:
 
-<figure><img src="images/Pasted image 20261007211223.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007211223.png" alt=""><figcaption></figcaption></figure>
 
 Entre las peticiones `POST` vemos una que sube un archivo PHP disfrazado de imagen. La IP origen de esa petición es:
 
@@ -179,7 +179,7 @@ País de origen: Vietnam
 
 El User-Agent identifica el cliente HTTP que realizó las peticiones. Seguimos el stream de una de las peticiones POST para ver las cabeceras completas:
 
-<figure><img src="images/Pasted image 20261007211616.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007211616.png" alt=""><figcaption></figcaption></figure>
 
 En las cabeceras HTTP vemos un User-Agent personalizado que delata un bot de reconocimiento:
 
@@ -192,18 +192,18 @@ El nombre `ReconBot` confirma que el atacante realizó primero una fase de recon
 
 Observando la URL de la petición POST que sube el archivo malicioso:
 
-<figure><img src="images/Pasted image 20261007211838.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007211838.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Ruta de upload: /reviews/upload.php
 ```
 ## Pregunta 5: Directorio donde el atacante encuentra los archivos subidos
 
-<figure><img src="images/vuln_Reverse_Shell_por_archivo_PHP__64986a6c.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln_Reverse_Shell_por_archivo_PHP__64986a6c.png" alt=""><figcaption></figcaption></figure>
 
 Tras subir el archivo, el atacante realizó peticiones `GET` explorando el servidor para confirmar que el archivo quedó accesible. La ruta que el servidor expone para los archivos subidos es:
 
-<figure><img src="images/Pasted image 20261007212232.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007212232.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Directorio de uploads: /reviews/uploads/
@@ -212,7 +212,7 @@ Directorio de uploads: /reviews/uploads/
 
 Este es el punto clave del ataque. El atacante intentó varias subidas antes de encontrar un nombre que el servidor aceptara. El bypass de la validación de extensiones se consiguió usando **doble extensión**: al servidor le parecía una imagen (`.jpg`) pero el intérprete PHP lo ejecutaba como PHP (`.php`):
 
-<figure><img src="images/Pasted image 20261007212416.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261007212416.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Archivo malicioso: image.jpg.php
@@ -234,7 +234,7 @@ tcp.port == 8080
 
 Respuesta:
 
-<figure><img src="images/Pasted image 20261008092304.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Pasted image 20261008092304.png" alt=""><figcaption></figcaption></figure>
 
 En el stream vemos la secuencia completa de comandos post-explotación. El archivo que el atacante leyó para obtener información de usuarios del sistema fue:
 
@@ -243,7 +243,7 @@ Archivo leído: /etc/passwd
 ```
 ## Pregunta 9: Usuario comprometido
 
-<figure><img src="images/vuln_Enumeración_de_usuarios_del_si_30a11e28.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vuln_Enumeración_de_usuarios_del_si_30a11e28.png" alt=""><figcaption></figcaption></figure>
 
 Continuando el análisis del stream, vemos que tras leer `/etc/passwd` el atacante identificó a un usuario de interés y reseteó su contraseña para mantener acceso persistente al sistema:
 
