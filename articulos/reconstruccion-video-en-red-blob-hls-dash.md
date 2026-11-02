@@ -26,7 +26,7 @@ layout:
 
 > **Guía técnica para hacking ético** · Cómo funciona el streaming moderno, por qué el clic derecho no sirve, cómo reconstruir el vídeo final en MP4 (con audio) usando **Video DownloadHelper**, alternativas, y cómo construir tu propia herramienta.
 
----
+***
 
 {% hint style="warning" %}
 **Aviso legal y ético**
@@ -37,32 +37,32 @@ Esta documentación tiene fines **educativos y de auditoría de seguridad**. Ús
 * Entornos de laboratorio, CTF o auditorías con **autorización expresa por escrito**.
 * Material en dominio público o con licencias abiertas (Creative Commons, etc.).
 
-Descargar contenido protegido por derechos de autor sin permiso puede incumplir los términos del servicio y la legislación aplicable. **Esta guía NO cubre la elusión de DRM** (Widevine, PlayReady, FairPlay); ese terreno queda explícitamente fuera de alcance (ver [sección 10](#10-drm-el-limite-que-no-se-cruza)).
+Descargar contenido protegido por derechos de autor sin permiso puede incumplir los términos del servicio y la legislación aplicable. **Esta guía NO cubre la elusión de DRM** (Widevine, PlayReady, FairPlay); ese terreno queda explícitamente fuera de alcance (ver sección 10).
 {% endhint %}
 
----
+***
 
-## 📑 Índice
+### 📑 Índice
 
-1. [Por qué el clic derecho no funciona](#1-por-que-el-clic-derecho-no-funciona)
-2. [¿Qué es realmente `blob:`?](#2-que-es-realmente-blob)
-3. [Streaming adaptativo: HLS y DASH](#3-streaming-adaptativo-hls-y-dash)
-4. [El viaje completo del vídeo](#4-el-viaje-completo-del-video)
-5. [Observar el tráfico con DevTools](#5-observar-el-trafico-con-devtools)
-6. [Video DownloadHelper paso a paso](#6-video-downloadhelper-paso-a-paso)
-7. [Cómo se reconstruye el MP4 final](#7-como-se-reconstruye-el-mp4-final)
-8. [Método manual: DevTools + FFmpeg / yt-dlp](#8-metodo-manual-devtools--ffmpeg--yt-dlp)
-9. [Problemas frecuentes (troubleshooting)](#9-problemas-frecuentes-troubleshooting)
-10. [DRM: el límite que no se cruza](#10-drm-el-limite-que-no-se-cruza)
-11. [Extensiones y herramientas recomendadas](#11-extensiones-y-herramientas-recomendadas)
-12. [StreamGrab: la herramienta open source](#12-streamgrab-la-herramienta-open-source)
-13. [Crea tu propia extensión](#13-crea-tu-propia-extension)
-14. [Enfoque de pentesting: qué se audita aquí](#14-enfoque-de-pentesting-que-se-audita-aqui)
-15. [Glosario y checklist](#15-glosario-y-checklist)
+1. Por qué el clic derecho no funciona
+2. ¿Qué es realmente `blob:`?
+3. Streaming adaptativo: HLS y DASH
+4. El viaje completo del vídeo
+5. Observar el tráfico con DevTools
+6. Video DownloadHelper paso a paso
+7. Cómo se reconstruye el MP4 final
+8. Método manual: DevTools + FFmpeg / yt-dlp
+9. Problemas frecuentes (troubleshooting)
+10. DRM: el límite que no se cruza
+11. Extensiones y herramientas recomendadas
+12. StreamGrab: la herramienta open source
+13. Crea tu propia extensión
+14. Enfoque de pentesting: qué se audita aquí
+15. Glosario y checklist
 
----
+***
 
-## 1. Por qué el clic derecho no funciona
+### 1. Por qué el clic derecho no funciona
 
 En la web "clásica", un vídeo era un archivo directo:
 
@@ -70,7 +70,7 @@ En la web "clásica", un vídeo era un archivo directo:
 <video src="https://ejemplo.com/video.mp4" controls></video>
 ```
 
-El navegador descarga **un único archivo** y, al hacer clic derecho → *"Guardar vídeo como…"*, simplemente te guarda ese archivo.
+El navegador descarga **un único archivo** y, al hacer clic derecho → _"Guardar vídeo como…"_, simplemente te guarda ese archivo.
 
 Hoy casi ninguna plataforma seria sirve así el vídeo. Lo que ves en el DOM suele ser:
 
@@ -90,23 +90,23 @@ Esa URL **no apunta a ningún servidor**. Es una referencia temporal a datos que
 * **Protección de contenido** (a veces, no siempre, con DRM).
 {% endhint %}
 
----
+***
 
-## 2. ¿Qué es realmente `blob:`?
+### 2. ¿Qué es realmente `blob:`?
 
-### 2.1 `blob:` NO es un protocolo de red
+#### 2.1 `blob:` NO es un protocolo de red
 
 Un error común es hablar del "protocolo blob". En realidad:
 
-| Concepto | Qué es |
-|---|---|
-| `http://`, `https://` | Protocolos de red: viajan por Internet. |
-| `blob:` | **Esquema de URL local**: apunta a un objeto en la memoria del navegador. |
-| `data:` | Esquema de URL con los datos incrustados en la propia URL. |
+| Concepto              | Qué es                                                                    |
+| --------------------- | ------------------------------------------------------------------------- |
+| `http://`, `https://` | Protocolos de red: viajan por Internet.                                   |
+| `blob:`               | **Esquema de URL local**: apunta a un objeto en la memoria del navegador. |
+| `data:`               | Esquema de URL con los datos incrustados en la propia URL.                |
 
 Una URL `blob:` solo tiene sentido **dentro de esa pestaña / origen**. Si la copias y la abres en otro navegador, no existe.
 
-### 2.2 Cómo nace una URL `blob:`
+#### 2.2 Cómo nace una URL `blob:`
 
 El JavaScript de la página crea un objeto y le pide al navegador una URL para él:
 
@@ -118,7 +118,7 @@ video.src  = url;
 
 Para vídeo en streaming se usa algo más sofisticado: **Media Source Extensions (MSE)**.
 
-### 2.3 Media Source Extensions (MSE): el motor del streaming web
+#### 2.3 Media Source Extensions (MSE): el motor del streaming web
 
 MSE permite que JavaScript **alimente al reproductor con trozos de vídeo** que él mismo descarga.
 
@@ -149,25 +149,25 @@ Es decir:
 
 Librerías habituales que hacen este trabajo: **hls.js**, **dash.js**, **Shaka Player**, **Video.js** (con VHS), **JW Player**, **Bitmovin**.
 
----
+***
 
-## 3. Streaming adaptativo: HLS y DASH
+### 3. Streaming adaptativo: HLS y DASH
 
 Existen dos familias dominantes.
 
-| | **HLS** | **MPEG-DASH** |
-|---|---|---|
-| Creador | Apple | Estándar ISO/MPEG |
-| Archivo índice (manifiesto) | `.m3u8` | `.mpd` |
-| Segmentos | `.ts` (MPEG-TS) o `.m4s`/`.mp4` (fMP4) | `.m4s` / `.mp4` (fMP4) |
-| Formato del manifiesto | Texto plano | XML |
-| Audio/vídeo | Pueden ir **mezclados** o **separados** | Casi siempre **separados** |
+|                             | **HLS**                                 | **MPEG-DASH**              |
+| --------------------------- | --------------------------------------- | -------------------------- |
+| Creador                     | Apple                                   | Estándar ISO/MPEG          |
+| Archivo índice (manifiesto) | `.m3u8`                                 | `.mpd`                     |
+| Segmentos                   | `.ts` (MPEG-TS) o `.m4s`/`.mp4` (fMP4)  | `.m4s` / `.mp4` (fMP4)     |
+| Formato del manifiesto      | Texto plano                             | XML                        |
+| Audio/vídeo                 | Pueden ir **mezclados** o **separados** | Casi siempre **separados** |
 
-### 3.1 Anatomía de HLS
+#### 3.1 Anatomía de HLS
 
 Un streaming HLS tiene normalmente **dos niveles de playlist**.
 
-#### a) Master playlist (lista de calidades)
+**a) Master playlist (lista de calidades)**
 
 ```m3u8
 #EXTM3U
@@ -179,9 +179,9 @@ Un streaming HLS tiene normalmente **dos niveles de playlist**.
 1080p/index.m3u8
 ```
 
-Cada línea `#EXT-X-STREAM-INF` describe una **variante** (calidad) y la línea siguiente es la URL de su *media playlist*.
+Cada línea `#EXT-X-STREAM-INF` describe una **variante** (calidad) y la línea siguiente es la URL de su _media playlist_.
 
-#### b) Media playlist (lista de segmentos)
+**b) Media playlist (lista de segmentos)**
 
 ```m3u8
 #EXTM3U
@@ -201,15 +201,15 @@ seg_002.ts
 * `#EXTINF` → duración del segmento.
 * `#EXT-X-ENDLIST` → es VOD (vídeo bajo demanda). Si **no** aparece, es un **directo** y la playlist se va actualizando.
 
-#### c) Audio separado en HLS
+**c) Audio separado en HLS**
 
 ```m3u8
 #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="aud",NAME="Español",LANGUAGE="es",URI="audio_es/index.m3u8"
 ```
 
-Cuando existe `#EXT-X-MEDIA:TYPE=AUDIO`, el audio **no viene dentro** de los segmentos de vídeo. Hay que descargar **ambas pistas** y unirlas (*muxing*). Esta es la razón de que a veces las descargas "no tengan sonido".
+Cuando existe `#EXT-X-MEDIA:TYPE=AUDIO`, el audio **no viene dentro** de los segmentos de vídeo. Hay que descargar **ambas pistas** y unirlas (_muxing_). Esta es la razón de que a veces las descargas "no tengan sonido".
 
-#### d) Cifrado AES-128 estándar de HLS
+**d) Cifrado AES-128 estándar de HLS**
 
 ```m3u8
 #EXT-X-KEY:METHOD=AES-128,URI="https://ejemplo.com/key.bin",IV=0x0000...
@@ -217,7 +217,7 @@ Cuando existe `#EXT-X-MEDIA:TYPE=AUDIO`, el audio **no viene dentro** de los seg
 
 Es un cifrado **estándar y público del protocolo**: la clave se entrega en una URL accesible para el reproductor, y por tanto también para cualquier cliente con los permisos adecuados. FFmpeg lo gestiona solo. **No es DRM** (no hay licencia por dispositivo).
 
-### 3.2 Anatomía de DASH
+#### 3.2 Anatomía de DASH
 
 ```xml
 <MPD type="static" mediaPresentationDuration="PT0H10M0S">
@@ -244,19 +244,19 @@ Puntos clave:
 
 * **`AdaptationSet`** = un tipo de contenido (vídeo, audio, subtítulos).
 * **`Representation`** = una calidad concreta dentro de ese conjunto.
-* **`initialization`** = el *init segment* (cabecera `moov` con codecs y parámetros). **Sin él, los `.m4s` no se pueden reproducir.**
+* **`initialization`** = el _init segment_ (cabecera `moov` con codecs y parámetros). **Sin él, los `.m4s` no se pueden reproducir.**
 * `$Number$` / `$Time$` = plantilla que se rellena para construir cada URL.
 
-### 3.3 Contenedores: `.ts` vs fMP4
+#### 3.3 Contenedores: `.ts` vs fMP4
 
-| Formato | Características |
-|---|---|
-| **MPEG-TS (`.ts`)** | Heredado de TV digital. Cada segmento es autosuficiente. Se concatenan fácilmente. |
+| Formato                   | Características                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------- |
+| **MPEG-TS (`.ts`)**       | Heredado de TV digital. Cada segmento es autosuficiente. Se concatenan fácilmente.              |
 | **fMP4 (`.m4s`, `.mp4`)** | MP4 fragmentado: un `init.mp4` + fragmentos `moof/mdat`. Es lo que MSE consume de forma nativa. |
 
----
+***
 
-## 4. El viaje completo del vídeo
+### 4. El viaje completo del vídeo
 
 ```mermaid
 sequenceDiagram
@@ -282,11 +282,11 @@ sequenceDiagram
 
 1. **Detectar** el manifiesto (`.m3u8` / `.mpd`) o los segmentos.
 2. **Descargar** todos los segmentos de la calidad elegida (vídeo + audio).
-3. **Unirlos** en un único contenedor MP4 (*muxing*).
+3. **Unirlos** en un único contenedor MP4 (_muxing_).
 
----
+***
 
-## 5. Observar el tráfico con DevTools
+### 5. Observar el tráfico con DevTools
 
 Antes de usar ninguna extensión conviene **entender qué ocurre**. Es el paso más didáctico y el que más se valora en una auditoría.
 
@@ -314,13 +314,13 @@ document.querySelector('video').src
 // "blob:https://..."  → montado por MSE
 ```
 
----
+***
 
-## 6. Video DownloadHelper paso a paso
+### 6. Video DownloadHelper paso a paso
 
 **Video DownloadHelper (VDH)** es una de las extensiones más conocidas para Firefox, Chrome y Edge. Detecta streams en las peticiones de red de la pestaña y los ofrece como descargas.
 
-### 6.1 Cómo funciona por dentro
+#### 6.1 Cómo funciona por dentro
 
 ```mermaid
 flowchart LR
@@ -336,17 +336,17 @@ flowchart LR
 3. **Descarga:** para streams HLS/DASH, baja el manifiesto, lo interpreta y descarga cada segmento.
 4. **Ensamblado:** para unir y convertir (sobre todo audio + vídeo separados, o `.ts` → `.mp4`) necesita **FFmpeg**, que no puede ejecutarse dentro del navegador de forma nativa y eficiente. Por eso existe la **CoApp**.
 
-### 6.2 Instalación
+#### 6.2 Instalación
 
 1. Instala la extensión desde la tienda oficial de tu navegador (Firefox Add-ons o Chrome Web Store) buscando **"Video DownloadHelper"** y comprobando que el desarrollador es el oficial.
 2. Al instalarla, la extensión te indicará que necesita la **Companion Application (CoApp)** para ciertas funciones. **Instálala:** es el componente que incluye FFmpeg y puede escribir ficheros en disco y fusionar pistas.
-3. Reinicia el navegador y, en la ventana de la extensión, revisa que aparece como *"CoApp instalada y funcionando"*.
+3. Reinicia el navegador y, en la ventana de la extensión, revisa que aparece como _"CoApp instalada y funcionando"_.
 
 {% hint style="warning" %}
 Sin CoApp, muchas descargas HLS/DASH quedan **sin audio**, en formatos raros o directamente deshabilitadas. Si la extensión te muestra el aviso, no es un fallo: es una dependencia.
 {% endhint %}
 
-### 6.3 Descargar un vídeo (flujo de uso)
+#### 6.3 Descargar un vídeo (flujo de uso)
 
 1. Abre la página y **reproduce el vídeo unos segundos** (la extensión necesita ver el tráfico).
 2. El icono de VDH en la barra **se animará/mostrará un contador** al detectar streams.
@@ -354,33 +354,33 @@ Sin CoApp, muchas descargas HLS/DASH quedan **sin audio**, en formatos raros o d
    * Variantes de calidad (1080p, 720p, 360p…).
    * Entradas de **solo audio** o de **solo vídeo**.
    * Entradas de manifiesto (`master.m3u8`).
-4. Elige **la calidad deseada**. Si hay opciones, prioriza las marcadas como **vídeo + audio** o *"Download and convert / merge"*.
+4. Elige **la calidad deseada**. Si hay opciones, prioriza las marcadas como **vídeo + audio** o _"Download and convert / merge"_.
 5. Usa la acción de **descargar / descargar y convertir a MP4**. VDH descargará los segmentos y la CoApp los unirá.
 6. Al terminar, el archivo aparece en tu carpeta de descargas (configurable en ajustes de la extensión).
 
-### 6.4 Consejos de calidad
+#### 6.4 Consejos de calidad
 
-| Objetivo | Qué hacer |
-|---|---|
-| **Máxima calidad** | Elige la variante con mayor `RESOLUTION` / `BANDWIDTH`. Si la web solo muestra 720p mientras reproduces, fuerza 1080p en el selector de calidad del reproductor y vuelve a mirar. |
-| **Que tenga sonido** | Selecciona una entrada con audio o la opción de fusión audio+vídeo. Revisa en [7.3](#73-fusion-de-audio-y-video-separados). |
-| **Archivo universal** | Convierte a **MP4 (H.264 + AAC)**: es el combo más compatible. |
-| **Directos largos** | Aumenta la tolerancia de red y comprueba el espacio en disco. |
+| Objetivo              | Qué hacer                                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Máxima calidad**    | Elige la variante con mayor `RESOLUTION` / `BANDWIDTH`. Si la web solo muestra 720p mientras reproduces, fuerza 1080p en el selector de calidad del reproductor y vuelve a mirar. |
+| **Que tenga sonido**  | Selecciona una entrada con audio o la opción de fusión audio+vídeo. Revisa en 7.3.                                                                                                |
+| **Archivo universal** | Convierte a **MP4 (H.264 + AAC)**: es el combo más compatible.                                                                                                                    |
+| **Directos largos**   | Aumenta la tolerancia de red y comprueba el espacio en disco.                                                                                                                     |
 
-### 6.5 Limitaciones esperables
+#### 6.5 Limitaciones esperables
 
 * **URLs que caducan:** si pausas mucho tiempo o el token expira, la descarga falla a mitad.
 * **DRM:** VDH no descarga (ni debe) contenido cifrado con Widevine/PlayReady/FairPlay.
 * **Cambios de política de las tiendas:** las funciones disponibles pueden variar entre navegadores (Chrome/Manifest V3 es más restrictivo que Firefox).
 * **Sitios que detectan extensiones** o exigen cabeceras particulares.
 
----
+***
 
-## 7. Cómo se reconstruye el MP4 final
+### 7. Cómo se reconstruye el MP4 final
 
 Esta es la parte "mágica" que hace la CoApp (FFmpeg). Entenderla permite replicarla a mano o programarla.
 
-### 7.1 Conceptos
+#### 7.1 Conceptos
 
 * **Demuxing:** abrir un contenedor y separar sus pistas.
 * **Muxing:** meter pistas (vídeo, audio, subs) en un contenedor.
@@ -389,7 +389,7 @@ Esta es la parte "mágica" que hace la CoApp (FFmpeg). Entenderla permite replic
 
 > En el 99 % de los casos de HLS/DASH la reconstrucción es un **remux**: los códecs (H.264 + AAC) ya son compatibles con MP4.
 
-### 7.2 Caso A: HLS con audio y vídeo mezclados (`.ts`)
+#### 7.2 Caso A: HLS con audio y vídeo mezclados (`.ts`)
 
 Pasos lógicos:
 
@@ -406,7 +406,7 @@ ffmpeg -i "https://ejemplo.com/720p/index.m3u8" -c copy -bsf:a aac_adtstoasc sal
 * `-c copy` → no recodifica.
 * `-bsf:a aac_adtstoasc` → convierte el AAC en formato **ADTS** (propio de MPEG-TS) al formato **ASC** que exige MP4. Sin esto, FFmpeg suele dar error o el audio queda corrupto.
 
-### 7.3 Fusión de audio y vídeo separados
+#### 7.3 Fusión de audio y vídeo separados
 
 Cuando el vídeo y el audio vienen en pistas distintas (muy típico en DASH y HLS moderno):
 
@@ -418,9 +418,9 @@ ffmpeg -i video.m3u8 -i audio.m3u8 -map 0:v:0 -map 1:a:0 -c copy salida.mp4
 * `-map 0:v:0` → toma el vídeo de la entrada 0.
 * `-map 1:a:0` → toma el audio de la entrada 1.
 
-### 7.4 Caso B: DASH / fMP4 (init + `.m4s`)
+#### 7.4 Caso B: DASH / fMP4 (init + `.m4s`)
 
-Un `.m4s` suelto **no se reproduce** porque le falta el `moov` del *init segment*. El procedimiento correcto es:
+Un `.m4s` suelto **no se reproduce** porque le falta el `moov` del _init segment_. El procedimiento correcto es:
 
 ```
 init.mp4  +  seg_1.m4s  +  seg_2.m4s  + ...   →  pista.mp4
@@ -442,7 +442,7 @@ O directamente, dándole el manifiesto a FFmpeg:
 ffmpeg -i "https://ejemplo.com/manifest.mpd" -c copy salida.mp4
 ```
 
-### 7.5 Cabeceras, cookies y tokens
+#### 7.5 Cabeceras, cookies y tokens
 
 Muchos CDN rechazan peticiones sin cabeceras correctas:
 
@@ -451,7 +451,7 @@ ffmpeg -headers $'Referer: https://ejemplo.com/\r\nUser-Agent: Mozilla/5.0\r\nCo
        -i "https://cdn.ejemplo.com/master.m3u8" -c copy salida.mp4
 ```
 
-### 7.6 Resumen visual del reensamblado
+#### 7.6 Resumen visual del reensamblado
 
 ```
  [master.m3u8] ─► elegir variante ─► [variante.m3u8]
@@ -467,16 +467,16 @@ ffmpeg -headers $'Referer: https://ejemplo.com/\r\nUser-Agent: Mozilla/5.0\r\nCo
                           🎞  salida.mp4  (H.264 + AAC)
 ```
 
----
+***
 
-## 8. Método manual: DevTools + FFmpeg / yt-dlp
+### 8. Método manual: DevTools + FFmpeg / yt-dlp
 
 Sirve de **verificación cruzada** cuando una extensión falla, o para scripts reproducibles en un informe.
 
-### 8.1 Con FFmpeg
+#### 8.1 Con FFmpeg
 
 1. En DevTools localiza el `.m3u8` / `.mpd`.
-2. *Copy as cURL* para conocer cabeceras necesarias.
+2. _Copy as cURL_ para conocer cabeceras necesarias.
 3. Ejecuta:
 
 ```bash
@@ -485,7 +485,7 @@ ffmpeg -headers $'Referer: https://ejemplo.com/\r\n' \
        -c copy -bsf:a aac_adtstoasc salida.mp4
 ```
 
-### 8.2 Con yt-dlp (muy recomendable)
+#### 8.2 Con yt-dlp (muy recomendable)
 
 ```bash
 # Ver formatos disponibles
@@ -500,7 +500,7 @@ yt-dlp --add-header "Referer:https://ejemplo.com/" \
        -f "bv*+ba/b" --merge-output-format mp4 "URL"
 ```
 
-### 8.3 Comprobar el resultado
+#### 8.3 Comprobar el resultado
 
 ```bash
 ffprobe -hide_banner salida.mp4
@@ -508,36 +508,36 @@ ffprobe -hide_banner salida.mp4
 
 Verifica que existen una pista `Video: h264` y una `Audio: aac`.
 
----
+***
 
-## 9. Problemas frecuentes (troubleshooting)
+### 9. Problemas frecuentes (troubleshooting)
 
-| Síntoma | Causa probable | Solución |
-|---|---|---|
-| **Sin audio** | Pista de audio separada no descargada | Elegir opción de fusión o descargar audio y unir con `-map` (7.3). |
-| **Sin vídeo, solo audio** | Se descargó la variante equivocada | Elegir entrada con `RESOLUTION`. |
-| **Error `403 Forbidden`** | Faltan `Referer`, `Origin`, cookies o token caducado | Copiar cabeceras desde DevTools; repetir con token reciente. |
-| **Error `404` a mitad** | URL firmada caducó | Recargar la página y empezar de nuevo; descargar más rápido. |
-| **MP4 que no abre** | `.m4s` sin `init.mp4` | Concatenar `init + segmentos` (7.4). |
-| **Audio corrupto / distorsionado** | Faltó `aac_adtstoasc` | Añadir `-bsf:a aac_adtstoasc`. |
-| **Vídeo "a trompicones"** | Segmentos desordenados | Ordenar numéricamente (`sort -V`). |
-| **Solo ves un trozo del vídeo** | Es directo o hay varios *Periods* (anuncios) | Revisar el manifiesto; separar periodos. |
-| **Pantalla negra al reproducir** | DRM (cifrado de licencia) | Fuera de alcance (sección 10). |
-| **CoApp no detectada** | No instalada o bloqueada por el sistema | Reinstalar y reiniciar navegador. |
-| **Calidad menor a la esperada** | El reproductor solo cargó una variante | Forzar calidad en el reproductor o descargar la variante desde el master. |
+| Síntoma                            | Causa probable                                       | Solución                                                                  |
+| ---------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Sin audio**                      | Pista de audio separada no descargada                | Elegir opción de fusión o descargar audio y unir con `-map` (7.3).        |
+| **Sin vídeo, solo audio**          | Se descargó la variante equivocada                   | Elegir entrada con `RESOLUTION`.                                          |
+| **Error `403 Forbidden`**          | Faltan `Referer`, `Origin`, cookies o token caducado | Copiar cabeceras desde DevTools; repetir con token reciente.              |
+| **Error `404` a mitad**            | URL firmada caducó                                   | Recargar la página y empezar de nuevo; descargar más rápido.              |
+| **MP4 que no abre**                | `.m4s` sin `init.mp4`                                | Concatenar `init + segmentos` (7.4).                                      |
+| **Audio corrupto / distorsionado** | Faltó `aac_adtstoasc`                                | Añadir `-bsf:a aac_adtstoasc`.                                            |
+| **Vídeo "a trompicones"**          | Segmentos desordenados                               | Ordenar numéricamente (`sort -V`).                                        |
+| **Solo ves un trozo del vídeo**    | Es directo o hay varios _Periods_ (anuncios)         | Revisar el manifiesto; separar periodos.                                  |
+| **Pantalla negra al reproducir**   | DRM (cifrado de licencia)                            | Fuera de alcance (sección 10).                                            |
+| **CoApp no detectada**             | No instalada o bloqueada por el sistema              | Reinstalar y reiniciar navegador.                                         |
+| **Calidad menor a la esperada**    | El reproductor solo cargó una variante               | Forzar calidad en el reproductor o descargar la variante desde el master. |
 
----
+***
 
-## 10. DRM: el límite que no se cruza
+### 10. DRM: el límite que no se cruza
 
 Es fundamental distinguir:
 
-| | **Cifrado AES-128 de HLS** | **DRM (EME)** |
-|---|---|---|
-| Clave | URL accesible al reproductor | Licencia ligada al dispositivo y al CDM |
-| Estándar | Parte del protocolo HLS | Encrypted Media Extensions + Widevine / PlayReady / FairPlay |
-| Pista visible | `#EXT-X-KEY:METHOD=AES-128` | `<ContentProtection>` en el MPD, peticiones a servidor de licencias, `pssh` |
-| Resultado de capturar segmentos | Se pueden descifrar con la clave pública | Segmentos **inútiles** sin licencia |
+|                                 | **Cifrado AES-128 de HLS**               | **DRM (EME)**                                                               |
+| ------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------- |
+| Clave                           | URL accesible al reproductor             | Licencia ligada al dispositivo y al CDM                                     |
+| Estándar                        | Parte del protocolo HLS                  | Encrypted Media Extensions + Widevine / PlayReady / FairPlay                |
+| Pista visible                   | `#EXT-X-KEY:METHOD=AES-128`              | `<ContentProtection>` en el MPD, peticiones a servidor de licencias, `pssh` |
+| Resultado de capturar segmentos | Se pueden descifrar con la clave pública | Segmentos **inútiles** sin licencia                                         |
 
 **Cómo reconocer DRM durante una auditoría:**
 
@@ -548,36 +548,36 @@ Es fundamental distinguir:
 
 **Qué hacer en un informe:** documentar que el contenido está protegido por DRM y que **la descarga mediante captura de red no es aplicable**. Eso es un **hallazgo positivo** (control de seguridad correcto), no un obstáculo que "saltar".
 
----
+***
 
-## 11. Extensiones y herramientas recomendadas
+### 11. Extensiones y herramientas recomendadas
 
 {% hint style="info" %}
 La disponibilidad y funciones de las extensiones cambian con las políticas de cada tienda. Verifica siempre el desarrollador oficial y la última versión antes de instalar.
 {% endhint %}
 
-### 11.1 Extensiones de navegador
+#### 11.1 Extensiones de navegador
 
-| Herramienta | Para qué sirve | Notas |
-|---|---|---|
-| **StreamGrab** | Detecta HLS/DASH/`blob:` y reconstruye un MP4 con audio, sin CoApp ni servidores | Open source (MIT), Chrome y Firefox. Ver [sección 12](#12-streamgrab-la-herramienta-open-source). |
-| **Video DownloadHelper** | Detección y descarga de vídeo/streams; CoApp para fusionar | Referencia del sector. Firefox es su mejor entorno. |
-| **Stream Detector** | Detecta URLs de `.m3u8`/`.mpd` y las muestra/copia | Ideal para sacar el manifiesto y pasarlo a FFmpeg/yt-dlp. |
-| **HLS Downloader** (y similares) | Descarga streams HLS directamente desde el navegador | Útil cuando no quieres instalar CoApp. |
-| **Extensiones de "Copy as cURL" / inspección de red** | Auditar cabeceras y peticiones | Complementan a DevTools. |
+| Herramienta                                           | Para qué sirve                                                                   | Notas                                                     |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **StreamGrab**                                        | Detecta HLS/DASH/`blob:` y reconstruye un MP4 con audio, sin CoApp ni servidores | Open source (MIT), Chrome y Firefox. Ver sección 12.      |
+| **Video DownloadHelper**                              | Detección y descarga de vídeo/streams; CoApp para fusionar                       | Referencia del sector. Firefox es su mejor entorno.       |
+| **Stream Detector**                                   | Detecta URLs de `.m3u8`/`.mpd` y las muestra/copia                               | Ideal para sacar el manifiesto y pasarlo a FFmpeg/yt-dlp. |
+| **HLS Downloader** (y similares)                      | Descarga streams HLS directamente desde el navegador                             | Útil cuando no quieres instalar CoApp.                    |
+| **Extensiones de "Copy as cURL" / inspección de red** | Auditar cabeceras y peticiones                                                   | Complementan a DevTools.                                  |
 
-### 11.2 Herramientas de línea de comandos (las más potentes)
+#### 11.2 Herramientas de línea de comandos (las más potentes)
 
-| Herramienta | Uso |
-|---|---|
-| **FFmpeg** | La navaja suiza: demux, mux, transcodificar. |
-| **yt-dlp** | Descarga desde miles de sitios y manifiestos; fusiona audio+vídeo; soporta cookies y cabeceras. |
-| **Streamlink** | Pensado para directos (HLS/DASH). |
-| **N_m3u8DL-RE** | Descargador de HLS/DASH muy completo (multihilo, selección de pistas, subtítulos). |
-| **JDownloader 2** | Gestor de descargas con detección automática. |
-| **mitmproxy / Burp Suite / Fiddler** | Interceptación de tráfico para auditar cabeceras, tokens y flujo completo. |
+| Herramienta                          | Uso                                                                                             |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| **FFmpeg**                           | La navaja suiza: demux, mux, transcodificar.                                                    |
+| **yt-dlp**                           | Descarga desde miles de sitios y manifiestos; fusiona audio+vídeo; soporta cookies y cabeceras. |
+| **Streamlink**                       | Pensado para directos (HLS/DASH).                                                               |
+| **N\_m3u8DL-RE**                     | Descargador de HLS/DASH muy completo (multihilo, selección de pistas, subtítulos).              |
+| **JDownloader 2**                    | Gestor de descargas con detección automática.                                                   |
+| **mitmproxy / Burp Suite / Fiddler** | Interceptación de tráfico para auditar cabeceras, tokens y flujo completo.                      |
 
-### 11.3 Flujo recomendado en una auditoría
+#### 11.3 Flujo recomendado en una auditoría
 
 ```
 1. DevTools / mitmproxy  →  entender el flujo y localizar manifiesto
@@ -586,9 +586,9 @@ La disponibilidad y funciones de las extensiones cambian con las políticas de c
 4. Informe               →  tokens, caducidad, cabeceras, DRM, hallazgos
 ```
 
----
+***
 
-## 12. StreamGrab: la herramienta open source
+### 12. StreamGrab: la herramienta open source
 
 {% hint style="success" %}
 **StreamGrab** es una extensión de código abierto (licencia MIT) creada para este proyecto, que automatiza todo lo explicado en esta guía: detecta el stream, lee el manifiesto, descarga los segmentos y reconstruye **un único MP4 con vídeo + audio**, todo en local.
@@ -597,57 +597,57 @@ La disponibilidad y funciones de las extensiones cambian con las políticas de c
 * 🌐 Web: [d1se0.github.io/StreamGrab](https://d1se0.github.io/StreamGrab/)
 {% endhint %}
 
-### 12.1 ¿Qué es y qué problema resuelve?
+#### 12.1 ¿Qué es y qué problema resuelve?
 
 StreamGrab es una extensión para **Chrome, Edge, Brave, Opera, Vivaldi y Firefox** que detecta los streams de vídeo que carga una página, **incluidos los reproductores que solo exponen una URL `blob:`** (MSE, hls.js, dash.js, Video.js…), y los reconstruye en un MP4 con la calidad que elijas.
 
 Sus puntos diferenciales respecto al flujo "clásico" con Video DownloadHelper:
 
-| Característica | Video DownloadHelper | StreamGrab |
-|---|---|---|
-| Necesita programa externo (CoApp / FFmpeg) | Sí, para unir audio y vídeo | **No**: el muxer MP4 está escrito en JavaScript dentro de la propia extensión |
-| Hay que reproducir el vídeo para detectarlo | Normalmente sí | **No**: lee el manifiesto y descarga los segmentos directamente |
-| Recodifica el vídeo | Depende de la opción elegida | **No**: solo remux, sin pérdida de calidad |
-| Servidores intermedios | No | **No**: todo ocurre en local |
-| Historial con re-descarga | No | **Sí** |
+| Característica                              | Video DownloadHelper         | StreamGrab                                                                    |
+| ------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------- |
+| Necesita programa externo (CoApp / FFmpeg)  | Sí, para unir audio y vídeo  | **No**: el muxer MP4 está escrito en JavaScript dentro de la propia extensión |
+| Hay que reproducir el vídeo para detectarlo | Normalmente sí               | **No**: lee el manifiesto y descarga los segmentos directamente               |
+| Recodifica el vídeo                         | Depende de la opción elegida | **No**: solo remux, sin pérdida de calidad                                    |
+| Servidores intermedios                      | No                           | **No**: todo ocurre en local                                                  |
+| Historial con re-descarga                   | No                           | **Sí**                                                                        |
 
 {% hint style="info" %}
 **Importante:** como la extensión solo ve las peticiones mientras está activa, si la página ya estaba abierta antes de instalarla **recárgala con `F5`**.
 {% endhint %}
 
-### 12.2 Qué formatos soporta
+#### 12.2 Qué formatos soporta
 
-| Origen | Soporte |
-|---|---|
-| HLS `.m3u8` (MPEG-TS con H.264/AAC) | ✅ Transmuxado a MP4 (mux.js) |
-| HLS fMP4/CMAF con audio en pistas separadas | ✅ Se fusionan |
-| HLS con segmentos cifrados **AES-128** | ✅ Descifrados con WebCrypto |
-| DASH `.mpd` (SegmentTemplate / Timeline / List / Base, fMP4 H.264/AAC) | ✅ Vídeo + audio fusionados |
-| Manifiestos sin extensión o con `content-type` genérico | ✅ Detectados espiando los `fetch`/XHR de la página |
-| MP4/WebM progresivos | ✅ Se delegan al gestor de descargas del navegador |
-| CDN que exigen `Referer` / `Origin` | ✅ Emulados con `declarativeNetRequest` |
-| **DRM (Widevine / PlayReady / FairPlay, SAMPLE-AES)** | ❌ **Nunca**: la extensión te lo indica |
-| Directos (live) | ⚠️ Descarga lo que haya listado en ese momento |
-| WebM/VP9 en DASH, HEVC en TS, audio AAC empaquetado en HLS | ❌ Todavía no |
+| Origen                                                                 | Soporte                                            |
+| ---------------------------------------------------------------------- | -------------------------------------------------- |
+| HLS `.m3u8` (MPEG-TS con H.264/AAC)                                    | ✅ Transmuxado a MP4 (mux.js)                       |
+| HLS fMP4/CMAF con audio en pistas separadas                            | ✅ Se fusionan                                      |
+| HLS con segmentos cifrados **AES-128**                                 | ✅ Descifrados con WebCrypto                        |
+| DASH `.mpd` (SegmentTemplate / Timeline / List / Base, fMP4 H.264/AAC) | ✅ Vídeo + audio fusionados                         |
+| Manifiestos sin extensión o con `content-type` genérico                | ✅ Detectados espiando los `fetch`/XHR de la página |
+| MP4/WebM progresivos                                                   | ✅ Se delegan al gestor de descargas del navegador  |
+| CDN que exigen `Referer` / `Origin`                                    | ✅ Emulados con `declarativeNetRequest`             |
+| **DRM (Widevine / PlayReady / FairPlay, SAMPLE-AES)**                  | ❌ **Nunca**: la extensión te lo indica             |
+| Directos (live)                                                        | ⚠️ Descarga lo que haya listado en ese momento     |
+| WebM/VP9 en DASH, HEVC en TS, audio AAC empaquetado en HLS             | ❌ Todavía no                                       |
 
-El resultado es un MP4 **"faststart"** (`moov` al principio, tablas de muestras completas y *edit lists* para sincronizar audio y vídeo). **No es un MP4 fragmentado**, así que se puede buscar (*seek*) y muestra su duración en cualquier reproductor. Para archivos de más de 4 GB usa desplazamientos de 64 bits (`co64`).
+El resultado es un MP4 **"faststart"** (`moov` al principio, tablas de muestras completas y _edit lists_ para sincronizar audio y vídeo). **No es un MP4 fragmentado**, así que se puede buscar (_seek_) y muestra su duración en cualquier reproductor. Para archivos de más de 4 GB usa desplazamientos de 64 bits (`co64`).
 
-### 12.3 Cómo encaja con la teoría de esta guía
+#### 12.3 Cómo encaja con la teoría de esta guía
 
 Cada pieza de StreamGrab corresponde a un concepto explicado en las secciones anteriores:
 
-| Concepto de la guía | Dónde está en StreamGrab |
-|---|---|
-| Observar las peticiones de red (secciones 5 y 6.1) | `src/background.js` (`webRequest`) |
-| Interpretar el manifiesto HLS (sección 3.1) | `src/core/hls.js` |
-| Interpretar el manifiesto DASH (sección 3.2) | `src/core/dash.js` |
-| Elegir calidad y pistas de audio | `src/core/analyze.js` |
-| Descarga de segmentos y AES-128 (sección 3.1 d) | `src/core/download.js` |
-| Reconstrucción del MP4 (sección 7) | `src/core/mp4.js` (muxer fMP4 → MP4) |
-| Hook del `MediaSource` / detección de manifiestos en `fetch` y XHR (sección 13.4, "Crea tu propia extensión") | `src/inject-main.js` (mundo MAIN) |
-| Cabeceras `Referer` / `Origin` (sección 7.5) | Reglas `declarativeNetRequest` en el *background* |
-| Procesos pesados en MV3 | Chrome: *offscreen document* (`engine.html`) · Firefox: la propia página de fondo |
-| Interfaz | `src/popup.*` |
+| Concepto de la guía                                                                                           | Dónde está en StreamGrab                                                          |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Observar las peticiones de red (secciones 5 y 6.1)                                                            | `src/background.js` (`webRequest`)                                                |
+| Interpretar el manifiesto HLS (sección 3.1)                                                                   | `src/core/hls.js`                                                                 |
+| Interpretar el manifiesto DASH (sección 3.2)                                                                  | `src/core/dash.js`                                                                |
+| Elegir calidad y pistas de audio                                                                              | `src/core/analyze.js`                                                             |
+| Descarga de segmentos y AES-128 (sección 3.1 d)                                                               | `src/core/download.js`                                                            |
+| Reconstrucción del MP4 (sección 7)                                                                            | `src/core/mp4.js` (muxer fMP4 → MP4)                                              |
+| Hook del `MediaSource` / detección de manifiestos en `fetch` y XHR (sección 13.4, "Crea tu propia extensión") | `src/inject-main.js` (mundo MAIN)                                                 |
+| Cabeceras `Referer` / `Origin` (sección 7.5)                                                                  | Reglas `declarativeNetRequest` en el _background_                                 |
+| Procesos pesados en MV3                                                                                       | Chrome: _offscreen document_ (`engine.html`) · Firefox: la propia página de fondo |
+| Interfaz                                                                                                      | `src/popup.*`                                                                     |
 
 ```mermaid
 flowchart LR
@@ -665,7 +665,7 @@ flowchart LR
 El directorio `src/core/` **no usa APIs del navegador**, por lo que el motor también se puede ejecutar en Node.js. Es lo que permite sus tests automáticos contra herramientas reales.
 {% endhint %}
 
-### 12.4 Instalación
+#### 12.4 Instalación
 
 **Requisitos:** Node.js con `npm` y Git. (Para Firefox, versión **≥ 140**.)
 
@@ -699,7 +699,7 @@ En Firefox, un complemento cargado de forma temporal **se elimina al cerrar el n
 npm run pack      # crea dist/streamgrab-*.zip
 ```
 
-### 12.5 Guía de uso paso a paso
+#### 12.5 Guía de uso paso a paso
 
 1. **Abre la página con el vídeo.** Si ya estaba abierta antes de instalar la extensión, **recárgala con `F5`**.
 2. **Mira el icono de StreamGrab:** muestra un **contador** con los streams detectados. No hace falta reproducir el vídeo.
@@ -720,7 +720,7 @@ Desde la lista de detecciones puedes **copiar la URL del manifiesto**, lo que te
 
 En el pie del popup puedes fijar un tope de tamaño. Por defecto **no hay límite**.
 
-### 12.6 Pestaña Historial
+#### 12.6 Pestaña Historial
 
 StreamGrab guarda un registro de las descargas completadas:
 
@@ -732,7 +732,7 @@ StreamGrab guarda un registro de las descargas completadas:
 * Límite de **200 entradas**, almacenadas en `storage.local`: **los datos no salen del navegador**.
 * Línea de estado con el número de descargas y el tamaño total acumulado.
 
-### 12.7 Qué ocurre por dentro durante una descarga
+#### 12.7 Qué ocurre por dentro durante una descarga
 
 1. **Detección:** `webRequest` ve una petición a un `.m3u8` / `.mpd`, o el hook del mundo MAIN encuentra un manifiesto dentro de una respuesta `fetch`/XHR (aunque no tenga extensión).
 2. **Análisis:** se descarga y se interpreta el manifiesto, se listan las variantes de calidad y las pistas de audio.
@@ -744,19 +744,19 @@ StreamGrab guarda un registro de las descargas completadas:
 
 Todo esto equivale a automatizar lo que en la sección 7 hacías a mano con `ffmpeg -c copy`.
 
-### 12.8 Problemas frecuentes con StreamGrab
+#### 12.8 Problemas frecuentes con StreamGrab
 
-| Síntoma | Causa probable | Solución |
-|---|---|---|
-| El contador no sube | La página se cargó antes que la extensión | Recarga con `F5`. |
-| Error 403 o 404 en mitad de la descarga | Token o URL firmada caducados | Recarga la página para obtener un manifiesto nuevo y vuelve a descargar. Usa **Volver a descargar** en el historial, que revalida el manifiesto. |
-| El elemento aparece marcado como protegido | **DRM** detectado | Es el comportamiento esperado: StreamGrab **nunca** lo elude. Documéntalo como control correcto. |
-| Solo se descarga una parte (directo) | Es un *live*: solo baja lo listado en ese momento | Normal; se descarga lo que haya en la playlist. |
-| El vídeo usa MSE pero no se detecta manifiesto | Protocolo binario propio, sin manifiesto accesible | No se puede reconstruir desde las peticiones. |
-| Códec no soportado | WebM/VP9 en DASH, HEVC en TS o audio AAC empaquetado en HLS | Aún no soportados; usa FFmpeg/yt-dlp como alternativa. |
-| Archivos muy grandes | Límite práctico de disco y cuota de Blobs del navegador | Libera espacio. El propio README indica que los archivos de varios GB no se han probado de extremo a extremo (solo se validó el formato de 64 bits). |
+| Síntoma                                        | Causa probable                                              | Solución                                                                                                                                             |
+| ---------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| El contador no sube                            | La página se cargó antes que la extensión                   | Recarga con `F5`.                                                                                                                                    |
+| Error 403 o 404 en mitad de la descarga        | Token o URL firmada caducados                               | Recarga la página para obtener un manifiesto nuevo y vuelve a descargar. Usa **Volver a descargar** en el historial, que revalida el manifiesto.     |
+| El elemento aparece marcado como protegido     | **DRM** detectado                                           | Es el comportamiento esperado: StreamGrab **nunca** lo elude. Documéntalo como control correcto.                                                     |
+| Solo se descarga una parte (directo)           | Es un _live_: solo baja lo listado en ese momento           | Normal; se descarga lo que haya en la playlist.                                                                                                      |
+| El vídeo usa MSE pero no se detecta manifiesto | Protocolo binario propio, sin manifiesto accesible          | No se puede reconstruir desde las peticiones.                                                                                                        |
+| Códec no soportado                             | WebM/VP9 en DASH, HEVC en TS o audio AAC empaquetado en HLS | Aún no soportados; usa FFmpeg/yt-dlp como alternativa.                                                                                               |
+| Archivos muy grandes                           | Límite práctico de disco y cuota de Blobs del navegador     | Libera espacio. El propio README indica que los archivos de varios GB no se han probado de extremo a extremo (solo se validó el formato de 64 bits). |
 
-### 12.9 Calidad y pruebas
+#### 12.9 Calidad y pruebas
 
 El proyecto incluye una batería de pruebas contra herramientas reales:
 
@@ -769,25 +769,25 @@ npm run test:e2e     # Chromium real + extensión compilada + página con hls.js
 npm run lint:firefox # web-ext lint del build de Firefox
 ```
 
-También hay *workflows* de GitHub Actions (CI en cada *push* y *release* automática al etiquetar versiones `v*`). Para ver la especificación completa de la implementación, consulta `docs/AGENT_PROMPT.md` en el repositorio.
+También hay _workflows_ de GitHub Actions (CI en cada _push_ y _release_ automática al etiquetar versiones `v*`). Para ver la especificación completa de la implementación, consulta `docs/AGENT_PROMPT.md` en el repositorio.
 
 {% hint style="info" %}
-**Nota de honestidad técnica (del propio proyecto):** el *build* de Firefox pasa `web-ext lint` sin errores, pero el test e2e automatizado en navegador solo se ejecuta actualmente en Chromium.
+**Nota de honestidad técnica (del propio proyecto):** el _build_ de Firefox pasa `web-ext lint` sin errores, pero el test e2e automatizado en navegador solo se ejecuta actualmente en Chromium.
 {% endhint %}
 
-### 12.10 Uso responsable y contribuciones
+#### 12.10 Uso responsable y contribuciones
 
 * Usa StreamGrab **solo con contenido sobre el que tengas derecho de descarga** (propio, con licencia o en entornos de laboratorio autorizados).
 * **No elude DRM y no lo hará**: es una decisión de diseño del proyecto.
 * Es software libre bajo licencia **MIT**. Si quieres aportar mejoras, lee `CONTRIBUTING.md` en el repositorio.
-* Si encuentras un sitio que no detecta correctamente, abre una *issue* con la URL del manifiesto (sin tokens) y el comportamiento observado.
+* Si encuentras un sitio que no detecta correctamente, abre una _issue_ con la URL del manifiesto (sin tokens) y el comportamiento observado.
 
----
+***
 
-## 13. Crea tu propia extensión
+### 13. Crea tu propia extensión
 
 {% hint style="info" %}
-Si prefieres ver una implementación completa y funcional en lugar de empezar desde cero, estudia el código de [StreamGrab](#12-streamgrab-la-herramienta-open-source). Esta sección explica los fundamentos para que puedas construir la tuya.
+Si prefieres ver una implementación completa y funcional en lugar de empezar desde cero, estudia el código de StreamGrab. Esta sección explica los fundamentos para que puedas construir la tuya.
 {% endhint %}
 
 Construir una herramienta propia es la mejor forma de **entender de verdad** el proceso. Vamos a crear una extensión mínima que:
@@ -795,9 +795,9 @@ Construir una herramienta propia es la mejor forma de **entender de verdad** el 
 1. **Detecta** manifiestos `.m3u8` / `.mpd` en la pestaña.
 2. **Los lista** en un popup.
 3. **Genera el comando FFmpeg / yt-dlp** listo para copiar (con cabeceras).
-4. *(Avanzado)* Descarga y une segmentos HLS en el propio navegador.
+4. _(Avanzado)_ Descarga y une segmentos HLS en el propio navegador.
 
-### 13.1 Arquitectura
+#### 13.1 Arquitectura
 
 ```mermaid
 flowchart TB
@@ -810,7 +810,7 @@ flowchart TB
     POP -.->|opcional: Native Messaging| N[Host nativo + FFmpeg]
 ```
 
-### 13.2 `manifest.json` (Manifest V3, válido en Chrome/Edge)
+#### 13.2 `manifest.json` (Manifest V3, válido en Chrome/Edge)
 
 ```json
 {
@@ -835,7 +835,7 @@ flowchart TB
 
 > 💡 En **Firefox** el `manifest.json` es casi igual, pero con `"background": { "scripts": ["background.js"] }` y el bloque `browser_specific_settings` con tu ID. Firefox sigue permitiendo `webRequest` bloqueante; Chrome MV3 solo permite **observar**, que es justo lo que necesitamos.
 
-### 13.3 `background.js`: detectar manifiestos
+#### 13.3 `background.js`: detectar manifiestos
 
 ```javascript
 // Patrones que nos interesan
@@ -889,9 +889,9 @@ chrome.runtime.onMessage.addListener((msg, _s, responder) => {
 });
 ```
 
-### 13.4 `hook.js`: ver quién fabrica el `blob:` (mundo MAIN)
+#### 13.4 `hook.js`: ver quién fabrica el `blob:` (mundo MAIN)
 
-Este *content script* se inyecta en el contexto de la propia página y **envuelve** las APIs para registrar qué ocurre. Es una técnica de análisis muy didáctica.
+Este _content script_ se inyecta en el contexto de la propia página y **envuelve** las APIs para registrar qué ocurre. Es una técnica de análisis muy didáctica.
 
 ```javascript
 (() => {
@@ -917,7 +917,7 @@ Este *content script* se inyecta en el contexto de la propia página y **envuelv
 
 Qué aprenderás con ella: el MIME exacto (`video/mp4; codecs="avc1…"`), si el audio y el vídeo usan `SourceBuffer` separados, y si el reproductor es MSE puro.
 
-### 13.5 `popup.html` + `popup.js`
+#### 13.5 `popup.html` + `popup.js`
 
 ```html
 <!-- popup.html -->
@@ -984,7 +984,7 @@ function comandoYtDlp(item) {
 })();
 ```
 
-### 13.6 Cargar la extensión en modo desarrollador
+#### 13.6 Cargar la extensión en modo desarrollador
 
 **Chrome / Edge**
 
@@ -997,7 +997,7 @@ function comandoYtDlp(item) {
 1. Abre `about:debugging#/runtime/this-firefox`.
 2. **Cargar complemento temporal…** y selecciona el `manifest.json`.
 
-### 13.7 Nivel avanzado: descargar y unir **dentro del navegador**
+#### 13.7 Nivel avanzado: descargar y unir **dentro del navegador**
 
 Si quieres una herramienta autónoma sin CoApp, necesitas tres piezas.
 
@@ -1047,11 +1047,11 @@ async function descargarSegmentos(urls, concurrencia = 6, onProgreso = () => {})
 
 Aquí tienes tres caminos:
 
-| Opción | Cómo | Pros / contras |
-|---|---|---|
-| **mux.js** (transmuxer TS → fMP4) | Libreria JS ligera que convierte segmentos MPEG-TS a fragmentos MP4 | Rápido y ligero. Ideal para HLS con `.ts`. |
-| **ffmpeg.wasm** | FFmpeg compilado a WebAssembly | Muy flexible (fusiona audio+vídeo, `-c copy`), pero pesado y más lento con archivos grandes. |
-| **Native Messaging** | La extensión habla con un programa local que ejecuta FFmpeg real | Es lo que hace VDH con la CoApp. Máximo rendimiento, requiere instalar el host. |
+| Opción                            | Cómo                                                                | Pros / contras                                                                               |
+| --------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **mux.js** (transmuxer TS → fMP4) | Libreria JS ligera que convierte segmentos MPEG-TS a fragmentos MP4 | Rápido y ligero. Ideal para HLS con `.ts`.                                                   |
+| **ffmpeg.wasm**                   | FFmpeg compilado a WebAssembly                                      | Muy flexible (fusiona audio+vídeo, `-c copy`), pero pesado y más lento con archivos grandes. |
+| **Native Messaging**              | La extensión habla con un programa local que ejecuta FFmpeg real    | Es lo que hace VDH con la CoApp. Máximo rendimiento, requiere instalar el host.              |
 
 Ejemplo conceptual con **ffmpeg.wasm**:
 
@@ -1087,7 +1087,7 @@ function unirBuffers(lista) {
 }
 ```
 
-> ⚠️ En Manifest V3 el *service worker* se suspende y no tiene `URL.createObjectURL`. Para procesos pesados usa un **Offscreen Document** (`chrome.offscreen`) o una página de extensión propia.
+> ⚠️ En Manifest V3 el _service worker_ se suspende y no tiene `URL.createObjectURL`. Para procesos pesados usa un **Offscreen Document** (`chrome.offscreen`) o una página de extensión propia.
 
 **4) Cifrado AES-128 estándar (si existe `#EXT-X-KEY`)**
 
@@ -1099,7 +1099,7 @@ async function descifrarSegmento(buffer, claveBytes, ivBytes) {
 // Si no hay IV explícito, se usa el número de secuencia del segmento como IV (128 bits, big-endian).
 ```
 
-### 13.8 Mejoras para tu herramienta
+#### 13.8 Mejoras para tu herramienta
 
 * ✅ **Selector de calidad:** parsear el master playlist y listar `RESOLUTION` / `BANDWIDTH`.
 * ✅ **Parser de DASH:** `DOMParser` + expansión de `SegmentTemplate`, `SegmentTimeline`, `BaseURL`.
@@ -1108,33 +1108,33 @@ async function descifrarSegmento(buffer, claveBytes, ivBytes) {
 * ✅ **Exportar un `.har` o informe** con URLs, cabeceras y caducidad del token → perfecto para entregables de pentesting.
 * ✅ **Modo Native Messaging** para delegar la fusión en FFmpeg local.
 
-### 13.9 Errores típicos al desarrollar
+#### 13.9 Errores típicos al desarrollar
 
-| Problema | Causa | Solución |
-|---|---|---|
-| CORS al hacer `fetch` de segmentos | El CDN no permite el origen | Hacer la petición desde el service worker/extensión con `host_permissions`. |
-| El *service worker* "se duerme" | MV3 lo suspende a los 30 s sin actividad | Usar `chrome.offscreen`, `alarms` o dividir en tareas cortas. |
-| Cookies no enviadas | Falta `credentials: 'include'` | Añadirlo y verificar permisos de host. |
-| Memoria agotada con vídeos largos | Todo en RAM | Escribir a disco por trozos (File System Access API / `downloads`) o usar host nativo. |
-| `webRequest` no ve peticiones | Falta `host_permissions` | Añadir `<all_urls>` o los dominios necesarios. |
+| Problema                           | Causa                                    | Solución                                                                               |
+| ---------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
+| CORS al hacer `fetch` de segmentos | El CDN no permite el origen              | Hacer la petición desde el service worker/extensión con `host_permissions`.            |
+| El _service worker_ "se duerme"    | MV3 lo suspende a los 30 s sin actividad | Usar `chrome.offscreen`, `alarms` o dividir en tareas cortas.                          |
+| Cookies no enviadas                | Falta `credentials: 'include'`           | Añadirlo y verificar permisos de host.                                                 |
+| Memoria agotada con vídeos largos  | Todo en RAM                              | Escribir a disco por trozos (File System Access API / `downloads`) o usar host nativo. |
+| `webRequest` no ve peticiones      | Falta `host_permissions`                 | Añadir `<all_urls>` o los dominios necesarios.                                         |
 
----
+***
 
-## 14. Enfoque de pentesting: qué se audita aquí
+### 14. Enfoque de pentesting: qué se audita aquí
 
 Cuando este flujo aparece en un trabajo de hacking ético, **no se trata de "bajar un vídeo"**, sino de evaluar los controles de acceso del sistema:
 
-| Control | Qué comprobar |
-|---|---|
-| **Autorización** | ¿Se puede obtener el manifiesto sin sesión? ¿Un usuario sin suscripción llega a las URLs? |
-| **URLs firmadas** | ¿Caducan? ¿Se pueden reutilizar desde otra IP? ¿Están ligadas a sesión/dispositivo? |
-| **Cabeceras** | ¿Se valida `Referer`/`Origin`? (recuerda: son fácilmente falsificables → no es un control fuerte). |
-| **Enumeración / IDOR** | ¿Se pueden adivinar rutas de otros vídeos (`/video/123/`, `/video/124/`)? |
-| **Hotlinking** | ¿Otro sitio puede incrustar el stream sin permiso? |
-| **Configuración del CDN** | ¿Listado de directorios habilitado? ¿CORS excesivamente abierto (`*`)? |
-| **Cifrado de claves** | ¿La URL de `EXT-X-KEY` exige autenticación? |
-| **DRM** | ¿El contenido premium está realmente protegido o solo "ofuscado"? |
-| **Rate limiting** | ¿Se pueden descargar masivamente segmentos sin límite? |
+| Control                   | Qué comprobar                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Autorización**          | ¿Se puede obtener el manifiesto sin sesión? ¿Un usuario sin suscripción llega a las URLs?          |
+| **URLs firmadas**         | ¿Caducan? ¿Se pueden reutilizar desde otra IP? ¿Están ligadas a sesión/dispositivo?                |
+| **Cabeceras**             | ¿Se valida `Referer`/`Origin`? (recuerda: son fácilmente falsificables → no es un control fuerte). |
+| **Enumeración / IDOR**    | ¿Se pueden adivinar rutas de otros vídeos (`/video/123/`, `/video/124/`)?                          |
+| **Hotlinking**            | ¿Otro sitio puede incrustar el stream sin permiso?                                                 |
+| **Configuración del CDN** | ¿Listado de directorios habilitado? ¿CORS excesivamente abierto (`*`)?                             |
+| **Cifrado de claves**     | ¿La URL de `EXT-X-KEY` exige autenticación?                                                        |
+| **DRM**                   | ¿El contenido premium está realmente protegido o solo "ofuscado"?                                  |
+| **Rate limiting**         | ¿Se pueden descargar masivamente segmentos sin límite?                                             |
 
 **Recomendaciones típicas para el cliente:**
 
@@ -1144,46 +1144,46 @@ Cuando este flujo aparece en un trabajo de hacking ético, **no se trata de "baj
 4. Monitorización de patrones de descarga anómalos.
 5. Marca de agua (visible o forense) para trazabilidad de filtraciones.
 
-> 📝 Recuerda: **cualquier cosa que el navegador pueda reproducir sin DRM, es técnicamente capturable.** La defensa real es controlar *quién* obtiene los manifiestos y cuánto duran, no esconder el vídeo detrás de un `blob:`.
+> 📝 Recuerda: **cualquier cosa que el navegador pueda reproducir sin DRM, es técnicamente capturable.** La defensa real es controlar _quién_ obtiene los manifiestos y cuánto duran, no esconder el vídeo detrás de un `blob:`.
 
----
+***
 
-## 15. Glosario y checklist
+### 15. Glosario y checklist
 
-### 📖 Glosario
+#### 📖 Glosario
 
-| Término | Definición |
-|---|---|
-| **Blob** | Objeto binario inmutable en memoria del navegador. |
-| **`blob:` URL** | Referencia local a un Blob o MediaSource. |
-| **MSE** | Media Source Extensions: API para alimentar `<video>` con datos generados por JS. |
-| **EME** | Encrypted Media Extensions: API para reproducir contenido con DRM. |
-| **HLS** | HTTP Live Streaming (Apple). Manifiesto `.m3u8`. |
-| **DASH** | Dynamic Adaptive Streaming over HTTP. Manifiesto `.mpd`. |
-| **Manifiesto / Playlist** | Archivo índice con calidades y segmentos. |
-| **Segmento** | Trozo corto de vídeo/audio (2–10 s). |
-| **Init segment** | Cabecera fMP4 con códecs y parámetros (`moov`). |
-| **Muxing / Remuxing** | Empaquetar pistas en un contenedor, sin / con cambio de contenedor. |
-| **Transcodificar** | Recodificar el contenido con otro códec. |
-| **CoApp** | Aplicación auxiliar nativa de VDH (incluye FFmpeg). |
-| **CDN** | Red de distribución de contenido que sirve los segmentos. |
-| **ADTS / ASC** | Dos formas de empaquetar AAC (TS vs MP4). |
+| Término                   | Definición                                                                        |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| **Blob**                  | Objeto binario inmutable en memoria del navegador.                                |
+| **`blob:` URL**           | Referencia local a un Blob o MediaSource.                                         |
+| **MSE**                   | Media Source Extensions: API para alimentar `<video>` con datos generados por JS. |
+| **EME**                   | Encrypted Media Extensions: API para reproducir contenido con DRM.                |
+| **HLS**                   | HTTP Live Streaming (Apple). Manifiesto `.m3u8`.                                  |
+| **DASH**                  | Dynamic Adaptive Streaming over HTTP. Manifiesto `.mpd`.                          |
+| **Manifiesto / Playlist** | Archivo índice con calidades y segmentos.                                         |
+| **Segmento**              | Trozo corto de vídeo/audio (2–10 s).                                              |
+| **Init segment**          | Cabecera fMP4 con códecs y parámetros (`moov`).                                   |
+| **Muxing / Remuxing**     | Empaquetar pistas en un contenedor, sin / con cambio de contenedor.               |
+| **Transcodificar**        | Recodificar el contenido con otro códec.                                          |
+| **CoApp**                 | Aplicación auxiliar nativa de VDH (incluye FFmpeg).                               |
+| **CDN**                   | Red de distribución de contenido que sirve los segmentos.                         |
+| **ADTS / ASC**            | Dos formas de empaquetar AAC (TS vs MP4).                                         |
 
-### ✅ Checklist rápida
+#### ✅ Checklist rápida
 
-- [ ] Tengo **autorización** o el contenido es mío / libre.
-- [ ] He reproducido el vídeo y observado **Network** (`m3u8`/`mpd`).
-- [ ] He identificado si hay **audio separado**.
-- [ ] He revisado si hay **DRM** (si lo hay: me detengo y lo documento).
-- [ ] He copiado **cabeceras/cookies** necesarias.
-- [ ] He elegido la **calidad máxima** disponible.
-- [ ] He descargado con VDH (con CoApp), con **StreamGrab** **o** con `yt-dlp`/`ffmpeg`.
-- [ ] He verificado con `ffprobe` que hay **H.264 + AAC**.
-- [ ] He documentado URLs, caducidad de tokens y hallazgos.
+* [ ] Tengo **autorización** o el contenido es mío / libre.
+* [ ] He reproducido el vídeo y observado **Network** (`m3u8`/`mpd`).
+* [ ] He identificado si hay **audio separado**.
+* [ ] He revisado si hay **DRM** (si lo hay: me detengo y lo documento).
+* [ ] He copiado **cabeceras/cookies** necesarias.
+* [ ] He elegido la **calidad máxima** disponible.
+* [ ] He descargado con VDH (con CoApp), con **StreamGrab** **o** con `yt-dlp`/`ffmpeg`.
+* [ ] He verificado con `ffprobe` que hay **H.264 + AAC**.
+* [ ] He documentado URLs, caducidad de tokens y hallazgos.
 
----
+***
 
-## 📚 Referencias para profundizar
+### 📚 Referencias para profundizar
 
 * Especificación HLS (RFC 8216).
 * Especificación MPEG-DASH (ISO/IEC 23009-1).
@@ -1194,6 +1194,6 @@ Cuando este flujo aparece en un trabajo de hacking ético, **no se trata de "baj
 * Repositorio de **StreamGrab**: [github.com/D1se0/StreamGrab](https://github.com/D1se0/StreamGrab)
 * Repositorios de **hls.js**, **dash.js**, **Shaka Player** y **mux.js** (leer su código es la mejor forma de entender el streaming).
 
----
+***
 
-*Documento elaborado con fines formativos para la comunidad de hacking ético. Usa estos conocimientos de forma responsable.*
+_Documento elaborado con fines formativos para la comunidad de hacking ético. Usa estos conocimientos de forma responsable._
