@@ -1,0 +1,2 @@
+# Consideraciones generales de endurecimiento
+

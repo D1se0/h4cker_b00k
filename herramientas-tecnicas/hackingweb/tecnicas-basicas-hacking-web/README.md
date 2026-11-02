@@ -18,8 +18,9 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Técnicas básicas Hacking web
 
-Apuntes de tecnicas básicas de hacking web, aprendidos por el certificado del CWES de HTB.

@@ -1,0 +1,2 @@
+# XSS Reflejado (Reflected)
+

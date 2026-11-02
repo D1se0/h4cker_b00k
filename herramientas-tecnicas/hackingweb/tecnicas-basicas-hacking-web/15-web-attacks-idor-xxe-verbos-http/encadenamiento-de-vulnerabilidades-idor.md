@@ -1,0 +1,2 @@
+# Encadenamiento de vulnerabilidades IDOR
+

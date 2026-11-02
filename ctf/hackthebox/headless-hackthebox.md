@@ -1,0 +1,6 @@
+---
+icon: flag
+---
+
+# Headless HackTheBox
+

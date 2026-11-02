@@ -1,0 +1,2 @@
+# Vulnerabilidades públicas y CVSS
+

@@ -1,0 +1,2 @@
+# Preparación y metodología general
+

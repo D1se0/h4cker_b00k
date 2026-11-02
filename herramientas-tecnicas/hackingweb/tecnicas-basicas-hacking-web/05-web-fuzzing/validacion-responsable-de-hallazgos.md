@@ -1,0 +1,2 @@
+# Validación responsable de hallazgos
+

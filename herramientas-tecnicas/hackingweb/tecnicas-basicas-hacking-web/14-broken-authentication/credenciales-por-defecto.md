@@ -1,0 +1,2 @@
+# Credenciales por defecto
+

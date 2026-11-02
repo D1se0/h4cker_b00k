@@ -1,0 +1,2 @@
+# Evasión de comandos bloqueados
+

@@ -1,0 +1,2 @@
+# Prevención de XSS
+

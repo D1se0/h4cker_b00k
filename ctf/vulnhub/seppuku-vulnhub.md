@@ -1,0 +1,6 @@
+---
+icon: flag
+---
+
+# Seppuku VulnHub
+

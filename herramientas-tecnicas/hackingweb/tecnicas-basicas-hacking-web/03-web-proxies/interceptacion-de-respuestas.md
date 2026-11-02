@@ -1,0 +1,2 @@
+# Interceptación de respuestas
+

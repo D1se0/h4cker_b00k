@@ -1,0 +1,2 @@
+# Operadores lógicos en SQL
+

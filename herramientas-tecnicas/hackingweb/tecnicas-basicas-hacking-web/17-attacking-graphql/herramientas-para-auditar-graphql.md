@@ -1,0 +1,2 @@
+# Herramientas para auditar GraphQL
+

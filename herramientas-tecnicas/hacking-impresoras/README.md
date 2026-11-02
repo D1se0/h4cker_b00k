@@ -18,9 +18,9 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Hacking Impresoras
-
-Herramientas / Técnicas utilizadas para el hacking de impresoras pudiendo comunicarte con la misma, el descubrimiento de la misma, el lenguaje \`PJL\` que es con la que se comunican las impresoras, scripts, etc...
 
