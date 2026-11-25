@@ -1,26 +1,12 @@
 ---
-icon: chevrons-right
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-  tags:
-    visible: true
-  actions:
-    visible: true
-  anchors:
-    visible: true
+icon: meteor
 ---
 
 # Primeros pasos
 
+Todo lo que me hubiese gustado leer el primer día:
+
+* [Mentalidad y metodología general](mentalidad-y-metodologia-general.md)
+* [Herramientas esenciales](herramientas-esenciales.md)
+* [Recursos y comunidad](recursos-y-comunidad.md)
+* [Errores comunes de principiante](errores-comunes-de-principiante.md)

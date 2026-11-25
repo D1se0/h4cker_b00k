@@ -4,3 +4,41 @@ icon: globe
 
 # Servicios de Red e Internet (Inicio)
 
+> **No se puede hackear lo que no se entiende.** Antes de lanzar un exploit hay que saber cómo viajan los datos: qué es un socket, qué hace un NAT, cómo funciona el DNS que resuelve tus dominios y por qué tu conexión va lenta o tus puertos no se abren. Esta sección te da **toda la base de redes** que necesitas, desde cero hasta nivel intermedio-avanzado, siempre con la mirada puesta en el hacking ético.
+
+***
+
+## 📚 Índice de la sección
+
+| Cap.                                      | Título                                 | Qué vas a aprender                                                                     |
+| ----------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------- |
+| [00](fundamentos-como-funciona-una-red.md)             | **Fundamentos de Redes**               | Qué es una red, modelo OSI/TCP-IP, sockets, puertos bien conocidos, dispositivos       |
+| [01](dns-el-telefono-de-internet.md)                           | **DNS: El Teléfono de Internet**       | Cómo se resuelven los dominios, registros A/AAAA/MX/NS/TXT/PTR/SOA, `nslookup` y `dig` |
+| [02](el-servicio-de-correo-electronico.md)            | **Correo Electrónico (SMTP, MX, SPF)** | Cómo funciona el email, montar tu propio servidor gratis, anti-phishing                |
+| [03](direccionamiento-ip-y-subnetting.md)           | **Direccionamiento IP**                | IPv4/IPv6, rangos especiales (privadas, loopback, APIPA, CGNAT), subredes              |
+| [04](nat-cgnat-y-hole-punching.md)                   | **NAT, CGNAT y Hole Punching**         | Cómo sales a Internet, SNAT/DNAT, tipos de NAT, por qué no puedes abrir puertos        |
+| [05](cableado-fisico-y-practica.md)               | **Cableado Físico y Práctica**         | TIA-568A/B, cable cruzado, auto-MDIX, AWG, CCA, cables de exterior                     |
+| [06](tramas-mtu-y-fragmentacion.md)      | **Tramas, MTU y Fragmentación**        | Segmentación, multiplexación, DF flag, por qué las VPN van mal sin ajustar MTU         |
+| [07](dominios-de-colision-y-switching.md) | **Dominios de Colisión y Switching**   | CSMA/CD vs CSMA/CA, hub vs switch vs router, rutas y métricas                          |
+| [08](vlans-y-vtp.md)                   | **VLANs y VTP**                        | Segmentación lógica, trunking 802.1Q, VTP Server/Client, VLAN hopping                  |
+| [09](herramientas-de-diagnostico-de-red.md)      | **Herramientas de Diagnóstico**        | `iperf3`, `nPerf`, `ping`, `traceroute`, `tcpdump`, `ss` — qué usar en cada caso       |
+| [10](posix-acl-y-glosario-completo.md)            | **POSIX, ACL y Glosario**              | Estándares POSIX, listas de control de acceso y glosario A-Z de todos los términos     |
+| [11](todo-aplicado-al-hacking.md)         | **Todo Aplicado al Hacking**           | Cómo cada concepto se convierte en vector de ataque o técnica de pentesting            |
+
+***
+
+## 🧭 ¿Cómo leer esta sección?
+
+* **Si empiezas de cero:** lee los capítulos **en orden** (00 → 11). Están diseñados para que cada uno apoye al anterior.
+* **Si ya tienes nivel:** usa el índice como manual de referencia. Cada capítulo incluye una caja 🎯 **"Para el hacker ético"** que conecta la teoría con técnicas reales de pentesting.
+
+***
+
+## 🔗 Prerrequisitos y siguientes pasos
+
+* **Prerrequisitos:** ninguno. Esto es la base.
+* **Después de esta sección:** continúa con [SQL — De Cero a Hacker](../SQL/) y luego con las técnicas de [HackingWeb](../herramientas-tecnicas/hackingweb/), donde todo esto se pone en práctica.
+
+***
+
+_Última actualización: septiembre 2026 · h4cker\_b00k_

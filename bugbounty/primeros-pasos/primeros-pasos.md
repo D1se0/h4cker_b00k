@@ -1,6 +1,0 @@
----
-icon: meteor
----
-
-# Primeros pasos
-

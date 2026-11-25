@@ -1,6 +1,0 @@
----
-icon: book-blank
----
-
-# Introducción
-

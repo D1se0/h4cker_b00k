@@ -1,26 +1,10 @@
 ---
-icon: angle-right
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-  tags:
-    visible: true
-  actions:
-    visible: true
-  anchors:
-    visible: true
+icon: book-blank
 ---
 
 # Introducción
 
+Esta sección es la puerta de entrada al manual. Si vienes de cero, empieza aquí.
+
+* [¿Qué es el Bug Bounty?](que-es-el-bug-bounty.md) — el concepto, cómo funciona el ecosistema y por qué existe.
+* [Glosario de términos](glosario-de-terminos.md) — vocabulario que verás repetido en todo el manual (IDOR, CVSS, triage, safe harbor, etc.).

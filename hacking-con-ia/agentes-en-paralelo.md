@@ -52,7 +52,7 @@ Las tareas de **solo lectura**, con huella de red baja y sin estado mutable son 
 
 En cuanto un hallazgo de la Fase 1 parece prometedor, **pasa a ejecutarse en un único hilo de trabajo, nunca en paralelo**, sobre la cuenta de prueba correspondiente, hasta reproducirlo de principio a fin.
 
-**Regla de oro**: nunca dar por confirmada una vulnerabilidad solo porque un agente diga que la ha encontrado — se reproduce paso a paso, idealmente dos veces, antes de tratarla como real. Esto conecta directamente con el paso 3 del [Flujo de trabajo completo](flujo-de-trabajo-completo.md#3️⃣-cuando-aparece-algo-prometedor-pedir-la-guía-de-reproducción-manual): pedir la guía de reproducción manual y hacerla tú mismo es, precisamente, esa verificación.
+**Regla de oro**: nunca dar por confirmada una vulnerabilidad solo porque un agente diga que la ha encontrado — se reproduce paso a paso, idealmente dos veces, antes de tratarla como real. Esto conecta directamente con el paso 3 del [Flujo de trabajo completo](flujo-de-trabajo-completo-paso-a-paso.md#3️⃣-cuando-aparece-algo-prometedor-pedir-la-guía-de-reproducción-manual): pedir la guía de reproducción manual y hacerla tú mismo es, precisamente, esa verificación.
 
 ### Fase 3 — Guardar el hallazgo reportable
 
